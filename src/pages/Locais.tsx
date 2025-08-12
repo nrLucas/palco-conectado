@@ -1,16 +1,17 @@
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { MapPin, Building2, Heart } from "lucide-react";
+import { MapPin, Building2, Heart, Star } from "lucide-react";
 import { useAuth } from "@/components/auth/AuthContext";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
 
 const mock = [
-  { id: 1, name: "Bar Aurora", city: "São Paulo", offerUpTo: 1200, capacity: 150 },
-  { id: 2, name: "Rest. Varanda", city: "Curitiba", offerUpTo: 900, capacity: 90 },
-  { id: 3, name: "Pub Noite Feliz", city: "Florianópolis", offerUpTo: 1500, capacity: 200 },
+  { id: 1, name: "Bar Aurora", city: "São Paulo", offerUpTo: 1200, capacity: 150, rating: 4.7 },
+  { id: 2, name: "Rest. Varanda", city: "Curitiba", offerUpTo: 900, capacity: 90, rating: 4.5 },
+  { id: 3, name: "Pub Noite Feliz", city: "Florianópolis", offerUpTo: 1500, capacity: 200, rating: 4.8 },
 ];
 
 export default function Locais() {
@@ -74,7 +75,10 @@ export default function Locais() {
           <Card key={v.id} className="group relative overflow-hidden rounded-xl border border-primary/20 bg-gradient-to-b from-background/70 to-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)] transition">
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-primary/40" />
             <CardHeader>
-              <CardTitle className="flex items-center gap-2"><Building2 className="h-5 w-5" /> {v.name}</CardTitle>
+              <CardTitle className="flex items-center justify-between">
+                <span className="inline-flex items-center gap-2"><Building2 className="h-5 w-5" /> {v.name}</span>
+                <Badge variant="secondary" className="inline-flex items-center gap-1"><Star className="h-4 w-4 text-primary" /> {v.rating}</Badge>
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground inline-flex items-center gap-1"><MapPin className="h-4 w-4" /> {v.city}</p>

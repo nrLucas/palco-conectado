@@ -50,7 +50,7 @@ All colors MUST be HSL.
     /* Extras - gradients, shadows, fonts */
     --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(286 76% 60%));
     --shadow-elevated: 0 12px 40px -10px hsl(262 83% 58% / 0.25);
-    --font-sans: 'Inter', ui-sans-serif, system-ui;
+    --font-sans: 'Sora', ui-sans-serif, system-ui;
   }
 
   .dark {

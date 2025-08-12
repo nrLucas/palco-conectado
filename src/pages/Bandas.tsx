@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const mock = [
-  { id: 1, name: "The Violet Cats", city: "São Paulo", priceFrom: 500, rating: 4.8, styles: ["Rock", "Indie"] },
-  { id: 2, name: "Samba da Vila", city: "Rio de Janeiro", priceFrom: 400, rating: 4.6, styles: ["Samba", "Pagode"] },
-  { id: 3, name: "Trio Jazz&Co", city: "Belo Horizonte", priceFrom: 700, rating: 4.9, styles: ["Jazz"] },
+  { id: 1, name: "The Violet Cats", city: "São Paulo", priceFrom: 500, rating: 4.8, styles: ["Rock", "Indie"], members: 4 },
+  { id: 2, name: "Samba da Vila", city: "Rio de Janeiro", priceFrom: 400, rating: 4.6, styles: ["Samba", "Pagode"], members: 6 },
+  { id: 3, name: "Trio Jazz&Co", city: "Belo Horizonte", priceFrom: 700, rating: 4.9, styles: ["Jazz"], members: 3 },
 ];
 
 export default function Bandas() {
@@ -84,7 +84,7 @@ export default function Bandas() {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-muted-foreground inline-flex items-center gap-1"><MapPin className="h-4 w-4" /> {b.city}</p>
-              <p className="mt-2 text-sm">Preço a partir de <strong>R$ {b.priceFrom}</strong></p>
+              <p className="mt-2 text-sm">Preço a partir de <strong>R$ {b.priceFrom}</strong> • <span className="text-muted-foreground">{b.members} integrantes</span></p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {b.styles.map((s) => (
                   <span key={s} className="rounded bg-accent px-2 py-0.5 text-xs">{s}</span>
