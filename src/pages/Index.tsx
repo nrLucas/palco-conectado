@@ -28,80 +28,44 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="container mx-auto py-10" aria-labelledby="destaques-heading">
-        <header className="mb-6">
-          <h2 id="destaques-heading" className="text-xl font-semibold">Destaques</h2>
-          <p className="text-muted-foreground">Seleção curada por avaliação e popularidade</p>
+      <section className="container mx-auto py-12" aria-labelledby="perfil-heading">
+        <header className="mb-8">
+          <h2 id="perfil-heading" className="text-2xl font-semibold">Como você quer usar?</h2>
+          <p className="text-muted-foreground">Escolha seu perfil para uma experiência focada, no estilo iFood.</p>
         </header>
-        <Carousel>
-          <CarouselContent>
-            {featured.map((f) => (
-              <CarouselItem key={f.title} className="md:basis-1/2 lg:basis-1/3">
-                <Link to={f.to} className="block">
-                  <Card className="hover-scale">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2"><Music2 className="h-5 w-5" /> {f.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">{f.desc}</p>
-                    </CardContent>
-                  </Card>
-                </Link>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-      </section>
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card className="relative overflow-hidden rounded-xl border border-primary/20 bg-gradient-to-b from-background/70 to-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)] transition">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-primary/40" />
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2"><Building2 className="h-5 w-5" /> Sou Bar/Restaurante</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">Busque <strong>bandas e cantores</strong> por estilo, cidade e nome. Veja nota geral (até 5 estrelas) e portfólios completos.</p>
+              <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                <li>Filtros por estilo, cidade e avaliação</li>
+                <li>Perfis com integrantes, melhores faixas e vídeos</li>
+                <li>Histórico de apresentações e disponibilidade</li>
+              </ul>
+              <Link to="/bandas"><Button className="hover-scale">Entrar e buscar bandas</Button></Link>
+            </CardContent>
+          </Card>
 
-      <section className="container mx-auto py-10" aria-labelledby="categorias-heading">
-        <h2 id="categorias-heading" className="text-xl font-semibold mb-4">Categorias</h2>
-        <div className="flex flex-wrap gap-3">
-          {['Rock','Sertanejo','MPB','Pagode','Pop','Jazz','Blues','Funk','Forró'].map((c) => (
-            <Link to="/bandas" key={c}><Button variant="secondary" className="hover-scale">{c}</Button></Link>
-          ))}
+          <Card className="relative overflow-hidden rounded-xl border border-primary/20 bg-gradient-to-b from-background/70 to-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)] transition">
+            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-primary/40" />
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2"><Music2 className="h-5 w-5" /> Sou Banda/Artista</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">Encontre <strong>bares e restaurantes</strong> por cidade, capacidade e cache oferecido. Consulte agenda e avaliações.</p>
+              <ul className="list-disc pl-5 text-sm text-muted-foreground space-y-1">
+                <li>Filtros por cidade, capacidade e orçamento</li>
+                <li>Detalhes de infraestrutura e vagas abertas</li>
+                <li>Histórico, avaliações e contato</li>
+              </ul>
+              <Link to="/bares"><Button className="hover-scale">Entrar e buscar locais</Button></Link>
+            </CardContent>
+          </Card>
         </div>
-      </section>
-
-      <section className="container mx-auto py-10 grid md:grid-cols-2 gap-6" aria-labelledby="atalhos-heading">
-        <h2 id="atalhos-heading" className="sr-only">Atalhos</h2>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2"><Music2 className="h-5 w-5" /> Bandas populares</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {[1,2,3].map((i) => (
-              <div key={i} className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded bg-accent" aria-hidden />
-                  <div>
-                    <p className="font-medium">Banda {i}</p>
-                    <p className="text-sm text-muted-foreground inline-flex items-center gap-1"><Star className="h-4 w-4 text-primary" /> 4.{i} • a partir de R$ {300+i*50}</p>
-                  </div>
-                </div>
-                <Link to="/bandas"><Button variant="outline">Ver</Button></Link>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2"><Building2 className="h-5 w-5" /> Bares em destaque</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {[1,2,3].map((i) => (
-              <div key={i} className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded bg-accent" aria-hidden />
-                  <div>
-                    <p className="font-medium">Bar {i}</p>
-                    <p className="text-sm text-muted-foreground inline-flex items-center gap-1"><MapPin className="h-4 w-4" /> Centro • oferece até R$ {800+i*100}</p>
-                  </div>
-                </div>
-                <Link to="/bares"><Button variant="outline">Ver</Button></Link>
-              </div>
-            ))}
-          </CardContent>
-        </Card>
       </section>
 
       {/* Structured Data */}

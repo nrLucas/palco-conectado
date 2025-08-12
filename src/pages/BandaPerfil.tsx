@@ -29,29 +29,29 @@ export default function BandaPerfil() {
           <TabsList>
             <TabsTrigger value="sobre">Sobre</TabsTrigger>
             <TabsTrigger value="integrantes">Integrantes</TabsTrigger>
-            <TabsTrigger value="portfolio">Portfólio</TabsTrigger>
+            <TabsTrigger value="portfolio">Vídeos & Faixas</TabsTrigger>
             <TabsTrigger value="precos">Preços</TabsTrigger>
-            <TabsTrigger value="agenda">Agenda</TabsTrigger>
-            <TabsTrigger value="avaliacoes">Avaliações</TabsTrigger>
+            <TabsTrigger value="agenda">Agenda & Disponibilidade</TabsTrigger>
+            <TabsTrigger value="avaliacoes">Avaliações por noite</TabsTrigger>
           </TabsList>
 
           <TabsContent value="sobre" className="mt-4">
-            <Card><CardContent className="pt-6">Bio, estilos e links.</CardContent></Card>
+            <Card><CardContent className="pt-6">Bio, estilos, links e informações gerais.</CardContent></Card>
           </TabsContent>
           <TabsContent value="integrantes" className="mt-4">
-            <Card><CardContent className="pt-6">Lista de integrantes.</CardContent></Card>
+            <Card><CardContent className="pt-6">Nome e função dos integrantes.</CardContent></Card>
           </TabsContent>
           <TabsContent value="portfolio" className="mt-4">
-            <Card><CardContent className="pt-6">Vídeos e áudios.</CardContent></Card>
+            <Card><CardContent className="pt-6">Melhores faixas e vídeos destacados.</CardContent></Card>
           </TabsContent>
           <TabsContent value="precos" className="mt-4">
-            <Card><CardContent className="pt-6">Faixas de preço.</CardContent></Card>
+            <Card><CardContent className="pt-6">Faixas de preço e condições.</CardContent></Card>
           </TabsContent>
           <TabsContent value="agenda" className="mt-4">
-            <Card><CardContent className="pt-6">Calendário e disponibilidades.</CardContent></Card>
+            <Card><CardContent className="pt-6">Calendário de disponibilidade.</CardContent></Card>
           </TabsContent>
           <TabsContent value="avaliacoes" className="mt-4">
-            <Card><CardContent className="pt-6">Média e distribuição de notas.</CardContent></Card>
+            <Card><CardContent className="pt-6">Avaliações por noite com comentários.</CardContent></Card>
           </TabsContent>
         </Tabs>
       </section>
