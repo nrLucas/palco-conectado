@@ -11,6 +11,7 @@ import Bandas from "./pages/Bandas";
 import Locais from "./pages/Locais";
 import BandaPerfil from "./pages/BandaPerfil";
 import LocalPerfil from "./pages/LocalPerfil";
+import Subscription from "./pages/Subscription";
 
 const queryClient = new QueryClient();
 
@@ -25,9 +26,10 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/bandas" element={<Bandas />} />
-            <Route path="/bares" element={<Locais />} />
+            <Route path="/estabelecimentos" element={<Locais />} />
             <Route path="/banda/:id" element={<BandaPerfil />} />
-            <Route path="/bar/:id" element={<LocalPerfil />} />
+            <Route path="/estabelecimento/:id" element={<LocalPerfil />} />
+            <Route path="/assinatura" element={<Subscription />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom";
-import { Music2, Building2, LogIn, Sparkles } from "lucide-react";
+import { Music2, Building2, LogIn, LogOut, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "../auth/AuthContext";
 
 export const SiteHeader = () => {
-  const { openAuth, requireAuth } = useAuth();
+  const { openAuth, requireAuth, isAuthenticated, currentUser, logout } = useAuth();
 
   const navCls = ({ isActive }: { isActive: boolean }) =>
     isActive ? "text-primary" : "text-foreground/80 hover:text-foreground";
@@ -21,18 +21,36 @@ export const SiteHeader = () => {
           <NavLink to="/bandas" className={navCls}>
             <span className="inline-flex items-center gap-2"><Music2 className="h-4 w-4" /> Bandas</span>
           </NavLink>
-          <NavLink to="/bares" className={navCls}>
-            <span className="inline-flex items-center gap-2"><Building2 className="h-4 w-4" /> Bares</span>
+          <NavLink to="/estabelecimentos" className={navCls}>
+            <span className="inline-flex items-center gap-2"><Building2 className="h-4 w-4" /> Estabelecimentos</span>
           </NavLink>
         </div>
 
         <div className="flex items-center gap-3">
-          <Button variant="ghost" onClick={() => openAuth('login')}>
-            <LogIn className="mr-2" /> Entrar
-          </Button>
-          <Button variant="hero" onClick={() => requireAuth('criar-vaga')}>
-            Criar vaga
-          </Button>
+          {isAuthenticated ? (
+            <>
+              <span className="text-sm text-muted-foreground">
+                Olá, {currentUser?.name}
+              </span>
+              <Button variant="ghost" onClick={logout}>
+                <LogOut className="mr-2 h-4 w-4" /> Sair
+              </Button>
+            </>
+          ) : (
+            <Button variant="ghost" onClick={() => openAuth('login')}>
+              <LogIn className="mr-2 h-4 w-4" /> Entrar
+            </Button>
+          )}
+          
+          {currentUser?.type === 'establishment' ? (
+            <Button variant="hero" onClick={() => requireAuth('criar-evento')}>
+              Criar Evento
+            </Button>
+          ) : (
+            <Button variant="hero" onClick={() => requireAuth('enviar-proposta')}>
+              Enviar Proposta
+            </Button>
+          )}
         </div>
       </nav>
     </header>

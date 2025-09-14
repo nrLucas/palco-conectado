@@ -5,9 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/components/auth/AuthContext";
 import { Calendar } from "@/components/ui/calendar";
 import { Star, CheckCircle2, MapPin } from "lucide-react";
+import { useState } from "react";
+import { ProposalModal } from "@/components/proposals/ProposalModal";
 
 export default function LocalPerfil() {
-  const { requireAuth } = useAuth();
+  const { requireAuth, currentUser } = useAuth();
+  const [proposalModalOpen, setProposalModalOpen] = useState(false);
 
   return (
     <main>
@@ -20,8 +23,13 @@ export default function LocalPerfil() {
             <p className="text-muted-foreground">Centro • capacidade 150 • oferece até R$ 1.200</p>
           </div>
           <div className="flex gap-2">
-            <Button onClick={() => requireAuth('convidar-banda')}>Convidar banda</Button>
-            <Button variant="outline" onClick={() => requireAuth('criar-vaga')}>Criar vaga</Button>
+            <Button onClick={() => {
+              requireAuth('convidar-banda');
+              setProposalModalOpen(true);
+            }}>
+              Convidar banda
+            </Button>
+            <Button variant="outline" onClick={() => requireAuth('criar-evento')}>Criar evento</Button>
           </div>
         </div>
       </header>
@@ -160,6 +168,14 @@ export default function LocalPerfil() {
           </TabsContent>
         </Tabs>
       </section>
+
+      <ProposalModal
+        open={proposalModalOpen}
+        onOpenChange={setProposalModalOpen}
+        targetId="band-1"
+        targetName="The Violet Cats"
+        currentUserId={currentUser?.id || ""}
+      />
     </main>
   );
 }

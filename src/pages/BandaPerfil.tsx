@@ -5,9 +5,16 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useAuth } from "@/components/auth/AuthContext";
 import { Calendar } from "@/components/ui/calendar";
 import { Star, Play, Video } from "lucide-react";
+import { useState } from "react";
+import { useCalendar } from "@/hooks/useCalendar";
+import { ProposalModal } from "@/components/proposals/ProposalModal";
+import { useNavigate } from "react-router-dom";
 
 export default function BandaPerfil() {
-  const { requireAuth } = useAuth();
+  const { requireAuth, currentUser, canSendProposal } = useAuth();
+  const navigate = useNavigate();
+  const [proposalModalOpen, setProposalModalOpen] = useState(false);
+  const { selectedDate, setSelectedDate, isAvailable } = useCalendar();
 
   return (
     <main>
@@ -20,7 +27,20 @@ export default function BandaPerfil() {
             <p className="text-muted-foreground">Rock/Indie • São Paulo • a partir de R$ 600</p>
           </div>
           <div className="flex gap-2">
-            <Button onClick={() => requireAuth('enviar-proposta')}>Enviar proposta</Button>
+            <Button onClick={() => {
+              requireAuth('enviar-proposta');
+              
+              const { canSend, reason } = canSendProposal();
+              if (!canSend) {
+                if (reason?.includes('upgrade')) {
+                  navigate('/assinatura');
+                }
+                return;
+              }
+              setProposalModalOpen(true);
+            }}>
+              Enviar proposta
+            </Button>
             <Button variant="outline" onClick={() => requireAuth('abrir-chat')}>Abrir chat</Button>
           </div>
         </div>
@@ -163,9 +183,19 @@ export default function BandaPerfil() {
           <TabsContent value="agenda" className="mt-4">
             <Card>
               <CardContent className="pt-6 grid gap-6 md:grid-cols-2">
-                <div>
-                  <Calendar mode="single" selected={new Date()} />
-                </div>
+                 <div>
+                   <Calendar 
+                     mode="single" 
+                     selected={selectedDate} 
+                     onSelect={setSelectedDate}
+                     modifiers={{
+                       available: (date) => isAvailable(date, "band-1")
+                     }}
+                     modifiersStyles={{
+                       available: { backgroundColor: 'hsl(var(--primary))', color: 'white' }
+                     }}
+                   />
+                 </div>
                 <div>
                   <h3 className="font-medium mb-2">Próximas disponibilidades</h3>
                   <ul className="space-y-2">
@@ -211,6 +241,18 @@ export default function BandaPerfil() {
           </TabsContent>
         </Tabs>
       </section>
+
+      <ProposalModal
+        open={proposalModalOpen}
+        onOpenChange={setProposalModalOpen}
+        targetId="establishment-1"
+        targetName="Bar Aurora"
+        currentUserId={currentUser?.id || ""}
+        onProposalSent={() => {
+          // Refresh user data to update proposal count
+          window.location.reload();
+        }}
+      />
     </main>
   );
 }

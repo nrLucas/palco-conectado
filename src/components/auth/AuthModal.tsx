@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "@/hooks/use-toast";
+import { useAuth } from "./AuthContext";
 
 const loginSchema = z.object({
   email: z.string().email("E-mail inválido"),
@@ -35,11 +36,16 @@ export function AuthModal({
 }) {
   const loginForm = useForm<LoginValues>({ resolver: zodResolver(loginSchema) });
   const signupForm = useForm<SignupValues>({ resolver: zodResolver(signupSchema) });
+  const { login } = useAuth();
 
   const onLogin = (data: LoginValues) => {
-    toast({ title: "Login (demo)", description: "Conecte o Supabase para autenticação real." });
-    onOpenChange(false);
+    const success = login(data.email, data.password);
+    if (success) {
+      onOpenChange(false);
+      loginForm.reset();
+    }
   };
+  
   const onSignup = (data: SignupValues) => {
     toast({ title: "Cadastro (demo)", description: "Conecte o Supabase para concluir o fluxo." });
     onOpenChange(false);
