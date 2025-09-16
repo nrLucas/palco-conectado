@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { Music2, Building2, LogIn, LogOut, Sparkles } from "lucide-react";
+import { Music2, Building2, LogIn, LogOut, Sparkles, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useAuth } from "../auth/AuthContext";
 
 export const SiteHeader = () => {
@@ -29,12 +30,26 @@ export const SiteHeader = () => {
         <div className="flex items-center gap-3">
           {isAuthenticated ? (
             <>
-              <span className="text-sm text-muted-foreground">
-                Olá, {currentUser?.name}
-              </span>
-              <Button variant="ghost" onClick={logout}>
-                <LogOut className="mr-2 h-4 w-4" /> Sair
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost">
+                    <Settings className="mr-2 h-4 w-4" />
+                    {currentUser?.name}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end">
+                  <DropdownMenuItem asChild>
+                    <NavLink to="/profile" className="flex items-center w-full">
+                      <Settings className="mr-2 h-4 w-4" />
+                      Meu Perfil
+                    </NavLink>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem onClick={logout}>
+                    <LogOut className="mr-2 h-4 w-4" />
+                    Sair
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </>
           ) : (
             <Button variant="ghost" onClick={() => openAuth('login')}>
@@ -42,15 +57,9 @@ export const SiteHeader = () => {
             </Button>
           )}
           
-          {currentUser?.type === 'establishment' ? (
-            <Button variant="hero" onClick={() => requireAuth('criar-evento')}>
-              Criar Evento
-            </Button>
-          ) : (
-            <Button variant="hero" onClick={() => requireAuth('enviar-proposta')}>
-              Enviar Proposta
-            </Button>
-          )}
+          <Button variant="hero" onClick={() => requireAuth('criar-evento')}>
+            Criar Evento
+          </Button>
         </div>
       </nav>
     </header>

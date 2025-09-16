@@ -11,6 +11,7 @@ interface AuthContextValue {
   openAuth: (mode?: Mode) => void;
   requireAuth: (actionName?: string) => void;
   login: (email: string, password: string) => boolean;
+  signup: (email: string, password: string, name: string) => boolean;
   logout: () => void;
   canSendProposal: () => { canSend: boolean; reason?: string };
 }
@@ -56,6 +57,30 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     return false;
   };
 
+  const signup = (email: string, password: string, name: string): boolean => {
+    const users = mockDataManager.getUsers();
+    const existingUser = users.find(u => u.email === email);
+    
+    if (existingUser) {
+      toast({
+        title: "Erro no cadastro",
+        description: "Este email já está em uso",
+        variant: "destructive"
+      });
+      return false;
+    }
+    
+    const newUser = mockDataManager.createUser(email, password, name);
+    mockDataManager.setCurrentUser(newUser);
+    setCurrentUser(newUser);
+    
+    toast({
+      title: "Cadastro realizado com sucesso!",
+      description: `Bem-vindo(a), ${newUser.name}`,
+    });
+    return true;
+  };
+
   const logout = () => {
     mockDataManager.setCurrentUser(null);
     setCurrentUser(null);
@@ -66,8 +91,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   const canSendProposal = () => {
-    if (!currentUser || currentUser.type !== 'band') {
-      return { canSend: false, reason: "Apenas bandas podem enviar propostas" };
+    if (!currentUser) {
+      return { canSend: false, reason: "Faça login para enviar propostas" };
     }
 
     const proposalsUsed = currentUser.proposalsUsed || 0;
@@ -101,6 +126,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       openAuth, 
       requireAuth, 
       login, 
+      signup, 
       logout, 
       canSendProposal 
     }),

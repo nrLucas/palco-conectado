@@ -18,7 +18,6 @@ type LoginValues = z.infer<typeof loginSchema>;
 
 const signupSchema = loginSchema.extend({
   name: z.string().min(2, "Informe seu nome"),
-  role: z.enum(["artist", "venue"], { required_error: "Selecione um papel" }),
 });
 
 type SignupValues = z.infer<typeof signupSchema>;
@@ -36,7 +35,7 @@ export function AuthModal({
 }) {
   const loginForm = useForm<LoginValues>({ resolver: zodResolver(loginSchema) });
   const signupForm = useForm<SignupValues>({ resolver: zodResolver(signupSchema) });
-  const { login } = useAuth();
+  const { login, signup } = useAuth();
 
   const onLogin = (data: LoginValues) => {
     const success = login(data.email, data.password);
@@ -47,8 +46,11 @@ export function AuthModal({
   };
   
   const onSignup = (data: SignupValues) => {
-    toast({ title: "Cadastro (demo)", description: "Conecte o Supabase para concluir o fluxo." });
-    onOpenChange(false);
+    const success = signup(data.email, data.password, data.name);
+    if (success) {
+      onOpenChange(false);
+      signupForm.reset();
+    }
   };
 
   return (
@@ -108,16 +110,6 @@ export function AuthModal({
                 <Input id="password2" type="password" {...signupForm.register("password")} />
                 {signupForm.formState.errors.password && (
                   <p className="text-destructive text-sm">{signupForm.formState.errors.password.message}</p>
-                )}
-              </div>
-              <div className="space-y-2">
-                <Label>Papel</Label>
-                <div className="flex gap-2">
-                  <Button type="button" variant={signupForm.watch("role") === "artist" ? "default" : "outline"} onClick={() => signupForm.setValue("role", "artist")}>Sou Banda/Artista</Button>
-                  <Button type="button" variant={signupForm.watch("role") === "venue" ? "default" : "outline"} onClick={() => signupForm.setValue("role", "venue")}>Sou Bar/Restaurante</Button>
-                </div>
-                {signupForm.formState.errors.role && (
-                  <p className="text-destructive text-sm">{signupForm.formState.errors.role.message as string}</p>
                 )}
               </div>
               <DialogFooter>

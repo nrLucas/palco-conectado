@@ -61,7 +61,7 @@ export const ProposalModal = ({
     
     // Update user's proposal count
     const currentUser = mockDataManager.getCurrentUser();
-    if (currentUser && currentUser.type === 'band') {
+    if (currentUser) {
       const updatedUser = {
         ...currentUser,
         proposalsUsed: (currentUser.proposalsUsed || 0) + 1
