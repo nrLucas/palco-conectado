@@ -1,73 +1,72 @@
-# Welcome to your Lovable project
+# 🎸 Palco Conectado
 
-## Project info
+**Conectando talentos a grandes palcos.**
 
-**URL**: https://lovable.dev/projects/54cdb8e0-b3e3-4a14-9520-00df4850b369
+> O marketplace definitivo para bandas, músicos e estabelecimentos criarem experiências inesquecíveis.
 
-## How can I edit this code?
+![Palco Conectado Hero](src/assets/hero-music.jpg)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Sobre o Projeto
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/54cdb8e0-b3e3-4a14-9520-00df4850b369) and start prompting.
+**Palco Conectado** é uma plataforma moderna que revoluciona a forma como shows são negociados. Removemos a fricção entre artistas talentosos e estabelecimentos que buscam música ao vivo de qualidade.
 
-Changes made via Lovable will be committed automatically to this repo.
+Com uma interface inspirada nos melhores marketplaces (como iFood e Airbnb), oferecemos uma experiência fluida, transparente e profissional para todos os envolvidos.
 
-**Use your preferred IDE**
+### ✨ Para Bandas e Músicos
+*   **Visibilidade Profissional**: Crie um perfil incrível com vídeos, faixas, agenda e rider técnico.
+*   **Encontre Gigs**: Busque bares, restaurantes e casas de show que combinam com seu estilo e cache.
+*   **Negociação Direta**: Envie propostas, negocie valores e feche contratos diretamente na plataforma.
+*   **Gestão de Agenda**: Mantenha suas datas organizadas e evite conflitos.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🏢 Para Estabelecimentos
+*   **Curadoria Simplificada**: Filtre artistas por estilo, avaliação, preço e disponibilidade.
+*   **Contrate com Segurança**: Veja avaliações reais de outros contratantes.
+*   **Vagas Abertas**: Publique oportunidades e receba propostas apenas de artistas qualificados.
+*   **Calendário Integrado**: Gerencie sua programação musical de ponta a ponta.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🛠️ Tecnologias de Ponta
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Este projeto foi construído com o que há de mais moderno no desenvolvimento web, garantindo performance, SEO e escalabilidade.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+*   **⚡ Next.js 14 (App Router)**: Framework React full-stack para máxima performance e SEO.
+*   **🎨 Tailwind CSS + Shadcn/ui**: Design system moderno, responsivo e acessível.
+*   **💎 TypeScript**: Código robusto e tipado para manutenibilidade a longo prazo.
+*   **🔒 Auth Context Avançado**: Sistema de autenticação multi-perfil (alterne entre Banda, Músico e Contratante com um clique).
+*   **📦 Lucide React**: Ícones vetoriais modernos e leves.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## 📸 Funcionalidades Destaque
+
+### 1. Sistema Multi-Perfil
+Uma única conta, múltiplas personas. Você toca em uma banda de Rock na sexta, faz voz e violão no sábado e contrata bandas para seu bar no domingo? **Nós suportamos tudo isso sem precisar deslogar.**
+
+### 2. Matchmaking Inteligente
+Não perca tempo. Nosso sistema sugere artistas que se encaixam no perfil do seu estabelecimento e vice-versa, baseado em localização, estilo musical e faixa de preço.
+
+### 3. Wizard de Onboarding
+Comece com o pé direito. Nosso fluxo de cadastro guiado ajuda você a montar um perfil completo e atraente em minutos.
+
+---
+
+## 🚀 Como Rodar Localmente
+
+Clone o projeto e instale as dependências:
+
+```bash
+# Instalar dependências
+npm install
+
+# Rodar servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Acesse [http://localhost:3000](http://localhost:3000) e comece o show! 🤘
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/54cdb8e0-b3e3-4a14-9520-00df4850b369) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Palco Conectado © 2026** — *Feito para quem vive de música.*
