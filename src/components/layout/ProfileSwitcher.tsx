@@ -11,7 +11,6 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useAuth } from '@/lib/auth';
-import { storage } from '@/lib/storage';
 import type { ProfileType, UserProfile } from '@/lib/types';
 import {
   Building2,
@@ -26,10 +25,6 @@ import {
 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
-// =============================================================================
-// PROFILE ICONS
-// =============================================================================
-
 const profileIcons: Record<ProfileType, typeof Guitar> = {
   artista_independente: Guitar,
   banda: Music2,
@@ -42,27 +37,8 @@ const profileColors: Record<ProfileType, string> = {
   contratante: 'text-emerald-500',
 };
 
-// =============================================================================
-// HELPER
-// =============================================================================
-
-function getProfileName(profile: UserProfile): string {
-  switch (profile.type) {
-    case 'artista_independente': {
-      const musician = storage.getMusicianById(profile.entityId);
-      return musician?.name || 'Artista';
-    }
-    case 'banda': {
-      const band = storage.getBandById(profile.entityId);
-      return band?.name || 'Banda';
-    }
-    case 'contratante': {
-      const establishment = storage.getEstablishmentById(profile.entityId);
-      return establishment?.name || 'Estabelecimento';
-    }
-    default:
-      return 'Perfil';
-  }
+function getProfileName(profile: UserProfile & { entityName?: string }): string {
+  return profile.entityName || 'Perfil';
 }
 
 function getProfileTypeName(type: ProfileType): string {
@@ -73,10 +49,6 @@ function getProfileTypeName(type: ProfileType): string {
   };
   return names[type];
 }
-
-// =============================================================================
-// COMPONENT
-// =============================================================================
 
 export function ProfileSwitcher() {
   const {
@@ -97,9 +69,6 @@ export function ProfileSwitcher() {
         <Button variant="ghost" size="sm" onClick={() => openAuthModal('login')}>
           Entrar
         </Button>
-        <Button size="sm" onClick={() => openAuthModal('signup')}>
-          Criar conta
-        </Button>
       </div>
     );
   }
@@ -111,10 +80,11 @@ export function ProfileSwitcher() {
     .slice(0, 2)
     .toUpperCase();
 
-  const currentProfileName = activeProfile ? getProfileName(activeProfile) : account.name;
+  const currentProfileName = activeProfile
+    ? getProfileName(activeProfile as UserProfile & { entityName?: string })
+    : account.name;
   const CurrentIcon = activeProfile ? profileIcons[activeProfile.type] : User;
   const currentColor = activeProfile ? profileColors[activeProfile.type] : 'text-muted-foreground';
-
   const { allowed: canAddProfile, max, current } = canCreateProfile();
 
   return (
@@ -164,17 +134,16 @@ export function ProfileSwitcher() {
               className="cursor-pointer"
             >
               <Icon className={`h-4 w-4 mr-2 ${color}`} />
-              <span className="flex-1">{getProfileName(profile)}</span>
+              <span className="flex-1">
+                {getProfileName(profile as UserProfile & { entityName?: string })}
+              </span>
               {isActive && <Check className="h-4 w-4 text-primary" />}
             </DropdownMenuItem>
           );
         })}
 
         {canAddProfile && (
-          <DropdownMenuItem
-            onClick={() => router.push('/profile')}
-            className="cursor-pointer"
-          >
+          <DropdownMenuItem onClick={() => router.push('/profile')} className="cursor-pointer">
             <Plus className="h-4 w-4 mr-2" />
             <span>Adicionar perfil</span>
           </DropdownMenuItem>

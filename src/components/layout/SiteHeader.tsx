@@ -1,9 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth";
-import { Building2, Guitar, MessageCircle, Music2, Sparkles } from "lucide-react";
+import { Building2, Guitar, Music2, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { NotificationBell } from "./NotificationBell";
 import { ProfileSwitcher } from "./ProfileSwitcher";
 
 export const SiteHeader = () => {
@@ -18,7 +19,7 @@ export const SiteHeader = () => {
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <Sparkles className="h-5 w-5 text-primary" aria-hidden />
-          <span className="font-semibold">PalcoMatch</span>
+          <span className="font-semibold">Palco Conectado</span>
         </Link>
 
         <div className="flex items-center gap-6">
@@ -37,20 +38,16 @@ export const SiteHeader = () => {
               <Guitar className="h-4 w-4" /> Músicos
             </span>
           </Link>
+          {isAuthenticated && (
+            <Link href="/propostas" className={getNavCls('/propostas')}>
+              Propostas
+            </Link>
+          )}
         </div>
 
         <div className="flex items-center gap-3">
-          {isAuthenticated && (
-            <Link href="/mensagens">
-              <Button variant="ghost" size="icon" className="relative">
-                <MessageCircle className="h-5 w-5" />
-                {/* Unread badge placeholder */}
-              </Button>
-            </Link>
-          )}
-
+          {isAuthenticated && <NotificationBell />}
           <ProfileSwitcher />
-
           {!isAuthenticated && (
             <Button variant="hero" onClick={() => openAuthModal('signup')}>
               Criar Conta

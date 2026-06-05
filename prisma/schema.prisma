@@ -1,0 +1,242 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("POSTGRES_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+enum ProfileType {
+  artista_independente
+  banda
+  contratante
+}
+
+enum ProfileRole {
+  owner
+  member
+}
+
+enum SubscriptionTier {
+  free
+  basic
+  premium
+  enterprise
+}
+
+enum ExperienceLevel {
+  iniciante
+  intermediario
+  profissional
+}
+
+enum AvailabilityStatus {
+  disponivel
+  ocupado
+  parcial
+}
+
+enum LookingForType {
+  banda
+  freelance
+  ambos
+}
+
+enum ProposalStatus {
+  pending
+  accepted
+  rejected
+}
+
+enum NotificationType {
+  proposal_received
+  proposal_accepted
+  proposal_rejected
+}
+
+model User {
+  id               String           @id @default(cuid())
+  email            String           @unique
+  emailVerified    DateTime?
+  name             String
+  passwordHash     String?
+  image            String?
+  activeProfileId  String?
+  subscriptionTier SubscriptionTier @default(free)
+  proposalsUsed    Int              @default(0)
+  proposalsLimit   Int              @default(2)
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  accounts      Account[]
+  sessions      Session[]
+  profiles      Profile[]
+  musicians     Musician[]
+  bands         Band[]
+  establishments Establishment[]
+  sentProposals Proposal[]     @relation("SentProposals")
+  receivedProposals Proposal[] @relation("ReceivedProposals")
+  notifications Notification[]
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Profile {
+  id        String      @id @default(cuid())
+  userId    String
+  type      ProfileType
+  entityId  String
+  role      ProfileRole @default(owner)
+  createdAt DateTime    @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  sentProposals     Proposal[] @relation("FromProfile")
+  receivedProposals Proposal[] @relation("ToProfile")
+
+  @@index([userId])
+  @@index([entityId, type])
+}
+
+model Musician {
+  id           String             @id @default(cuid())
+  userId       String
+  name         String
+  instruments  String[]
+  genres       String[]
+  experience   ExperienceLevel    @default(intermediario)
+  location     String
+  bio          String             @default("")
+  availability AvailabilityStatus @default(disponivel)
+  lookingFor   LookingForType     @default(ambos)
+  pricePerGig  String?
+  image        String?
+  rating       Float              @default(5)
+  totalGigs    Int                @default(0)
+  createdAt    DateTime           @default(now())
+  updatedAt    DateTime           @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([location])
+}
+
+model Band {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  genre       String
+  description String   @default("")
+  location    String
+  members     Int      @default(1)
+  priceRange  String   @default("")
+  image       String?
+  rating      Float    @default(5)
+  totalShows  Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([location])
+  @@index([genre])
+}
+
+model Establishment {
+  id            String   @id @default(cuid())
+  userId        String
+  name          String
+  type          String
+  description   String   @default("")
+  location      String
+  capacity      Int      @default(50)
+  averageBudget String   @default("")
+  image         String?
+  rating        Float    @default(5)
+  totalEvents   Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([location])
+}
+
+model Proposal {
+  id            String         @id @default(cuid())
+  fromProfileId String
+  toProfileId   String
+  fromUserId    String
+  toUserId      String
+  eventDate     DateTime
+  message       String
+  amount        Float
+  status        ProposalStatus @default(pending)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  fromProfile Profile @relation("FromProfile", fields: [fromProfileId], references: [id], onDelete: Cascade)
+  toProfile   Profile @relation("ToProfile", fields: [toProfileId], references: [id], onDelete: Cascade)
+  fromUser    User    @relation("SentProposals", fields: [fromUserId], references: [id], onDelete: Cascade)
+  toUser      User    @relation("ReceivedProposals", fields: [toUserId], references: [id], onDelete: Cascade)
+  notifications Notification[]
+
+  @@index([fromUserId])
+  @@index([toUserId])
+  @@index([status])
+}
+
+model Notification {
+  id         String           @id @default(cuid())
+  userId     String
+  type       NotificationType
+  title      String
+  body       String
+  read       Boolean          @default(false)
+  proposalId String?
+  createdAt  DateTime         @default(now())
+
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  proposal Proposal? @relation(fields: [proposalId], references: [id], onDelete: SetNull)
+
+  @@index([userId, read])
+  @@index([createdAt])
+}

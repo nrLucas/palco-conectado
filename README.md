@@ -1,72 +1,84 @@
-# 🎸 Palco Conectado
+# Palco Conectado
 
 **Conectando talentos a grandes palcos.**
 
-> O marketplace definitivo para bandas, músicos e estabelecimentos criarem experiências inesquecíveis.
+Marketplace para bandas, músicos e estabelecimentos negociarem shows.
 
-![Palco Conectado Hero](src/assets/hero-music.jpg)
+## Stack
 
----
+- **Next.js 16** + **React 19** (App Router)
+- **PostgreSQL** + **Prisma 6** (Vercel Postgres em produção)
+- **Auth.js v5** — credenciais + Google OAuth
+- **TanStack Query** + **shadcn/ui** + **Tailwind CSS 3**
 
-## 🚀 Sobre o Projeto
+## Funcionalidades
 
-**Palco Conectado** é uma plataforma moderna que revoluciona a forma como shows são negociados. Removemos a fricção entre artistas talentosos e estabelecimentos que buscam música ao vivo de qualidade.
+- Autenticação (email/senha e Google)
+- Multi-perfil (artista, banda, contratante)
+- CRUD de músicos, bandas e estabelecimentos
+- Propostas simples (enviar, aceitar, recusar, cancelar)
+- Notificações in-app (polling a cada 30s)
+- Seed com dados demo
 
-Com uma interface inspirada nos melhores marketplaces (como iFood e Airbnb), oferecemos uma experiência fluida, transparente e profissional para todos os envolvidos.
+## Setup local
 
-### ✨ Para Bandas e Músicos
-*   **Visibilidade Profissional**: Crie um perfil incrível com vídeos, faixas, agenda e rider técnico.
-*   **Encontre Gigs**: Busque bares, restaurantes e casas de show que combinam com seu estilo e cache.
-*   **Negociação Direta**: Envie propostas, negocie valores e feche contratos diretamente na plataforma.
-*   **Gestão de Agenda**: Mantenha suas datas organizadas e evite conflitos.
-
-### 🏢 Para Estabelecimentos
-*   **Curadoria Simplificada**: Filtre artistas por estilo, avaliação, preço e disponibilidade.
-*   **Contrate com Segurança**: Veja avaliações reais de outros contratantes.
-*   **Vagas Abertas**: Publique oportunidades e receba propostas apenas de artistas qualificados.
-*   **Calendário Integrado**: Gerencie sua programação musical de ponta a ponta.
-
----
-
-## 🛠️ Tecnologias de Ponta
-
-Este projeto foi construído com o que há de mais moderno no desenvolvimento web, garantindo performance, SEO e escalabilidade.
-
-*   **⚡ Next.js 14 (App Router)**: Framework React full-stack para máxima performance e SEO.
-*   **🎨 Tailwind CSS + Shadcn/ui**: Design system moderno, responsivo e acessível.
-*   **💎 TypeScript**: Código robusto e tipado para manutenibilidade a longo prazo.
-*   **🔒 Auth Context Avançado**: Sistema de autenticação multi-perfil (alterne entre Banda, Músico e Contratante com um clique).
-*   **📦 Lucide React**: Ícones vetoriais modernos e leves.
-
----
-
-## 📸 Funcionalidades Destaque
-
-### 1. Sistema Multi-Perfil
-Uma única conta, múltiplas personas. Você toca em uma banda de Rock na sexta, faz voz e violão no sábado e contrata bandas para seu bar no domingo? **Nós suportamos tudo isso sem precisar deslogar.**
-
-### 2. Matchmaking Inteligente
-Não perca tempo. Nosso sistema sugere artistas que se encaixam no perfil do seu estabelecimento e vice-versa, baseado em localização, estilo musical e faixa de preço.
-
-### 3. Wizard de Onboarding
-Comece com o pé direito. Nosso fluxo de cadastro guiado ajuda você a montar um perfil completo e atraente em minutos.
-
----
-
-## 🚀 Como Rodar Localmente
-
-Clone o projeto e instale as dependências:
+### 1. Dependências
 
 ```bash
-# Instalar dependências
-npm install
+npm install --legacy-peer-deps
+```
 
-# Rodar servidor de desenvolvimento
+### 2. Banco de dados
+
+```bash
+docker compose up -d
+cp .env.example .env.local
+```
+
+Edite `.env.local` com `AUTH_SECRET` e credenciais Google (opcional para dev).
+
+### 3. Migrar e popular
+
+```bash
+npm run db:push
+npm run db:seed
+```
+
+### 4. Rodar
+
+```bash
 npm run dev
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000) e comece o show! 🤘
+Acesse [http://localhost:3000](http://localhost:3000).
+
+## Contas demo (após seed)
+
+| Email | Senha |
+|-------|-------|
+| demo@palco.com | demo123 |
+| banda@palco.com | demo123 |
+| bar@palco.com | demo123 |
+| musico@palco.com | demo123 |
+
+## Deploy na Vercel
+
+1. Crie **Vercel Postgres** e link ao projeto
+2. Configure variáveis: `POSTGRES_URL`, `POSTGRES_URL_NON_POOLING`, `AUTH_SECRET`, `AUTH_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
+3. No Google Cloud Console, adicione redirect URI: `https://seu-dominio.vercel.app/api/auth/callback/google`
+4. Build command: `prisma generate && prisma migrate deploy && next build` (ou use `db:push` na primeira vez)
+5. Após deploy: `npm run db:seed` via Vercel CLI ou script manual
+
+## Scripts
+
+| Script | Descrição |
+|--------|-----------|
+| `npm run dev` | Servidor de desenvolvimento |
+| `npm run build` | Build de produção |
+| `npm run db:push` | Sincroniza schema com o banco |
+| `npm run db:migrate` | Cria/aplica migrations |
+| `npm run db:seed` | Popula dados demo |
 
 ---
 
-**Palco Conectado © 2026** — *Feito para quem vive de música.*
+**Palco Conectado © 2026**

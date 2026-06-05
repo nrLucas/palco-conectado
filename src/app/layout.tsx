@@ -7,7 +7,7 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PalcoMatch - Marketplace de Shows",
+  title: "Palco Conectado - Marketplace de Shows",
   description: "Conecte-se com bandas, músicos e estabelecimentos para shows inesquecíveis.",
 };
 

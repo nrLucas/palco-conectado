@@ -1,44 +1,20 @@
-import { useState, useCallback } from 'react';
-import { mockDataManager, Availability } from '@/lib/mockData';
+import { useState } from 'react';
 
-export const useCalendar = (bandId?: string) => {
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
-  const [availabilities, setAvailabilities] = useState<Availability[]>(() => 
-    mockDataManager.getAvailability()
-  );
+export function useCalendar() {
+  const [selectedDate, setSelectedDate] = useState<Date>();
+  const [availabilities] = useState<{ bandId: string; date: string; available: boolean }[]>([]);
 
-  const toggleAvailability = useCallback((date: Date, bandId: string) => {
+  const isAvailable = (date: Date, _bandId: string) => {
     const dateStr = date.toISOString().split('T')[0];
-    const existing = availabilities.find(a => a.bandId === bandId && a.date === dateStr);
-    
-    const newAvailability: Availability = {
-      id: existing?.id || `${bandId}-${dateStr}`,
-      bandId,
-      date: dateStr,
-      available: !existing?.available
-    };
-
-    mockDataManager.saveAvailability(newAvailability);
-    setAvailabilities(mockDataManager.getAvailability());
-  }, [availabilities]);
-
-  const isAvailable = useCallback((date: Date, bandId: string) => {
-    const dateStr = date.toISOString().split('T')[0];
-    const availability = availabilities.find(a => a.bandId === bandId && a.date === dateStr);
-    return availability?.available || false;
-  }, [availabilities]);
-
-  const getAvailableDates = useCallback((bandId: string) => {
-    return availabilities
-      .filter(a => a.bandId === bandId && a.available)
-      .map(a => new Date(a.date));
-  }, [availabilities]);
+    return availabilities.some(
+      (a) => a.bandId === _bandId && a.date === dateStr && a.available
+    );
+  };
 
   return {
     selectedDate,
     setSelectedDate,
-    toggleAvailability,
     isAvailable,
-    getAvailableDates
+    availabilities,
   };
-};
+}

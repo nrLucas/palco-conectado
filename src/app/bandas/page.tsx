@@ -5,16 +5,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { useBands } from "@/lib/hooks";
 import { useAuth } from "@/lib/auth";
 import { Heart, MapPin, Star } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
-
-const mock = [
-  { id: 1, name: "The Violet Cats", city: "São Paulo", priceFrom: 500, rating: 4.8, styles: ["Rock", "Indie"], members: 4 },
-  { id: 2, name: "Samba da Vila", city: "Rio de Janeiro", priceFrom: 400, rating: 4.6, styles: ["Samba", "Pagode"], members: 6 },
-  { id: 3, name: "Trio Jazz&Co", city: "Belo Horizonte", priceFrom: 700, rating: 4.9, styles: ["Jazz"], members: 3 },
-];
+import { useMemo, useState } from "react";
 
 export default function BandasPage() {
   const { openAuthModal, isAuthenticated } = useAuth();
@@ -23,31 +18,34 @@ export default function BandasPage() {
   const [city, setCity] = useState<string>("todas");
   const [minRating, setMinRating] = useState<number>(0);
 
-  const styles = Array.from(new Set(mock.flatMap((b) => b.styles))).sort();
-  const cities = Array.from(new Set(mock.map((b) => b.city))).sort();
-
-  const filtered = mock.filter((b) => {
-    const q = query.trim().toLowerCase();
-    const matchesQuery = q ? b.name.toLowerCase().includes(q) || b.city.toLowerCase().includes(q) : true;
-    const matchesStyle = style === "todas" ? true : b.styles.includes(style);
-    const matchesCity = city === "todas" ? true : b.city === city;
-    const matchesRating = b.rating >= minRating;
-    return matchesQuery && matchesStyle && matchesCity && matchesRating;
+  const { data: bands = [], isLoading } = useBands({
+    query: query || undefined,
+    location: city !== "todas" ? city : undefined,
+    genre: style !== "todas" ? style : undefined,
+    minRating: minRating || undefined,
   });
+
+  const styles = useMemo(
+    () => Array.from(new Set(bands.map((b) => b.genre))).sort(),
+    [bands]
+  );
+  const cities = useMemo(
+    () => Array.from(new Set(bands.map((b) => b.location))).sort(),
+    [bands]
+  );
 
   const handleAction = (action: string) => {
     if (!isAuthenticated) {
       openAuthModal('login');
       return;
     }
-    console.log(`Action: ${action}`);
   };
 
   return (
     <main className="container mx-auto py-10">
       <header className="mb-6">
         <h1 className="text-2xl font-bold">Encontre Bandas e Cantores</h1>
-        <p className="text-muted-foreground">Filtre por estilo, cidade, nome e nota mínima. Visual moderno tipo iFood.</p>
+        <p className="text-muted-foreground">Filtre por estilo, cidade, nome e nota mínima.</p>
       </header>
 
       <section className="mb-6 grid gap-3 md:grid-cols-4" aria-label="Filtros">
@@ -75,40 +73,61 @@ export default function BandasPage() {
         <Select value={String(minRating)} onValueChange={(v) => setMinRating(Number(v))}>
           <SelectTrigger aria-label="Nota mínima"><SelectValue placeholder="Nota mínima" /></SelectTrigger>
           <SelectContent>
-            {[0,3,4,4.5].map((n) => (
+            {[0, 3, 4, 4.5].map((n) => (
               <SelectItem key={n} value={String(n)}>{n === 0 ? "Qualquer nota" : `A partir de ${n}`}</SelectItem>
             ))}
           </SelectContent>
         </Select>
       </section>
 
-      <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-label="Lista de bandas">
-        {filtered.map((b) => (
-          <Card key={b.id} className="group relative overflow-hidden rounded-xl border border-primary/20 bg-gradient-to-b from-background/70 to-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-[var(--shadow-elegant)] hover:shadow-[var(--shadow-glow)] transition">
-            <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary to-primary/40" />
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
-                <span>{b.name}</span>
-                <Badge variant="secondary" className="inline-flex items-center gap-1"><Star className="h-4 w-4 text-primary" /> {b.rating}</Badge>
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-sm text-muted-foreground inline-flex items-center gap-1"><MapPin className="h-4 w-4" /> {b.city}</p>
-              <p className="mt-2 text-sm">Preço a partir de <strong>R$ {b.priceFrom}</strong> • <span className="text-muted-foreground">{b.members} integrantes</span></p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {b.styles.map((s) => (
-                  <span key={s} className="rounded bg-accent px-2 py-0.5 text-xs">{s}</span>
-                ))}
-              </div>
-            </CardContent>
-            <CardFooter className="flex gap-2 flex-wrap">
-              <Link href={`/banda/${b.id}`}><Button variant="secondary" className="hover-scale">Ver perfil</Button></Link>
-              <Button onClick={() => handleAction('enviar-proposta')} className="hover-scale">Enviar proposta</Button>
-              <Button variant="outline" onClick={() => handleAction('favoritar')} className="hover-scale"><Heart className="mr-2 h-4 w-4" /> Favoritar</Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </section>
+      {isLoading ? (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {[1, 2, 3].map((i) => (
+            <Card key={i} className="animate-pulse h-64 bg-muted/50" />
+          ))}
+        </div>
+      ) : (
+        <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-label="Lista de bandas">
+          {bands.length === 0 ? (
+            <p className="col-span-full text-center text-muted-foreground py-12">
+              Nenhuma banda encontrada.
+            </p>
+          ) : (
+            bands.map((b) => (
+              <Card key={b.id} className="group relative overflow-hidden rounded-xl border border-primary/20">
+                <CardHeader>
+                  <CardTitle className="flex items-center justify-between">
+                    <span>{b.name}</span>
+                    <Badge variant="secondary" className="inline-flex items-center gap-1">
+                      <Star className="h-4 w-4 text-primary" /> {b.rating}
+                    </Badge>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground inline-flex items-center gap-1">
+                    <MapPin className="h-4 w-4" /> {b.location}
+                  </p>
+                  <p className="mt-2 text-sm">
+                    {b.priceRange || "Consulte"} • {b.members} integrantes
+                  </p>
+                  <div className="mt-3">
+                    <span className="rounded bg-accent px-2 py-0.5 text-xs">{b.genre}</span>
+                  </div>
+                </CardContent>
+                <CardFooter className="flex gap-2 flex-wrap">
+                  <Link href={`/banda/${b.id}`}>
+                    <Button variant="secondary">Ver perfil</Button>
+                  </Link>
+                  <Button onClick={() => handleAction('enviar-proposta')}>Enviar proposta</Button>
+                  <Button variant="outline" onClick={() => handleAction('favoritar')}>
+                    <Heart className="mr-2 h-4 w-4" /> Favoritar
+                  </Button>
+                </CardFooter>
+              </Card>
+            ))
+          )}
+        </section>
+      )}
     </main>
   );
 }

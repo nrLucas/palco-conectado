@@ -3,60 +3,66 @@
 import HeroImage from "@/assets/hero-music.jpg";
 import { ProposalModal } from "@/components/proposals/ProposalModal";
 import { Button } from "@/components/ui/button";
-import { Calendar } from "@/components/ui/calendar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useCalendar } from "@/hooks/useCalendar";
+import { useBand } from "@/lib/hooks";
 import { useAuth } from "@/lib/auth";
-import { Play, Star } from "lucide-react";
+import { Star } from "lucide-react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function BandProfilePage({ params }: { params: { id: string } }) {
+export default function BandProfilePage() {
+  const params = useParams();
+  const id = params.id as string;
+  const { data: band, isLoading } = useBand(id);
   const { openAuthModal, isAuthenticated, canSendProposal, account } = useAuth();
   const router = useRouter();
   const [proposalModalOpen, setProposalModalOpen] = useState(false);
-  const { selectedDate, setSelectedDate, isAvailable } = useCalendar();
 
-  const handleAction = (action: string) => {
+  const handleSendProposal = () => {
     if (!isAuthenticated) {
       openAuthModal('login');
       return;
     }
-
-    if (action === 'enviar-proposta') {
-      const { allowed, reason } = canSendProposal();
-      if (!allowed) {
-        if (reason?.includes('upgrade')) {
-          router.push('/assinatura');
-        }
-        return;
-      }
-      setProposalModalOpen(true);
+    const { allowed, reason } = canSendProposal();
+    if (!allowed) {
+      if (reason?.includes('upgrade')) router.push('/assinatura');
+      return;
     }
+    setProposalModalOpen(true);
   };
+
+  if (isLoading) {
+    return (
+      <main className="container mx-auto py-10">
+        <div className="animate-pulse h-64 bg-muted rounded-lg" />
+      </main>
+    );
+  }
+
+  if (!band) {
+    return (
+      <main className="container mx-auto py-10">
+        <p className="text-muted-foreground">Banda não encontrada.</p>
+      </main>
+    );
+  }
 
   return (
     <main>
       <header className="relative h-56 w-full">
-        <Image 
-          src={HeroImage} 
-          alt="Capa da banda" 
-          fill
-          className="object-cover"
-        />
+        <Image src={HeroImage} alt="Capa da banda" fill className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
         <div className="container mx-auto absolute bottom-4 left-0 right-0 flex items-end justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-white relative z-10">The Violet Cats</h1>
-            <p className="text-white/80 relative z-10">Rock/Indie • São Paulo • a partir de R$ 600</p>
+            <h1 className="text-2xl font-bold text-white relative z-10">{band.name}</h1>
+            <p className="text-white/80 relative z-10">
+              {band.genre} • {band.location} • {band.priceRange || "Consulte valores"}
+            </p>
           </div>
           <div className="flex gap-2 relative z-10">
-            <Button onClick={() => handleAction('enviar-proposta')}>
-              Enviar proposta
-            </Button>
-            <Button variant="outline" onClick={() => handleAction('abrir-chat')}>Abrir chat</Button>
+            <Button onClick={handleSendProposal}>Enviar proposta</Button>
           </div>
         </div>
       </header>
@@ -65,85 +71,26 @@ export default function BandProfilePage({ params }: { params: { id: string } }) 
         <Tabs defaultValue="sobre">
           <TabsList>
             <TabsTrigger value="sobre">Sobre</TabsTrigger>
-            <TabsTrigger value="integrantes">Integrantes</TabsTrigger>
-            <TabsTrigger value="portfolio">Vídeos & Faixas</TabsTrigger>
             <TabsTrigger value="precos">Preços</TabsTrigger>
-            <TabsTrigger value="agenda">Agenda & Disponibilidade</TabsTrigger>
-            <TabsTrigger value="avaliacoes">Avaliações por noite (23)</TabsTrigger>
+            <TabsTrigger value="avaliacoes">Avaliações</TabsTrigger>
           </TabsList>
-
-
           <TabsContent value="sobre" className="mt-4">
             <Card>
               <CardContent className="pt-6 space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  Banda de rock alternativo com influências de indie e pop. Atuação em eventos corporativos,
-                  bares e festivais. Palco completo, repertório versátil e presença marcante.
-                </p>
+                <p className="text-sm text-muted-foreground">{band.description || "Sem descrição."}</p>
                 <div className="grid gap-4 sm:grid-cols-3">
                   <div>
                     <h3 className="text-sm font-medium">Cidade-base</h3>
-                    <p className="text-sm">São Paulo - SP</p>
+                    <p className="text-sm">{band.location}</p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium">Estilos</h3>
-                    <p className="text-sm">Rock, Indie, Pop</p>
+                    <h3 className="text-sm font-medium">Estilo</h3>
+                    <p className="text-sm">{band.genre}</p>
                   </div>
                   <div>
-                    <h3 className="text-sm font-medium">Links</h3>
-                    <div className="flex flex-wrap gap-3">
-                      <a href="#" className="story-link text-sm" aria-label="Instagram">Instagram</a>
-                      <a href="#" className="story-link text-sm" aria-label="Spotify">Spotify</a>
-                      <a href="#" className="story-link text-sm" aria-label="YouTube">YouTube</a>
-                    </div>
+                    <h3 className="text-sm font-medium">Integrantes</h3>
+                    <p className="text-sm">{band.members}</p>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          <TabsContent value="integrantes" className="mt-4">
-            <Card>
-              <CardContent className="pt-6">
-                <ul className="grid gap-3 sm:grid-cols-2">
-                  <li className="rounded-lg border p-4">
-                    <p className="font-medium">Ana Ribeiro</p>
-                    <p className="text-sm text-muted-foreground">Voz</p>
-                  </li>
-                  <li className="rounded-lg border p-4">
-                    <p className="font-medium">Lucas Prado</p>
-                    <p className="text-sm text-muted-foreground">Guitarra</p>
-                  </li>
-                  <li className="rounded-lg border p-4">
-                    <p className="font-medium">Marina Lopes</p>
-                    <p className="text-sm text-muted-foreground">Baixo</p>
-                  </li>
-                  <li className="rounded-lg border p-4">
-                    <p className="font-medium">Diego Martins</p>
-                    <p className="text-sm text-muted-foreground">Bateria</p>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          <TabsContent value="portfolio" className="mt-4">
-            <Card>
-              <CardContent className="pt-6 space-y-6">
-                <div>
-                  <h3 className="font-medium mb-2">Melhores faixas</h3>
-                  <ul className="grid gap-3 sm:grid-cols-2">
-                    <li className="rounded-lg border p-3 flex items-center justify-between">
-                      <span>Midnight Drive</span>
-                      <Button variant="outline" size="sm" aria-label="Ouvir Midnight Drive"><Play className="h-4 w-4 mr-1" />Ouvir</Button>
-                    </li>
-                    <li className="rounded-lg border p-3 flex items-center justify-between">
-                      <span>Violet Skies</span>
-                      <Button variant="outline" size="sm" aria-label="Ouvir Violet Skies"><Play className="h-4 w-4 mr-1" />Ouvir</Button>
-                    </li>
-                    <li className="rounded-lg border p-3 flex items-center justify-between">
-                      <span>City Lights</span>
-                      <Button variant="outline" size="sm" aria-label="Ouvir City Lights"><Play className="h-4 w-4 mr-1" />Ouvir</Button>
-                    </li>
-                  </ul>
                 </div>
               </CardContent>
             </Card>
@@ -151,92 +98,30 @@ export default function BandProfilePage({ params }: { params: { id: string } }) 
           <TabsContent value="precos" className="mt-4">
             <Card>
               <CardContent className="pt-6">
-                <div className="grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-lg border p-4">
-                    <p className="text-sm text-muted-foreground">A partir de</p>
-                    <p className="text-2xl font-bold">R$ 600</p>
-                  </div>
-                  <div className="rounded-lg border p-4">
-                    <p className="text-sm text-muted-foreground">Show completo (2h)</p>
-                    <p className="text-2xl font-bold">R$ 1.200</p>
-                  </div>
-                  <div className="rounded-lg border p-4">
-                    <p className="text-sm text-muted-foreground">Eventos corporativos</p>
-                    <p className="text-2xl font-bold">R$ 2.500</p>
-                  </div>
-                </div>
-                <p className="mt-3 text-sm text-muted-foreground">
-                  Valores variam conforme duração, deslocamento e rider técnico.
-                </p>
-              </CardContent>
-            </Card>
-          </TabsContent>
-          <TabsContent value="agenda" className="mt-4">
-            <Card>
-              <CardContent className="pt-6 grid gap-6 md:grid-cols-2">
-                 <div>
-                   <Calendar 
-                     mode="single" 
-                     selected={selectedDate} 
-                     onSelect={setSelectedDate}
-                     modifiers={{
-                       available: (date) => isAvailable(date, "band-1")
-                     }}
-                     modifiersStyles={{
-                       available: { backgroundColor: 'hsl(var(--primary))', color: 'white' }
-                     }}
-                   />
-                 </div>
-                <div>
-                  <h3 className="font-medium mb-2">Próximas disponibilidades</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center justify-between rounded border p-3">
-                      <span>Sex • 20 Set</span><span className="text-sm text-muted-foreground">19h–23h</span>
-                    </li>
-                    <li className="flex items-center justify-between rounded border p-3">
-                      <span>Sáb • 05 Out</span><span className="text-sm text-muted-foreground">20h–00h</span>
-                    </li>
-                    <li className="flex items-center justify-between rounded border p-3">
-                      <span>Sex • 18 Out</span><span className="text-sm text-muted-foreground">19h–23h</span>
-                    </li>
-                  </ul>
-                </div>
+                <p className="text-2xl font-bold">{band.priceRange || "Sob consulta"}</p>
               </CardContent>
             </Card>
           </TabsContent>
           <TabsContent value="avaliacoes" className="mt-4">
             <Card>
-              <CardContent className="pt-6 space-y-4">
-                <div className="flex items-center gap-2">
-                  <Star className="h-5 w-5 text-primary" />
-                  <p className="font-medium">Nota geral 4.8 (23 avaliações)</p>
-                </div>
-                <ul className="space-y-3">
-                  <li className="rounded border p-4">
-                    <p className="text-sm text-muted-foreground">Noite 12/08/2025 • Bar Aurora</p>
-                    <div className="mt-1 flex items-center gap-1">
-                      <Star className="h-4 w-4 text-primary" /><Star className="h-4 w-4 text-primary" /><Star className="h-4 w-4 text-primary" /><Star className="h-4 w-4 text-primary" /><Star className="h-4 w-4 text-primary" />
-                    </div>
-                    <p className="mt-2 text-sm">Energia altíssima, público engajado e repertório muito bom.</p>
-                  </li>
-                </ul>
+              <CardContent className="pt-6 flex items-center gap-2">
+                <Star className="h-5 w-5 text-primary" />
+                <p className="font-medium">Nota {band.rating} • {band.totalShows} shows</p>
               </CardContent>
             </Card>
           </TabsContent>
-          
         </Tabs>
       </section>
 
-      <ProposalModal
-        open={proposalModalOpen}
-        onOpenChange={setProposalModalOpen}
-        targetId="establishment-1"
-        targetName="Bar Aurora"
-        currentUserId={account?.id || ""}
-        onProposalSent={() => {
-          window.location.reload();
-        }}
-      />
+      {band.profileId && (
+        <ProposalModal
+          open={proposalModalOpen}
+          onOpenChange={setProposalModalOpen}
+          toProfileId={band.profileId}
+          targetName={band.name}
+          onProposalSent={() => setProposalModalOpen(false)}
+        />
+      )}
     </main>
   );
 }

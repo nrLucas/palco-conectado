@@ -20,9 +20,9 @@ import {
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
+import { createProfile } from '@/lib/api/auth';
 import { useAuth } from '@/lib/auth';
-import { storage } from '@/lib/storage';
-import type { Band, Establishment, Musician, ProfileType } from '@/lib/types';
+import type { ProfileType } from '@/lib/types';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
@@ -114,7 +114,7 @@ const ROLE_OPTIONS = [
 // =============================================================================
 
 export function OnboardingWizard() {
-  const { account, needsOnboarding, addProfile, completeOnboarding } = useAuth();
+  const { account, needsOnboarding, completeOnboarding } = useAuth();
   const [step, setStep] = useState<'role' | 'form' | 'complete'>('role');
   const [selectedRole, setSelectedRole] = useState<ProfileType | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -175,29 +175,29 @@ export function OnboardingWizard() {
     setIsSubmitting(true);
 
     try {
-      const musician: Musician = {
-        id: `musician-${Date.now()}`,
-        userId: account.id,
-        name: data.name,
-        instruments: data.instruments.split(',').map(i => i.trim()),
-        genres: data.genres.split(',').map(g => g.trim()),
-        experience: data.experience,
-        location: data.location,
-        bio: data.bio || '',
-        availability: data.availability,
-        lookingFor: data.lookingFor,
-        rating: 5.0,
-        totalGigs: 0,
-        createdAt: new Date().toISOString(),
-      };
-
-      storage.saveMusician(musician);
-      addProfile('artista_independente', musician.id, 'owner');
+      await createProfile({
+        type: 'artista_independente',
+        musician: {
+          name: data.name,
+          instruments: data.instruments.split(',').map((i) => i.trim()),
+          genres: data.genres.split(',').map((g) => g.trim()),
+          experience: data.experience,
+          location: data.location,
+          bio: data.bio || '',
+          availability: data.availability,
+          lookingFor: data.lookingFor,
+        },
+      });
       setStep('complete');
-
       toast({
         title: 'Perfil criado!',
         description: 'Seu perfil de artista foi criado com sucesso.',
+      });
+    } catch {
+      toast({
+        title: 'Erro',
+        description: 'Não foi possível criar o perfil',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
@@ -209,27 +209,27 @@ export function OnboardingWizard() {
     setIsSubmitting(true);
 
     try {
-      const band: Band = {
-        id: `band-${Date.now()}`,
-        userId: account.id,
-        name: data.name,
-        genre: data.genre,
-        description: data.description || '',
-        location: data.location,
-        members: data.members,
-        priceRange: data.priceRange || '',
-        rating: 5.0,
-        totalShows: 0,
-        createdAt: new Date().toISOString(),
-      };
-
-      storage.saveBand(band);
-      addProfile('banda', band.id, 'owner');
+      await createProfile({
+        type: 'banda',
+        band: {
+          name: data.name,
+          genre: data.genre,
+          description: data.description || '',
+          location: data.location,
+          members: data.members,
+          priceRange: data.priceRange || '',
+        },
+      });
       setStep('complete');
-
       toast({
         title: 'Banda criada!',
         description: 'O perfil da sua banda foi criado com sucesso.',
+      });
+    } catch {
+      toast({
+        title: 'Erro',
+        description: 'Não foi possível criar a banda',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
@@ -241,27 +241,27 @@ export function OnboardingWizard() {
     setIsSubmitting(true);
 
     try {
-      const establishment: Establishment = {
-        id: `est-${Date.now()}`,
-        userId: account.id,
-        name: data.name,
-        type: data.type,
-        description: data.description || '',
-        location: data.location,
-        capacity: data.capacity,
-        averageBudget: data.averageBudget || '',
-        rating: 5.0,
-        totalEvents: 0,
-        createdAt: new Date().toISOString(),
-      };
-
-      storage.saveEstablishment(establishment);
-      addProfile('contratante', establishment.id, 'owner');
+      await createProfile({
+        type: 'contratante',
+        establishment: {
+          name: data.name,
+          type: data.type,
+          description: data.description || '',
+          location: data.location,
+          capacity: data.capacity,
+          averageBudget: data.averageBudget || '',
+        },
+      });
       setStep('complete');
-
       toast({
         title: 'Estabelecimento criado!',
         description: 'O perfil do seu estabelecimento foi criado com sucesso.',
+      });
+    } catch {
+      toast({
+        title: 'Erro',
+        description: 'Não foi possível criar o estabelecimento',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
@@ -274,7 +274,7 @@ export function OnboardingWizard() {
 
   return (
     <Dialog open={needsOnboarding} onOpenChange={() => {}}>
-      <DialogContent className="sm:max-w-lg md:max-w-xl overflow-hidden" hideCloseButton>
+      <DialogContent className="sm:max-w-lg md:max-w-xl overflow-hidden">
         {/* Gradient Top Border */}
         <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-primary/80 to-primary/40" />
 
