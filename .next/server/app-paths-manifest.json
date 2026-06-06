@@ -2,7 +2,9 @@
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/auth/forgot-password/route": "app/api/auth/forgot-password/route.js",
   "/api/auth/register/route": "app/api/auth/register/route.js",
+  "/api/auth/reset-password/route": "app/api/auth/reset-password/route.js",
   "/api/bands/[id]/route": "app/api/bands/[id]/route.js",
   "/api/bands/route": "app/api/bands/route.js",
   "/api/establishments/[id]/route": "app/api/establishments/[id]/route.js",
@@ -28,5 +30,6 @@
   "/musicos/page": "app/musicos/page.js",
   "/page": "app/page.js",
   "/profile/page": "app/profile/page.js",
-  "/propostas/page": "app/propostas/page.js"
+  "/propostas/page": "app/propostas/page.js",
+  "/redefinir-senha/page": "app/redefinir-senha/page.js"
 }

@@ -14,6 +14,7 @@ Marketplace para bandas, músicos e estabelecimentos negociarem shows.
 ## Funcionalidades
 
 - Autenticação (email/senha e Google)
+- Recuperação de senha por e-mail (Resend em produção; link no terminal em dev)
 - Multi-perfil (artista, banda, contratante)
 - CRUD de músicos, bandas e estabelecimentos
 - Propostas simples (enviar, aceitar, recusar, cancelar)
@@ -36,6 +37,8 @@ cp .env.example .env.local
 ```
 
 Edite `.env.local` com `AUTH_SECRET` e credenciais Google (opcional para dev).
+
+Para **recuperação de senha** em produção, configure também `RESEND_API_KEY` e `EMAIL_FROM` (domínio verificado no [Resend](https://resend.com)). Em desenvolvimento, sem essas variáveis o link de reset aparece no terminal do servidor.
 
 ### 3. Migrar e popular
 
@@ -64,7 +67,7 @@ Acesse [http://localhost:3000](http://localhost:3000).
 ## Deploy na Vercel
 
 1. Crie **Vercel Postgres** e link ao projeto
-2. Configure variáveis: `DATABASE_URL`, `DATABASE_URL_UNPOOLED`, `AUTH_SECRET`, `AUTH_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
+2. Configure variáveis: `DATABASE_URL`, `DATABASE_URL_UNPOOLED`, `AUTH_SECRET`, `AUTH_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `RESEND_API_KEY`, `EMAIL_FROM`
 3. No Google Cloud Console, adicione redirect URI: `https://seu-dominio.vercel.app/api/auth/callback/google`
 4. Build command: `prisma generate && prisma migrate deploy && next build` (ou use `db:push` na primeira vez)
 5. Após deploy: `npm run db:seed` via Vercel CLI ou script manual

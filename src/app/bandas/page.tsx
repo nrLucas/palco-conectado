@@ -1,15 +1,16 @@
 'use client';
 
 import { FilterSelect } from '@/components/shared/FilterSelect';
+import { ProposalModal } from '@/components/proposals/ProposalModal';
+import { useProposalAction } from '@/components/proposals/useProposalAction';
 import { Button, Card, Chip, Input, Label, TextField } from '@heroui/react';
 import { useBands } from '@/lib/hooks';
-import { useAuth } from '@/lib/auth';
 import { Heart, MapPin, Star } from 'lucide-react';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
 export default function BandasPage() {
-  const { openAuthModal, isAuthenticated } = useAuth();
+  const { openProposal, modalOpen, setModalOpen, target } = useProposalAction();
   const [query, setQuery] = useState('');
   const [style, setStyle] = useState<string>('todas');
   const [city, setCity] = useState<string>('todas');
@@ -24,16 +25,12 @@ export default function BandasPage() {
 
   const styles = useMemo(
     () => Array.from(new Set(bands.map((b) => b.genre))).sort(),
-    [bands]
+    [bands],
   );
   const cities = useMemo(
     () => Array.from(new Set(bands.map((b) => b.location))).sort(),
-    [bands]
+    [bands],
   );
-
-  const handleAction = () => {
-    if (!isAuthenticated) openAuthModal('login');
-  };
 
   return (
     <main className="container mx-auto px-4 py-10">
@@ -93,7 +90,10 @@ export default function BandasPage() {
             <p className="col-span-full text-center text-muted py-12">Nenhuma banda encontrada.</p>
           ) : (
             bands.map((b) => (
-              <Card key={b.id} className="border-accent/15 shadow-surface hover:shadow-overlay transition-shadow">
+              <Card
+                key={b.id}
+                className="border-accent/15 shadow-surface hover:shadow-overlay transition-shadow"
+              >
                 <Card.Header>
                   <Card.Title className="flex items-center justify-between text-lg">
                     <span>{b.name}</span>
@@ -117,8 +117,15 @@ export default function BandasPage() {
                   <Link href={`/banda/${b.id}`}>
                     <Button variant="secondary">Ver perfil</Button>
                   </Link>
-                  <Button onPress={handleAction}>Enviar proposta</Button>
-                  <Button variant="outline" onPress={handleAction}>
+                  <Button
+                    isDisabled={!b.profileId}
+                    onPress={() =>
+                      openProposal({ profileId: b.profileId, targetName: b.name })
+                    }
+                  >
+                    Enviar proposta
+                  </Button>
+                  <Button variant="outline" isDisabled>
                     <Heart className="mr-2 h-4 w-4" /> Favoritar
                   </Button>
                 </Card.Footer>
@@ -126,6 +133,16 @@ export default function BandasPage() {
             ))
           )}
         </section>
+      )}
+
+      {target && (
+        <ProposalModal
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+          toProfileId={target.toProfileId}
+          targetName={target.targetName}
+          onProposalSent={() => setModalOpen(false)}
+        />
       )}
     </main>
   );

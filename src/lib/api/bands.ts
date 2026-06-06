@@ -13,7 +13,9 @@ export function fetchBands(params?: {
   if (params?.genre) search.set("genre", params.genre);
   if (params?.minRating) search.set("minRating", String(params.minRating));
   const qs = search.toString();
-  return apiFetch<Band[]>(`/api/bands${qs ? `?${qs}` : ""}`);
+  return apiFetch<(Band & { profileId?: string | null })[]>(
+    `/api/bands${qs ? `?${qs}` : ""}`,
+  );
 }
 
 export function fetchBand(id: string) {

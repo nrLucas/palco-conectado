@@ -1,22 +1,21 @@
 'use client';
 
+import { StatefulButton } from '@/components/aceternity/stateful-button';
 import { EventDatePicker } from '@/components/shared/EventDatePicker';
 import {
-  Button,
+  FieldError,
   Input,
   Label,
   Modal,
   TextArea,
   TextField,
 } from '@heroui/react';
-import { toast } from '@/hooks/use-toast';
 import { createProposal } from '@/lib/api/proposals';
 import { useAuth } from '@/lib/auth';
 import type { DateValue } from '@internationalized/date';
 import { getLocalTimeZone } from '@internationalized/date';
 import { useQueryClient } from '@tanstack/react-query';
-import { Loader2 } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface ProposalModalProps {
   open: boolean;
@@ -38,54 +37,54 @@ export const ProposalModal = ({
   const [date, setDate] = useState<DateValue | null>(null);
   const [message, setMessage] = useState('');
   const [amount, setAmount] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<{
+    date?: string;
+    amount?: string;
+    message?: string;
+  }>({});
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!date || !message || !amount) {
-      toast({
-        title: 'Erro',
-        description: 'Preencha todos os campos obrigatórios',
-        variant: 'destructive',
-      });
-      return;
+  useEffect(() => {
+    if (!open) {
+      setFormError(null);
+      setFieldErrors({});
     }
+  }, [open]);
 
-    setIsSubmitting(true);
-    try {
-      const eventDate = date.toDate(getLocalTimeZone());
-
-      await createProposal({
-        toProfileId,
-        eventDate: eventDate.toISOString(),
-        message,
-        amount: parseFloat(amount),
-      });
-
-      toast({
-        title: 'Proposta enviada!',
-        description: `Sua proposta foi enviada para ${targetName}`,
-      });
-
-      await refreshAccount();
-      queryClient.invalidateQueries({ queryKey: ['notifications'] });
-      queryClient.invalidateQueries({ queryKey: ['proposals'] });
-
-      onProposalSent?.();
-      onOpenChange(false);
-      setDate(null);
-      setMessage('');
-      setAmount('');
-    } catch (error) {
-      toast({
-        title: 'Erro ao enviar proposta',
-        description: error instanceof Error ? error.message : 'Tente novamente',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsSubmitting(false);
+  const validate = () => {
+    const errors: typeof fieldErrors = {};
+    if (!date) errors.date = 'Informe a data do evento';
+    if (!amount.trim()) errors.amount = 'Informe o valor';
+    else if (Number.isNaN(parseFloat(amount)) || parseFloat(amount) <= 0) {
+      errors.amount = 'Valor inválido';
     }
+    if (!message.trim()) errors.message = 'Escreva uma mensagem';
+    setFieldErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const handleSubmit = async () => {
+    setFormError(null);
+    if (!validate() || !date) return;
+
+    const eventDate = date.toDate(getLocalTimeZone());
+
+    await createProposal({
+      toProfileId,
+      eventDate: eventDate.toISOString(),
+      message: message.trim(),
+      amount: parseFloat(amount),
+    });
+
+    await refreshAccount();
+    queryClient.invalidateQueries({ queryKey: ['notifications'] });
+    queryClient.invalidateQueries({ queryKey: ['proposals'] });
+
+    onProposalSent?.();
+    onOpenChange(false);
+    setDate(null);
+    setMessage('');
+    setAmount('');
   };
 
   return (
@@ -99,10 +98,21 @@ export const ProposalModal = ({
           </Modal.Header>
 
           <Modal.Body>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <EventDatePicker value={date} onChange={setDate} isRequired />
+            {formError && (
+              <p className="mb-4 rounded-lg border border-danger/30 bg-danger/10 px-3 py-2 text-sm text-danger">
+                {formError}
+              </p>
+            )}
 
-              <TextField isRequired>
+            <div className="space-y-4">
+              <div>
+                <EventDatePicker value={date} onChange={setDate} isRequired />
+                {fieldErrors.date && (
+                  <FieldError className="mt-1">{fieldErrors.date}</FieldError>
+                )}
+              </div>
+
+              <TextField isInvalid={!!fieldErrors.amount} isRequired>
                 <Label htmlFor="amount">Valor (R$)</Label>
                 <Input
                   id="amount"
@@ -113,9 +123,10 @@ export const ProposalModal = ({
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
                 />
+                {fieldErrors.amount && <FieldError>{fieldErrors.amount}</FieldError>}
               </TextField>
 
-              <TextField isRequired>
+              <TextField isInvalid={!!fieldErrors.message} isRequired>
                 <Label htmlFor="message">Mensagem</Label>
                 <TextArea
                   id="message"
@@ -124,19 +135,25 @@ export const ProposalModal = ({
                   onChange={(e) => setMessage(e.target.value)}
                   rows={4}
                 />
+                {fieldErrors.message && <FieldError>{fieldErrors.message}</FieldError>}
               </TextField>
 
-              <Button type="submit" className="button--hero w-full" isDisabled={isSubmitting}>
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Enviando...
-                  </>
-                ) : (
-                  'Enviar proposta'
-                )}
-              </Button>
-            </form>
+              <StatefulButton
+                type="button"
+                onClick={async () => {
+                  try {
+                    await handleSubmit();
+                  } catch (error) {
+                    setFormError(
+                      error instanceof Error ? error.message : 'Erro ao enviar proposta',
+                    );
+                    throw error;
+                  }
+                }}
+              >
+                Enviar proposta
+              </StatefulButton>
+            </div>
           </Modal.Body>
         </Modal.Dialog>
       </Modal.Container>

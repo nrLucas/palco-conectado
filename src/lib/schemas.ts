@@ -162,6 +162,20 @@ export const signupFormSchema = loginFormSchema.extend({
   path: ['confirmPassword'],
 });
 
+export const forgotPasswordSchema = z.object({
+  email: z.string().email('E-mail inválido'),
+});
+
+export const resetPasswordSchema = z.object({
+  email: z.string().email('E-mail inválido'),
+  token: z.string().min(1, 'Token inválido'),
+  password: z.string().min(6, 'Mínimo de 6 caracteres'),
+  confirmPassword: z.string(),
+}).refine((data) => data.password === data.confirmPassword, {
+  message: 'Senhas não conferem',
+  path: ['confirmPassword'],
+});
+
 export const musicianFormSchema = musicianSchema.omit({
   id: true,
   userId: true,

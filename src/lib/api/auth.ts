@@ -43,3 +43,21 @@ export function deleteProfile(id: string) {
     method: "DELETE",
   });
 }
+
+export function requestPasswordReset(email: string) {
+  return apiFetch<{ message: string }>("/api/auth/forgot-password", {
+    method: "POST",
+    body: JSON.stringify({ email }),
+  });
+}
+
+export function resetPassword(data: {
+  email: string;
+  token: string;
+  password: string;
+}) {
+  return apiFetch<{ message: string }>("/api/auth/reset-password", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+}

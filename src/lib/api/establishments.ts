@@ -13,8 +13,8 @@ export function fetchEstablishments(params?: {
   if (params?.type) search.set("type", params.type);
   if (params?.minRating) search.set("minRating", String(params.minRating));
   const qs = search.toString();
-  return apiFetch<Establishment[]>(
-    `/api/establishments${qs ? `?${qs}` : ""}`
+  return apiFetch<(Establishment & { profileId?: string | null })[]>(
+    `/api/establishments${qs ? `?${qs}` : ""}`,
   );
 }
 

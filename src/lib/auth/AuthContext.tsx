@@ -21,13 +21,18 @@ import {
   useState,
 } from 'react';
 
+interface AuthResult {
+  success: boolean;
+  error?: string;
+}
+
 interface AuthContextValue {
   account: UserAccount | null;
   session: null;
   isAuthenticated: boolean;
   isLoading: boolean;
-  login: (email: string, password: string) => Promise<boolean>;
-  signup: (email: string, password: string, name: string) => Promise<boolean>;
+  login: (email: string, password: string) => Promise<AuthResult>;
+  signup: (email: string, password: string, name: string) => Promise<AuthResult>;
   logout: () => void;
   activeProfile: UserProfile | null;
   activeEntity: Musician | Band | Establishment | null;
@@ -92,7 +97,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const activeEntity = (account?.activeEntity as unknown as Musician | Band | Establishment | null) ?? null;
   const needsOnboarding = isAuthenticated && profiles.length === 0;
 
-  const login = useCallback(async (email: string, password: string): Promise<boolean> => {
+  const login = useCallback(async (email: string, password: string): Promise<AuthResult> => {
     const result = await signIn('credentials', {
       email,
       password,
@@ -100,12 +105,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
 
     if (result?.error) {
-      toast({
-        title: 'Erro no login',
-        description: 'E-mail ou senha incorretos',
-        variant: 'destructive',
-      });
-      return false;
+      return { success: false, error: 'E-mail ou senha incorretos' };
     }
 
     setAuthModalOpen(false);
@@ -113,32 +113,30 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       title: 'Login realizado!',
       description: 'Bem-vindo(a) de volta',
     });
-    return true;
+    return { success: true };
   }, []);
 
   const signup = useCallback(
-    async (email: string, password: string, name: string): Promise<boolean> => {
+    async (email: string, password: string, name: string): Promise<AuthResult> => {
       try {
         await registerUser({ email, password, name });
-        const loggedIn = await login(email, password);
-        if (loggedIn) {
+        const loginResult = await login(email, password);
+        if (loginResult.success) {
           toast({
             title: 'Cadastro realizado!',
             description: `Bem-vindo(a), ${name}`,
           });
         }
-        return loggedIn;
+        return loginResult;
       } catch (error) {
-        toast({
-          title: 'Erro no cadastro',
-          description:
+        return {
+          success: false,
+          error:
             error instanceof Error ? error.message : 'Não foi possível criar a conta',
-          variant: 'destructive',
-        });
-        return false;
+        };
       }
     },
-    [login]
+    [login],
   );
 
   const logout = useCallback(() => {

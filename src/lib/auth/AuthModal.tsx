@@ -10,11 +10,24 @@ import {
   TextField,
 } from '@heroui/react';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { Building2, Guitar, Loader2, Lock, Mail, Music2, User } from 'lucide-react';
+import {
+  Building2,
+  Eye,
+  EyeOff,
+  Guitar,
+  Loader2,
+  Lock,
+  Mail,
+  Music2,
+  User,
+} from 'lucide-react';
 import { signIn } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+import { requestPasswordReset } from '@/lib/api/auth';
+import { ApiClientError } from '@/lib/api/client';
+import { forgotPasswordSchema } from '@/lib/schemas';
 import { useAuth } from './AuthContext';
 
 const loginSchema = z.object({
@@ -28,15 +41,71 @@ const signupSchema = loginSchema.extend({
 
 type LoginValues = z.infer<typeof loginSchema>;
 type SignupValues = z.infer<typeof signupSchema>;
+type ForgotValues = z.infer<typeof forgotPasswordSchema>;
+
+function PasswordInput({
+  id,
+  placeholder,
+  disabled,
+  showPassword,
+  onToggle,
+  ...registerProps
+}: {
+  id: string;
+  placeholder: string;
+  disabled?: boolean;
+  showPassword: boolean;
+  onToggle: () => void;
+} & React.InputHTMLAttributes<HTMLInputElement>) {
+  return (
+    <div className="relative w-full">
+      <Input
+        id={id}
+        type={showPassword ? 'text' : 'password'}
+        placeholder={placeholder}
+        disabled={disabled}
+        fullWidth
+        className="pr-11"
+        {...registerProps}
+      />
+      <button
+        type="button"
+        disabled={disabled}
+        className="absolute inset-y-0 right-0 flex items-center justify-center px-3 text-muted transition-colors hover:text-foreground disabled:opacity-50"
+        aria-label={showPassword ? 'Ocultar senha' : 'Mostrar senha'}
+        onClick={onToggle}
+      >
+        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+      </button>
+    </div>
+  );
+}
 
 export function AuthModal() {
   const { authModalOpen, authModalMode, closeAuthModal, login, signup } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [mode, setMode] = useState<'login' | 'signup'>(authModalMode);
+  const [view, setView] = useState<'auth' | 'forgot'>('auth');
+  const [showLoginPassword, setShowLoginPassword] = useState(false);
+  const [showSignupPassword, setShowSignupPassword] = useState(false);
+  const [loginError, setLoginError] = useState<string | null>(null);
+  const [signupError, setSignupError] = useState<string | null>(null);
+  const [forgotError, setForgotError] = useState<string | null>(null);
+  const [forgotSuccess, setForgotSuccess] = useState<string | null>(null);
 
   useEffect(() => {
     setMode(authModalMode);
   }, [authModalMode]);
+
+  useEffect(() => {
+    if (!authModalOpen) {
+      setLoginError(null);
+      setSignupError(null);
+      setForgotError(null);
+      setForgotSuccess(null);
+      setView('auth');
+    }
+  }, [authModalOpen]);
 
   const loginForm = useForm<LoginValues>({
     resolver: zodResolver(loginSchema),
@@ -48,21 +117,36 @@ export function AuthModal() {
     defaultValues: { email: '', password: '', name: '' },
   });
 
+  const forgotForm = useForm<ForgotValues>({
+    resolver: zodResolver(forgotPasswordSchema),
+    defaultValues: { email: '' },
+  });
+
   const handleLogin = async (data: LoginValues) => {
+    setLoginError(null);
     setIsSubmitting(true);
     try {
-      await login(data.email, data.password);
-      loginForm.reset();
+      const result = await login(data.email, data.password);
+      if (result.success) {
+        loginForm.reset();
+      } else {
+        setLoginError(result.error ?? 'Erro ao entrar');
+      }
     } finally {
       setIsSubmitting(false);
     }
   };
 
   const handleSignup = async (data: SignupValues) => {
+    setSignupError(null);
     setIsSubmitting(true);
     try {
-      await signup(data.email, data.password, data.name);
-      signupForm.reset();
+      const result = await signup(data.email, data.password, data.name);
+      if (result.success) {
+        signupForm.reset();
+      } else {
+        setSignupError(result.error ?? 'Erro ao criar conta');
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -70,6 +154,34 @@ export function AuthModal() {
 
   const handleGoogleSignIn = () => {
     signIn('google', { callbackUrl: '/' });
+  };
+
+  const handleForgot = async (data: ForgotValues) => {
+    setForgotError(null);
+    setForgotSuccess(null);
+    setIsSubmitting(true);
+    try {
+      const result = await requestPasswordReset(data.email);
+      setForgotSuccess(result.message);
+    } catch (error) {
+      setForgotError(
+        error instanceof ApiClientError
+          ? error.message
+          : 'Não foi possível enviar o link',
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const openForgotView = () => {
+    const email = loginForm.getValues('email');
+    if (email) {
+      forgotForm.setValue('email', email);
+    }
+    setForgotError(null);
+    setForgotSuccess(null);
+    setView('forgot');
   };
 
   return (
@@ -90,6 +202,70 @@ export function AuthModal() {
           </Modal.Header>
 
           <Modal.Body className="gap-4">
+            {view === 'forgot' ? (
+              <div className="space-y-4">
+                <div className="text-center">
+                  <h3 className="font-display text-lg font-semibold">Esqueci a senha</h3>
+                  <p className="text-muted mt-1 text-sm">
+                    Enviaremos um link para redefinir sua senha.
+                  </p>
+                </div>
+
+                <form onSubmit={forgotForm.handleSubmit(handleForgot)} className="space-y-4">
+                  {forgotError && (
+                    <p className="rounded-lg border border-danger/30 bg-danger/10 px-3 py-2 text-sm text-danger">
+                      {forgotError}
+                    </p>
+                  )}
+                  {forgotSuccess && (
+                    <p className="rounded-lg border border-success/30 bg-success/10 px-3 py-2 text-sm text-success">
+                      {forgotSuccess}
+                    </p>
+                  )}
+
+                  <TextField isInvalid={!!forgotForm.formState.errors.email} className="w-full">
+                    <Label className="flex items-center gap-2">
+                      <Mail className="h-4 w-4 text-muted" />
+                      E-mail
+                    </Label>
+                    <Input
+                      type="email"
+                      placeholder="voce@email.com"
+                      disabled={isSubmitting}
+                      fullWidth
+                      {...forgotForm.register('email')}
+                    />
+                    {forgotForm.formState.errors.email && (
+                      <FieldError>{forgotForm.formState.errors.email.message}</FieldError>
+                    )}
+                  </TextField>
+
+                  <Button
+                    type="submit"
+                    className="button--hero w-full"
+                    isDisabled={isSubmitting || !!forgotSuccess}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        Enviando...
+                      </>
+                    ) : (
+                      'Enviar link'
+                    )}
+                  </Button>
+                </form>
+
+                <button
+                  type="button"
+                  className="text-accent hover:underline w-full text-center text-sm"
+                  onClick={() => setView('auth')}
+                >
+                  Voltar ao login
+                </button>
+              </div>
+            ) : (
+              <>
             <Button variant="secondary" className="w-full" onPress={handleGoogleSignIn}>
               <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24" aria-hidden>
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4" />
@@ -111,7 +287,11 @@ export function AuthModal() {
 
             <Tabs
               selectedKey={mode}
-              onSelectionChange={(key) => setMode(String(key) as 'login' | 'signup')}
+              onSelectionChange={(key) => {
+                setMode(String(key) as 'login' | 'signup');
+                setLoginError(null);
+                setSignupError(null);
+              }}
               className="w-full"
             >
               <Tabs.ListContainer>
@@ -131,6 +311,12 @@ export function AuthModal() {
 
               <Tabs.Panel id="login" className="space-y-4 pt-4">
                 <form onSubmit={loginForm.handleSubmit(handleLogin)} className="space-y-4">
+                  {loginError && (
+                    <p className="rounded-lg border border-danger/30 bg-danger/10 px-3 py-2 text-sm text-danger">
+                      {loginError}
+                    </p>
+                  )}
+
                   <TextField isInvalid={!!loginForm.formState.errors.email}>
                     <Label className="flex items-center gap-2">
                       <Mail className="h-4 w-4 text-muted" />
@@ -147,21 +333,33 @@ export function AuthModal() {
                     )}
                   </TextField>
 
-                  <TextField isInvalid={!!loginForm.formState.errors.password}>
+                  <TextField isInvalid={!!loginForm.formState.errors.password} className="w-full">
                     <Label className="flex items-center gap-2">
                       <Lock className="h-4 w-4 text-muted" />
                       Senha
                     </Label>
-                    <Input
-                      type="password"
+                    <PasswordInput
+                      id="login-password"
                       placeholder="••••••"
                       disabled={isSubmitting}
+                      showPassword={showLoginPassword}
+                      onToggle={() => setShowLoginPassword((v) => !v)}
                       {...loginForm.register('password')}
                     />
                     {loginForm.formState.errors.password && (
                       <FieldError>{loginForm.formState.errors.password.message}</FieldError>
                     )}
                   </TextField>
+
+                  <div className="flex justify-end">
+                    <button
+                      type="button"
+                      className="text-accent hover:underline text-sm"
+                      onClick={openForgotView}
+                    >
+                      Esqueci a senha
+                    </button>
+                  </div>
 
                   <Button
                     type="submit"
@@ -187,6 +385,12 @@ export function AuthModal() {
 
               <Tabs.Panel id="signup" className="space-y-4 pt-4">
                 <form onSubmit={signupForm.handleSubmit(handleSignup)} className="space-y-4">
+                  {signupError && (
+                    <p className="rounded-lg border border-danger/30 bg-danger/10 px-3 py-2 text-sm text-danger">
+                      {signupError}
+                    </p>
+                  )}
+
                   <TextField isInvalid={!!signupForm.formState.errors.name}>
                     <Label>Nome completo</Label>
                     <Input
@@ -199,7 +403,7 @@ export function AuthModal() {
                     )}
                   </TextField>
 
-                  <TextField>
+                  <TextField isInvalid={!!signupForm.formState.errors.email}>
                     <Label>E-mail</Label>
                     <Input
                       type="email"
@@ -207,16 +411,24 @@ export function AuthModal() {
                       disabled={isSubmitting}
                       {...signupForm.register('email')}
                     />
+                    {signupForm.formState.errors.email && (
+                      <FieldError>{signupForm.formState.errors.email.message}</FieldError>
+                    )}
                   </TextField>
 
-                  <TextField>
+                  <TextField isInvalid={!!signupForm.formState.errors.password} className="w-full">
                     <Label>Senha</Label>
-                    <Input
-                      type="password"
+                    <PasswordInput
+                      id="signup-password"
                       placeholder="Mínimo 6 caracteres"
                       disabled={isSubmitting}
+                      showPassword={showSignupPassword}
+                      onToggle={() => setShowSignupPassword((v) => !v)}
                       {...signupForm.register('password')}
                     />
+                    {signupForm.formState.errors.password && (
+                      <FieldError>{signupForm.formState.errors.password.message}</FieldError>
+                    )}
                   </TextField>
 
                   <Button
@@ -256,6 +468,8 @@ export function AuthModal() {
                 </div>
               </Tabs.Panel>
             </Tabs>
+              </>
+            )}
           </Modal.Body>
         </Modal.Dialog>
       </Modal.Container>

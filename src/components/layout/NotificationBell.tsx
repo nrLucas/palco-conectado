@@ -43,18 +43,16 @@ export function NotificationBell() {
 
   return (
     <Dropdown>
-      <Dropdown.Trigger>
-        <Button variant="ghost" size="sm" aria-label="Notificações" className="relative min-w-10">
-          <Badge.Anchor>
-            <Bell className="h-5 w-5" />
-            {unreadCount > 0 && (
-              <Badge color="danger" size="sm">
-                {unreadCount > 9 ? '9+' : unreadCount}
-              </Badge>
-            )}
-          </Badge.Anchor>
-        </Button>
-      </Dropdown.Trigger>
+      <Button variant="ghost" size="sm" aria-label="Notificações" className="relative min-w-10">
+        <Badge.Anchor>
+          <Bell className="h-5 w-5" />
+          {unreadCount > 0 && (
+            <Badge color="danger" size="sm">
+              {unreadCount > 9 ? '9+' : unreadCount}
+            </Badge>
+          )}
+        </Badge.Anchor>
+      </Button>
 
       <Dropdown.Popover className="w-80">
         <Dropdown.Menu

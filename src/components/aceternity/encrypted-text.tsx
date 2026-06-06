@@ -31,13 +31,18 @@ export function EncryptedText({
   revealedClassName,
 }: EncryptedTextProps) {
   const reducedMotion = useReducedMotion();
-  const [display, setDisplay] = useState<string[]>(() =>
-    text.split("").map((ch) => (ch === " " ? " " : randomChar(charset))),
-  );
+  const [mounted, setMounted] = useState(false);
+  const [display, setDisplay] = useState<string[]>(() => text.split(""));
   const revealedRef = useRef(0);
-  const [revealedCount, setRevealedCount] = useState(reducedMotion ? text.length : 0);
+  const [revealedCount, setRevealedCount] = useState(text.length);
 
   useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!mounted) return;
+
     if (reducedMotion) {
       setDisplay(text.split(""));
       setRevealedCount(text.length);
@@ -77,13 +82,21 @@ export function EncryptedText({
       window.clearInterval(revealInterval);
       window.clearInterval(flipInterval);
     };
-  }, [text, revealDelayMs, flipDelayMs, charset, reducedMotion]);
+  }, [text, revealDelayMs, flipDelayMs, charset, reducedMotion, mounted]);
+
+  if (!mounted) {
+    return (
+      <span className={cn("inline-flex flex-wrap", className)} aria-label={text}>
+        {text}
+      </span>
+    );
+  }
 
   return (
     <span className={cn("inline-flex flex-wrap", className)} aria-label={text}>
       {display.map((char, i) => (
         <span
-          key={`${i}-${char}`}
+          key={i}
           className={cn(
             i < revealedCount ? revealedClassName : encryptedClassName,
           )}

@@ -4,12 +4,32 @@ import { Button, Card, Chip, Tabs } from '@heroui/react';
 import { toast } from '@/hooks/use-toast';
 import { updateProposalStatus, cancelProposal } from '@/lib/api/proposals';
 import { useProposals } from '@/lib/hooks';
+import { useAuth } from '@/lib/auth';
+import { getProfilePath, getProfileTypeLabel } from '@/lib/profile-links';
 import { useQueryClient } from '@tanstack/react-query';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import Link from 'next/link';
+
+function ProfileLink({
+  profile,
+}: {
+  profile?: { type: string; entityId: string };
+}) {
+  if (!profile) return <span className="text-muted">Perfil</span>;
+  const href = getProfilePath(profile.type, profile.entityId);
+  const label = getProfileTypeLabel(profile.type);
+  if (!href) return <span className="text-muted">{label}</span>;
+  return (
+    <Link href={href} className="text-accent hover:underline text-sm font-medium">
+      Ver {label.toLowerCase()}
+    </Link>
+  );
+}
 
 export default function PropostasPage() {
   const queryClient = useQueryClient();
+  const { refreshAccount } = useAuth();
   const { data: received = [], isLoading: loadingReceived } = useProposals('received');
   const { data: sent = [], isLoading: loadingSent } = useProposals('sent');
 
@@ -32,6 +52,7 @@ export default function PropostasPage() {
     try {
       await cancelProposal(id);
       queryClient.invalidateQueries({ queryKey: ['proposals'] });
+      await refreshAccount();
       toast({ title: 'Proposta cancelada' });
     } catch (error) {
       toast({
@@ -42,52 +63,64 @@ export default function PropostasPage() {
     }
   };
 
-  const renderProposal = (proposal: (typeof received)[0], mode: 'received' | 'sent') => (
-    <Card key={proposal.id} className="shadow-surface">
-      <Card.Header>
-        <Card.Title className="flex items-center justify-between text-base">
-          <span>R$ {proposal.amount.toFixed(2)}</span>
-          <Chip
-            variant="soft"
-            color={
-              proposal.status === 'pending'
-                ? 'default'
+  const renderProposal = (proposal: (typeof received)[0], mode: 'received' | 'sent') => {
+    const counterparty = mode === 'received' ? proposal.fromProfile : proposal.toProfile;
+
+    return (
+      <Card key={proposal.id} className="shadow-surface">
+        <Card.Header>
+          <Card.Title className="flex items-center justify-between text-base">
+            <span>R$ {proposal.amount.toFixed(2)}</span>
+            <Chip
+              variant="soft"
+              color={
+                proposal.status === 'pending'
+                  ? 'default'
+                  : proposal.status === 'accepted'
+                    ? 'success'
+                    : 'danger'
+              }
+            >
+              {proposal.status === 'pending'
+                ? 'Pendente'
                 : proposal.status === 'accepted'
-                  ? 'success'
-                  : 'danger'
-            }
-          >
-            {proposal.status === 'pending'
-              ? 'Pendente'
-              : proposal.status === 'accepted'
-                ? 'Aceita'
-                : 'Recusada'}
-          </Chip>
-        </Card.Title>
-      </Card.Header>
-      <Card.Content className="space-y-3">
-        <p className="text-sm text-muted">
-          {format(new Date(proposal.eventDate), 'PPP', { locale: ptBR })}
-        </p>
-        <p className="text-sm">{proposal.message}</p>
-        {mode === 'received' && proposal.status === 'pending' && (
-          <div className="flex gap-2">
-            <Button size="sm" onPress={() => handleStatus(proposal.id, 'accepted')}>
-              Aceitar
+                  ? 'Aceita'
+                  : 'Recusada'}
+            </Chip>
+          </Card.Title>
+          <Card.Description>
+            {mode === 'received' ? 'De: ' : 'Para: '}
+            <ProfileLink profile={counterparty} />
+          </Card.Description>
+        </Card.Header>
+        <Card.Content className="space-y-3">
+          <p className="text-sm text-muted">
+            {format(new Date(proposal.eventDate), 'PPP', { locale: ptBR })}
+          </p>
+          <p className="text-sm">{proposal.message}</p>
+          {mode === 'received' && proposal.status === 'pending' && (
+            <div className="flex gap-2">
+              <Button size="sm" onPress={() => handleStatus(proposal.id, 'accepted')}>
+                Aceitar
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                onPress={() => handleStatus(proposal.id, 'rejected')}
+              >
+                Recusar
+              </Button>
+            </div>
+          )}
+          {mode === 'sent' && proposal.status === 'pending' && (
+            <Button size="sm" variant="danger" onPress={() => handleCancel(proposal.id)}>
+              Cancelar
             </Button>
-            <Button size="sm" variant="outline" onPress={() => handleStatus(proposal.id, 'rejected')}>
-              Recusar
-            </Button>
-          </div>
-        )}
-        {mode === 'sent' && proposal.status === 'pending' && (
-          <Button size="sm" variant="danger" onPress={() => handleCancel(proposal.id)}>
-            Cancelar
-          </Button>
-        )}
-      </Card.Content>
-    </Card>
-  );
+          )}
+        </Card.Content>
+      </Card>
+    );
+  };
 
   return (
     <main className="container mx-auto px-4 py-10">
