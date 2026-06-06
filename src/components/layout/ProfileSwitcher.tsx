@@ -1,15 +1,13 @@
 'use client';
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+  Avatar,
+  Button,
+  Dropdown,
+  Header,
+  Label,
+  Separator,
+} from '@heroui/react';
 import { useAuth } from '@/lib/auth';
 import type { ProfileType, UserProfile } from '@/lib/types';
 import {
@@ -32,9 +30,9 @@ const profileIcons: Record<ProfileType, typeof Guitar> = {
 };
 
 const profileColors: Record<ProfileType, string> = {
-  artista_independente: 'text-violet-500',
-  banda: 'text-amber-500',
-  contratante: 'text-emerald-500',
+  artista_independente: 'text-[oklch(0.55_0.2_285)]',
+  banda: 'text-accent',
+  contratante: 'text-success',
 };
 
 function getProfileName(profile: UserProfile & { entityName?: string }): string {
@@ -65,11 +63,9 @@ export function ProfileSwitcher() {
 
   if (!isAuthenticated || !account) {
     return (
-      <div className="flex gap-2">
-        <Button variant="ghost" size="sm" onClick={() => openAuthModal('login')}>
-          Entrar
-        </Button>
-      </div>
+      <Button variant="ghost" size="sm" onPress={() => openAuthModal('login')}>
+        Entrar
+      </Button>
     );
   }
 
@@ -84,86 +80,89 @@ export function ProfileSwitcher() {
     ? getProfileName(activeProfile as UserProfile & { entityName?: string })
     : account.name;
   const CurrentIcon = activeProfile ? profileIcons[activeProfile.type] : User;
-  const currentColor = activeProfile ? profileColors[activeProfile.type] : 'text-muted-foreground';
+  const currentColor = activeProfile ? profileColors[activeProfile.type] : 'text-muted';
   const { allowed: canAddProfile, max, current } = canCreateProfile();
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+    <Dropdown>
+      <Dropdown.Trigger>
         <Button variant="ghost" className="gap-2 h-auto py-1.5 px-2">
           <Avatar className="h-8 w-8">
-            <AvatarImage src={account.avatarUrl} />
-            <AvatarFallback className="text-xs">{initials}</AvatarFallback>
+            <Avatar.Image src={account.avatarUrl} alt={account.name} />
+            <Avatar.Fallback className="text-xs">{initials}</Avatar.Fallback>
           </Avatar>
-          <div className="flex flex-col items-start">
+          <div className="hidden sm:flex flex-col items-start">
             <span className="text-sm font-medium">{currentProfileName}</span>
             {activeProfile && (
-              <span className="text-xs text-muted-foreground flex items-center gap-1">
+              <span className="text-xs text-muted flex items-center gap-1">
                 <CurrentIcon className={`h-3 w-3 ${currentColor}`} />
                 {getProfileTypeName(activeProfile.type)}
               </span>
             )}
           </div>
-          <ChevronDown className="h-4 w-4 text-muted-foreground" />
+          <ChevronDown className="h-4 w-4 text-muted" />
         </Button>
-      </DropdownMenuTrigger>
+      </Dropdown.Trigger>
 
-      <DropdownMenuContent align="end" className="w-64">
-        <DropdownMenuLabel className="font-normal">
-          <div className="flex flex-col">
-            <span className="font-medium">{account.name}</span>
-            <span className="text-xs text-muted-foreground">{account.email}</span>
-          </div>
-        </DropdownMenuLabel>
-
-        <DropdownMenuSeparator />
-
-        <DropdownMenuLabel className="text-xs text-muted-foreground">
-          Seus Perfis ({current}/{max})
-        </DropdownMenuLabel>
-
-        {profiles.map((profile) => {
-          const Icon = profileIcons[profile.type];
-          const color = profileColors[profile.type];
-          const isActive = activeProfile?.id === profile.id;
-
-          return (
-            <DropdownMenuItem
-              key={profile.id}
-              onClick={() => switchProfile(profile.id)}
-              className="cursor-pointer"
-            >
-              <Icon className={`h-4 w-4 mr-2 ${color}`} />
-              <span className="flex-1">
-                {getProfileName(profile as UserProfile & { entityName?: string })}
-              </span>
-              {isActive && <Check className="h-4 w-4 text-primary" />}
-            </DropdownMenuItem>
-          );
-        })}
-
-        {canAddProfile && (
-          <DropdownMenuItem onClick={() => router.push('/profile')} className="cursor-pointer">
-            <Plus className="h-4 w-4 mr-2" />
-            <span>Adicionar perfil</span>
-          </DropdownMenuItem>
-        )}
-
-        <DropdownMenuSeparator />
-
-        <DropdownMenuItem onClick={() => router.push('/profile')} className="cursor-pointer">
-          <Settings className="h-4 w-4 mr-2" />
-          <span>Configurações</span>
-        </DropdownMenuItem>
-
-        <DropdownMenuItem
-          onClick={logout}
-          className="cursor-pointer text-destructive focus:text-destructive"
+      <Dropdown.Popover className="w-64">
+        <Dropdown.Menu
+          onAction={(key) => {
+            const id = String(key);
+            if (id === 'settings') router.push('/profile');
+            else if (id === 'add-profile') router.push('/profile');
+            else if (id === 'logout') logout();
+            else switchProfile(id);
+          }}
         >
-          <LogOut className="h-4 w-4 mr-2" />
-          <span>Sair</span>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+          <Header className="px-2 py-1.5">
+            <div className="flex flex-col">
+              <span className="font-medium">{account.name}</span>
+              <span className="text-xs text-muted">{account.email}</span>
+            </div>
+          </Header>
+
+          <Separator />
+
+          <Header className="text-xs text-muted px-2">
+            Seus Perfis ({current}/{max})
+          </Header>
+
+          {profiles.map((profile) => {
+            const Icon = profileIcons[profile.type];
+            const color = profileColors[profile.type];
+            const isActive = activeProfile?.id === profile.id;
+
+            return (
+              <Dropdown.Item key={profile.id} id={profile.id} textValue={getProfileName(profile as UserProfile & { entityName?: string })}>
+                <Icon className={`h-4 w-4 ${color}`} />
+                <Label className="flex-1">
+                  {getProfileName(profile as UserProfile & { entityName?: string })}
+                </Label>
+                {isActive && <Check className="h-4 w-4 text-accent" />}
+              </Dropdown.Item>
+            );
+          })}
+
+          {canAddProfile && (
+            <Dropdown.Item id="add-profile" textValue="Adicionar perfil">
+              <Plus className="h-4 w-4" />
+              <Label>Adicionar perfil</Label>
+            </Dropdown.Item>
+          )}
+
+          <Separator />
+
+          <Dropdown.Item id="settings" textValue="Configurações">
+            <Settings className="h-4 w-4" />
+            <Label>Configurações</Label>
+          </Dropdown.Item>
+
+          <Dropdown.Item id="logout" textValue="Sair" variant="danger">
+            <LogOut className="h-4 w-4" />
+            <Label>Sair</Label>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown.Popover>
+    </Dropdown>
   );
 }

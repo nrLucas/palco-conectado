@@ -1,24 +1,23 @@
 'use client';
 
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+  Badge,
+  Button,
+  Dropdown,
+  Header,
+  Label,
+  Separator,
+} from '@heroui/react';
 import { fetchNotifications, markAllNotificationsRead, markNotificationRead } from '@/lib/api/notifications';
 import { useAuth } from '@/lib/auth';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Bell } from 'lucide-react';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export function NotificationBell() {
   const { isAuthenticated } = useAuth();
   const queryClient = useQueryClient();
+  const router = useRouter();
 
   const { data } = useQuery({
     queryKey: ['notifications'],
@@ -43,50 +42,70 @@ export function NotificationBell() {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="icon" className="relative">
-          <Bell className="h-5 w-5" />
-          {unreadCount > 0 && (
-            <Badge className="absolute -top-1 -right-1 h-5 min-w-5 px-1 text-xs">
-              {unreadCount > 9 ? '9+' : unreadCount}
-            </Badge>
-          )}
+    <Dropdown>
+      <Dropdown.Trigger>
+        <Button variant="ghost" size="sm" aria-label="Notificações" className="relative min-w-10">
+          <Badge.Anchor>
+            <Bell className="h-5 w-5" />
+            {unreadCount > 0 && (
+              <Badge color="danger" size="sm">
+                {unreadCount > 9 ? '9+' : unreadCount}
+              </Badge>
+            )}
+          </Badge.Anchor>
         </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-80">
-        <DropdownMenuLabel className="flex items-center justify-between">
-          <span>Notificações</span>
-          {unreadCount > 0 && (
-            <Button variant="ghost" size="sm" className="h-auto p-0 text-xs" onClick={handleMarkAllRead}>
-              Marcar todas
-            </Button>
+      </Dropdown.Trigger>
+
+      <Dropdown.Popover className="w-80">
+        <Dropdown.Menu
+          onAction={(key) => {
+            if (key === 'view-all') {
+              router.push('/propostas');
+              return;
+            }
+            if (typeof key === 'string' && key.startsWith('n-')) {
+              void handleMarkRead(key.slice(2));
+            }
+          }}
+        >
+          <Header className="flex items-center justify-between px-2 py-1.5">
+            <span className="font-medium">Notificações</span>
+            {unreadCount > 0 && (
+              <Button variant="ghost" size="sm" className="h-auto min-h-0 p-0 text-xs" onPress={handleMarkAllRead}>
+                Marcar todas
+              </Button>
+            )}
+          </Header>
+
+          <Separator />
+
+          {notifications.length === 0 ? (
+            <Header className="p-4 text-sm text-muted text-center font-normal">
+              Nenhuma notificação
+            </Header>
+          ) : (
+            notifications.slice(0, 8).map((n) => (
+              <Dropdown.Item
+                key={n.id}
+                id={`n-${n.id}`}
+                textValue={n.title}
+                className={!n.read ? 'bg-default/60' : undefined}
+              >
+                <div className="flex flex-col items-start gap-0.5 py-0.5">
+                  <span className="font-medium text-sm">{n.title}</span>
+                  <span className="text-xs text-muted">{n.body}</span>
+                </div>
+              </Dropdown.Item>
+            ))
           )}
-        </DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        {notifications.length === 0 ? (
-          <div className="p-4 text-sm text-muted-foreground text-center">
-            Nenhuma notificação
-          </div>
-        ) : (
-          notifications.slice(0, 8).map((n) => (
-            <DropdownMenuItem
-              key={n.id}
-              className={`flex flex-col items-start gap-1 cursor-pointer ${!n.read ? 'bg-muted/50' : ''}`}
-              onClick={() => !n.read && handleMarkRead(n.id)}
-            >
-              <span className="font-medium text-sm">{n.title}</span>
-              <span className="text-xs text-muted-foreground">{n.body}</span>
-            </DropdownMenuItem>
-          ))
-        )}
-        <DropdownMenuSeparator />
-        <DropdownMenuItem asChild>
-          <Link href="/propostas" className="w-full text-center text-sm">
-            Ver propostas
-          </Link>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+
+          <Separator />
+
+          <Dropdown.Item id="view-all" textValue="Ver propostas" href="/propostas">
+            <Label className="w-full text-center text-sm">Ver propostas</Label>
+          </Dropdown.Item>
+        </Dropdown.Menu>
+      </Dropdown.Popover>
+    </Dropdown>
   );
 }
