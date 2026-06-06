@@ -1,19 +1,22 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { CalendarIcon, Loader2 } from "lucide-react";
-import { format } from "date-fns";
-import { ptBR } from "date-fns/locale";
-import { cn } from "@/lib/utils";
-import { createProposal } from "@/lib/api/proposals";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/lib/auth";
-import { useQueryClient } from "@tanstack/react-query";
+'use client';
+
+import { EventDatePicker } from '@/components/shared/EventDatePicker';
+import {
+  Button,
+  Input,
+  Label,
+  Modal,
+  TextArea,
+  TextField,
+} from '@heroui/react';
+import { toast } from '@/hooks/use-toast';
+import { createProposal } from '@/lib/api/proposals';
+import { useAuth } from '@/lib/auth';
+import type { DateValue } from '@internationalized/date';
+import { getLocalTimeZone } from '@internationalized/date';
+import { useQueryClient } from '@tanstack/react-query';
+import { Loader2 } from 'lucide-react';
+import { useState } from 'react';
 
 interface ProposalModalProps {
   open: boolean;
@@ -32,9 +35,9 @@ export const ProposalModal = ({
 }: ProposalModalProps) => {
   const { refreshAccount } = useAuth();
   const queryClient = useQueryClient();
-  const [date, setDate] = useState<Date>();
-  const [message, setMessage] = useState("");
-  const [amount, setAmount] = useState("");
+  const [date, setDate] = useState<DateValue | null>(null);
+  const [message, setMessage] = useState('');
+  const [amount, setAmount] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -42,41 +45,43 @@ export const ProposalModal = ({
 
     if (!date || !message || !amount) {
       toast({
-        title: "Erro",
-        description: "Preencha todos os campos obrigatórios",
-        variant: "destructive",
+        title: 'Erro',
+        description: 'Preencha todos os campos obrigatórios',
+        variant: 'destructive',
       });
       return;
     }
 
     setIsSubmitting(true);
     try {
+      const eventDate = date.toDate(getLocalTimeZone());
+
       await createProposal({
         toProfileId,
-        eventDate: date.toISOString(),
+        eventDate: eventDate.toISOString(),
         message,
         amount: parseFloat(amount),
       });
 
       toast({
-        title: "Proposta enviada!",
+        title: 'Proposta enviada!',
         description: `Sua proposta foi enviada para ${targetName}`,
       });
 
       await refreshAccount();
-      queryClient.invalidateQueries({ queryKey: ["notifications"] });
-      queryClient.invalidateQueries({ queryKey: ["proposals"] });
+      queryClient.invalidateQueries({ queryKey: ['notifications'] });
+      queryClient.invalidateQueries({ queryKey: ['proposals'] });
 
       onProposalSent?.();
       onOpenChange(false);
-      setDate(undefined);
-      setMessage("");
-      setAmount("");
+      setDate(null);
+      setMessage('');
+      setAmount('');
     } catch (error) {
       toast({
-        title: "Erro ao enviar proposta",
-        description: error instanceof Error ? error.message : "Tente novamente",
-        variant: "destructive",
+        title: 'Erro ao enviar proposta',
+        description: error instanceof Error ? error.message : 'Tente novamente',
+        variant: 'destructive',
       });
     } finally {
       setIsSubmitting(false);
@@ -84,70 +89,57 @@ export const ProposalModal = ({
   };
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle>Enviar proposta</DialogTitle>
-          <DialogDescription>
-            Envie uma proposta para {targetName}
-          </DialogDescription>
-        </DialogHeader>
+    <Modal.Backdrop isOpen={open} onOpenChange={onOpenChange}>
+      <Modal.Container>
+        <Modal.Dialog className="sm:max-w-md">
+          <Modal.CloseTrigger />
+          <Modal.Header>
+            <Modal.Heading>Enviar proposta</Modal.Heading>
+            <p className="text-sm text-muted">Envie uma proposta para {targetName}</p>
+          </Modal.Header>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label>Data do evento</Label>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                  variant="outline"
-                  className={cn("w-full justify-start text-left font-normal", !date && "text-muted-foreground")}
-                >
-                  <CalendarIcon className="mr-2 h-4 w-4" />
-                  {date ? format(date, "PPP", { locale: ptBR }) : "Selecione a data"}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0">
-                <Calendar mode="single" selected={date} onSelect={setDate} initialFocus />
-              </PopoverContent>
-            </Popover>
-          </div>
+          <Modal.Body>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <EventDatePicker value={date} onChange={setDate} isRequired />
 
-          <div className="space-y-2">
-            <Label htmlFor="amount">Valor (R$)</Label>
-            <Input
-              id="amount"
-              type="number"
-              min="0"
-              step="0.01"
-              placeholder="600.00"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-            />
-          </div>
+              <TextField isRequired>
+                <Label htmlFor="amount">Valor (R$)</Label>
+                <Input
+                  id="amount"
+                  type="number"
+                  min="0"
+                  step="0.01"
+                  placeholder="600.00"
+                  value={amount}
+                  onChange={(e) => setAmount(e.target.value)}
+                />
+              </TextField>
 
-          <div className="space-y-2">
-            <Label htmlFor="message">Mensagem</Label>
-            <Textarea
-              id="message"
-              placeholder="Descreva o evento, horário, repertório desejado..."
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              rows={4}
-            />
-          </div>
+              <TextField isRequired>
+                <Label htmlFor="message">Mensagem</Label>
+                <TextArea
+                  id="message"
+                  placeholder="Descreva o evento, horário, repertório desejado..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  rows={4}
+                />
+              </TextField>
 
-          <Button type="submit" className="w-full" disabled={isSubmitting}>
-            {isSubmitting ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Enviando...
-              </>
-            ) : (
-              "Enviar proposta"
-            )}
-          </Button>
-        </form>
-      </DialogContent>
-    </Dialog>
+              <Button type="submit" className="button--hero w-full" isDisabled={isSubmitting}>
+                {isSubmitting ? (
+                  <>
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Enviando...
+                  </>
+                ) : (
+                  'Enviar proposta'
+                )}
+              </Button>
+            </form>
+          </Modal.Body>
+        </Modal.Dialog>
+      </Modal.Container>
+    </Modal.Backdrop>
   );
 };

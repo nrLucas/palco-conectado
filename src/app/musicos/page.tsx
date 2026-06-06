@@ -1,9 +1,6 @@
 'use client';
 
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
+import { Button, Card, Chip, Input, Label, TextField } from '@heroui/react';
 import { useSearchMusicians } from '@/lib/hooks';
 import { MapPin, Star } from 'lucide-react';
 import { useState } from 'react';
@@ -13,60 +10,64 @@ export default function MusiciansPage() {
   const { data: musicians, isLoading } = useSearchMusicians({ query });
 
   return (
-    <main className="container mx-auto py-10">
-      <header className="mb-6">
-        <h1 className="text-2xl font-bold">Encontre Músicos Independentes</h1>
-        <p className="text-muted-foreground">Bateristas, guitarristas e vocalistas prontos para sua banda ou gig.</p>
+    <main className="container mx-auto px-4 py-10">
+      <header className="mb-8">
+        <h1 className="font-display text-3xl font-bold">Encontre Músicos Independentes</h1>
+        <p className="text-muted mt-1">
+          Bateristas, guitarristas e vocalistas prontos para sua banda ou gig.
+        </p>
       </header>
 
-      <div className="mb-8">
-        <Input 
-          placeholder="Buscar por instrumento, nome ou estilo..." 
+      <TextField className="mb-8 max-w-md">
+        <Label className="sr-only">Buscar músicos</Label>
+        <Input
+          placeholder="Buscar por instrumento, nome ou estilo..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          className="max-w-md"
         />
-      </div>
+      </TextField>
 
       {isLoading ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[1,2,3].map(i => (
-            <Card key={i} className="animate-pulse h-64 bg-muted/50" />
+          {[1, 2, 3].map((i) => (
+            <div key={i} className="animate-pulse h-64 rounded-xl bg-default/50" />
           ))}
         </div>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {musicians.length === 0 ? (
-            <p className="col-span-full text-center text-muted-foreground py-12">
+            <p className="col-span-full text-center text-muted py-12">
               Nenhum músico encontrado. Experimente buscar por outro termo.
             </p>
           ) : (
             musicians.map((musician) => (
-              <Card key={musician.id} className="overflow-hidden hover:shadow-md transition">
-                <CardHeader>
-                  <CardTitle className="flex items-center justify-between">
+              <Card key={musician.id} className="shadow-surface hover:shadow-overlay transition-shadow">
+                <Card.Header>
+                  <Card.Title className="flex items-center justify-between text-lg">
                     <span>{musician.name}</span>
-                    <Badge variant="secondary" className="gap-1">
-                      <Star className="h-3 w-3 fill-primary text-primary" />
+                    <Chip variant="secondary" className="gap-1">
+                      <Star className="h-3 w-3 fill-accent text-accent" />
                       {musician.rating}
-                    </Badge>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
+                    </Chip>
+                  </Card.Title>
+                </Card.Header>
+                <Card.Content className="space-y-4">
                   <div className="flex flex-wrap gap-2">
-                    {musician.instruments.map(inst => (
-                      <Badge key={inst} variant="outline" className="bg-primary/5">{inst}</Badge>
+                    {musician.instruments.map((inst) => (
+                      <Chip key={inst} variant="secondary" size="sm">
+                        {inst}
+                      </Chip>
                     ))}
                   </div>
-                  <div className="text-sm text-muted-foreground flex items-center gap-2">
+                  <div className="text-sm text-muted flex items-center gap-2">
                     <MapPin className="h-4 w-4" />
                     {musician.location}
                   </div>
                   <p className="text-sm line-clamp-2">{musician.bio}</p>
-                </CardContent>
-                <CardFooter>
+                </Card.Content>
+                <Card.Footer>
                   <Button className="w-full">Ver Perfil</Button>
-                </CardFooter>
+                </Card.Footer>
               </Card>
             ))
           )}

@@ -1,24 +1,17 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-} from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select';
-import { Textarea } from '@/components/ui/textarea';
+  Button,
+  Card,
+  FieldError,
+  Input,
+  Label,
+  ListBox,
+  Modal,
+  Select,
+  TextArea,
+  TextField,
+} from '@heroui/react';
 import { toast } from '@/hooks/use-toast';
 import { createProfile } from '@/lib/api/auth';
 import { useAuth } from '@/lib/auth';
@@ -26,15 +19,16 @@ import type { ProfileType } from '@/lib/types';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
-    ArrowLeft,
-    ArrowRight,
-    Building2,
-    Check,
-    Guitar,
-    Loader2,
-    Music2
+  ArrowLeft,
+  ArrowRight,
+  Building2,
+  Check,
+  Guitar,
+  Loader2,
+  Music2,
 } from 'lucide-react';
 import { useState } from 'react';
+import type { Key } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
@@ -273,293 +267,385 @@ export function OnboardingWizard() {
   };
 
   return (
-    <Dialog open={needsOnboarding} onOpenChange={() => {}}>
-      <DialogContent className="sm:max-w-lg md:max-w-xl overflow-hidden">
-        {/* Gradient Top Border */}
-        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-primary/80 to-primary/40" />
+    <Modal.Backdrop isOpen={needsOnboarding} onOpenChange={() => {}}>
+      <Modal.Container>
+        <Modal.Dialog className="sm:max-w-lg md:max-w-xl overflow-hidden">
+          <div className="absolute inset-x-0 top-0 h-1 rounded-t-xl bg-gradient-to-r from-accent via-accent/80 to-accent/40" />
 
-        <AnimatePresence mode="wait">
-          {/* Step 1: Role Selection */}
-          {step === 'role' && (
-            <motion.div
-              key="role"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              transition={{ duration: 0.2 }}
-            >
-              <DialogHeader className="text-center pb-4">
-                <DialogTitle className="text-2xl">
-                  Bem-vindo(a), {account?.name}! 🎉
-                </DialogTitle>
-                <DialogDescription>
-                  Como você vai usar o PalcoMatch?
-                </DialogDescription>
-              </DialogHeader>
+          <AnimatePresence mode="wait">
+            {/* Step 1: Role Selection */}
+            {step === 'role' && (
+              <motion.div
+                key="role"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 20 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Modal.Header className="flex flex-col items-center text-center pb-4">
+                  <Modal.Heading className="text-2xl">
+                    Bem-vindo(a), {account?.name}! 🎉
+                  </Modal.Heading>
+                  <p className="text-sm text-muted mt-1">
+                    Como você vai usar o PalcoMatch?
+                  </p>
+                </Modal.Header>
 
-              <div className="grid gap-3 pt-2">
-                {ROLE_OPTIONS.map((role) => (
-                  <Card
-                    key={role.type}
-                    className={`cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg bg-gradient-to-br ${role.color} ${role.borderColor}`}
-                    onClick={() => handleRoleSelect(role.type)}
+                <Modal.Body>
+                  <div className="grid gap-3 pt-2">
+                    {ROLE_OPTIONS.map((role) => (
+                      <Button
+                        key={role.type}
+                        variant="ghost"
+                        className="h-auto w-full p-0"
+                        onPress={() => handleRoleSelect(role.type)}
+                      >
+                        <Card
+                          className={`w-full cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg bg-gradient-to-br ${role.color} ${role.borderColor}`}
+                        >
+                          <Card.Content className="flex items-center gap-4 p-4">
+                            <div className={`p-3 rounded-full bg-background/80 ${role.iconColor}`}>
+                              <role.icon className="h-6 w-6" />
+                            </div>
+                            <div className="flex-1 text-left">
+                              <h3 className="font-semibold">{role.title}</h3>
+                              <p className="text-sm text-muted">{role.description}</p>
+                            </div>
+                            <ArrowRight className="h-5 w-5 text-muted" />
+                          </Card.Content>
+                        </Card>
+                      </Button>
+                    ))}
+                  </div>
+
+                  <p className="text-xs text-muted text-center mt-4">
+                    Você poderá adicionar mais perfis depois
+                  </p>
+                </Modal.Body>
+              </motion.div>
+            )}
+
+            {/* Step 2: Profile Form */}
+            {step === 'form' && selectedRole && (
+              <motion.div
+                key="form"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Modal.Header className="pb-4">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="w-fit -ml-2 mb-2"
+                    onPress={handleBack}
                   >
-                    <CardContent className="flex items-center gap-4 p-4">
-                      <div className={`p-3 rounded-full bg-background/80 ${role.iconColor}`}>
-                        <role.icon className="h-6 w-6" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="font-semibold">{role.title}</h3>
-                        <p className="text-sm text-muted-foreground">{role.description}</p>
-                      </div>
-                      <ArrowRight className="h-5 w-5 text-muted-foreground" />
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
+                    <ArrowLeft className="h-4 w-4 mr-1" />
+                    Voltar
+                  </Button>
+                  <Modal.Heading>
+                    {selectedRole === 'artista_independente' && 'Configure seu perfil de Artista'}
+                    {selectedRole === 'banda' && 'Configure sua Banda'}
+                    {selectedRole === 'contratante' && 'Configure seu Estabelecimento'}
+                  </Modal.Heading>
+                  <p className="text-sm text-muted mt-1">
+                    Preencha as informações básicas
+                  </p>
+                </Modal.Header>
 
-              <p className="text-xs text-muted-foreground text-center mt-4">
-                Você poderá adicionar mais perfis depois
-              </p>
-            </motion.div>
-          )}
+                <Modal.Body>
+                  {/* Musician Form */}
+                  {selectedRole === 'artista_independente' && (
+                    <form onSubmit={musicianForm.handleSubmit(handleMusicianSubmit)} className="space-y-4">
+                      <TextField isInvalid={!!musicianForm.formState.errors.name}>
+                        <Label htmlFor="musician-name">Nome artístico</Label>
+                        <Input id="musician-name" {...musicianForm.register('name')} />
+                        {musicianForm.formState.errors.name && (
+                          <FieldError>{musicianForm.formState.errors.name.message}</FieldError>
+                        )}
+                      </TextField>
 
-          {/* Step 2: Profile Form */}
-          {step === 'form' && selectedRole && (
-            <motion.div
-              key="form"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.2 }}
-            >
-              <DialogHeader className="pb-4">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="w-fit -ml-2 mb-2"
-                  onClick={handleBack}
-                >
-                  <ArrowLeft className="h-4 w-4 mr-1" />
-                  Voltar
+                      <div className="grid grid-cols-2 gap-3">
+                        <TextField>
+                          <Label htmlFor="instruments">Instrumentos</Label>
+                          <Input
+                            id="instruments"
+                            placeholder="Guitarra, Baixo..."
+                            {...musicianForm.register('instruments')}
+                          />
+                        </TextField>
+                        <TextField>
+                          <Label htmlFor="genres">Gêneros</Label>
+                          <Input
+                            id="genres"
+                            placeholder="Rock, Jazz..."
+                            {...musicianForm.register('genres')}
+                          />
+                        </TextField>
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-3">
+                        <Select
+                          value={musicianForm.watch('experience')}
+                          onChange={(key: Key | Key[] | null) =>
+                            musicianForm.setValue(
+                              'experience',
+                              String(key) as 'iniciante' | 'intermediario' | 'profissional',
+                            )
+                          }
+                        >
+                          <Label>Experiência</Label>
+                          <Select.Trigger>
+                            <Select.Value />
+                            <Select.Indicator />
+                          </Select.Trigger>
+                          <Select.Popover>
+                            <ListBox>
+                              <ListBox.Item id="iniciante" textValue="Iniciante">
+                                Iniciante
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                              <ListBox.Item id="intermediario" textValue="Intermediário">
+                                Intermediário
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                              <ListBox.Item id="profissional" textValue="Profissional">
+                                Profissional
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                            </ListBox>
+                          </Select.Popover>
+                        </Select>
+                        <Select
+                          value={musicianForm.watch('lookingFor')}
+                          onChange={(key: Key | Key[] | null) =>
+                            musicianForm.setValue(
+                              'lookingFor',
+                              String(key) as 'banda' | 'freelance' | 'ambos',
+                            )
+                          }
+                        >
+                          <Label>Busco</Label>
+                          <Select.Trigger>
+                            <Select.Value />
+                            <Select.Indicator />
+                          </Select.Trigger>
+                          <Select.Popover>
+                            <ListBox>
+                              <ListBox.Item id="banda" textValue="Banda fixa">
+                                Banda fixa
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                              <ListBox.Item id="freelance" textValue="Freelances">
+                                Freelances
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                              <ListBox.Item id="ambos" textValue="Ambos">
+                                Ambos
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                            </ListBox>
+                          </Select.Popover>
+                        </Select>
+                      </div>
+
+                      <TextField>
+                        <Label htmlFor="location">Localização</Label>
+                        <Input
+                          id="location"
+                          placeholder="São Paulo, SP"
+                          {...musicianForm.register('location')}
+                        />
+                      </TextField>
+
+                      <Button type="submit" className="w-full" isDisabled={isSubmitting}>
+                        {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
+                        Criar perfil
+                      </Button>
+                    </form>
+                  )}
+
+                  {/* Band Form */}
+                  {selectedRole === 'banda' && (
+                    <form onSubmit={bandForm.handleSubmit(handleBandSubmit)} className="space-y-4">
+                      <TextField isInvalid={!!bandForm.formState.errors.name}>
+                        <Label htmlFor="band-name">Nome da banda</Label>
+                        <Input id="band-name" {...bandForm.register('name')} />
+                        {bandForm.formState.errors.name && (
+                          <FieldError>{bandForm.formState.errors.name.message}</FieldError>
+                        )}
+                      </TextField>
+
+                      <div className="grid grid-cols-2 gap-3">
+                        <TextField>
+                          <Label htmlFor="genre">Gênero principal</Label>
+                          <Input
+                            id="genre"
+                            placeholder="Rock, MPB..."
+                            {...bandForm.register('genre')}
+                          />
+                        </TextField>
+                        <TextField>
+                          <Label htmlFor="members">Membros</Label>
+                          <Input
+                            id="members"
+                            type="number"
+                            min={1}
+                            {...bandForm.register('members', { valueAsNumber: true })}
+                          />
+                        </TextField>
+                      </div>
+
+                      <TextField>
+                        <Label htmlFor="band-location">Localização</Label>
+                        <Input
+                          id="band-location"
+                          placeholder="São Paulo, SP"
+                          {...bandForm.register('location')}
+                        />
+                      </TextField>
+
+                      <TextField>
+                        <Label htmlFor="priceRange">Faixa de preço</Label>
+                        <Input
+                          id="priceRange"
+                          placeholder="R$ 1.000 - R$ 3.000"
+                          {...bandForm.register('priceRange')}
+                        />
+                      </TextField>
+
+                      <TextField>
+                        <Label htmlFor="band-description">Descrição</Label>
+                        <TextArea id="band-description" rows={2} {...bandForm.register('description')} />
+                      </TextField>
+
+                      <Button type="submit" className="w-full" isDisabled={isSubmitting}>
+                        {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
+                        Criar banda
+                      </Button>
+                    </form>
+                  )}
+
+                  {/* Establishment Form */}
+                  {selectedRole === 'contratante' && (
+                    <form
+                      onSubmit={establishmentForm.handleSubmit(handleEstablishmentSubmit)}
+                      className="space-y-4"
+                    >
+                      <TextField isInvalid={!!establishmentForm.formState.errors.name}>
+                        <Label htmlFor="est-name">Nome do estabelecimento</Label>
+                        <Input id="est-name" {...establishmentForm.register('name')} />
+                        {establishmentForm.formState.errors.name && (
+                          <FieldError>{establishmentForm.formState.errors.name.message}</FieldError>
+                        )}
+                      </TextField>
+
+                      <div className="grid grid-cols-2 gap-3">
+                        <Select
+                          value={establishmentForm.watch('type')}
+                          onChange={(key: Key | Key[] | null) =>
+                            establishmentForm.setValue('type', String(key ?? ''))
+                          }
+                          placeholder="Selecione"
+                        >
+                          <Label>Tipo</Label>
+                          <Select.Trigger>
+                            <Select.Value />
+                            <Select.Indicator />
+                          </Select.Trigger>
+                          <Select.Popover>
+                            <ListBox>
+                              <ListBox.Item id="bar" textValue="Bar">
+                                Bar
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                              <ListBox.Item id="restaurante" textValue="Restaurante">
+                                Restaurante
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                              <ListBox.Item id="casa-de-show" textValue="Casa de Show">
+                                Casa de Show
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                              <ListBox.Item id="cafe" textValue="Café">
+                                Café
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                              <ListBox.Item id="centro-cultural" textValue="Centro Cultural">
+                                Centro Cultural
+                                <ListBox.ItemIndicator />
+                              </ListBox.Item>
+                            </ListBox>
+                          </Select.Popover>
+                        </Select>
+                        <TextField>
+                          <Label htmlFor="capacity">Capacidade</Label>
+                          <Input
+                            id="capacity"
+                            type="number"
+                            min={1}
+                            {...establishmentForm.register('capacity', { valueAsNumber: true })}
+                          />
+                        </TextField>
+                      </div>
+
+                      <TextField>
+                        <Label htmlFor="est-location">Localização</Label>
+                        <Input
+                          id="est-location"
+                          placeholder="Vila Madalena, São Paulo"
+                          {...establishmentForm.register('location')}
+                        />
+                      </TextField>
+
+                      <TextField>
+                        <Label htmlFor="averageBudget">Orçamento médio</Label>
+                        <Input
+                          id="averageBudget"
+                          placeholder="R$ 1.000 - R$ 5.000"
+                          {...establishmentForm.register('averageBudget')}
+                        />
+                      </TextField>
+
+                      <Button type="submit" className="w-full" isDisabled={isSubmitting}>
+                        {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
+                        Criar estabelecimento
+                      </Button>
+                    </form>
+                  )}
+                </Modal.Body>
+              </motion.div>
+            )}
+
+            {/* Step 3: Complete */}
+            {step === 'complete' && (
+              <motion.div
+                key="complete"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3 }}
+                className="text-center py-8"
+              >
+                <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 border border-emerald-500/30">
+                  <Check className="h-8 w-8 text-emerald-500" />
+                </div>
+
+                <Modal.Heading className="text-2xl mb-2">Tudo pronto! 🎉</Modal.Heading>
+                <p className="text-sm text-muted mb-6">
+                  Seu perfil foi criado com sucesso. Agora você pode explorar o PalcoMatch
+                  e começar a fazer conexões.
+                </p>
+
+                <Button onPress={handleComplete} size="lg" className="gap-2">
+                  Começar a explorar
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
-                <DialogTitle>
-                  {selectedRole === 'artista_independente' && 'Configure seu perfil de Artista'}
-                  {selectedRole === 'banda' && 'Configure sua Banda'}
-                  {selectedRole === 'contratante' && 'Configure seu Estabelecimento'}
-                </DialogTitle>
-                <DialogDescription>
-                  Preencha as informações básicas
-                </DialogDescription>
-              </DialogHeader>
-
-              {/* Musician Form */}
-              {selectedRole === 'artista_independente' && (
-                <form onSubmit={musicianForm.handleSubmit(handleMusicianSubmit)} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="musician-name">Nome artístico</Label>
-                    <Input id="musician-name" {...musicianForm.register('name')} />
-                    {musicianForm.formState.errors.name && (
-                      <p className="text-destructive text-sm">{musicianForm.formState.errors.name.message}</p>
-                    )}
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-2">
-                      <Label htmlFor="instruments">Instrumentos</Label>
-                      <Input
-                        id="instruments"
-                        placeholder="Guitarra, Baixo..."
-                        {...musicianForm.register('instruments')}
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="genres">Gêneros</Label>
-                      <Input
-                        id="genres"
-                        placeholder="Rock, Jazz..."
-                        {...musicianForm.register('genres')}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-2">
-                      <Label>Experiência</Label>
-                      <Select
-                        value={musicianForm.watch('experience')}
-                        onValueChange={(v) => musicianForm.setValue('experience', v as 'iniciante' | 'intermediario' | 'profissional')}
-                      >
-                        <SelectTrigger><SelectValue /></SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="iniciante">Iniciante</SelectItem>
-                          <SelectItem value="intermediario">Intermediário</SelectItem>
-                          <SelectItem value="profissional">Profissional</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div className="space-y-2">
-                      <Label>Busco</Label>
-                      <Select
-                        value={musicianForm.watch('lookingFor')}
-                        onValueChange={(v) => musicianForm.setValue('lookingFor', v as 'banda' | 'freelance' | 'ambos')}
-                      >
-                        <SelectTrigger><SelectValue /></SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="banda">Banda fixa</SelectItem>
-                          <SelectItem value="freelance">Freelances</SelectItem>
-                          <SelectItem value="ambos">Ambos</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="location">Localização</Label>
-                    <Input id="location" placeholder="São Paulo, SP" {...musicianForm.register('location')} />
-                  </div>
-
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
-                    Criar perfil
-                  </Button>
-                </form>
-              )}
-
-              {/* Band Form */}
-              {selectedRole === 'banda' && (
-                <form onSubmit={bandForm.handleSubmit(handleBandSubmit)} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="band-name">Nome da banda</Label>
-                    <Input id="band-name" {...bandForm.register('name')} />
-                    {bandForm.formState.errors.name && (
-                      <p className="text-destructive text-sm">{bandForm.formState.errors.name.message}</p>
-                    )}
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-2">
-                      <Label htmlFor="genre">Gênero principal</Label>
-                      <Input id="genre" placeholder="Rock, MPB..." {...bandForm.register('genre')} />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="members">Membros</Label>
-                      <Input
-                        id="members"
-                        type="number"
-                        min={1}
-                        {...bandForm.register('members', { valueAsNumber: true })}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="band-location">Localização</Label>
-                    <Input id="band-location" placeholder="São Paulo, SP" {...bandForm.register('location')} />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="priceRange">Faixa de preço</Label>
-                    <Input id="priceRange" placeholder="R$ 1.000 - R$ 3.000" {...bandForm.register('priceRange')} />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="band-description">Descrição</Label>
-                    <Textarea id="band-description" rows={2} {...bandForm.register('description')} />
-                  </div>
-
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
-                    Criar banda
-                  </Button>
-                </form>
-              )}
-
-              {/* Establishment Form */}
-              {selectedRole === 'contratante' && (
-                <form onSubmit={establishmentForm.handleSubmit(handleEstablishmentSubmit)} className="space-y-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="est-name">Nome do estabelecimento</Label>
-                    <Input id="est-name" {...establishmentForm.register('name')} />
-                    {establishmentForm.formState.errors.name && (
-                      <p className="text-destructive text-sm">{establishmentForm.formState.errors.name.message}</p>
-                    )}
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="space-y-2">
-                      <Label>Tipo</Label>
-                      <Select
-                        value={establishmentForm.watch('type')}
-                        onValueChange={(v) => establishmentForm.setValue('type', v)}
-                      >
-                        <SelectTrigger><SelectValue placeholder="Selecione" /></SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="bar">Bar</SelectItem>
-                          <SelectItem value="restaurante">Restaurante</SelectItem>
-                          <SelectItem value="casa-de-show">Casa de Show</SelectItem>
-                          <SelectItem value="cafe">Café</SelectItem>
-                          <SelectItem value="centro-cultural">Centro Cultural</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="capacity">Capacidade</Label>
-                      <Input
-                        id="capacity"
-                        type="number"
-                        min={1}
-                        {...establishmentForm.register('capacity', { valueAsNumber: true })}
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="est-location">Localização</Label>
-                    <Input id="est-location" placeholder="Vila Madalena, São Paulo" {...establishmentForm.register('location')} />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="averageBudget">Orçamento médio</Label>
-                    <Input id="averageBudget" placeholder="R$ 1.000 - R$ 5.000" {...establishmentForm.register('averageBudget')} />
-                  </div>
-
-                  <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : null}
-                    Criar estabelecimento
-                  </Button>
-                </form>
-              )}
-            </motion.div>
-          )}
-
-          {/* Step 3: Complete */}
-          {step === 'complete' && (
-            <motion.div
-              key="complete"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3 }}
-              className="text-center py-8"
-            >
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500/20 to-emerald-500/5 border border-emerald-500/30">
-                <Check className="h-8 w-8 text-emerald-500" />
-              </div>
-              
-              <DialogTitle className="text-2xl mb-2">Tudo pronto! 🎉</DialogTitle>
-              <DialogDescription className="mb-6">
-                Seu perfil foi criado com sucesso. Agora você pode explorar o PalcoMatch
-                e começar a fazer conexões.
-              </DialogDescription>
-
-              <Button onClick={handleComplete} size="lg" className="gap-2">
-                Começar a explorar
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </DialogContent>
-    </Dialog>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </Modal.Dialog>
+      </Modal.Container>
+    </Modal.Backdrop>
   );
 }
