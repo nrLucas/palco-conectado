@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth";
-import { Building2, Guitar, Music2, Sparkles } from "lucide-react";
+import { Building2, Guitar, Music2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NotificationBell } from "./NotificationBell";
@@ -18,7 +18,7 @@ export const SiteHeader = () => {
     <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-primary" aria-hidden />
+          <Guitar className="h-5 w-5 text-primary" aria-hidden />
           <span className="font-semibold">Palco Conectado</span>
         </Link>
 
