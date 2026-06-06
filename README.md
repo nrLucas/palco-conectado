@@ -54,30 +54,30 @@ Acesse [http://localhost:3000](http://localhost:3000).
 
 ## Contas demo (após seed)
 
-| Email | Senha |
-|-------|-------|
-| demo@palco.com | demo123 |
-| banda@palco.com | demo123 |
-| bar@palco.com | demo123 |
+| Email            | Senha   |
+| ---------------- | ------- |
+| demo@palco.com   | demo123 |
+| banda@palco.com  | demo123 |
+| bar@palco.com    | demo123 |
 | musico@palco.com | demo123 |
 
 ## Deploy na Vercel
 
 1. Crie **Vercel Postgres** e link ao projeto
-2. Configure variáveis: `POSTGRES_URL`, `POSTGRES_URL_NON_POOLING`, `AUTH_SECRET`, `AUTH_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
+2. Configure variáveis: `DATABASE_URL`, `DATABASE_URL_UNPOOLED`, `AUTH_SECRET`, `AUTH_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`
 3. No Google Cloud Console, adicione redirect URI: `https://seu-dominio.vercel.app/api/auth/callback/google`
 4. Build command: `prisma generate && prisma migrate deploy && next build` (ou use `db:push` na primeira vez)
 5. Após deploy: `npm run db:seed` via Vercel CLI ou script manual
 
 ## Scripts
 
-| Script | Descrição |
-|--------|-----------|
-| `npm run dev` | Servidor de desenvolvimento |
-| `npm run build` | Build de produção |
-| `npm run db:push` | Sincroniza schema com o banco |
-| `npm run db:migrate` | Cria/aplica migrations |
-| `npm run db:seed` | Popula dados demo |
+| Script               | Descrição                     |
+| -------------------- | ----------------------------- |
+| `npm run dev`        | Servidor de desenvolvimento   |
+| `npm run build`      | Build de produção             |
+| `npm run db:push`    | Sincroniza schema com o banco |
+| `npm run db:migrate` | Cria/aplica migrations        |
+| `npm run db:seed`    | Popula dados demo             |
 
 ---
 
