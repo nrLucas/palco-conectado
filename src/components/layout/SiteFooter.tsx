@@ -20,7 +20,6 @@ const legalLinks = [
 
 export function SiteFooter() {
   const { isAuthenticated, openAuthModal } = useAuth();
-  const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border bg-surface">
@@ -117,7 +116,9 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
-          <p className="text-muted text-sm">© {year} Palco Conectado. Todos os direitos reservados.</p>
+          <p className="text-muted text-sm" suppressHydrationWarning>
+            © {new Date().getFullYear()} Palco Conectado. Todos os direitos reservados.
+          </p>
           <a
             href={AMBITIONS_TECH_URL}
             target="_blank"

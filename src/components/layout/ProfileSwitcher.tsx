@@ -85,24 +85,22 @@ export function ProfileSwitcher() {
 
   return (
     <Dropdown>
-      <Dropdown.Trigger>
-        <Button variant="ghost" className="gap-2 h-auto py-1.5 px-2">
-          <Avatar className="h-8 w-8">
-            <Avatar.Image src={account.avatarUrl} alt={account.name} />
-            <Avatar.Fallback className="text-xs">{initials}</Avatar.Fallback>
-          </Avatar>
-          <div className="hidden sm:flex flex-col items-start">
-            <span className="text-sm font-medium">{currentProfileName}</span>
-            {activeProfile && (
-              <span className="text-xs text-muted flex items-center gap-1">
-                <CurrentIcon className={`h-3 w-3 ${currentColor}`} />
-                {getProfileTypeName(activeProfile.type)}
-              </span>
-            )}
-          </div>
-          <ChevronDown className="h-4 w-4 text-muted" />
-        </Button>
-      </Dropdown.Trigger>
+      <Button variant="ghost" className="gap-2 h-auto py-1.5 px-2">
+        <Avatar className="h-8 w-8">
+          <Avatar.Image src={account.avatarUrl} alt={account.name} />
+          <Avatar.Fallback className="text-xs">{initials}</Avatar.Fallback>
+        </Avatar>
+        <div className="hidden sm:flex flex-col items-start">
+          <span className="text-sm font-medium">{currentProfileName}</span>
+          {activeProfile && (
+            <span className="text-xs text-muted flex items-center gap-1">
+              <CurrentIcon className={`h-3 w-3 ${currentColor}`} />
+              {getProfileTypeName(activeProfile.type)}
+            </span>
+          )}
+        </div>
+        <ChevronDown className="h-4 w-4 text-muted" />
+      </Button>
 
       <Dropdown.Popover className="w-64">
         <Dropdown.Menu

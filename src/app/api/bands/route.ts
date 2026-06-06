@@ -28,7 +28,20 @@ export async function GET(request: Request) {
       return matchesQuery && matchesLocation && matchesGenre && matchesRating;
     });
 
-    return NextResponse.json(filtered);
+    const profiles = await prisma.profile.findMany({
+      where: {
+        type: "banda",
+        entityId: { in: filtered.map((b) => b.id) },
+      },
+      select: { id: true, entityId: true },
+    });
+    const profileByEntity = Object.fromEntries(
+      profiles.map((p) => [p.entityId, p.id]),
+    );
+
+    return NextResponse.json(
+      filtered.map((b) => ({ ...b, profileId: profileByEntity[b.id] ?? null })),
+    );
   } catch (error) {
     return handleApiError(error);
   }

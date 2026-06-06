@@ -14,7 +14,7 @@ export type AvailabilityStatus = 'disponivel' | 'ocupado' | 'parcial';
 
 export type LookingForType = 'banda' | 'freelance' | 'ambos';
 
-export type ProposalStatus = 'pending' | 'accepted' | 'rejected' | 'counter';
+export type ProposalStatus = 'pending' | 'accepted' | 'rejected';
 
 export type MessageType = 'text' | 'proposal' | 'collaboration';
 

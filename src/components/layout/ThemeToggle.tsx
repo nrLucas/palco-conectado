@@ -21,17 +21,22 @@ export function ThemeToggle() {
     <Switch
       isSelected={isDark}
       onChange={(selected) => setTheme(selected ? 'dark' : 'light')}
+      size="lg"
       aria-label={isDark ? 'Ativar modo claro' : 'Ativar modo escuro'}
     >
-      <Switch.Control>
-        <Switch.Thumb>
-          {isDark ? (
-            <Moon className="size-3 text-accent" aria-hidden />
-          ) : (
-            <Sun className="size-3 text-accent" aria-hidden />
-          )}
-        </Switch.Thumb>
-      </Switch.Control>
+      {({ isSelected }) => (
+        <Switch.Control>
+          <Switch.Thumb>
+            <Switch.Icon>
+              {isSelected ? (
+                <Moon className="size-3 text-inherit opacity-100" />
+              ) : (
+                <Sun className="size-3 text-inherit opacity-70" />
+              )}
+            </Switch.Icon>
+          </Switch.Thumb>
+        </Switch.Control>
+      )}
     </Switch>
   );
 }

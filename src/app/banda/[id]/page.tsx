@@ -2,34 +2,18 @@
 
 import HeroImage from '@/assets/hero-music.jpg';
 import { ProposalModal } from '@/components/proposals/ProposalModal';
-import { Button, Card, Tabs } from '@heroui/react';
+import { useProposalAction } from '@/components/proposals/useProposalAction';
+import { Button, Card, Chip, Tabs } from '@heroui/react';
 import { useBand } from '@/lib/hooks';
-import { useAuth } from '@/lib/auth';
-import { Star } from 'lucide-react';
+import { MapPin, Music2, Star, Users } from 'lucide-react';
 import Image from 'next/image';
-import { useParams, useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useParams } from 'next/navigation';
 
 export default function BandProfilePage() {
   const params = useParams();
   const id = params.id as string;
   const { data: band, isLoading } = useBand(id);
-  const { openAuthModal, isAuthenticated, canSendProposal } = useAuth();
-  const router = useRouter();
-  const [proposalModalOpen, setProposalModalOpen] = useState(false);
-
-  const handleSendProposal = () => {
-    if (!isAuthenticated) {
-      openAuthModal('login');
-      return;
-    }
-    const { allowed, reason } = canSendProposal();
-    if (!allowed) {
-      if (reason?.includes('upgrade')) router.push('/assinatura');
-      return;
-    }
-    setProposalModalOpen(true);
-  };
+  const { openProposal, modalOpen, setModalOpen, target } = useProposalAction();
 
   if (isLoading) {
     return (
@@ -47,19 +31,51 @@ export default function BandProfilePage() {
     );
   }
 
+  const coverSrc = band.image || HeroImage;
+
   return (
     <main>
-      <header className="relative h-56 w-full">
-        <Image src={HeroImage} alt="Capa da banda" fill className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-        <div className="container mx-auto absolute bottom-4 left-0 right-0 flex items-end justify-between px-4">
-          <div>
-            <h1 className="font-display text-3xl font-bold text-foreground relative z-10">{band.name}</h1>
-            <p className="text-muted relative z-10">
-              {band.genre} • {band.location} • {band.priceRange || 'Consulte valores'}
-            </p>
+      <header className="relative h-64 w-full">
+        <Image
+          src={coverSrc}
+          alt={`Capa de ${band.name}`}
+          fill
+          className="object-cover"
+          unoptimized={!!band.image}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent" />
+        <div className="container mx-auto absolute bottom-4 left-0 right-0 flex flex-col gap-4 px-4 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-2">
+            <h1 className="font-display text-3xl font-bold text-foreground relative z-10 md:text-4xl">
+              {band.name}
+            </h1>
+            <div className="relative z-10 flex flex-wrap gap-2">
+              <Chip variant="soft" color="accent">
+                <Music2 className="mr-1 h-3.5 w-3.5" />
+                {band.genre}
+              </Chip>
+              <Chip variant="secondary">
+                <MapPin className="mr-1 h-3.5 w-3.5" />
+                {band.location}
+              </Chip>
+              <Chip variant="secondary">
+                <Users className="mr-1 h-3.5 w-3.5" />
+                {band.members} integrantes
+              </Chip>
+              <Chip variant="secondary">
+                <Star className="mr-1 h-3.5 w-3.5 fill-accent text-accent" />
+                {band.rating} · {band.totalShows} shows
+              </Chip>
+            </div>
+            {band.priceRange && (
+              <p className="text-muted relative z-10 text-sm">{band.priceRange}</p>
+            )}
           </div>
-          <Button className="button--hero relative z-10" onPress={handleSendProposal}>
+          <Button
+            className="button--hero relative z-10 shrink-0"
+            isDisabled={!band.profileId}
+            onPress={() => openProposal({ profileId: band.profileId, targetName: band.name })}
+          >
             Enviar proposta
           </Button>
         </div>
@@ -77,20 +93,29 @@ export default function BandProfilePage() {
 
           <Tabs.Panel id="sobre" className="mt-4">
             <Card className="shadow-surface">
-              <Card.Content className="space-y-4">
-                <p className="text-sm text-muted">{band.description || 'Sem descrição.'}</p>
-                <div className="grid gap-4 sm:grid-cols-3">
-                  <div>
-                    <h3 className="text-sm font-medium">Cidade-base</h3>
-                    <p className="text-sm">{band.location}</p>
+              <Card.Content className="space-y-6">
+                <div>
+                  <h3 className="font-display mb-2 text-lg font-semibold">Sobre a banda</h3>
+                  <p className="text-muted leading-relaxed">
+                    {band.description || 'Sem descrição cadastrada.'}
+                  </p>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                  <div className="rounded-lg border border-border bg-surface/50 p-4">
+                    <p className="text-muted text-xs uppercase tracking-wide">Estilo</p>
+                    <p className="mt-1 font-medium">{band.genre}</p>
                   </div>
-                  <div>
-                    <h3 className="text-sm font-medium">Estilo</h3>
-                    <p className="text-sm">{band.genre}</p>
+                  <div className="rounded-lg border border-border bg-surface/50 p-4">
+                    <p className="text-muted text-xs uppercase tracking-wide">Cidade-base</p>
+                    <p className="mt-1 font-medium">{band.location}</p>
                   </div>
-                  <div>
-                    <h3 className="text-sm font-medium">Integrantes</h3>
-                    <p className="text-sm">{band.members}</p>
+                  <div className="rounded-lg border border-border bg-surface/50 p-4">
+                    <p className="text-muted text-xs uppercase tracking-wide">Integrantes</p>
+                    <p className="mt-1 font-medium">{band.members}</p>
+                  </div>
+                  <div className="rounded-lg border border-border bg-surface/50 p-4">
+                    <p className="text-muted text-xs uppercase tracking-wide">Faixa de preço</p>
+                    <p className="mt-1 font-medium">{band.priceRange || 'Sob consulta'}</p>
                   </div>
                 </div>
               </Card.Content>
@@ -100,17 +125,23 @@ export default function BandProfilePage() {
           <Tabs.Panel id="precos" className="mt-4">
             <Card className="shadow-surface">
               <Card.Content>
-                <p className="text-2xl font-bold font-display">{band.priceRange || 'Sob consulta'}</p>
+                <p className="text-muted mb-1 text-sm">Valor médio por apresentação</p>
+                <p className="font-display text-3xl font-bold">
+                  {band.priceRange || 'Sob consulta'}
+                </p>
               </Card.Content>
             </Card>
           </Tabs.Panel>
 
           <Tabs.Panel id="avaliacoes" className="mt-4">
             <Card className="shadow-surface">
-              <Card.Content className="flex items-center gap-2">
-                <Star className="h-5 w-5 text-accent fill-accent" />
-                <p className="font-medium">
-                  Nota {band.rating} • {band.totalShows} shows
+              <Card.Content className="flex flex-col items-center py-8 text-center">
+                <div className="mb-2 flex items-center gap-2">
+                  <Star className="h-8 w-8 text-accent fill-accent" />
+                  <span className="font-display text-4xl font-bold">{band.rating}</span>
+                </div>
+                <p className="text-muted">
+                  Baseado em {band.totalShows} apresentações registradas na plataforma
                 </p>
               </Card.Content>
             </Card>
@@ -118,13 +149,13 @@ export default function BandProfilePage() {
         </Tabs>
       </section>
 
-      {band.profileId && (
+      {target && (
         <ProposalModal
-          open={proposalModalOpen}
-          onOpenChange={setProposalModalOpen}
-          toProfileId={band.profileId}
-          targetName={band.name}
-          onProposalSent={() => setProposalModalOpen(false)}
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+          toProfileId={target.toProfileId}
+          targetName={target.targetName}
+          onProposalSent={() => setModalOpen(false)}
         />
       )}
     </main>

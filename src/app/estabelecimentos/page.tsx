@@ -1,15 +1,16 @@
 'use client';
 
 import { FilterSelect } from '@/components/shared/FilterSelect';
+import { ProposalModal } from '@/components/proposals/ProposalModal';
+import { useProposalAction } from '@/components/proposals/useProposalAction';
 import { Button, Card, Chip, Input, Label, TextField } from '@heroui/react';
 import { useEstablishments } from '@/lib/hooks';
-import { useAuth } from '@/lib/auth';
-import { Heart, MapPin, Users } from 'lucide-react';
+import { Heart, MapPin, Star, Users } from 'lucide-react';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
 export default function EstabelecimentosPage() {
-  const { openAuthModal, isAuthenticated } = useAuth();
+  const { openProposal, modalOpen, setModalOpen, target } = useProposalAction();
   const [query, setQuery] = useState('');
   const [type, setType] = useState<string>('todos');
   const [city, setCity] = useState<string>('todas');
@@ -22,16 +23,12 @@ export default function EstabelecimentosPage() {
 
   const types = useMemo(
     () => Array.from(new Set(establishments.map((e) => e.type))).sort(),
-    [establishments]
+    [establishments],
   );
   const cities = useMemo(
     () => Array.from(new Set(establishments.map((e) => e.location))).sort(),
-    [establishments]
+    [establishments],
   );
-
-  const handleAction = () => {
-    if (!isAuthenticated) openAuthModal('login');
-  };
 
   return (
     <main className="container mx-auto px-4 py-10">
@@ -78,12 +75,22 @@ export default function EstabelecimentosPage() {
       ) : (
         <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {establishments.length === 0 ? (
-            <p className="col-span-full text-center text-muted py-12">Nenhum estabelecimento encontrado.</p>
+            <p className="col-span-full text-center text-muted py-12">
+              Nenhum estabelecimento encontrado.
+            </p>
           ) : (
             establishments.map((e) => (
-              <Card key={e.id} className="border-accent/15 shadow-surface hover:shadow-overlay transition-shadow">
+              <Card
+                key={e.id}
+                className="border-accent/15 shadow-surface hover:shadow-overlay transition-shadow"
+              >
                 <Card.Header>
-                  <Card.Title className="text-lg">{e.name}</Card.Title>
+                  <Card.Title className="flex items-center justify-between text-lg">
+                    <span>{e.name}</span>
+                    <Chip variant="secondary" className="inline-flex items-center gap-1">
+                      <Star className="h-3.5 w-3.5 fill-accent text-accent" /> {e.rating}
+                    </Chip>
+                  </Card.Title>
                   <Card.Description className="capitalize">{e.type}</Card.Description>
                 </Card.Header>
                 <Card.Content>
@@ -103,8 +110,15 @@ export default function EstabelecimentosPage() {
                   <Link href={`/estabelecimento/${e.id}`}>
                     <Button variant="secondary">Ver perfil</Button>
                   </Link>
-                  <Button onPress={handleAction}>Enviar proposta</Button>
-                  <Button variant="outline" onPress={handleAction}>
+                  <Button
+                    isDisabled={!e.profileId}
+                    onPress={() =>
+                      openProposal({ profileId: e.profileId, targetName: e.name })
+                    }
+                  >
+                    Enviar proposta
+                  </Button>
+                  <Button variant="outline" isDisabled>
                     <Heart className="mr-2 h-4 w-4" /> Favoritar
                   </Button>
                 </Card.Footer>
@@ -112,6 +126,16 @@ export default function EstabelecimentosPage() {
             ))
           )}
         </section>
+      )}
+
+      {target && (
+        <ProposalModal
+          open={modalOpen}
+          onOpenChange={setModalOpen}
+          toProfileId={target.toProfileId}
+          targetName={target.targetName}
+          onProposalSent={() => setModalOpen(false)}
+        />
       )}
     </main>
   );

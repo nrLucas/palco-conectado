@@ -27,7 +27,20 @@ export async function GET(request: Request) {
       return matchesQuery && matchesLocation && matchesType && matchesRating;
     });
 
-    return NextResponse.json(filtered);
+    const profiles = await prisma.profile.findMany({
+      where: {
+        type: "contratante",
+        entityId: { in: filtered.map((e) => e.id) },
+      },
+      select: { id: true, entityId: true },
+    });
+    const profileByEntity = Object.fromEntries(
+      profiles.map((p) => [p.entityId, p.id]),
+    );
+
+    return NextResponse.json(
+      filtered.map((e) => ({ ...e, profileId: profileByEntity[e.id] ?? null })),
+    );
   } catch (error) {
     return handleApiError(error);
   }

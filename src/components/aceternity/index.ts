@@ -10,3 +10,5 @@ export { Timeline } from "./timeline";
 export type { TimelineEntry, TimelineProps } from "./timeline";
 export { DotBackground, GridBackground } from "./grid-background";
 export type { GridBackgroundProps } from "./grid-background";
+export { StatefulButton } from "./stateful-button";
+export type { StatefulButtonProps } from "./stateful-button";
