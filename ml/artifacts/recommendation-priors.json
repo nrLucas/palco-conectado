@@ -1,0 +1,257 @@
+{
+  "smoothing": 1.0,
+  "modelWeight": 0.7,
+  "historyWeight": 0.3,
+  "global": {
+    "accepted": 554,
+    "total": 900,
+    "rate": 0.61529933481153
+  },
+  "byTypeAndGenre": {
+    "Bar|Blues": {
+      "establishmentType": "Bar",
+      "genre": "Blues",
+      "accepted": 23,
+      "total": 37,
+      "rate": 0.6153846153846154
+    },
+    "Bar|Eletronica": {
+      "establishmentType": "Bar",
+      "genre": "Eletronica",
+      "accepted": 9,
+      "total": 15,
+      "rate": 0.5882352941176471
+    },
+    "Bar|Jazz": {
+      "establishmentType": "Bar",
+      "genre": "Jazz",
+      "accepted": 17,
+      "total": 30,
+      "rate": 0.5625
+    },
+    "Bar|MPB": {
+      "establishmentType": "Bar",
+      "genre": "MPB",
+      "accepted": 17,
+      "total": 32,
+      "rate": 0.5294117647058824
+    },
+    "Bar|Pop": {
+      "establishmentType": "Bar",
+      "genre": "Pop",
+      "accepted": 21,
+      "total": 29,
+      "rate": 0.7096774193548387
+    },
+    "Bar|Rock": {
+      "establishmentType": "Bar",
+      "genre": "Rock",
+      "accepted": 13,
+      "total": 16,
+      "rate": 0.7777777777777778
+    },
+    "Bar|Samba": {
+      "establishmentType": "Bar",
+      "genre": "Samba",
+      "accepted": 15,
+      "total": 25,
+      "rate": 0.5925925925925926
+    },
+    "Casa noturna|Blues": {
+      "establishmentType": "Casa noturna",
+      "genre": "Blues",
+      "accepted": 16,
+      "total": 27,
+      "rate": 0.5862068965517241
+    },
+    "Casa noturna|Eletronica": {
+      "establishmentType": "Casa noturna",
+      "genre": "Eletronica",
+      "accepted": 14,
+      "total": 22,
+      "rate": 0.625
+    },
+    "Casa noturna|Jazz": {
+      "establishmentType": "Casa noturna",
+      "genre": "Jazz",
+      "accepted": 11,
+      "total": 23,
+      "rate": 0.48
+    },
+    "Casa noturna|MPB": {
+      "establishmentType": "Casa noturna",
+      "genre": "MPB",
+      "accepted": 20,
+      "total": 42,
+      "rate": 0.4772727272727273
+    },
+    "Casa noturna|Pop": {
+      "establishmentType": "Casa noturna",
+      "genre": "Pop",
+      "accepted": 16,
+      "total": 20,
+      "rate": 0.7727272727272727
+    },
+    "Casa noturna|Rock": {
+      "establishmentType": "Casa noturna",
+      "genre": "Rock",
+      "accepted": 17,
+      "total": 20,
+      "rate": 0.8181818181818182
+    },
+    "Casa noturna|Samba": {
+      "establishmentType": "Casa noturna",
+      "genre": "Samba",
+      "accepted": 16,
+      "total": 31,
+      "rate": 0.5151515151515151
+    },
+    "Evento|Blues": {
+      "establishmentType": "Evento",
+      "genre": "Blues",
+      "accepted": 14,
+      "total": 30,
+      "rate": 0.46875
+    },
+    "Evento|Eletronica": {
+      "establishmentType": "Evento",
+      "genre": "Eletronica",
+      "accepted": 9,
+      "total": 16,
+      "rate": 0.5555555555555556
+    },
+    "Evento|Jazz": {
+      "establishmentType": "Evento",
+      "genre": "Jazz",
+      "accepted": 14,
+      "total": 27,
+      "rate": 0.5172413793103449
+    },
+    "Evento|MPB": {
+      "establishmentType": "Evento",
+      "genre": "MPB",
+      "accepted": 20,
+      "total": 42,
+      "rate": 0.4772727272727273
+    },
+    "Evento|Pop": {
+      "establishmentType": "Evento",
+      "genre": "Pop",
+      "accepted": 14,
+      "total": 17,
+      "rate": 0.7894736842105263
+    },
+    "Evento|Rock": {
+      "establishmentType": "Evento",
+      "genre": "Rock",
+      "accepted": 10,
+      "total": 17,
+      "rate": 0.5789473684210527
+    },
+    "Evento|Samba": {
+      "establishmentType": "Evento",
+      "genre": "Samba",
+      "accepted": 25,
+      "total": 29,
+      "rate": 0.8387096774193549
+    },
+    "Pub|Blues": {
+      "establishmentType": "Pub",
+      "genre": "Blues",
+      "accepted": 20,
+      "total": 30,
+      "rate": 0.65625
+    },
+    "Pub|Eletronica": {
+      "establishmentType": "Pub",
+      "genre": "Eletronica",
+      "accepted": 10,
+      "total": 25,
+      "rate": 0.4074074074074074
+    },
+    "Pub|Jazz": {
+      "establishmentType": "Pub",
+      "genre": "Jazz",
+      "accepted": 9,
+      "total": 24,
+      "rate": 0.38461538461538464
+    },
+    "Pub|MPB": {
+      "establishmentType": "Pub",
+      "genre": "MPB",
+      "accepted": 15,
+      "total": 31,
+      "rate": 0.48484848484848486
+    },
+    "Pub|Pop": {
+      "establishmentType": "Pub",
+      "genre": "Pop",
+      "accepted": 9,
+      "total": 11,
+      "rate": 0.7692307692307693
+    },
+    "Pub|Rock": {
+      "establishmentType": "Pub",
+      "genre": "Rock",
+      "accepted": 11,
+      "total": 18,
+      "rate": 0.6
+    },
+    "Pub|Samba": {
+      "establishmentType": "Pub",
+      "genre": "Samba",
+      "accepted": 20,
+      "total": 26,
+      "rate": 0.75
+    },
+    "Restaurante|Blues": {
+      "establishmentType": "Restaurante",
+      "genre": "Blues",
+      "accepted": 29,
+      "total": 33,
+      "rate": 0.8571428571428571
+    },
+    "Restaurante|Eletronica": {
+      "establishmentType": "Restaurante",
+      "genre": "Eletronica",
+      "accepted": 10,
+      "total": 18,
+      "rate": 0.55
+    },
+    "Restaurante|Jazz": {
+      "establishmentType": "Restaurante",
+      "genre": "Jazz",
+      "accepted": 31,
+      "total": 40,
+      "rate": 0.7619047619047619
+    },
+    "Restaurante|MPB": {
+      "establishmentType": "Restaurante",
+      "genre": "MPB",
+      "accepted": 26,
+      "total": 35,
+      "rate": 0.7297297297297297
+    },
+    "Restaurante|Pop": {
+      "establishmentType": "Restaurante",
+      "genre": "Pop",
+      "accepted": 5,
+      "total": 11,
+      "rate": 0.46153846153846156
+    },
+    "Restaurante|Rock": {
+      "establishmentType": "Restaurante",
+      "genre": "Rock",
+      "accepted": 11,
+      "total": 25,
+      "rate": 0.4444444444444444
+    },
+    "Restaurante|Samba": {
+      "establishmentType": "Restaurante",
+      "genre": "Samba",
+      "accepted": 17,
+      "total": 26,
+      "rate": 0.6428571428571429
+    }
+  }
+}

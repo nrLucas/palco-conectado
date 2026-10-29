@@ -7,7 +7,7 @@ export function getProfilePath(type: string, entityId: string): string | null {
     case "contratante":
       return `/estabelecimento/${entityId}`;
     case "artista_independente":
-      return `/musicos`;
+      return `/musico/${entityId}`;
     default:
       return null;
   }

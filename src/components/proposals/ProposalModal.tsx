@@ -2,20 +2,32 @@
 
 import { StatefulButton } from '@/components/aceternity/stateful-button';
 import { EventDatePicker } from '@/components/shared/EventDatePicker';
-import {
-  FieldError,
-  Input,
-  Label,
-  Modal,
-  TextArea,
-  TextField,
-} from '@heroui/react';
+import { Button, FieldError, Input, Label, Modal, TextArea, TextField } from '@heroui/react';
+import { suggestProposal, type ProposalSuggestion } from '@/lib/api/ml';
 import { createProposal } from '@/lib/api/proposals';
 import { useAuth } from '@/lib/auth';
 import type { DateValue } from '@internationalized/date';
 import { getLocalTimeZone } from '@internationalized/date';
 import { useQueryClient } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
+
+const currency = new Intl.NumberFormat('pt-BR', {
+  style: 'currency',
+  currency: 'BRL',
+});
+
+const ACCEPTANCE_COPY = {
+  alta: 'alta',
+  media: 'média',
+  baixa: 'baixa',
+} as const;
+
+function toIsoDate(value: DateValue): string {
+  const eventDate = value.toDate(getLocalTimeZone());
+  const month = String(eventDate.getMonth() + 1).padStart(2, '0');
+  const day = String(eventDate.getDate()).padStart(2, '0');
+  return `${eventDate.getFullYear()}-${month}-${day}`;
+}
 
 interface ProposalModalProps {
   open: boolean;
@@ -43,13 +55,54 @@ export const ProposalModal = ({
     amount?: string;
     message?: string;
   }>({});
+  const [insight, setInsight] = useState<ProposalSuggestion | null>(null);
+  const [insightLoading, setInsightLoading] = useState(false);
+
+  const eventIso = date ? toIsoDate(date) : null;
+  const parsedAmount = Number(amount);
+  const amountForModel = amount.trim() && Number.isFinite(parsedAmount) && parsedAmount > 0
+    ? parsedAmount
+    : undefined;
 
   useEffect(() => {
     if (!open) {
       setFormError(null);
       setFieldErrors({});
+      setInsight(null);
+      setInsightLoading(false);
     }
   }, [open]);
+
+  useEffect(() => {
+    if (!open || !eventIso) {
+      setInsight(null);
+      return;
+    }
+
+    let active = true;
+    const handle = setTimeout(() => {
+      setInsightLoading(true);
+      suggestProposal({
+        toProfileId,
+        eventDate: eventIso,
+        amount: amountForModel,
+      })
+        .then((response) => {
+          if (active) setInsight(response);
+        })
+        .catch(() => {
+          if (active) setInsight(null);
+        })
+        .finally(() => {
+          if (active) setInsightLoading(false);
+        });
+    }, 350);
+
+    return () => {
+      active = false;
+      clearTimeout(handle);
+    };
+  }, [open, eventIso, amountForModel, toProfileId]);
 
   const validate = () => {
     const errors: typeof fieldErrors = {};
@@ -126,6 +179,12 @@ export const ProposalModal = ({
                 {fieldErrors.amount && <FieldError>{fieldErrors.amount}</FieldError>}
               </TextField>
 
+              <ProposalInsight
+                loading={insightLoading}
+                insight={insight}
+                onUseAmount={(value) => setAmount(String(value))}
+              />
+
               <TextField isInvalid={!!fieldErrors.message} isRequired>
                 <Label htmlFor="message">Mensagem</Label>
                 <TextArea
@@ -160,3 +219,56 @@ export const ProposalModal = ({
     </Modal.Backdrop>
   );
 };
+
+function ProposalInsight({
+  loading,
+  insight,
+  onUseAmount,
+}: {
+  loading: boolean;
+  insight: ProposalSuggestion | null;
+  onUseAmount: (amount: number) => void;
+}) {
+  if (loading && !insight) {
+    return <p className="text-muted text-xs">Calculando cachê sugerido…</p>;
+  }
+
+  if (!insight) return null;
+
+  if (!insight.available || insight.suggestedAmount === null) {
+    return insight.message ? <p className="text-muted text-sm">{insight.message}</p> : null;
+  }
+
+  const probability = insight.acceptanceProbability;
+
+  return (
+    <div className="rounded-lg border border-accent/30 bg-accent/5 px-3 py-3">
+      <p className="text-muted text-[11px] uppercase tracking-[0.14em]">Cachê sugerido</p>
+      <div className="mt-1 flex items-end justify-between gap-3">
+        <p className="font-display text-2xl font-bold">{currency.format(insight.suggestedAmount)}</p>
+        <Button size="sm" variant="secondary" onPress={() => onUseAmount(insight.suggestedAmount!)}>
+          Usar valor
+        </Button>
+      </div>
+      <p className="text-muted mt-2 text-xs leading-relaxed">
+        Regressão linear sobre capacidade, gênero, cidade e faixa de preço.
+      </p>
+      {probability !== null && insight.acceptanceLabel && (
+        <div className="mt-3">
+          <div className="flex items-baseline justify-between gap-3 text-xs">
+            <span>Chance de aceite</span>
+            <span className="font-medium">
+              {Math.round(probability * 100)}% · {ACCEPTANCE_COPY[insight.acceptanceLabel]}
+            </span>
+          </div>
+          <div className="bg-default mt-1 h-1.5 overflow-hidden rounded-full">
+            <div
+              className="bg-accent h-full"
+              style={{ width: `${Math.round(probability * 100)}%` }}
+            />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}

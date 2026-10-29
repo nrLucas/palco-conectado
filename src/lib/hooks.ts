@@ -28,6 +28,17 @@ export function useBand(id: string) {
   });
 }
 
+export function useMusician(id: string) {
+  return useQuery({
+    queryKey: ['musician', id],
+    queryFn: async () => {
+      const { fetchMusician } = await import('@/lib/api/musicians');
+      return fetchMusician(id);
+    },
+    enabled: !!id,
+  });
+}
+
 export function useSearchMusicians(params?: { query?: string }) {
   return useQuery({
     queryKey: ['musicians', params],

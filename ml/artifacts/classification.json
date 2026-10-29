@@ -1,0 +1,138 @@
+{
+  "task": "classification",
+  "model": "logistic",
+  "positiveClass": "accepted",
+  "featureNames": [
+    "amount_ratio",
+    "ratio_gap",
+    "genre_match",
+    "capacity",
+    "experience",
+    "same_city",
+    "lead_days",
+    "rating"
+  ],
+  "mean": [
+    1.0782572748971728,
+    0.3582600363953279,
+    0.39166666666666666,
+    211.4597222222222,
+    1.4194444444444445,
+    0.55,
+    39.75555555555555,
+    4.604791666666666
+  ],
+  "scale": [
+    0.4363739526852061,
+    0.2507397983742175,
+    0.48812282152024905,
+    151.3252881118852,
+    0.7044775228826776,
+    0.49749371855331,
+    20.822629843039685,
+    0.14672143272011914
+  ],
+  "coef": [
+    0.04252067402341343,
+    -1.132082931466045,
+    0.7104226186705853,
+    -0.041925840172319075,
+    0.2926444890097871,
+    0.48472235703258826,
+    0.12657263021686935,
+    0.0845075899674254
+  ],
+  "intercept": 0.6864114164560561,
+  "threshold": 0.5,
+  "vocab": {
+    "genres": [
+      "Rock",
+      "Samba",
+      "Jazz",
+      "MPB",
+      "Eletronica",
+      "Pop",
+      "Blues",
+      "Forro",
+      "Sertanejo"
+    ],
+    "establishmentTypes": [
+      "Bar",
+      "Restaurante",
+      "Pub",
+      "Casa noturna",
+      "Evento"
+    ],
+    "compatibility": {
+      "Bar": [
+        "Pop",
+        "Rock",
+        "Samba",
+        "Sertanejo"
+      ],
+      "Restaurante": [
+        "Blues",
+        "Jazz",
+        "MPB"
+      ],
+      "Pub": [
+        "Forro",
+        "Pop",
+        "Rock",
+        "Samba",
+        "Sertanejo"
+      ],
+      "Casa noturna": [
+        "Eletronica",
+        "Pop",
+        "Rock"
+      ],
+      "Evento": [
+        "Forro",
+        "Pop",
+        "Rock",
+        "Samba",
+        "Sertanejo"
+      ]
+    },
+    "weekendFromWeekday": 4,
+    "bandExperienceCuts": [
+      15,
+      40
+    ]
+  },
+  "comparison": {
+    "logistic": {
+      "accuracy": 0.6611111111111111,
+      "precision": 0.7,
+      "recall": 0.7706422018348624,
+      "f1": 0.7336244541484717,
+      "confusionMatrix": [
+        [
+          35,
+          36
+        ],
+        [
+          25,
+          84
+        ]
+      ]
+    },
+    "randomForest": {
+      "accuracy": 0.6833333333333333,
+      "precision": 0.696969696969697,
+      "recall": 0.8440366972477065,
+      "f1": 0.7634854771784232,
+      "confusionMatrix": [
+        [
+          31,
+          40
+        ],
+        [
+          17,
+          92
+        ]
+      ]
+    }
+  }
+}

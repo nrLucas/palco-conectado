@@ -1,6 +1,8 @@
 'use client';
 
 import HeroImage from '@/assets/hero-music.jpg';
+import { Recommendations } from '@/components/ml/Recommendations';
+import { SimilarProfiles } from '@/components/ml/SimilarProfiles';
 import { ProposalModal } from '@/components/proposals/ProposalModal';
 import { useProposalAction } from '@/components/proposals/useProposalAction';
 import { Button, Card, Chip, Tabs } from '@heroui/react';
@@ -147,6 +149,8 @@ export default function BandProfilePage() {
             </Card>
           </Tabs.Panel>
         </Tabs>
+        <SimilarProfiles kind="band" id={band.id} />
+        <Recommendations kind="band" id={band.id} />
       </section>
 
       {target && (

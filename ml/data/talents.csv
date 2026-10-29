@@ -1,0 +1,181 @@
+talent_id,kind,name,segment,genre_raw,genre,location,members,experience,experience_label,rating,shows,price_text,price_mid
+t0000,band,Talento 1,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.31,12,R$ 575 - R$ 922,748.5
+t0001,band,Talento 2,casa_noturna,Pop,Pop,São Paulo - SP,5,0,iniciante,4.47,32,R$ 1.673 - R$ 1.883,1778.0
+t0002,band,Talento 3,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.67,26,R$ 1.225 - R$ 1.602,1413.5
+t0003,musician,Talento 4,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.57,51,R$ 456 - R$ 702,579.0
+t0004,band,Talento 5,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.55,49,R$ 1.876 - R$ 2.218,2047.0
+t0005,band,Talento 6,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.92,15,R$ 804 - R$ 1.162,983.0
+t0006,band,Talento 7,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.77,25,R$ 537 - R$ 735,636.0
+t0007,musician,Talento 8,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.71,37,R$ 1.292 - R$ 1.632,1462.0
+t0008,band,Talento 9,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.63,44,R$ 835 - R$ 1.214,1024.5
+t0009,band,Talento 10,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.7,37,R$ 506 - R$ 719,612.5
+t0010,musician,Talento 11,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.53,44,R$ 1.566 - R$ 1.812,1689.0
+t0011,band,Talento 12,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.75,13,R$ 859 - R$ 1.144,1001.5
+t0012,band,Talento 13,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.71,37,R$ 695 - R$ 1.010,852.5
+t0013,band,Talento 14,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,2,profissional,4.57,28,R$ 1.124 - R$ 1.539,1331.5
+t0014,band,Talento 15,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.62,10,R$ 913 - R$ 1.298,1105.5
+t0015,band,Talento 16,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.55,44,R$ 620 - R$ 1.039,829.5
+t0016,band,Talento 17,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.42,9,R$ 1.233 - R$ 1.438,1335.5
+t0017,band,Talento 18,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.67,31,R$ 871 - R$ 1.276,1073.5
+t0018,band,Talento 19,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,1,intermediario,4.35,22,R$ 557 - R$ 901,729.0
+t0019,musician,Talento 20,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.46,27,R$ 1.359 - R$ 1.757,1558.0
+t0020,musician,Talento 21,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.57,45,R$ 1.249 - R$ 1.618,1433.5
+t0021,musician,Talento 22,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.67,44,R$ 491 - R$ 719,605.0
+t0022,band,Talento 23,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,0,iniciante,4.52,8,R$ 1.470 - R$ 1.832,1651.0
+t0023,band,Talento 24,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.45,12,R$ 859 - R$ 1.194,1026.5
+t0024,band,Talento 25,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.65,16,R$ 484 - R$ 743,613.5
+t0025,musician,Talento 26,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.39,56,R$ 1.205 - R$ 1.622,1413.5
+t0026,band,Talento 27,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.65,53,R$ 792 - R$ 1.072,932.0
+t0027,musician,Talento 28,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.45,30,R$ 444 - R$ 849,646.5
+t0028,band,Talento 29,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.51,33,R$ 1.863 - R$ 2.167,2015.0
+t0029,musician,Talento 30,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.35,15,R$ 1.213 - R$ 1.465,1339.0
+t0030,band,Talento 31,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.62,38,R$ 521 - R$ 876,698.5
+t0031,musician,Talento 32,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.49,20,R$ 1.248 - R$ 1.436,1342.0
+t0032,band,Talento 33,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.74,53,R$ 1.042 - R$ 1.298,1170.0
+t0033,band,Talento 34,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.67,54,R$ 745 - R$ 1.149,947.0
+t0034,musician,Talento 35,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.62,54,R$ 1.444 - R$ 1.645,1544.5
+t0035,band,Talento 36,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.54,22,R$ 1.075 - R$ 1.260,1167.5
+t0036,band,Talento 37,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.42,43,R$ 454 - R$ 725,589.5
+t0037,musician,Talento 38,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.54,54,R$ 1.071 - R$ 1.287,1179.0
+t0038,band,Talento 39,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.7,21,R$ 805 - R$ 1.059,932.0
+t0039,band,Talento 40,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,1,intermediario,4.81,51,R$ 576 - R$ 759,667.5
+t0040,musician,Talento 41,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.42,34,R$ 1.238 - R$ 1.640,1439.0
+t0041,musician,Talento 42,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.6,12,R$ 1.170 - R$ 1.527,1348.5
+t0042,musician,Talento 43,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.68,23,R$ 625 - R$ 836,730.5
+t0043,band,Talento 44,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,0,iniciante,4.64,51,R$ 1.329 - R$ 1.628,1478.5
+t0044,band,Talento 45,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.98,14,R$ 840 - R$ 1.199,1019.5
+t0045,band,Talento 46,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.51,45,R$ 755 - R$ 1.038,896.5
+t0046,musician,Talento 47,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.28,21,R$ 1.552 - R$ 1.923,1737.5
+t0047,band,Talento 48,sala_intima,Blues,Blues,Belo Horizonte - MG,3,0,iniciante,4.52,43,R$ 1.311 - R$ 1.635,1473.0
+t0048,band,Talento 49,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.38,53,R$ 460 - R$ 848,654.0
+t0049,musician,Talento 50,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.42,50,R$ 1.197 - R$ 1.607,1402.0
+t0050,band,Talento 51,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.56,46,R$ 863 - R$ 1.119,991.0
+t0051,band,Talento 52,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,1,intermediario,4.39,21,R$ 479 - R$ 797,638.0
+t0052,musician,Talento 53,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.67,51,R$ 1.281 - R$ 1.473,1377.0
+t0053,band,Talento 54,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.6,54,R$ 1.252 - R$ 1.553,1402.5
+t0054,band,Talento 55,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.91,49,R$ 597 - R$ 833,715.0
+t0055,band,Talento 56,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.64,8,R$ 1.325 - R$ 1.594,1459.5
+t0056,musician,Talento 57,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.74,56,R$ 921 - R$ 1.266,1093.5
+t0057,band,Talento 58,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.61,45,R$ 772 - R$ 1.091,931.5
+t0058,band,Talento 59,casa_noturna,Pop,Pop,São Paulo - SP,5,0,iniciante,4.82,33,R$ 1.207 - R$ 1.464,1335.5
+t0059,band,Talento 60,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.54,38,R$ 999 - R$ 1.238,1118.5
+t0060,band,Talento 61,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.73,18,R$ 570 - R$ 831,700.5
+t0061,band,Talento 62,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,1,intermediario,4.8,40,R$ 1.403 - R$ 1.639,1521.0
+t0062,band,Talento 63,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.86,23,R$ 1.054 - R$ 1.344,1199.0
+t0063,band,Talento 64,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.5,33,R$ 709 - R$ 1.072,890.5
+t0064,band,Talento 65,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.61,40,R$ 1.261 - R$ 1.561,1411.0
+t0065,band,Talento 66,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.36,42,R$ 834 - R$ 1.153,993.5
+t0066,musician,Talento 67,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.7,29,R$ 722 - R$ 1.044,883.0
+t0067,band,Talento 68,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.5,41,R$ 1.172 - R$ 1.493,1332.5
+t0068,band,Talento 69,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.26,8,R$ 853 - R$ 1.170,1011.5
+t0069,band,Talento 70,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,0,iniciante,4.29,32,R$ 751 - R$ 1.049,900.0
+t0070,band,Talento 71,casa_noturna,Pop,Pop,São Paulo - SP,3,1,intermediario,4.66,41,R$ 1.728 - R$ 1.929,1828.5
+t0071,band,Talento 72,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.63,42,R$ 898 - R$ 1.158,1028.0
+t0072,band,Talento 73,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.58,33,R$ 706 - R$ 961,833.5
+t0073,musician,Talento 74,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.49,27,R$ 1.557 - R$ 1.767,1662.0
+t0074,band,Talento 75,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.8,30,R$ 1.224 - R$ 1.437,1330.5
+t0075,band,Talento 76,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.57,13,R$ 762 - R$ 1.007,884.5
+t0076,musician,Talento 77,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.8,36,R$ 1.351 - R$ 1.533,1442.0
+t0077,band,Talento 78,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.67,22,R$ 1.331 - R$ 1.617,1474.0
+t0078,band,Talento 79,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.61,26,R$ 616 - R$ 1.035,825.5
+t0079,band,Talento 80,casa_noturna,Pop,Pop,São Paulo - SP,5,1,intermediario,4.5,39,R$ 1.134 - R$ 1.553,1343.5
+t0080,band,Talento 81,sala_intima,Blues,Blues,Belo Horizonte - MG,2,0,iniciante,4.49,48,R$ 1.168 - R$ 1.354,1261.0
+t0081,musician,Talento 82,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.56,55,R$ 542 - R$ 791,666.5
+t0082,musician,Talento 83,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.38,58,R$ 1.089 - R$ 1.461,1275.0
+t0083,band,Talento 84,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.63,53,R$ 1.161 - R$ 1.563,1362.0
+t0084,band,Talento 85,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.8,29,R$ 580 - R$ 808,694.0
+t0085,band,Talento 86,casa_noturna,Rock,Rock,São Paulo - SP,5,1,intermediario,4.47,46,R$ 1.459 - R$ 1.815,1637.0
+t0086,musician,Talento 87,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.44,39,R$ 1.177 - R$ 1.479,1328.0
+t0087,musician,Talento 88,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.51,29,R$ 457 - R$ 678,567.5
+t0088,musician,Talento 89,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.65,48,R$ 1.598 - R$ 1.839,1718.5
+t0089,musician,Talento 90,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.76,29,R$ 740 - R$ 1.058,899.0
+t0090,band,Talento 91,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,1,intermediario,4.65,29,R$ 476 - R$ 778,627.0
+t0091,band,Talento 92,casa_noturna,Rock,Rock,São Paulo - SP,3,1,intermediario,4.76,52,R$ 1.878 - R$ 2.124,2001.0
+t0092,band,Talento 93,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.47,53,R$ 1.008 - R$ 1.286,1147.0
+t0093,musician,Talento 94,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.89,9,R$ 510 - R$ 761,635.5
+t0094,musician,Talento 95,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.56,38,R$ 1.033 - R$ 1.381,1207.0
+t0095,band,Talento 96,sala_intima,Blues,Blues,Belo Horizonte - MG,2,0,iniciante,4.43,24,R$ 920 - R$ 1.231,1075.5
+t0096,band,Talento 97,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.61,45,R$ 766 - R$ 1.122,944.0
+t0097,band,Talento 98,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.66,20,R$ 1.686 - R$ 2.057,1871.5
+t0098,band,Talento 99,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.76,10,R$ 803 - R$ 1.000,901.5
+t0099,musician,Talento 100,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.33,16,R$ 423 - R$ 778,600.5
+t0100,musician,Talento 101,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.73,29,R$ 1.390 - R$ 1.659,1524.5
+t0101,band,Talento 102,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.96,31,R$ 1.069 - R$ 1.479,1274.0
+t0102,band,Talento 103,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.56,14,R$ 697 - R$ 1.046,871.5
+t0103,band,Talento 104,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,1,intermediario,4.7,43,R$ 1.639 - R$ 1.945,1792.0
+t0104,musician,Talento 105,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.8,36,R$ 1.252 - R$ 1.480,1366.0
+t0105,musician,Talento 106,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.62,25,R$ 498 - R$ 697,597.5
+t0106,band,Talento 107,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,1,intermediario,4.53,22,R$ 1.835 - R$ 2.058,1946.5
+t0107,musician,Talento 108,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.24,33,R$ 731 - R$ 1.149,940.0
+t0108,musician,Talento 109,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.57,52,R$ 493 - R$ 826,659.5
+t0109,band,Talento 110,casa_noturna,Pop,Pop,São Paulo - SP,5,1,intermediario,4.71,42,R$ 1.591 - R$ 1.858,1724.5
+t0110,band,Talento 111,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.91,32,R$ 968 - R$ 1.332,1150.0
+t0111,band,Talento 112,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.41,13,R$ 529 - R$ 913,721.0
+t0112,band,Talento 113,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.65,9,R$ 1.513 - R$ 1.788,1650.5
+t0113,band,Talento 114,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.58,22,R$ 784 - R$ 1.009,896.5
+t0114,band,Talento 115,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.59,14,R$ 571 - R$ 894,732.5
+t0115,musician,Talento 116,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.79,59,R$ 1.491 - R$ 1.863,1677.0
+t0116,band,Talento 117,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.56,41,R$ 1.294 - R$ 1.542,1418.0
+t0117,band,Talento 118,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.47,42,R$ 461 - R$ 835,648.0
+t0118,band,Talento 119,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,1,intermediario,4.87,54,R$ 1.875 - R$ 2.091,1983.0
+t0119,band,Talento 120,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.54,13,R$ 977 - R$ 1.228,1102.5
+t0120,band,Talento 121,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,0,iniciante,4.68,29,R$ 774 - R$ 1.032,903.0
+t0121,band,Talento 122,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.68,34,R$ 1.167 - R$ 1.476,1321.5
+t0122,band,Talento 123,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.44,25,R$ 801 - R$ 1.209,1005.0
+t0123,band,Talento 124,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.41,44,R$ 676 - R$ 857,766.5
+t0124,band,Talento 125,casa_noturna,Pop,Pop,São Paulo - SP,4,0,iniciante,4.53,19,R$ 1.139 - R$ 1.343,1241.0
+t0125,musician,Talento 126,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.52,35,R$ 1.202 - R$ 1.389,1295.5
+t0126,band,Talento 127,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.84,27,R$ 511 - R$ 895,703.0
+t0127,band,Talento 128,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.56,29,R$ 1.667 - R$ 1.942,1804.5
+t0128,band,Talento 129,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.38,39,R$ 1.167 - R$ 1.429,1298.0
+t0129,band,Talento 130,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.58,44,R$ 649 - R$ 926,787.5
+t0130,band,Talento 131,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.62,42,R$ 1.784 - R$ 2.106,1945.0
+t0131,band,Talento 132,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.43,12,R$ 976 - R$ 1.243,1109.5
+t0132,musician,Talento 133,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.55,40,R$ 360 - R$ 751,555.5
+t0133,band,Talento 134,casa_noturna,Eletronica,Eletronica,São Paulo - SP,5,2,profissional,4.59,33,R$ 1.701 - R$ 2.116,1908.5
+t0134,musician,Talento 135,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.22,23,R$ 1.071 - R$ 1.378,1224.5
+t0135,band,Talento 136,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.73,48,R$ 429 - R$ 666,547.5
+t0136,musician,Talento 137,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.57,37,R$ 1.437 - R$ 1.677,1557.0
+t0137,band,Talento 138,sala_intima,Blues,Blues,Belo Horizonte - MG,3,0,iniciante,4.53,54,R$ 1.051 - R$ 1.372,1211.5
+t0138,musician,Talento 139,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.54,30,R$ 360 - R$ 696,528.0
+t0139,band,Talento 140,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.48,52,R$ 1.211 - R$ 1.621,1416.0
+t0140,musician,Talento 141,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.77,31,R$ 679 - R$ 922,800.5
+t0141,musician,Talento 142,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.45,48,R$ 600 - R$ 794,697.0
+t0142,musician,Talento 143,casa_noturna,Pop,Pop,São Paulo - SP,1,1,intermediario,4.71,29,R$ 1.113 - R$ 1.329,1221.0
+t0143,band,Talento 144,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.37,31,R$ 780 - R$ 1.025,902.5
+t0144,band,Talento 145,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.77,47,R$ 701 - R$ 1.008,854.5
+t0145,musician,Talento 146,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.64,25,R$ 1.668 - R$ 1.902,1785.0
+t0146,band,Talento 147,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.61,48,R$ 1.062 - R$ 1.412,1237.0
+t0147,musician,Talento 148,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.72,8,R$ 458 - R$ 861,659.5
+t0148,musician,Talento 149,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.45,12,R$ 1.311 - R$ 1.627,1469.0
+t0149,band,Talento 150,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.68,33,R$ 939 - R$ 1.267,1103.0
+t0150,band,Talento 151,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.45,19,R$ 524 - R$ 924,724.0
+t0151,band,Talento 152,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.73,42,R$ 1.163 - R$ 1.538,1350.5
+t0152,band,Talento 153,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.71,32,R$ 948 - R$ 1.227,1087.5
+t0153,musician,Talento 154,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.41,8,R$ 351 - R$ 699,525.0
+t0154,band,Talento 155,casa_noturna,Rock,Rock,São Paulo - SP,3,0,iniciante,4.8,22,R$ 1.690 - R$ 1.899,1794.5
+t0155,musician,Talento 156,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.61,11,R$ 1.116 - R$ 1.337,1226.5
+t0156,band,Talento 157,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,1,intermediario,4.73,34,R$ 752 - R$ 1.170,961.0
+t0157,musician,Talento 158,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.58,35,R$ 1.756 - R$ 1.975,1865.5
+t0158,musician,Talento 159,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.33,25,R$ 829 - R$ 1.168,998.5
+t0159,musician,Talento 160,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.47,53,R$ 497 - R$ 878,687.5
+t0160,band,Talento 161,casa_noturna,Rock,Rock,São Paulo - SP,4,0,iniciante,4.76,39,R$ 1.416 - R$ 1.723,1569.5
+t0161,band,Talento 162,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.57,27,R$ 1.340 - R$ 1.741,1540.5
+t0162,band,Talento 163,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.65,27,R$ 607 - R$ 1.012,809.5
+t0163,band,Talento 164,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.53,15,R$ 1.646 - R$ 1.912,1779.0
+t0164,musician,Talento 165,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.28,20,R$ 1.272 - R$ 1.502,1387.0
+t0165,band,Talento 166,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.78,27,R$ 652 - R$ 956,804.0
+t0166,band,Talento 167,casa_noturna,Eletronica,Eletronica,São Paulo - SP,5,2,profissional,4.54,28,R$ 1.859 - R$ 2.064,1961.5
+t0167,band,Talento 168,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.88,8,R$ 1.066 - R$ 1.295,1180.5
+t0168,musician,Talento 169,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.62,45,R$ 637 - R$ 1.040,838.5
+t0169,band,Talento 170,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.75,35,R$ 1.586 - R$ 1.858,1722.0
+t0170,band,Talento 171,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.64,17,R$ 1.046 - R$ 1.307,1176.5
+t0171,musician,Talento 172,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.7,10,R$ 491 - R$ 752,621.5
+t0172,musician,Talento 173,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.72,53,R$ 1.097 - R$ 1.359,1228.0
+t0173,musician,Talento 174,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.64,31,R$ 895 - R$ 1.137,1016.0
+t0174,band,Talento 175,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.31,39,R$ 508 - R$ 806,657.0
+t0175,musician,Talento 176,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.74,53,R$ 1.247 - R$ 1.612,1429.5
+t0176,band,Talento 177,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.79,11,R$ 1.323 - R$ 1.601,1462.0
+t0177,band,Talento 178,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,0,iniciante,4.52,47,R$ 454 - R$ 812,633.0
+t0178,musician,Talento 179,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.5,13,R$ 891 - R$ 1.275,1083.0
+t0179,band,Talento 180,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.62,47,R$ 1.263 - R$ 1.540,1401.5

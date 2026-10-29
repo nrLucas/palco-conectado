@@ -3,6 +3,7 @@
 import { Button, Card, Chip, Input, Label, TextField } from '@heroui/react';
 import { useSearchMusicians } from '@/lib/hooks';
 import { MapPin, Star } from 'lucide-react';
+import Link from 'next/link';
 import { useState } from 'react';
 
 export default function MusiciansPage() {
@@ -66,7 +67,9 @@ export default function MusiciansPage() {
                   <p className="text-sm line-clamp-2">{musician.bio}</p>
                 </Card.Content>
                 <Card.Footer>
-                  <Button className="w-full">Ver Perfil</Button>
+                  <Link href={`/musico/${musician.id}`} className="w-full">
+                    <Button className="w-full">Ver Perfil</Button>
+                  </Link>
                 </Card.Footer>
               </Card>
             ))

@@ -1,5 +1,6 @@
 'use client';
 
+import { Recommendations } from '@/components/ml/Recommendations';
 import HeroImage from '@/assets/hero-music.jpg';
 import { ProposalModal } from '@/components/proposals/ProposalModal';
 import { useProposalAction } from '@/components/proposals/useProposalAction';
@@ -168,6 +169,7 @@ export default function EstablishmentProfilePage() {
             </Card>
           </Tabs.Panel>
         </Tabs>
+        <Recommendations kind="establishment" id={establishment.id} />
       </section>
 
       {target && (
