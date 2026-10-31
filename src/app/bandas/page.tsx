@@ -5,7 +5,7 @@ import { ProposalModal } from '@/components/proposals/ProposalModal';
 import { useProposalAction } from '@/components/proposals/useProposalAction';
 import { Button, Card, Chip, Input, Label, TextField } from '@heroui/react';
 import { useBands } from '@/lib/hooks';
-import { Heart, MapPin, Star } from 'lucide-react';
+import { MapPin, Star } from 'lucide-react';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
@@ -35,8 +35,8 @@ export default function BandasPage() {
   return (
     <main className="container mx-auto px-4 py-10">
       <header className="mb-8">
-        <h1 className="font-display text-3xl font-bold">Encontre Bandas e Cantores</h1>
-        <p className="text-muted mt-1">Filtre por estilo, cidade, nome e nota mínima.</p>
+        <h1 className="font-display text-2xl font-semibold tracking-tight">Encontre Bandas e Cantores</h1>
+        <p className="text-muted mt-2 max-w-[65ch] text-sm leading-relaxed">Filtre por estilo, cidade, nome e nota mínima.</p>
       </header>
 
       <section className="mb-8 grid gap-3 md:grid-cols-4" aria-label="Filtros">
@@ -81,18 +81,20 @@ export default function BandasPage() {
       {isLoading ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="animate-pulse h-64 rounded-xl bg-default/50" />
+            <div key={i} className="animate-pulse h-64 rounded-[var(--radius)] bg-default/50" />
           ))}
         </div>
       ) : (
         <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" aria-label="Lista de bandas">
           {bands.length === 0 ? (
-            <p className="col-span-full text-center text-muted py-12">Nenhuma banda encontrada.</p>
+            <p className="col-span-full rounded-[var(--radius)] border border-dashed border-border px-6 py-16 text-center text-muted">
+              Nenhuma banda encontrada com esses filtros.
+            </p>
           ) : (
             bands.map((b) => (
               <Card
                 key={b.id}
-                className="border-accent/15 shadow-surface hover:shadow-overlay transition-shadow"
+                className="border border-border shadow-none transition-colors hover:border-accent/40"
               >
                 <Card.Header>
                   <Card.Title className="flex items-center justify-between text-lg">
@@ -113,20 +115,18 @@ export default function BandasPage() {
                     {b.genre}
                   </Chip>
                 </Card.Content>
-                <Card.Footer className="flex gap-2 flex-wrap">
-                  <Link href={`/banda/${b.id}`}>
-                    <Button variant="secondary">Ver perfil</Button>
+                <Card.Footer className="flex gap-2">
+                  <Link href={`/banda/${b.id}`} className="min-w-0 flex-1">
+                    <Button variant="secondary" className="w-full">Ver perfil</Button>
                   </Link>
                   <Button
+                    className="min-w-0 flex-1"
                     isDisabled={!b.profileId}
                     onPress={() =>
                       openProposal({ profileId: b.profileId, targetName: b.name })
                     }
                   >
                     Enviar proposta
-                  </Button>
-                  <Button variant="outline" isDisabled>
-                    <Heart className="mr-2 h-4 w-4" /> Favoritar
                   </Button>
                 </Card.Footer>
               </Card>

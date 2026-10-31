@@ -25,7 +25,7 @@ export default function EstablishmentProfilePage() {
   if (isLoading) {
     return (
       <main className="container mx-auto px-4 py-10">
-        <div className="animate-pulse h-64 bg-default/50 rounded-xl" />
+        <div className="h-64 animate-pulse rounded-[var(--radius)] bg-default/50" />
       </main>
     );
   }
@@ -53,7 +53,7 @@ export default function EstablishmentProfilePage() {
         <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/40 to-transparent" />
         <div className="container mx-auto absolute bottom-4 left-0 right-0 flex flex-col gap-4 px-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-2">
-            <h1 className="font-display text-3xl font-bold text-foreground relative z-10 md:text-4xl">
+            <h1 className="font-display relative z-10 text-2xl font-semibold tracking-tight text-foreground">
               {establishment.name}
             </h1>
             <div className="relative z-10 flex flex-wrap gap-2">
@@ -112,30 +112,30 @@ export default function EstablishmentProfilePage() {
           </Tabs.ListContainer>
 
           <Tabs.Panel id="sobre" className="mt-4">
-            <Card className="shadow-surface">
+            <Card className="border border-border shadow-none">
               <Card.Content className="space-y-6">
                 <div>
                   <h3 className="font-display mb-2 text-lg font-semibold">Sobre o local</h3>
-                  <p className="text-muted leading-relaxed">
+                  <p className="text-muted max-w-[65ch] text-sm leading-relaxed">
                     {establishment.description || 'Sem descrição cadastrada.'}
                   </p>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                  <div className="rounded-lg border border-border bg-surface/50 p-4">
-                    <p className="text-muted text-xs uppercase tracking-wide">Tipo</p>
-                    <p className="mt-1 font-medium">{establishment.type}</p>
+                  <div className="rounded-[var(--radius)] border border-border bg-surface/50 p-4">
+                    <p className="text-muted text-xs">Tipo</p>
+                    <p className="mt-1 text-sm font-medium">{establishment.type}</p>
                   </div>
-                  <div className="rounded-lg border border-border bg-surface/50 p-4">
-                    <p className="text-muted text-xs uppercase tracking-wide">Endereço</p>
-                    <p className="mt-1 font-medium">{establishment.location}</p>
+                  <div className="rounded-[var(--radius)] border border-border bg-surface/50 p-4">
+                    <p className="text-muted text-xs">Endereço</p>
+                    <p className="mt-1 text-sm font-medium">{establishment.location}</p>
                   </div>
-                  <div className="rounded-lg border border-border bg-surface/50 p-4">
-                    <p className="text-muted text-xs uppercase tracking-wide">Capacidade</p>
-                    <p className="mt-1 font-medium">{establishment.capacity} pessoas</p>
+                  <div className="rounded-[var(--radius)] border border-border bg-surface/50 p-4">
+                    <p className="text-muted text-xs">Capacidade</p>
+                    <p className="mt-1 text-sm font-medium">{establishment.capacity} pessoas</p>
                   </div>
-                  <div className="rounded-lg border border-border bg-surface/50 p-4">
-                    <p className="text-muted text-xs uppercase tracking-wide">Orçamento médio</p>
-                    <p className="mt-1 font-medium">
+                  <div className="rounded-[var(--radius)] border border-border bg-surface/50 p-4">
+                    <p className="text-muted text-xs">Orçamento médio</p>
+                    <p className="mt-1 text-sm font-medium">
                       {establishment.averageBudget || 'Sob consulta'}
                     </p>
                   </div>
@@ -145,10 +145,10 @@ export default function EstablishmentProfilePage() {
           </Tabs.Panel>
 
           <Tabs.Panel id="orcamentos" className="mt-4">
-            <Card className="shadow-surface">
+            <Card className="border border-border shadow-none">
               <Card.Content>
                 <p className="text-muted mb-1 text-sm">Faixa de orçamento para shows</p>
-                <p className="font-display text-3xl font-bold">
+                <p className="font-display text-2xl font-semibold tabular-nums">
                   {establishment.averageBudget || 'Sob consulta'}
                 </p>
               </Card.Content>
@@ -156,11 +156,11 @@ export default function EstablishmentProfilePage() {
           </Tabs.Panel>
 
           <Tabs.Panel id="avaliacoes" className="mt-4">
-            <Card className="shadow-surface">
+            <Card className="border border-border shadow-none">
               <Card.Content className="flex flex-col items-center py-8 text-center">
                 <div className="mb-2 flex items-center gap-2">
                   <Star className="h-8 w-8 text-accent fill-accent" />
-                  <span className="font-display text-4xl font-bold">{establishment.rating}</span>
+                  <span className="font-display text-2xl font-semibold tabular-nums">{establishment.rating}</span>
                 </div>
                 <p className="text-muted">
                   Baseado em {establishment.totalEvents} eventos registrados na plataforma

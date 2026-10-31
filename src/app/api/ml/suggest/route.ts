@@ -5,6 +5,7 @@ import {
   acceptanceLabel,
   predictAcceptance,
   predictCache,
+  predictVenueAcceptance,
   roundCache,
 } from "@/lib/ml/predict";
 import { NextResponse } from "next/server";
@@ -53,18 +54,34 @@ export async function POST(request: Request) {
       });
     }
 
-    const negotiation = negotiationFromPair(talent, venue, body.eventDate.slice(0, 10));
+    const eventDay = body.eventDate.slice(0, 10);
+    const negotiation = negotiationFromPair(talent, venue, eventDay);
     const rawCache = predictCache(negotiation);
     const suggestedAmount = roundCache(rawCache);
 
+    const venueProfileId = fromSide?.role === "venue" ? account.activeProfileId : body.toProfileId;
+    const dayStart = new Date(`${eventDay}T00:00:00.000-03:00`);
+    const dayEnd = new Date(dayStart.getTime() + 24 * 60 * 60 * 1000);
+    const openOnDate = await prisma.proposal.count({
+      where: {
+        status: { not: "rejected" },
+        eventDate: { gte: dayStart, lt: dayEnd },
+        OR: [{ fromProfileId: venueProfileId }, { toProfileId: venueProfileId }],
+      },
+    });
+    const dateLoad = Math.min(5, openOnDate);
+
+    const talentIsSender = fromSide?.role === "talent";
     let probability: number | null = null;
     if (body.amount && body.amount > 0) {
-      probability = predictAcceptance({
+      const scenario = {
         ...negotiation,
         amount: body.amount,
         asOf: asOfToday(),
         suggestedAmount: rawCache,
-      });
+        dateLoad,
+      };
+      probability = talentIsSender ? predictVenueAcceptance(scenario) : predictAcceptance(scenario);
     }
 
     return NextResponse.json({
@@ -72,6 +89,7 @@ export async function POST(request: Request) {
       suggestedAmount,
       acceptanceProbability: probability,
       acceptanceLabel: probability === null ? null : acceptanceLabel(probability),
+      acceptanceTarget: talentIsSender ? "venue" : "band",
     });
   } catch (error) {
     return handleApiError(error);

@@ -80,8 +80,25 @@ export function weekdayMonday0(isoDate: string): number {
   return (utc.getUTCDay() + 6) % 7;
 }
 
-export function isWeekend(isoDate: string, weekendFromWeekday: number): number {
-  return weekdayMonday0(isoDate) >= weekendFromWeekday ? 1 : 0;
+export function dayFlags(isoDate: string): {
+  is_friday: number;
+  is_saturday: number;
+  is_sunday: number;
+} {
+  const day = weekdayMonday0(isoDate);
+  return {
+    is_friday: day === 4 ? 1 : 0,
+    is_saturday: day === 5 ? 1 : 0,
+    is_sunday: day === 6 ? 1 : 0,
+  };
+}
+
+export function dayKindLabel(isoDate: string): string {
+  const day = weekdayMonday0(isoDate);
+  if (day === 4) return "sexta";
+  if (day === 5) return "sábado";
+  if (day === 6) return "domingo";
+  return "dia de semana";
 }
 
 export function leadDays(eventDate: string, asOf: string): number {
@@ -120,6 +137,7 @@ export interface ClassificationInput extends NegotiationInput {
   amount: number;
   asOf: string;
   suggestedAmount: number;
+  dateLoad?: number;
 }
 
 export interface TalentInput {
@@ -149,7 +167,7 @@ export function regressionFeatureMap(
     members: input.members,
     experience: input.experience,
     same_city: sameCity(input.talentLocation, input.venueLocation),
-    is_weekend: isWeekend(input.eventDate, vocab.weekendFromWeekday),
+    ...dayFlags(input.eventDate),
     rating: input.rating,
     shows: input.shows,
     talent_price_mid: parsePriceMidpoint(input.talentPrice),
@@ -180,9 +198,10 @@ export function classificationFeatureMap(
 ): Record<string, number> {
   const genre = canonicalGenre(input.genre);
   const ratio = input.amount / Math.max(input.suggestedAmount, 1);
+  const load = Math.min(5, Math.max(0, input.dateLoad ?? 0));
   return {
-    amount_ratio: ratio,
-    ratio_gap: Math.abs(ratio - 1.05),
+    offer_log: Math.log(Math.max(ratio, 0.2)),
+    date_load: load,
     genre_match: genreMatch(genre, input.establishmentType, artifact.vocab.compatibility),
     capacity: input.capacity,
     experience: input.experience,
@@ -200,6 +219,29 @@ export function classificationVector(
     classificationFeatureMap(input, artifact),
     artifact.featureNames,
   );
+}
+
+export function venueFeatureMap(
+  input: ClassificationInput,
+  artifact: { vocab: ClassificationArtifact["vocab"]; featureNames: string[] } = classificationArtifact,
+): Record<string, number> {
+  const ratio = input.amount / Math.max(input.suggestedAmount, 1);
+  const budget = Math.max(parsePriceMidpoint(input.venueBudget), 1);
+  const budgetRatio = input.amount / budget;
+  const load = Math.min(5, Math.max(0, input.dateLoad ?? 0));
+  return {
+    ...classificationFeatureMap(input, artifact as ClassificationArtifact),
+    offer_log: Math.log(Math.max(ratio, 0.2)),
+    budget_log: Math.log(Math.max(budgetRatio, 0.2)),
+    date_load: load,
+  };
+}
+
+export function venueVector(
+  input: ClassificationInput,
+  artifact: { vocab: ClassificationArtifact["vocab"]; featureNames: string[] },
+): number[] {
+  return vectorFromMap(venueFeatureMap(input, artifact), artifact.featureNames);
 }
 
 export function clusteringFeatureMap(

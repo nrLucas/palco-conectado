@@ -189,13 +189,12 @@ export function AuthModal() {
       <Modal.Container>
         <Modal.Dialog className="sm:max-w-md">
           <Modal.CloseTrigger />
-          <div className="absolute inset-x-0 top-0 h-1 rounded-t-xl bg-gradient-to-r from-accent via-accent/80 to-accent/40" />
 
           <Modal.Header className="flex flex-col items-center text-center pb-2">
             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-accent/20 bg-accent/10">
               <Music2 className="h-7 w-7 text-accent" />
             </div>
-            <Modal.Heading className="text-2xl font-display">Acesse o Palco Conectado</Modal.Heading>
+            <Modal.Heading className="font-display text-lg font-semibold tracking-tight">Acesse o Palco Conectado</Modal.Heading>
             <p className="text-sm text-muted mt-1">
               Conecte-se com bandas, músicos e estabelecimentos
             </p>

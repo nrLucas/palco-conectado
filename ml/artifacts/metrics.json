@@ -2,80 +2,115 @@
   "synthetic": true,
   "seed": 42,
   "split": "80/20",
-  "proposals": 900,
-  "talents": 180,
-  "acceptanceRate": 0.6155555555555555,
+  "proposals": 6000,
+  "talents": 800,
+  "acceptanceRate": 0.6981666666666667,
   "regression": {
     "linear": {
-      "mae": 107.36738862650442,
-      "rmse": 135.50248508305313,
-      "r2": 0.954061246868203
+      "mae": 119.08934896781005,
+      "rmse": 150.1835397977398,
+      "r2": 0.9390348840837772
     },
     "randomForest": {
-      "mae": 147.8683655091068,
-      "rmse": 188.2574267119416,
-      "r2": 0.9113275068991458
+      "mae": 149.1964662311744,
+      "rmse": 186.99360485474566,
+      "r2": 0.905487284962568
     }
   },
   "classification": {
     "logistic": {
-      "accuracy": 0.6611111111111111,
-      "precision": 0.7,
-      "recall": 0.7706422018348624,
-      "f1": 0.7336244541484717,
+      "accuracy": 0.8341666666666666,
+      "precision": 0.8695652173913043,
+      "recall": 0.9048723897911833,
+      "f1": 0.8868675383740762,
       "confusionMatrix": [
         [
-          35,
-          36
+          221,
+          117
         ],
         [
-          25,
-          84
+          82,
+          780
         ]
       ]
     },
     "randomForest": {
-      "accuracy": 0.6833333333333333,
-      "precision": 0.696969696969697,
-      "recall": 0.8440366972477065,
-      "f1": 0.7634854771784232,
+      "accuracy": 0.8225,
+      "precision": 0.8500539374325782,
+      "recall": 0.91415313225058,
+      "f1": 0.8809390721073225,
       "confusionMatrix": [
         [
-          31,
-          40
+          199,
+          139
         ],
         [
-          17,
-          92
+          74,
+          788
         ]
       ]
     }
   },
   "clustering": {
     "k": 6,
-    "silhouette": 0.44845454162593207,
+    "silhouette": 0.24595950726854554,
     "silhouetteByK": {
-      "2": 0.2588574779657232,
-      "3": 0.34942361620850104,
-      "4": 0.38097211482737425,
-      "5": 0.4126574133251184,
-      "6": 0.44845454162593207
+      "2": 0.14935884829867818,
+      "3": 0.1968131359285468,
+      "4": 0.19916580621648625,
+      "5": 0.22970369224263926,
+      "6": 0.24595950726854554
     },
     "clusterNames": [
       "Pop · cachê alto",
+      "Forro · cachê médio",
       "Samba · cachê médio",
       "Jazz · cachê médio",
-      "Eletronica · cachê alto",
-      "Blues · cachê médio",
-      "MPB · cachê médio"
+      "MPB · cachê médio",
+      "Jazz · cachê alto"
     ],
-    "adjustedRandVsLatentSegment": 0.5861949793087641
+    "adjustedRandVsLatentSegment": 0.6483749285289202
   },
   "notes": [
-    "O histórico é sintético, calibrado nas faixas de preço, cidades e gêneros do seed do Palco.",
-    "A regressão prevê o cachê observado. A classificação usa a razão entre o valor ofertado e o cachê sugerido pela regressão linear, além da distância dessa razão a 1,05 (ratio_gap).",
-    "No teste, a regressão linear supera o Random Forest. Na classificação, o Random Forest fica à frente da logística.",
+    "Histórico sintético maior, semente 42. 411 talentos usam nome, gênero e popularidade de artistas do Spotify. Integrantes, cachê, orçamento e aceite continuam simulados. A API do Spotify deste app devolve o nome e não devolve gênero nem popularidade, então o gênero dos artistas encontrados é o termo da busca.",
+    "O cachê não muda no dia de semana, sobe na sexta, fica entre os dois no domingo e é mais alto no sábado. A regressão aprende isso com is_friday, is_saturday e is_sunday.",
+    "A chance de aceite sobe com o logaritmo da oferta sobre o cachê e satura. Abaixo do cachê fica baixa. date_load conta propostas já feitas naquela casa e naquela data, de 0 a 5, e reduz a chance.",
     "O segmento latente dos talentos não entra no K-Means. O índice de Rand ajustado só mede se os grupos recuperaram essa estrutura.",
     "A aplicação infere com os coeficientes lineares e os centróides. Random Forest fica como modelo de comparação no relatório."
-  ]
+  ],
+  "venueClassification": {
+    "logistic": {
+      "accuracy": 0.8475,
+      "precision": 0.8197573656845754,
+      "recall": 0.8568840579710145,
+      "f1": 0.8379096545615589,
+      "confusionMatrix": [
+        [
+          544,
+          104
+        ],
+        [
+          79,
+          473
+        ]
+      ]
+    },
+    "randomForest": {
+      "accuracy": 0.8491666666666666,
+      "precision": 0.8128161888701517,
+      "recall": 0.8731884057971014,
+      "f1": 0.8419213973799127,
+      "confusionMatrix": [
+        [
+          537,
+          111
+        ],
+        [
+          70,
+          482
+        ]
+      ]
+    }
+  },
+  "venueAcceptanceRate": 0.4555
 }

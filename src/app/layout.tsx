@@ -1,3 +1,4 @@
+import { OperateSurface } from "@/components/layout/OperateSurface";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import type { Metadata } from "next";
@@ -37,7 +38,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex min-h-screen flex-col">
             <SiteHeader />
-            <div className="flex-1">{children}</div>
+            <OperateSurface>{children}</OperateSurface>
             <SiteFooter />
           </div>
         </Providers>

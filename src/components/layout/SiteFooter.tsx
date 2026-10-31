@@ -1,6 +1,5 @@
 "use client";
 
-import { EncryptedText } from "@/components/aceternity/encrypted-text";
 import { useAuth } from "@/lib/auth";
 import { AMBITIONS_TECH_URL } from "@/lib/constants";
 import { Guitar } from "lucide-react";
@@ -13,10 +12,7 @@ const productLinks = [
   { href: "/musicos", label: "Músicos" },
 ] as const;
 
-const legalLinks = [
-  { href: "#", label: "Termos de uso" },
-  { href: "#", label: "Privacidade" },
-] as const;
+const legalNotes = ["Termos de uso", "Privacidade"] as const;
 
 export function SiteFooter() {
   const { isAuthenticated, openAuthModal } = useAuth();
@@ -37,7 +33,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider">Produto</h3>
+            <h3 className="mb-3 text-sm font-semibold">Produto</h3>
             <ul className="space-y-2">
               {productLinks.map(({ href, label }) => (
                 <li key={href}>
@@ -53,7 +49,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider">Conta</h3>
+            <h3 className="mb-3 text-sm font-semibold">Conta</h3>
             <ul className="space-y-2">
               {isAuthenticated ? (
                 <li>
@@ -98,17 +94,12 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wider">Legal</h3>
+            <h3 className="mb-3 text-sm font-semibold">Legal</h3>
             <ul className="space-y-2">
-              {legalLinks.map(({ href, label }) => (
-                <li key={label}>
-                  <Link
-                    href={href}
-                    className="text-muted hover:text-foreground text-sm transition-colors"
-                    aria-label={label}
-                  >
-                    {label}
-                  </Link>
+              {legalNotes.map((label) => (
+                <li key={label} className="text-muted text-sm">
+                  {label}
+                  <span className="mt-0.5 block text-xs">Em breve</span>
                 </li>
               ))}
             </ul>
@@ -126,13 +117,7 @@ export function SiteFooter() {
             className="text-muted hover:text-accent text-sm transition-colors"
             aria-label="Ambitions Tech — desenvolvido por"
           >
-            <EncryptedText
-              text="Ambitions Tech"
-              revealDelayMs={40}
-              flipDelayMs={40}
-              encryptedClassName="text-muted/60"
-              revealedClassName="text-accent"
-            />
+            Ambitions Tech
           </a>
         </div>
       </div>

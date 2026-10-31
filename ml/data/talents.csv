@@ -1,181 +1,801 @@
-talent_id,kind,name,segment,genre_raw,genre,location,members,experience,experience_label,rating,shows,price_text,price_mid
-t0000,band,Talento 1,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.31,12,R$ 575 - R$ 922,748.5
-t0001,band,Talento 2,casa_noturna,Pop,Pop,São Paulo - SP,5,0,iniciante,4.47,32,R$ 1.673 - R$ 1.883,1778.0
-t0002,band,Talento 3,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.67,26,R$ 1.225 - R$ 1.602,1413.5
-t0003,musician,Talento 4,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.57,51,R$ 456 - R$ 702,579.0
-t0004,band,Talento 5,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.55,49,R$ 1.876 - R$ 2.218,2047.0
-t0005,band,Talento 6,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.92,15,R$ 804 - R$ 1.162,983.0
-t0006,band,Talento 7,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.77,25,R$ 537 - R$ 735,636.0
-t0007,musician,Talento 8,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.71,37,R$ 1.292 - R$ 1.632,1462.0
-t0008,band,Talento 9,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.63,44,R$ 835 - R$ 1.214,1024.5
-t0009,band,Talento 10,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.7,37,R$ 506 - R$ 719,612.5
-t0010,musician,Talento 11,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.53,44,R$ 1.566 - R$ 1.812,1689.0
-t0011,band,Talento 12,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.75,13,R$ 859 - R$ 1.144,1001.5
-t0012,band,Talento 13,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.71,37,R$ 695 - R$ 1.010,852.5
-t0013,band,Talento 14,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,2,profissional,4.57,28,R$ 1.124 - R$ 1.539,1331.5
-t0014,band,Talento 15,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.62,10,R$ 913 - R$ 1.298,1105.5
-t0015,band,Talento 16,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.55,44,R$ 620 - R$ 1.039,829.5
-t0016,band,Talento 17,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.42,9,R$ 1.233 - R$ 1.438,1335.5
-t0017,band,Talento 18,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.67,31,R$ 871 - R$ 1.276,1073.5
-t0018,band,Talento 19,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,1,intermediario,4.35,22,R$ 557 - R$ 901,729.0
-t0019,musician,Talento 20,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.46,27,R$ 1.359 - R$ 1.757,1558.0
-t0020,musician,Talento 21,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.57,45,R$ 1.249 - R$ 1.618,1433.5
-t0021,musician,Talento 22,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.67,44,R$ 491 - R$ 719,605.0
-t0022,band,Talento 23,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,0,iniciante,4.52,8,R$ 1.470 - R$ 1.832,1651.0
-t0023,band,Talento 24,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.45,12,R$ 859 - R$ 1.194,1026.5
-t0024,band,Talento 25,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.65,16,R$ 484 - R$ 743,613.5
-t0025,musician,Talento 26,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.39,56,R$ 1.205 - R$ 1.622,1413.5
-t0026,band,Talento 27,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.65,53,R$ 792 - R$ 1.072,932.0
-t0027,musician,Talento 28,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.45,30,R$ 444 - R$ 849,646.5
-t0028,band,Talento 29,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.51,33,R$ 1.863 - R$ 2.167,2015.0
-t0029,musician,Talento 30,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.35,15,R$ 1.213 - R$ 1.465,1339.0
-t0030,band,Talento 31,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.62,38,R$ 521 - R$ 876,698.5
-t0031,musician,Talento 32,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.49,20,R$ 1.248 - R$ 1.436,1342.0
-t0032,band,Talento 33,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.74,53,R$ 1.042 - R$ 1.298,1170.0
-t0033,band,Talento 34,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.67,54,R$ 745 - R$ 1.149,947.0
-t0034,musician,Talento 35,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.62,54,R$ 1.444 - R$ 1.645,1544.5
-t0035,band,Talento 36,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.54,22,R$ 1.075 - R$ 1.260,1167.5
-t0036,band,Talento 37,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.42,43,R$ 454 - R$ 725,589.5
-t0037,musician,Talento 38,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.54,54,R$ 1.071 - R$ 1.287,1179.0
-t0038,band,Talento 39,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.7,21,R$ 805 - R$ 1.059,932.0
-t0039,band,Talento 40,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,1,intermediario,4.81,51,R$ 576 - R$ 759,667.5
-t0040,musician,Talento 41,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.42,34,R$ 1.238 - R$ 1.640,1439.0
-t0041,musician,Talento 42,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.6,12,R$ 1.170 - R$ 1.527,1348.5
-t0042,musician,Talento 43,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.68,23,R$ 625 - R$ 836,730.5
-t0043,band,Talento 44,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,0,iniciante,4.64,51,R$ 1.329 - R$ 1.628,1478.5
-t0044,band,Talento 45,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.98,14,R$ 840 - R$ 1.199,1019.5
-t0045,band,Talento 46,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.51,45,R$ 755 - R$ 1.038,896.5
-t0046,musician,Talento 47,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.28,21,R$ 1.552 - R$ 1.923,1737.5
-t0047,band,Talento 48,sala_intima,Blues,Blues,Belo Horizonte - MG,3,0,iniciante,4.52,43,R$ 1.311 - R$ 1.635,1473.0
-t0048,band,Talento 49,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.38,53,R$ 460 - R$ 848,654.0
-t0049,musician,Talento 50,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.42,50,R$ 1.197 - R$ 1.607,1402.0
-t0050,band,Talento 51,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.56,46,R$ 863 - R$ 1.119,991.0
-t0051,band,Talento 52,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,1,intermediario,4.39,21,R$ 479 - R$ 797,638.0
-t0052,musician,Talento 53,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.67,51,R$ 1.281 - R$ 1.473,1377.0
-t0053,band,Talento 54,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.6,54,R$ 1.252 - R$ 1.553,1402.5
-t0054,band,Talento 55,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.91,49,R$ 597 - R$ 833,715.0
-t0055,band,Talento 56,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.64,8,R$ 1.325 - R$ 1.594,1459.5
-t0056,musician,Talento 57,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.74,56,R$ 921 - R$ 1.266,1093.5
-t0057,band,Talento 58,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.61,45,R$ 772 - R$ 1.091,931.5
-t0058,band,Talento 59,casa_noturna,Pop,Pop,São Paulo - SP,5,0,iniciante,4.82,33,R$ 1.207 - R$ 1.464,1335.5
-t0059,band,Talento 60,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.54,38,R$ 999 - R$ 1.238,1118.5
-t0060,band,Talento 61,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.73,18,R$ 570 - R$ 831,700.5
-t0061,band,Talento 62,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,1,intermediario,4.8,40,R$ 1.403 - R$ 1.639,1521.0
-t0062,band,Talento 63,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.86,23,R$ 1.054 - R$ 1.344,1199.0
-t0063,band,Talento 64,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.5,33,R$ 709 - R$ 1.072,890.5
-t0064,band,Talento 65,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.61,40,R$ 1.261 - R$ 1.561,1411.0
-t0065,band,Talento 66,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.36,42,R$ 834 - R$ 1.153,993.5
-t0066,musician,Talento 67,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.7,29,R$ 722 - R$ 1.044,883.0
-t0067,band,Talento 68,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.5,41,R$ 1.172 - R$ 1.493,1332.5
-t0068,band,Talento 69,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.26,8,R$ 853 - R$ 1.170,1011.5
-t0069,band,Talento 70,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,0,iniciante,4.29,32,R$ 751 - R$ 1.049,900.0
-t0070,band,Talento 71,casa_noturna,Pop,Pop,São Paulo - SP,3,1,intermediario,4.66,41,R$ 1.728 - R$ 1.929,1828.5
-t0071,band,Talento 72,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.63,42,R$ 898 - R$ 1.158,1028.0
-t0072,band,Talento 73,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.58,33,R$ 706 - R$ 961,833.5
-t0073,musician,Talento 74,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.49,27,R$ 1.557 - R$ 1.767,1662.0
-t0074,band,Talento 75,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.8,30,R$ 1.224 - R$ 1.437,1330.5
-t0075,band,Talento 76,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.57,13,R$ 762 - R$ 1.007,884.5
-t0076,musician,Talento 77,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.8,36,R$ 1.351 - R$ 1.533,1442.0
-t0077,band,Talento 78,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.67,22,R$ 1.331 - R$ 1.617,1474.0
-t0078,band,Talento 79,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.61,26,R$ 616 - R$ 1.035,825.5
-t0079,band,Talento 80,casa_noturna,Pop,Pop,São Paulo - SP,5,1,intermediario,4.5,39,R$ 1.134 - R$ 1.553,1343.5
-t0080,band,Talento 81,sala_intima,Blues,Blues,Belo Horizonte - MG,2,0,iniciante,4.49,48,R$ 1.168 - R$ 1.354,1261.0
-t0081,musician,Talento 82,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.56,55,R$ 542 - R$ 791,666.5
-t0082,musician,Talento 83,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.38,58,R$ 1.089 - R$ 1.461,1275.0
-t0083,band,Talento 84,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.63,53,R$ 1.161 - R$ 1.563,1362.0
-t0084,band,Talento 85,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.8,29,R$ 580 - R$ 808,694.0
-t0085,band,Talento 86,casa_noturna,Rock,Rock,São Paulo - SP,5,1,intermediario,4.47,46,R$ 1.459 - R$ 1.815,1637.0
-t0086,musician,Talento 87,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.44,39,R$ 1.177 - R$ 1.479,1328.0
-t0087,musician,Talento 88,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.51,29,R$ 457 - R$ 678,567.5
-t0088,musician,Talento 89,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.65,48,R$ 1.598 - R$ 1.839,1718.5
-t0089,musician,Talento 90,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.76,29,R$ 740 - R$ 1.058,899.0
-t0090,band,Talento 91,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,1,intermediario,4.65,29,R$ 476 - R$ 778,627.0
-t0091,band,Talento 92,casa_noturna,Rock,Rock,São Paulo - SP,3,1,intermediario,4.76,52,R$ 1.878 - R$ 2.124,2001.0
-t0092,band,Talento 93,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.47,53,R$ 1.008 - R$ 1.286,1147.0
-t0093,musician,Talento 94,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.89,9,R$ 510 - R$ 761,635.5
-t0094,musician,Talento 95,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.56,38,R$ 1.033 - R$ 1.381,1207.0
-t0095,band,Talento 96,sala_intima,Blues,Blues,Belo Horizonte - MG,2,0,iniciante,4.43,24,R$ 920 - R$ 1.231,1075.5
-t0096,band,Talento 97,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.61,45,R$ 766 - R$ 1.122,944.0
-t0097,band,Talento 98,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.66,20,R$ 1.686 - R$ 2.057,1871.5
-t0098,band,Talento 99,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.76,10,R$ 803 - R$ 1.000,901.5
-t0099,musician,Talento 100,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.33,16,R$ 423 - R$ 778,600.5
-t0100,musician,Talento 101,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.73,29,R$ 1.390 - R$ 1.659,1524.5
-t0101,band,Talento 102,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.96,31,R$ 1.069 - R$ 1.479,1274.0
-t0102,band,Talento 103,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.56,14,R$ 697 - R$ 1.046,871.5
-t0103,band,Talento 104,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,1,intermediario,4.7,43,R$ 1.639 - R$ 1.945,1792.0
-t0104,musician,Talento 105,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.8,36,R$ 1.252 - R$ 1.480,1366.0
-t0105,musician,Talento 106,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.62,25,R$ 498 - R$ 697,597.5
-t0106,band,Talento 107,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,1,intermediario,4.53,22,R$ 1.835 - R$ 2.058,1946.5
-t0107,musician,Talento 108,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.24,33,R$ 731 - R$ 1.149,940.0
-t0108,musician,Talento 109,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.57,52,R$ 493 - R$ 826,659.5
-t0109,band,Talento 110,casa_noturna,Pop,Pop,São Paulo - SP,5,1,intermediario,4.71,42,R$ 1.591 - R$ 1.858,1724.5
-t0110,band,Talento 111,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.91,32,R$ 968 - R$ 1.332,1150.0
-t0111,band,Talento 112,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.41,13,R$ 529 - R$ 913,721.0
-t0112,band,Talento 113,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.65,9,R$ 1.513 - R$ 1.788,1650.5
-t0113,band,Talento 114,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.58,22,R$ 784 - R$ 1.009,896.5
-t0114,band,Talento 115,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.59,14,R$ 571 - R$ 894,732.5
-t0115,musician,Talento 116,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.79,59,R$ 1.491 - R$ 1.863,1677.0
-t0116,band,Talento 117,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.56,41,R$ 1.294 - R$ 1.542,1418.0
-t0117,band,Talento 118,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.47,42,R$ 461 - R$ 835,648.0
-t0118,band,Talento 119,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,1,intermediario,4.87,54,R$ 1.875 - R$ 2.091,1983.0
-t0119,band,Talento 120,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.54,13,R$ 977 - R$ 1.228,1102.5
-t0120,band,Talento 121,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,0,iniciante,4.68,29,R$ 774 - R$ 1.032,903.0
-t0121,band,Talento 122,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.68,34,R$ 1.167 - R$ 1.476,1321.5
-t0122,band,Talento 123,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.44,25,R$ 801 - R$ 1.209,1005.0
-t0123,band,Talento 124,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.41,44,R$ 676 - R$ 857,766.5
-t0124,band,Talento 125,casa_noturna,Pop,Pop,São Paulo - SP,4,0,iniciante,4.53,19,R$ 1.139 - R$ 1.343,1241.0
-t0125,musician,Talento 126,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.52,35,R$ 1.202 - R$ 1.389,1295.5
-t0126,band,Talento 127,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.84,27,R$ 511 - R$ 895,703.0
-t0127,band,Talento 128,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.56,29,R$ 1.667 - R$ 1.942,1804.5
-t0128,band,Talento 129,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.38,39,R$ 1.167 - R$ 1.429,1298.0
-t0129,band,Talento 130,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.58,44,R$ 649 - R$ 926,787.5
-t0130,band,Talento 131,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.62,42,R$ 1.784 - R$ 2.106,1945.0
-t0131,band,Talento 132,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.43,12,R$ 976 - R$ 1.243,1109.5
-t0132,musician,Talento 133,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.55,40,R$ 360 - R$ 751,555.5
-t0133,band,Talento 134,casa_noturna,Eletronica,Eletronica,São Paulo - SP,5,2,profissional,4.59,33,R$ 1.701 - R$ 2.116,1908.5
-t0134,musician,Talento 135,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.22,23,R$ 1.071 - R$ 1.378,1224.5
-t0135,band,Talento 136,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.73,48,R$ 429 - R$ 666,547.5
-t0136,musician,Talento 137,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.57,37,R$ 1.437 - R$ 1.677,1557.0
-t0137,band,Talento 138,sala_intima,Blues,Blues,Belo Horizonte - MG,3,0,iniciante,4.53,54,R$ 1.051 - R$ 1.372,1211.5
-t0138,musician,Talento 139,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.54,30,R$ 360 - R$ 696,528.0
-t0139,band,Talento 140,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.48,52,R$ 1.211 - R$ 1.621,1416.0
-t0140,musician,Talento 141,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.77,31,R$ 679 - R$ 922,800.5
-t0141,musician,Talento 142,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.45,48,R$ 600 - R$ 794,697.0
-t0142,musician,Talento 143,casa_noturna,Pop,Pop,São Paulo - SP,1,1,intermediario,4.71,29,R$ 1.113 - R$ 1.329,1221.0
-t0143,band,Talento 144,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.37,31,R$ 780 - R$ 1.025,902.5
-t0144,band,Talento 145,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.77,47,R$ 701 - R$ 1.008,854.5
-t0145,musician,Talento 146,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.64,25,R$ 1.668 - R$ 1.902,1785.0
-t0146,band,Talento 147,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.61,48,R$ 1.062 - R$ 1.412,1237.0
-t0147,musician,Talento 148,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.72,8,R$ 458 - R$ 861,659.5
-t0148,musician,Talento 149,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.45,12,R$ 1.311 - R$ 1.627,1469.0
-t0149,band,Talento 150,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.68,33,R$ 939 - R$ 1.267,1103.0
-t0150,band,Talento 151,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.45,19,R$ 524 - R$ 924,724.0
-t0151,band,Talento 152,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.73,42,R$ 1.163 - R$ 1.538,1350.5
-t0152,band,Talento 153,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.71,32,R$ 948 - R$ 1.227,1087.5
-t0153,musician,Talento 154,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.41,8,R$ 351 - R$ 699,525.0
-t0154,band,Talento 155,casa_noturna,Rock,Rock,São Paulo - SP,3,0,iniciante,4.8,22,R$ 1.690 - R$ 1.899,1794.5
-t0155,musician,Talento 156,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.61,11,R$ 1.116 - R$ 1.337,1226.5
-t0156,band,Talento 157,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,1,intermediario,4.73,34,R$ 752 - R$ 1.170,961.0
-t0157,musician,Talento 158,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.58,35,R$ 1.756 - R$ 1.975,1865.5
-t0158,musician,Talento 159,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.33,25,R$ 829 - R$ 1.168,998.5
-t0159,musician,Talento 160,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.47,53,R$ 497 - R$ 878,687.5
-t0160,band,Talento 161,casa_noturna,Rock,Rock,São Paulo - SP,4,0,iniciante,4.76,39,R$ 1.416 - R$ 1.723,1569.5
-t0161,band,Talento 162,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.57,27,R$ 1.340 - R$ 1.741,1540.5
-t0162,band,Talento 163,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.65,27,R$ 607 - R$ 1.012,809.5
-t0163,band,Talento 164,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.53,15,R$ 1.646 - R$ 1.912,1779.0
-t0164,musician,Talento 165,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.28,20,R$ 1.272 - R$ 1.502,1387.0
-t0165,band,Talento 166,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.78,27,R$ 652 - R$ 956,804.0
-t0166,band,Talento 167,casa_noturna,Eletronica,Eletronica,São Paulo - SP,5,2,profissional,4.54,28,R$ 1.859 - R$ 2.064,1961.5
-t0167,band,Talento 168,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.88,8,R$ 1.066 - R$ 1.295,1180.5
-t0168,musician,Talento 169,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.62,45,R$ 637 - R$ 1.040,838.5
-t0169,band,Talento 170,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.75,35,R$ 1.586 - R$ 1.858,1722.0
-t0170,band,Talento 171,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.64,17,R$ 1.046 - R$ 1.307,1176.5
-t0171,musician,Talento 172,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.7,10,R$ 491 - R$ 752,621.5
-t0172,musician,Talento 173,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.72,53,R$ 1.097 - R$ 1.359,1228.0
-t0173,musician,Talento 174,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.64,31,R$ 895 - R$ 1.137,1016.0
-t0174,band,Talento 175,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.31,39,R$ 508 - R$ 806,657.0
-t0175,musician,Talento 176,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.74,53,R$ 1.247 - R$ 1.612,1429.5
-t0176,band,Talento 177,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.79,11,R$ 1.323 - R$ 1.601,1462.0
-t0177,band,Talento 178,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,0,iniciante,4.52,47,R$ 454 - R$ 812,633.0
-t0178,musician,Talento 179,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.5,13,R$ 891 - R$ 1.275,1083.0
-t0179,band,Talento 180,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.62,47,R$ 1.263 - R$ 1.540,1401.5
+talent_id,kind,name,name_source,segment,genre_raw,genre,location,members,experience,experience_label,rating,shows,price_text,price_mid,spotify_popularity
+t0000,band,Caetano Veloso,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.28,7,R$ 450 - R$ 756,603.0,39
+t0001,band,MPB4,spotify,palco_bairro,MPB,MPB,Recife - PE,5,2,profissional,4.6,49,R$ 600 - R$ 967,783.5,83
+t0002,band,Armandinho,spotify,palco_bairro,MPB,MPB,São Paulo - SP,5,1,intermediario,4.41,43,R$ 739 - R$ 985,862.0,67
+t0003,band,Martinho Da Vila,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.46,32,R$ 741 - R$ 1.107,924.0,66
+t0004,musician,Raul Seixas,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.31,34,R$ 403 - R$ 815,609.0,59
+t0005,musician,Natiruts,spotify,palco_bairro,MPB,MPB,Curitiba - PR,1,2,profissional,4.3,30,R$ 522 - R$ 927,724.5,38
+t0006,band,Roberto Carlos,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,0,iniciante,4.38,38,R$ 559 - R$ 808,683.5,56
+t0007,musician,Charlie Brown Jr.,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.43,44,R$ 444 - R$ 793,618.5,76
+t0008,musician,Djavan,spotify,palco_bairro,MPB,MPB,Florianópolis - SC,1,2,profissional,4.4,27,R$ 492 - R$ 691,591.5,60
+t0009,band,Gilberto Gil,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.52,35,R$ 529 - R$ 716,622.5,73
+t0010,band,Tribalistas,spotify,palco_bairro,MPB,MPB,Curitiba - PR,6,0,iniciante,4.37,28,R$ 440 - R$ 687,563.5,48
+t0011,band,Mari Froes,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.25,28,R$ 567 - R$ 824,695.5,41
+t0012,musician,Seu Jorge,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.32,29,R$ 512 - R$ 917,714.5,43
+t0013,band,Toquinho,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.17,11,R$ 528 - R$ 859,693.5,42
+t0014,band,Maria Bethânia,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.31,26,R$ 598 - R$ 961,779.5,52
+t0015,band,Marisa Monte,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.58,40,R$ 518 - R$ 721,619.5,83
+t0016,band,Marina Sena,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.4,25,R$ 616 - R$ 800,708.0,70
+t0017,band,ANAVITÓRIA,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.46,30,R$ 630 - R$ 965,797.5,72
+t0018,band,Legião Urbana,spotify,casa_noturna,Rock,Rock,São Paulo - SP,4,2,profissional,4.41,29,R$ 1.215 - R$ 1.419,1317.0,74
+t0019,band,Gilsons,spotify,palco_bairro,MPB,MPB,Porto Alegre - RS,5,2,profissional,4.24,16,R$ 632 - R$ 817,724.5,49
+t0020,musician,Chico Buarque,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.2,31,R$ 601 - R$ 1.006,803.5,58
+t0021,band,Leo Middea,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.48,38,R$ 725 - R$ 992,858.5,75
+t0022,musician,Alceu Valença,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.48,45,R$ 484 - R$ 839,661.5,76
+t0023,musician,Elis Regina,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.38,39,R$ 563 - R$ 874,718.5,71
+t0024,band,Jorge Ben Jor,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.29,28,R$ 648 - R$ 1.045,846.5,53
+t0025,musician,Ivete Sangalo,spotify,palco_bairro,MPB,MPB,Belo Horizonte - MG,1,1,intermediario,4.32,40,R$ 574 - R$ 968,771.0,47
+t0026,band,Os Paralamas Do Sucesso,spotify,palco_bairro,MPB,MPB,Porto Alegre - RS,4,2,profissional,4.34,35,R$ 697 - R$ 1.035,866.0,46
+t0027,musician,Vanessa Da Mata,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.43,53,R$ 541 - R$ 750,645.5,71
+t0028,band,Skank,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.42,31,R$ 436 - R$ 855,645.5,72
+t0029,band,O Rappa,spotify,palco_bairro,MPB,MPB,Porto Alegre - RS,4,1,intermediario,4.29,39,R$ 482 - R$ 666,574.0,73
+t0030,band,Rita Lee,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.5,33,R$ 629 - R$ 856,742.5,68
+t0031,musician,Paula Fernandes,spotify,palco_bairro,MPB,MPB,Salvador - BA,1,2,profissional,4.31,25,R$ 518 - R$ 729,623.5,39
+t0032,band,Cássia Eller,spotify,palco_bairro,MPB,MPB,Porto Alegre - RS,6,1,intermediario,4.29,34,R$ 599 - R$ 814,706.5,59
+t0033,musician,Maria Rita,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.3,35,R$ 374 - R$ 731,552.5,66
+t0034,band,Alcione,spotify,palco_bairro,MPB,MPB,Salvador - BA,4,0,iniciante,4.45,34,R$ 523 - R$ 814,668.5,75
+t0035,band,Maneva,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.3,19,R$ 637 - R$ 916,776.5,46
+t0036,band,Gal Costa,spotify,palco_bairro,MPB,MPB,Recife - PE,4,0,iniciante,4.74,58,R$ 505 - R$ 864,684.5,83
+t0037,band,Lenine,spotify,palco_bairro,MPB,MPB,São Paulo - SP,4,2,profissional,4.55,39,R$ 716 - R$ 970,843.0,79
+t0038,band,Tim Maia,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.42,32,R$ 461 - R$ 646,553.5,64
+t0039,band,Jota.pê,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.47,43,R$ 709 - R$ 1.125,917.0,76
+t0040,band,Grupo Menos É Mais,spotify,palco_bairro,Samba,Samba,Curitiba - PR,4,1,intermediario,4.41,49,R$ 740 - R$ 1.074,907.0,60
+t0041,musician,Samba De Raiz,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.44,46,R$ 563 - R$ 768,665.5,63
+t0042,musician,Samba Do Marcio,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.26,23,R$ 703 - R$ 1.022,862.5,37
+t0043,band,Terra Samba,spotify,palco_bairro,Samba,Samba,Recife - PE,5,2,profissional,4.44,50,R$ 536 - R$ 916,726.0,73
+t0044,band,Samba De Dom,spotify,palco_bairro,Samba,Samba,São Paulo - SP,4,2,profissional,4.25,34,R$ 576 - R$ 901,738.5,58
+t0045,band,Sambabook,spotify,palco_bairro,Samba,Samba,Curitiba - PR,5,2,profissional,4.35,24,R$ 485 - R$ 855,670.0,46
+t0046,band,Sambaiana,spotify,palco_bairro,Samba,Samba,Curitiba - PR,5,0,iniciante,4.48,46,R$ 765 - R$ 993,879.0,82
+t0047,band,Samba da Ladeira,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,1,intermediario,4.47,46,R$ 432 - R$ 732,582.0,75
+t0048,band,SAMBATA,spotify,palco_bairro,Samba,Samba,Florianópolis - SC,6,1,intermediario,4.39,28,R$ 629 - R$ 982,805.5,78
+t0049,band,Gigantes do Samba,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,0,iniciante,4.28,16,R$ 701 - R$ 1.071,886.0,41
+t0050,musician,Samba de Cosme,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.26,47,R$ 485 - R$ 800,642.5,71
+t0051,band,Samba Touré,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.48,20,R$ 606 - R$ 819,712.5,68
+t0052,musician,Raça Negra,spotify,palco_bairro,Samba,Samba,Curitiba - PR,1,2,profissional,4.59,53,R$ 549 - R$ 914,731.5,81
+t0053,band,Ferrugem,spotify,palco_bairro,Samba,Samba,Porto Alegre - RS,6,2,profissional,4.48,36,R$ 551 - R$ 806,678.5,71
+t0054,band,Grupo Revelação,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.28,17,R$ 466 - R$ 873,669.5,39
+t0055,band,Antônio Carlos Jobim,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,1,intermediario,4.54,49,R$ 775 - R$ 1.127,951.0,81
+t0056,band,Sorriso Maroto,spotify,palco_bairro,Samba,Samba,Recife - PE,5,1,intermediario,4.42,28,R$ 631 - R$ 975,803.0,48
+t0057,band,Paul McCartney,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.47,41,R$ 533 - R$ 836,684.5,71
+t0058,musician,Deu Samba,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.51,50,R$ 347 - R$ 537,442.0,80
+t0059,musician,Samba Vibe,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.34,26,R$ 574 - R$ 959,766.5,40
+t0060,band,Samba Pra Deus,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,1,intermediario,4.3,45,R$ 433 - R$ 614,523.5,73
+t0061,musician,Samba Melodiosa,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.53,48,R$ 521 - R$ 893,707.0,84
+t0062,band,Samba Jean-Baptiste,spotify,palco_bairro,Samba,Samba,Salvador - BA,5,1,intermediario,4.59,39,R$ 492 - R$ 701,596.5,77
+t0063,band,Só Pra Contrariar,spotify,palco_bairro,Samba,Samba,Salvador - BA,6,1,intermediario,4.46,31,R$ 684 - R$ 910,797.0,62
+t0064,band,Alexandre Pires,spotify,palco_bairro,Samba,Samba,Porto Alegre - RS,4,1,intermediario,4.24,32,R$ 641 - R$ 831,736.0,61
+t0065,musician,Turma do Pagode,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.38,38,R$ 470 - R$ 711,590.5,55
+t0066,musician,Zeca Pagodinho,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.51,47,R$ 541 - R$ 782,661.5,66
+t0067,musician,Samba,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.44,53,R$ 569 - R$ 982,775.5,67
+t0068,band,Oba Oba Samba House,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.21,26,R$ 639 - R$ 971,805.0,41
+t0069,band,Samba Junior Oficial,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.57,56,R$ 432 - R$ 712,572.0,77
+t0070,band,Samba Junior,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.24,25,R$ 616 - R$ 943,779.5,39
+t0071,band,João Gilberto,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.44,30,R$ 645 - R$ 911,778.0,50
+t0072,band,Kamisa 10,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.33,27,R$ 684 - R$ 923,803.5,62
+t0073,band,Stan Getz,spotify,palco_bairro,Samba,Samba,São Paulo - SP,4,0,iniciante,4.36,31,R$ 732 - R$ 930,831.0,50
+t0074,musician,Pagode Restaura,spotify,palco_bairro,Samba,Samba,São Paulo - SP,1,2,profissional,4.43,23,R$ 497 - R$ 875,686.0,49
+t0075,band,Ruben Rada,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.47,56,R$ 551 - R$ 961,756.0,70
+t0076,band,Juanjo Morgade,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.42,31,R$ 691 - R$ 951,821.0,56
+t0077,band,Anitta,spotify,casa_noturna,Pop,Pop,Salvador - BA,3,0,iniciante,4.17,34,R$ 1.434 - R$ 1.843,1638.5,35
+t0078,band,Thiaguinho,spotify,palco_bairro,Samba,Samba,Florianópolis - SC,5,2,profissional,4.42,45,R$ 723 - R$ 1.103,913.0,62
+t0079,band,ONE PLAY,spotify,palco_bairro,Samba,Samba,Belo Horizonte - MG,4,0,iniciante,4.5,42,R$ 507 - R$ 838,672.5,72
+t0080,band,Pagodah,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,1,intermediario,4.24,13,R$ 597 - R$ 797,697.0,46
+t0081,band,Mais Uma,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,0,iniciante,4.53,42,R$ 705 - R$ 1.058,881.5,77
+t0082,band,Pagode do Velloso,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.34,46,R$ 593 - R$ 957,775.0,53
+t0083,band,Pagode da Tia Doca,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.39,24,R$ 558 - R$ 743,650.5,56
+t0084,band,Pagode do Adame,spotify,palco_bairro,Samba,Samba,São Paulo - SP,5,1,intermediario,4.39,29,R$ 533 - R$ 858,695.5,54
+t0085,band,Herederos Para Vos,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.52,35,R$ 422 - R$ 668,545.0,81
+t0086,band,Luana,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,0,iniciante,4.35,40,R$ 774 - R$ 1.077,925.5,70
+t0087,band,Tabaré Cardozo,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.38,28,R$ 461 - R$ 816,638.5,71
+t0088,band,LUDMILLA,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.48,57,R$ 475 - R$ 887,681.0,83
+t0089,musician,Pagode Restaurador,spotify,palco_bairro,Samba,Samba,Florianópolis - SC,1,2,profissional,4.31,45,R$ 599 - R$ 1.015,807.0,72
+t0090,band,Marama,spotify,palco_bairro,Samba,Samba,Curitiba - PR,4,2,profissional,4.37,31,R$ 619 - R$ 991,805.0,47
+t0091,band,Enzo y la Sub 21,spotify,palco_bairro,Samba,Samba,São Paulo - SP,5,0,iniciante,4.34,15,R$ 459 - R$ 801,630.0,46
+t0092,band,EnLaPeraSessions,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,1,intermediario,4.21,16,R$ 557 - R$ 761,659.0,35
+t0093,musician,Marcados Pagode Gospel,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.53,37,R$ 374 - R$ 721,547.5,66
+t0094,musician,Sonido Caracol,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.46,45,R$ 583 - R$ 933,758.0,79
+t0095,musician,La Revulsiva,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.46,43,R$ 543 - R$ 830,686.5,64
+t0096,band,Jeninho,spotify,palco_bairro,Samba,Samba,Recife - PE,5,1,intermediario,4.34,42,R$ 612 - R$ 836,724.0,70
+t0097,band,Larbanois & Carrero,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,1,intermediario,4.65,42,R$ 749 - R$ 1.048,898.5,84
+t0098,musician,Jaime Roos,spotify,palco_bairro,Samba,Samba,São Paulo - SP,1,2,profissional,4.13,34,R$ 473 - R$ 760,616.5,39
+t0099,band,Uri,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.23,17,R$ 522 - R$ 917,719.5,56
+t0100,band,Sin Perse,spotify,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.38,43,R$ 497 - R$ 683,590.0,79
+t0101,band,Marília Mendonça,spotify,casa_noturna,Sertanejo,Sertanejo,Belo Horizonte - MG,5,2,profissional,4.31,31,R$ 1.101 - R$ 1.341,1221.0,49
+t0102,band,Henrique & Juliano,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,2,profissional,4.42,35,R$ 1.895 - R$ 2.236,2065.5,74
+t0103,musician,Ana Castela,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.37,28,R$ 1.529 - R$ 1.832,1680.5,43
+t0104,musician,Luan Santana,spotify,casa_noturna,Sertanejo,Sertanejo,Porto Alegre - RS,1,1,intermediario,4.59,43,R$ 841 - R$ 1.084,962.5,81
+t0105,musician,Sertanejo Play,spotify,casa_noturna,Sertanejo,Sertanejo,Salvador - BA,1,2,profissional,4.43,32,R$ 1.036 - R$ 1.383,1209.5,60
+t0106,band,Ícaro e Gilmar,spotify,casa_noturna,Sertanejo,Sertanejo,Curitiba - PR,3,2,profissional,4.36,32,R$ 1.189 - R$ 1.576,1382.5,59
+t0107,band,PEDRO SAMPAIO,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,0,iniciante,4.41,19,R$ 1.540 - R$ 1.847,1693.5,48
+t0108,musician,Panda,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.23,33,R$ 1.403 - R$ 1.642,1522.5,48
+t0109,band,Zé Neto & Cristiano,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,2,profissional,4.52,40,R$ 1.220 - R$ 1.411,1315.5,81
+t0110,musician,Sertanejo,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,1,intermediario,4.19,33,R$ 1.092 - R$ 1.293,1192.5,39
+t0111,band,Gusttavo Lima,spotify,casa_noturna,Sertanejo,Sertanejo,Belo Horizonte - MG,5,2,profissional,4.33,38,R$ 1.526 - R$ 1.921,1723.5,63
+t0112,musician,Jorge & Mateus,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.38,55,R$ 1.373 - R$ 1.572,1472.5,73
+t0113,band,MJ Records,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,2,profissional,4.4,34,R$ 1.580 - R$ 1.811,1695.5,53
+t0114,musician,Los Olimareños,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,1,intermediario,4.61,38,R$ 1.077 - R$ 1.459,1268.0,76
+t0115,band,Natanael Segovia,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,1,intermediario,4.35,39,R$ 1.575 - R$ 1.785,1680.0,70
+t0116,band,Melody,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,1,intermediario,4.33,22,R$ 1.311 - R$ 1.623,1467.0,38
+t0117,musician,Simone Mendes,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.46,43,R$ 1.019 - R$ 1.242,1130.5,84
+t0118,band,Continental,spotify,casa_noturna,Sertanejo,Sertanejo,Belo Horizonte - MG,4,0,iniciante,4.4,26,R$ 1.881 - R$ 2.073,1977.0,48
+t0119,band,Matheus & Kauan,spotify,casa_noturna,Sertanejo,Sertanejo,Florianópolis - SC,4,2,profissional,4.51,37,R$ 1.248 - R$ 1.608,1428.0,64
+t0120,band,Felipe e Rodrigo,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,1,intermediario,4.41,38,R$ 1.886 - R$ 2.166,2026.0,68
+t0121,band,Alfredo Zitarrosa,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,1,intermediario,4.27,24,R$ 1.851 - R$ 2.188,2019.5,36
+t0122,musician,Pepe Guerra,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,1,intermediario,4.2,28,R$ 1.017 - R$ 1.279,1148.0,54
+t0123,band,Copla alta,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,1,intermediario,4.4,10,R$ 1.513 - R$ 1.871,1692.0,58
+t0124,musician,Meri Deal,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.62,47,R$ 1.496 - R$ 1.867,1681.5,82
+t0125,musician,Zezé Di Camargo & Luciano,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.37,35,R$ 1.398 - R$ 1.750,1574.0,56
+t0126,band,Luan Pereira,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,2,profissional,4.38,43,R$ 1.407 - R$ 1.725,1566.0,66
+t0127,musician,CountryBeat,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.35,50,R$ 1.051 - R$ 1.304,1177.5,81
+t0128,band,Mariana Fagundes,spotify,casa_noturna,Sertanejo,Sertanejo,Rio de Janeiro - RJ,3,0,iniciante,4.5,37,R$ 1.478 - R$ 1.740,1609.0,69
+t0129,musician,Zé Vaqueiro,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.37,33,R$ 907 - R$ 1.089,998.0,48
+t0130,band,Hugo & Guilherme,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,1,intermediario,4.37,30,R$ 1.188 - R$ 1.428,1308.0,59
+t0131,band,Lucas LM,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,0,iniciante,4.35,19,R$ 1.591 - R$ 1.912,1751.5,50
+t0132,band,Santiago Chalar,spotify,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,0,iniciante,4.22,16,R$ 1.177 - R$ 1.559,1368.0,38
+t0133,musician,Forró Hits,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,1,2,profissional,4.27,33,R$ 404 - R$ 761,582.5,61
+t0134,band,Forró da Brucelose & Gilson Neto,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,1,intermediario,4.49,23,R$ 698 - R$ 927,812.5,49
+t0135,musician,Forró Perfeito,spotify,palco_bairro,Forro,Forro,Porto Alegre - RS,1,2,profissional,4.26,33,R$ 372 - R$ 566,469.0,46
+t0136,band,Forró Boys,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,2,profissional,4.48,35,R$ 734 - R$ 995,864.5,57
+t0137,musician,Forró Cachorro,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,1,1,intermediario,4.48,32,R$ 492 - R$ 858,675.0,51
+t0138,band,Forrozão Chicote D' Luxo,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,1,intermediario,4.46,31,R$ 550 - R$ 773,661.5,57
+t0139,band,Forró e Piseiro,spotify,palco_bairro,Forro,Forro,Belo Horizonte - MG,5,1,intermediario,4.57,42,R$ 765 - R$ 1.154,959.5,82
+t0140,band,Forrozão Tropykalia,spotify,palco_bairro,Forro,Forro,Porto Alegre - RS,5,2,profissional,4.28,24,R$ 445 - R$ 751,598.0,36
+t0141,band,Forro Pisada Black,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,6,2,profissional,4.43,37,R$ 686 - R$ 978,832.0,61
+t0142,musician,Forrest Frank,spotify,palco_bairro,Forro,Forro,Belo Horizonte - MG,1,2,profissional,4.56,42,R$ 393 - R$ 725,559.0,69
+t0143,band,FORRÓ DE JEITO,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,0,iniciante,4.44,28,R$ 650 - R$ 830,740.0,74
+t0144,band,Canal Do Forró,spotify,palco_bairro,Forro,Forro,São Paulo - SP,5,0,iniciante,4.53,42,R$ 474 - R$ 805,639.5,78
+t0145,band,Forró e Vaquejada Oficial,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.46,24,R$ 529 - R$ 726,627.5,67
+t0146,band,Forró Medôin,spotify,palco_bairro,Forro,Forro,São Paulo - SP,6,0,iniciante,4.4,37,R$ 775 - R$ 1.192,983.5,58
+t0147,band,Forró Pressão,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,0,iniciante,4.49,38,R$ 611 - R$ 949,780.0,57
+t0148,band,Forró Real,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,2,profissional,4.45,43,R$ 741 - R$ 1.062,901.5,70
+t0149,band,Grelo,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,2,profissional,4.38,38,R$ 543 - R$ 820,681.5,60
+t0150,band,Alemão Do Forró,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.59,43,R$ 683 - R$ 1.075,879.0,76
+t0151,band,Aviões do Forró,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,6,0,iniciante,4.31,29,R$ 508 - R$ 848,678.0,51
+t0152,band,Forró Anjo Azul,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,0,iniciante,4.29,42,R$ 749 - R$ 1.159,954.0,73
+t0153,band,Forrozão Baby Som,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,6,2,profissional,4.49,42,R$ 511 - R$ 841,676.0,62
+t0154,band,Matheus Fernandes,spotify,palco_bairro,Forro,Forro,Curitiba - PR,5,2,profissional,4.34,40,R$ 564 - R$ 954,759.0,60
+t0155,band,Acertei,spotify,palco_bairro,Forro,Forro,Porto Alegre - RS,6,2,profissional,4.23,26,R$ 616 - R$ 913,764.5,43
+t0156,band,Forró do HF,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,0,iniciante,4.45,43,R$ 533 - R$ 718,625.5,75
+t0157,band,Forroçacana,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,2,profissional,4.48,39,R$ 584 - R$ 821,702.5,72
+t0158,band,Forro + Tóys,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,1,intermediario,4.28,24,R$ 523 - R$ 772,647.5,50
+t0159,musician,Forró Cintura de Mola,spotify,palco_bairro,Forro,Forro,Curitiba - PR,1,1,intermediario,4.39,45,R$ 675 - R$ 888,781.5,78
+t0160,band,Zé Felipe,spotify,palco_bairro,Forro,Forro,Curitiba - PR,6,1,intermediario,4.23,46,R$ 475 - R$ 756,615.5,40
+t0161,musician,Netto Brito,spotify,palco_bairro,Forro,Forro,Porto Alegre - RS,1,2,profissional,4.21,33,R$ 502 - R$ 735,618.5,49
+t0162,band,Xand Avião,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,2,profissional,4.44,36,R$ 602 - R$ 852,727.0,68
+t0163,band,Rey Vaqueiro,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,1,intermediario,4.51,41,R$ 605 - R$ 807,706.0,69
+t0164,band,Toque Dez,spotify,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,1,intermediario,4.39,33,R$ 495 - R$ 858,676.5,51
+t0165,band,Axel,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.32,41,R$ 1.433 - R$ 1.690,1561.5,52
+t0166,band,Axe Bahia,spotify,casa_noturna,Pop,Pop,Curitiba - PR,4,0,iniciante,4.32,22,R$ 1.803 - R$ 2.006,1904.5,43
+t0167,musician,AX'EL,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.46,31,R$ 1.095 - R$ 1.356,1225.5,49
+t0168,musician,Axel Fiks,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.53,37,R$ 1.699 - R$ 2.008,1853.5,67
+t0169,band,Axel Caram,spotify,casa_noturna,Pop,Pop,Curitiba - PR,3,1,intermediario,4.5,31,R$ 1.701 - R$ 2.002,1851.5,56
+t0170,musician,Axe,spotify,casa_noturna,Pop,Pop,Belo Horizonte - MG,1,2,profissional,4.41,35,R$ 1.218 - R$ 1.478,1348.0,50
+t0171,band,Axel Muñiz,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,0,iniciante,4.34,20,R$ 1.892 - R$ 2.104,1998.0,43
+t0172,band,Axel Martinez,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,0,iniciante,4.47,30,R$ 1.864 - R$ 2.192,2028.0,80
+t0173,band,Axelle Red,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.45,46,R$ 1.553 - R$ 1.865,1709.0,46
+t0174,musician,axeos,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.37,31,R$ 959 - R$ 1.201,1080.0,58
+t0175,band,Axel Bennett,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.34,27,R$ 1.703 - R$ 1.921,1812.0,40
+t0176,band,Axel Moons,spotify,casa_noturna,Pop,Pop,Belo Horizonte - MG,3,1,intermediario,4.38,25,R$ 1.107 - R$ 1.472,1289.5,50
+t0177,band,Axel ASMR,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,0,iniciante,4.58,42,R$ 1.480 - R$ 1.884,1682.0,67
+t0178,musician,Axel Johansson,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.33,29,R$ 1.222 - R$ 1.425,1323.5,58
+t0179,musician,Axel Rudi Pell,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.57,33,R$ 1.004 - R$ 1.270,1137.0,61
+t0180,band,Axel Gillison,spotify,casa_noturna,Pop,Pop,Belo Horizonte - MG,5,1,intermediario,4.23,8,R$ 1.810 - R$ 2.213,2011.5,52
+t0181,band,Axelle Maga,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,0,iniciante,4.29,32,R$ 1.781 - R$ 2.142,1961.5,37
+t0182,musician,Axel Rulay,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.33,32,R$ 1.537 - R$ 1.944,1740.5,42
+t0183,band,Axel Ehnström,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.53,24,R$ 1.524 - R$ 1.933,1728.5,81
+t0184,band,Axel Pedersen,spotify,casa_noturna,Pop,Pop,Salvador - BA,3,1,intermediario,4.27,42,R$ 1.273 - R$ 1.644,1458.5,54
+t0185,band,Axe BA,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,0,iniciante,4.34,37,R$ 1.445 - R$ 1.776,1610.5,78
+t0186,band,AxelitoHmn,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.39,31,R$ 1.875 - R$ 2.124,1999.5,71
+t0187,band,Axero,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.43,32,R$ 1.525 - R$ 1.825,1675.0,67
+t0188,musician,Axé 90 Graus,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.5,38,R$ 1.351 - R$ 1.763,1557.0,71
+t0189,band,Axel de Chevron Villette,spotify,casa_noturna,Pop,Pop,Salvador - BA,5,2,profissional,4.5,45,R$ 1.777 - R$ 2.178,1977.5,81
+t0190,musician,Axel Flóvent,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.24,46,R$ 1.331 - R$ 1.547,1439.0,63
+t0191,band,Axel Cooper,spotify,casa_noturna,Pop,Pop,Florianópolis - SC,5,2,profissional,4.54,40,R$ 1.849 - R$ 2.266,2057.5,77
+t0192,musician,Axel Boman,spotify,casa_noturna,Pop,Pop,Curitiba - PR,1,1,intermediario,4.22,39,R$ 1.476 - R$ 1.784,1630.0,53
+t0193,musician,Axel Kala,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.51,29,R$ 1.723 - R$ 1.992,1857.5,74
+t0194,band,Bossa Nova Covers,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.36,42,R$ 682 - R$ 1.086,884.0,60
+t0195,musician,Bossa Nova,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.33,37,R$ 399 - R$ 754,576.5,53
+t0196,band,Laza Bossa,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.48,36,R$ 668 - R$ 887,777.5,78
+t0197,musician,Nova Bossa Ltd.,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.52,44,R$ 556 - R$ 787,671.5,74
+t0198,musician,Bossa Bros,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.42,48,R$ 452 - R$ 826,639.0,59
+t0199,band,BossArt Ensemble,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.36,38,R$ 549 - R$ 816,682.5,64
+t0200,band,Bossanova Covers,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,1,intermediario,4.24,29,R$ 434 - R$ 783,608.5,36
+t0201,band,Bossa Nova TBM,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.39,36,R$ 748 - R$ 929,838.5,54
+t0202,band,Bossa Nova Brain,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.55,37,R$ 624 - R$ 899,761.5,76
+t0203,band,Laufey,spotify,palco_bairro,MPB,MPB,Porto Alegre - RS,5,1,intermediario,4.39,35,R$ 522 - R$ 933,727.5,43
+t0204,band,Bossa Lounge Cover,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,0,iniciante,4.31,11,R$ 642 - R$ 972,807.0,41
+t0205,band,Lisa Ono,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.05,34,R$ 743 - R$ 1.156,949.5,41
+t0206,band,Sarah Menescal,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.39,41,R$ 490 - R$ 843,666.5,57
+t0207,band,Boza,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.11,26,R$ 640 - R$ 828,734.0,38
+t0208,musician,Bossa Nova Jazz,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.3,39,R$ 757 - R$ 1.171,964.0,49
+t0209,musician,Bossacucanova,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.38,37,R$ 461 - R$ 799,630.0,52
+t0210,band,Stacey Kent,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.35,46,R$ 731 - R$ 1.138,934.5,66
+t0211,band,Nova Jazzers,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.4,30,R$ 725 - R$ 934,829.5,58
+t0212,band,Astrud Gilberto,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.45,41,R$ 662 - R$ 946,804.0,62
+t0213,band,Bossanatics,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.49,43,R$ 458 - R$ 757,607.5,80
+t0214,band,Bossa Players,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.39,37,R$ 604 - R$ 1.017,810.5,81
+t0215,musician,Luiz Bonfá,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.21,36,R$ 636 - R$ 934,785.0,38
+t0216,musician,Toco,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.67,56,R$ 637 - R$ 926,781.5,79
+t0217,band,Butterfly Bossa Nova Covers,spotify,palco_bairro,MPB,MPB,Curitiba - PR,5,2,profissional,4.45,29,R$ 700 - R$ 1.049,874.5,66
+t0218,band,Sérgio Mendes,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.2,18,R$ 685 - R$ 975,830.0,53
+t0219,musician,Mats & My,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.51,33,R$ 433 - R$ 827,630.0,52
+t0220,musician,Hugo Fattoruso,spotify,palco_bairro,MPB,MPB,Porto Alegre - RS,1,1,intermediario,4.33,28,R$ 487 - R$ 841,664.0,39
+t0221,musician,João Donato,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.45,45,R$ 535 - R$ 774,654.5,73
+t0222,band,Titãs,spotify,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.24,31,R$ 1.155 - R$ 1.450,1302.5,50
+t0223,band,Rock Danger,spotify,casa_noturna,Rock,Rock,São Paulo - SP,5,1,intermediario,4.26,34,R$ 1.321 - R$ 1.544,1432.5,40
+t0224,band,La Trampa,spotify,casa_noturna,Rock,Rock,Porto Alegre - RS,5,2,profissional,4.33,26,R$ 1.239 - R$ 1.506,1372.5,43
+t0225,band,Edi Rock,spotify,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.38,18,R$ 1.288 - R$ 1.651,1469.5,41
+t0226,band,Marcelo D2,spotify,casa_noturna,Rock,Rock,São Paulo - SP,4,2,profissional,4.38,33,R$ 1.477 - R$ 1.856,1666.5,66
+t0227,band,Engenheiros Do Hawaii,spotify,casa_noturna,Rock,Rock,Salvador - BA,3,2,profissional,4.52,46,R$ 1.564 - R$ 1.862,1713.0,80
+t0228,band,Trotsky Vengarán,spotify,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.22,36,R$ 1.186 - R$ 1.420,1303.0,55
+t0229,band,Cazuza,spotify,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.56,40,R$ 1.228 - R$ 1.587,1407.5,73
+t0230,band,Baby Do Brasil,spotify,casa_noturna,Rock,Rock,Porto Alegre - RS,4,2,profissional,4.26,30,R$ 1.591 - R$ 1.824,1707.5,48
+t0231,band,Roberto De Carvalho,spotify,casa_noturna,Rock,Rock,São Paulo - SP,3,1,intermediario,4.36,19,R$ 1.767 - R$ 2.110,1938.5,44
+t0232,musician,Lulu Santos,spotify,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.23,24,R$ 1.327 - R$ 1.669,1498.0,46
+t0233,band,Rock Your Babies,spotify,casa_noturna,Rock,Rock,Belo Horizonte - MG,3,0,iniciante,4.49,43,R$ 1.443 - R$ 1.726,1584.5,83
+t0234,band,Pitty,spotify,casa_noturna,Rock,Rock,São Paulo - SP,5,1,intermediario,4.23,35,R$ 1.772 - R$ 2.089,1930.5,65
+t0235,musician,Gabriel O Pensador,spotify,casa_noturna,Rock,Rock,Porto Alegre - RS,1,2,profissional,4.27,38,R$ 1.434 - R$ 1.635,1534.5,63
+t0236,musician,Capital Inicial,spotify,casa_noturna,Rock,Rock,Belo Horizonte - MG,1,2,profissional,4.22,20,R$ 1.324 - R$ 1.630,1477.0,42
+t0237,band,Nando Reis,spotify,casa_noturna,Rock,Rock,São Paulo - SP,4,1,intermediario,4.34,48,R$ 1.422 - R$ 1.823,1622.5,67
+t0238,musician,Jota Quest,spotify,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.31,35,R$ 1.321 - R$ 1.545,1433.0,39
+t0239,band,Snake,spotify,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.3,23,R$ 1.609 - R$ 1.817,1713.0,44
+t0240,band,Mc Jacaré,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.25,29,R$ 1.279 - R$ 1.662,1470.5,47
+t0241,band,DENNIS,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,1,intermediario,4.08,25,R$ 1.228 - R$ 1.555,1391.5,39
+t0242,musician,MC Meno K,spotify,casa_noturna,Pop,Pop,Recife - PE,1,1,intermediario,4.48,47,R$ 1.444 - R$ 1.772,1608.0,77
+t0243,band,Mc Rodrigo do CN,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.16,24,R$ 1.880 - R$ 2.104,1992.0,41
+t0244,band,Mc Livinho,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.39,21,R$ 1.330 - R$ 1.538,1434.0,61
+t0245,band,Funk das galáxias,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,0,iniciante,4.47,32,R$ 1.765 - R$ 2.136,1950.5,68
+t0246,band,Gordinho Bolado,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.37,13,R$ 1.250 - R$ 1.620,1435.0,47
+t0247,band,MC Kevin o Chris,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.41,54,R$ 1.384 - R$ 1.581,1482.5,75
+t0248,band,DU'L,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.39,43,R$ 1.327 - R$ 1.696,1511.5,84
+t0249,band,MC Nito,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.32,40,R$ 1.265 - R$ 1.515,1390.0,59
+t0250,musician,MC Kevinho,spotify,casa_noturna,Pop,Pop,Porto Alegre - RS,1,2,profissional,4.47,37,R$ 1.465 - R$ 1.763,1614.0,67
+t0251,musician,Funk Maia,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.36,36,R$ 1.764 - R$ 1.956,1860.0,75
+t0252,band,Mc Gw,spotify,casa_noturna,Pop,Pop,Salvador - BA,4,2,profissional,4.17,45,R$ 1.525 - R$ 1.892,1708.5,46
+t0253,band,Luísa Sonza,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.51,12,R$ 1.186 - R$ 1.588,1387.0,55
+t0254,band,Jotape,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,1,intermediario,4.21,28,R$ 1.261 - R$ 1.654,1457.5,61
+t0255,musician,Kew,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.56,46,R$ 1.519 - R$ 1.920,1719.5,83
+t0256,musician,MC Menor JP,spotify,casa_noturna,Pop,Pop,Rio de Janeiro - RJ,1,1,intermediario,4.25,39,R$ 1.399 - R$ 1.586,1492.5,49
+t0257,band,Mc Th,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.26,24,R$ 1.604 - R$ 1.995,1799.5,41
+t0258,band,Mc Leléto,spotify,casa_noturna,Pop,Pop,Salvador - BA,3,1,intermediario,4.51,35,R$ 1.474 - R$ 1.694,1584.0,81
+t0259,musician,Furacão 2000,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.31,31,R$ 992 - R$ 1.336,1164.0,56
+t0260,band,MC L da Vinte,spotify,casa_noturna,Pop,Pop,Recife - PE,4,2,profissional,4.44,36,R$ 1.651 - R$ 2.049,1850.0,79
+t0261,band,DJ Biel do Furduncinho,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.22,18,R$ 1.456 - R$ 1.857,1656.5,47
+t0262,band,Oruam,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,0,iniciante,4.18,23,R$ 1.159 - R$ 1.446,1302.5,41
+t0263,band,CACAU CHUU,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,1,intermediario,4.52,41,R$ 1.716 - R$ 2.007,1861.5,84
+t0264,band,ZAAC,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.41,23,R$ 1.595 - R$ 1.997,1796.0,62
+t0265,band,Facu RG,spotify,casa_noturna,Pop,Pop,Florianópolis - SC,4,2,profissional,4.48,28,R$ 1.512 - R$ 1.807,1659.5,67
+t0266,band,MC Lan,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.39,42,R$ 1.571 - R$ 1.785,1678.0,62
+t0267,band,mc pl alves,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.25,20,R$ 1.686 - R$ 1.873,1779.5,39
+t0268,musician,MC Fioti,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.28,25,R$ 1.502 - R$ 1.835,1668.5,40
+t0269,band,Dj Funks,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,0,iniciante,4.13,32,R$ 1.225 - R$ 1.491,1358.0,42
+t0270,band,DJ Zigão,spotify,casa_noturna,Pop,Pop,Salvador - BA,3,2,profissional,4.56,49,R$ 1.611 - R$ 1.793,1702.0,84
+t0271,band,Prime Funk,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.45,48,R$ 1.846 - R$ 2.074,1960.0,84
+t0272,band,Croupier Funk,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,0,iniciante,4.31,24,R$ 1.459 - R$ 1.778,1618.5,46
+t0273,band,Tchakabum,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,1,intermediario,4.44,41,R$ 1.548 - R$ 1.849,1698.5,74
+t0274,band,Sergio Mendes & Brasil '66,spotify,sala_intima,Jazz,Jazz,Salvador - BA,3,2,profissional,4.32,24,R$ 852 - R$ 1.077,964.5,68
+t0275,band,Brasil 690,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.27,27,R$ 880 - R$ 1.086,983.0,37
+t0276,musician,Jorge Drexler,spotify,sala_intima,Jazz,Jazz,São Paulo - SP,1,2,profissional,4.32,35,R$ 716 - R$ 901,808.5,43
+t0277,band,Thomas Asselman,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.4,41,R$ 998 - R$ 1.328,1163.0,60
+t0278,musician,Jazzy-Fi,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.44,52,R$ 740 - R$ 1.113,926.5,79
+t0279,band,JazzyHan,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.54,50,R$ 1.061 - R$ 1.313,1187.0,67
+t0280,musician,Jazz Brasileiro,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.47,31,R$ 833 - R$ 1.017,925.0,72
+t0281,band,Aquarela Do Brasil,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.22,35,R$ 906 - R$ 1.293,1099.5,47
+t0282,musician,Brasil Guitar Duo,spotify,sala_intima,Jazz,Jazz,Recife - PE,1,1,intermediario,4.29,34,R$ 768 - R$ 1.047,907.5,58
+t0283,musician,Banda Brasileira,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.4,32,R$ 947 - R$ 1.348,1147.5,63
+t0284,band,JazzDaniels,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.25,45,R$ 912 - R$ 1.281,1096.5,78
+t0285,band,Brasil Group 55,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.14,20,R$ 1.017 - R$ 1.334,1175.5,38
+t0286,band,Brasiliero Bossa Lounge,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.39,37,R$ 1.078 - R$ 1.388,1233.0,70
+t0287,band,Lucia Fumero,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.26,25,R$ 879 - R$ 1.111,995.0,50
+t0288,musician,Eduardo Mateo,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.32,34,R$ 989 - R$ 1.373,1181.0,61
+t0289,musician,Lô Borges,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.31,26,R$ 1.303 - R$ 1.519,1411.0,58
+t0290,musician,Toti Cisneros,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.43,35,R$ 905 - R$ 1.153,1029.0,77
+t0291,band,Vinícius de Moraes,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.46,35,R$ 1.236 - R$ 1.461,1348.5,71
+t0292,band,Brasilian Tropical Orchestra,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.27,27,R$ 886 - R$ 1.196,1041.0,40
+t0293,band,Brasilidades,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.46,28,R$ 1.077 - R$ 1.324,1200.5,49
+t0294,band,Roberto Menescal E Seu Conjunto,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.34,32,R$ 787 - R$ 1.026,906.5,50
+t0295,band,Beats for Earth,spotify,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.39,36,R$ 897 - R$ 1.228,1062.5,73
+t0296,band,Millennium Jazz Music,spotify,sala_intima,Jazz,Jazz,São Paulo - SP,3,0,iniciante,4.39,34,R$ 1.255 - R$ 1.670,1462.5,60
+t0297,band,Ana Tijoux,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.37,52,R$ 1.605 - R$ 2.007,1806.0,65
+t0298,band,Anita Ward,spotify,casa_noturna,Pop,Pop,Curitiba - PR,5,1,intermediario,4.26,29,R$ 1.369 - R$ 1.786,1577.5,53
+t0299,band,Emilia,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,0,iniciante,4.28,29,R$ 1.221 - R$ 1.405,1313.0,40
+t0300,band,Annita Yes,spotify,casa_noturna,Pop,Pop,Florianópolis - SC,4,0,iniciante,4.29,24,R$ 1.106 - R$ 1.522,1314.0,41
+t0301,band,Anita Valiente,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,1,intermediario,4.53,22,R$ 1.458 - R$ 1.705,1581.5,83
+t0302,band,KAROL G,spotify,casa_noturna,Pop,Pop,Florianópolis - SC,5,1,intermediario,4.39,29,R$ 1.341 - R$ 1.528,1434.5,51
+t0303,musician,Maria Becerra,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.59,46,R$ 1.304 - R$ 1.569,1436.5,70
+t0304,band,Pabllo Vittar,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.28,36,R$ 1.144 - R$ 1.334,1239.0,58
+t0305,musician,TINI,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,1,intermediario,4.46,50,R$ 1.213 - R$ 1.464,1338.5,80
+t0306,band,Anita Baker,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.49,53,R$ 1.670 - R$ 2.088,1879.0,75
+t0307,band,Anita Hopt,spotify,casa_noturna,Pop,Pop,Florianópolis - SC,4,2,profissional,4.26,28,R$ 1.590 - R$ 1.773,1681.5,40
+t0308,musician,Beéle,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,1,intermediario,4.31,28,R$ 997 - R$ 1.242,1119.5,47
+t0309,band,La T y La M,spotify,casa_noturna,Pop,Pop,Belo Horizonte - MG,3,1,intermediario,4.31,28,R$ 1.361 - R$ 1.595,1478.0,44
+t0310,band,Bizarrap,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,0,iniciante,4.34,21,R$ 1.503 - R$ 1.810,1656.5,45
+t0311,band,Lali,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.33,23,R$ 1.235 - R$ 1.586,1410.5,38
+t0312,band,Anita O'Day,spotify,casa_noturna,Pop,Pop,Porto Alegre - RS,5,0,iniciante,4.53,26,R$ 1.456 - R$ 1.702,1579.0,75
+t0313,band,Anitta Nova,spotify,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.44,29,R$ 1.581 - R$ 1.966,1773.5,67
+t0314,musician,Anitha,spotify,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.52,47,R$ 1.136 - R$ 1.410,1273.0,83
+t0315,band,Anita Mui,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.3,26,R$ 1.705 - R$ 1.897,1801.0,44
+t0316,band,Anitha Karthikeyan,spotify,casa_noturna,Pop,Pop,Recife - PE,4,2,profissional,4.36,34,R$ 1.586 - R$ 1.881,1733.5,55
+t0317,band,Nicki Nicole,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.49,37,R$ 1.874 - R$ 2.255,2064.5,76
+t0318,band,Anita Mami,spotify,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.43,31,R$ 1.353 - R$ 1.758,1555.5,62
+t0319,band,La Joaqui,spotify,casa_noturna,Pop,Pop,Belo Horizonte - MG,4,0,iniciante,4.27,21,R$ 1.244 - R$ 1.546,1395.0,40
+t0320,band,Tiago PZK,spotify,casa_noturna,Pop,Pop,Curitiba - PR,5,0,iniciante,4.32,37,R$ 1.308 - R$ 1.550,1429.0,60
+t0321,band,Anita Donndorff,spotify,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.38,39,R$ 1.225 - R$ 1.429,1327.0,51
+t0322,musician,Pushi,spotify,casa_noturna,Pop,Pop,Porto Alegre - RS,1,2,profissional,4.37,40,R$ 1.543 - R$ 1.801,1672.0,73
+t0323,band,Anita Tatlow,spotify,casa_noturna,Pop,Pop,Florianópolis - SC,5,2,profissional,4.39,33,R$ 1.787 - R$ 2.113,1950.0,52
+t0324,band,ANITA B QUEEN,spotify,casa_noturna,Pop,Pop,Florianópolis - SC,4,1,intermediario,4.26,15,R$ 1.456 - R$ 1.849,1652.5,38
+t0325,musician,Anita Lipnicka,spotify,casa_noturna,Pop,Pop,Porto Alegre - RS,1,2,profissional,4.37,38,R$ 1.213 - R$ 1.464,1338.5,72
+t0326,band,Legião Urbana Tributo,spotify,casa_noturna,Rock,Rock,Belo Horizonte - MG,5,2,profissional,4.33,32,R$ 1.309 - R$ 1.639,1474.0,62
+t0327,band,No Te Va Gustar,spotify,casa_noturna,Rock,Rock,São Paulo - SP,4,2,profissional,4.4,45,R$ 1.331 - R$ 1.582,1456.5,69
+t0328,band,La Vela Puerca,spotify,casa_noturna,Rock,Rock,Salvador - BA,4,2,profissional,4.53,41,R$ 1.892 - R$ 2.264,2078.0,61
+t0329,band,Patricio Rey y sus Redonditos de Ricota,spotify,casa_noturna,Rock,Rock,Salvador - BA,5,2,profissional,4.37,26,R$ 1.123 - R$ 1.503,1313.0,57
+t0330,band,Soda Stereo,spotify,casa_noturna,Rock,Rock,São Paulo - SP,4,2,profissional,4.5,42,R$ 1.773 - R$ 2.161,1967.0,78
+t0331,band,Sumo,spotify,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.57,28,R$ 1.490 - R$ 1.885,1687.5,70
+t0332,musician,La Deskarga,spotify,casa_noturna,Rock,Rock,Curitiba - PR,1,1,intermediario,4.43,31,R$ 1.690 - R$ 1.917,1803.5,51
+t0333,band,Buitres,spotify,casa_noturna,Rock,Rock,Salvador - BA,4,2,profissional,4.23,12,R$ 1.339 - R$ 1.528,1433.5,43
+t0334,band,Peyote Asesino,spotify,casa_noturna,Rock,Rock,São Paulo - SP,3,0,iniciante,4.57,46,R$ 1.350 - R$ 1.587,1468.5,79
+t0335,band,Renato Russo,spotify,casa_noturna,Rock,Rock,São Paulo - SP,4,2,profissional,4.19,36,R$ 1.444 - R$ 1.767,1605.5,59
+t0336,band,Agarrate Catalina,spotify,casa_noturna,Rock,Rock,São Paulo - SP,5,1,intermediario,4.46,45,R$ 1.381 - R$ 1.629,1505.0,76
+t0337,band,Abuela Coca,spotify,casa_noturna,Rock,Rock,Curitiba - PR,5,1,intermediario,4.48,47,R$ 1.153 - R$ 1.429,1291.0,76
+t0338,musician,Once Tiros,spotify,casa_noturna,Rock,Rock,Porto Alegre - RS,1,2,profissional,4.44,42,R$ 1.036 - R$ 1.253,1144.5,54
+t0339,musician,Eté & Los Problems,spotify,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.22,48,R$ 1.132 - R$ 1.445,1288.5,53
+t0340,musician,La Renga,spotify,casa_noturna,Rock,Rock,Florianópolis - SC,1,1,intermediario,4.61,45,R$ 1.346 - R$ 1.699,1522.5,63
+t0341,musician,Turf,spotify,casa_noturna,Rock,Rock,Recife - PE,1,1,intermediario,4.47,26,R$ 1.735 - R$ 2.027,1881.0,70
+t0342,band,Árbol,spotify,casa_noturna,Rock,Rock,São Paulo - SP,3,0,iniciante,4.46,35,R$ 1.500 - R$ 1.917,1708.5,62
+t0343,band,Buenos Muchachos,spotify,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.54,45,R$ 1.189 - R$ 1.552,1370.5,82
+t0344,band,Guasones,spotify,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.32,36,R$ 1.469 - R$ 1.727,1598.0,48
+t0345,musician,Hereford,spotify,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.41,52,R$ 1.236 - R$ 1.448,1342.0,78
+t0346,musician,Gilberto Santa Rosa,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.35,44,R$ 429 - R$ 673,551.0,39
+t0347,musician,Bebel Gilberto,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.18,25,R$ 445 - R$ 698,571.5,37
+t0348,musician,Gilberto Daza,spotify,palco_bairro,MPB,MPB,Florianópolis - SC,1,2,profissional,4.4,43,R$ 406 - R$ 729,567.5,64
+t0349,band,Gilberto e Gilmar,spotify,palco_bairro,MPB,MPB,Porto Alegre - RS,5,2,profissional,4.5,41,R$ 620 - R$ 871,745.5,58
+t0350,band,Gilberto & Gilmar,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.48,53,R$ 490 - R$ 753,621.5,61
+t0351,band,Gilberto Vasconcelos,spotify,palco_bairro,MPB,MPB,Recife - PE,6,1,intermediario,4.4,22,R$ 694 - R$ 1.054,874.0,40
+t0352,band,Gilberto Ferrer,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.45,39,R$ 444 - R$ 790,617.0,73
+t0353,band,Gilberto Mota,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.13,28,R$ 588 - R$ 813,700.5,37
+t0354,band,Gilberto Gless,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.37,48,R$ 692 - R$ 1.111,901.5,82
+t0355,band,León Gieco,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,1,intermediario,4.48,35,R$ 440 - R$ 824,632.0,69
+t0356,band,Gilberto Monteiro,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.27,27,R$ 650 - R$ 1.019,834.5,64
+t0357,band,GILBERTO CRUZ PAULA,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.14,16,R$ 619 - R$ 894,756.5,40
+t0358,band,Gilberto Valenzuela,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.45,29,R$ 633 - R$ 954,793.5,64
+t0359,band,Gilberto Alves,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.56,36,R$ 515 - R$ 882,698.5,76
+t0360,band,Gilberto Amaral,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.37,12,R$ 601 - R$ 837,719.0,42
+t0361,band,Gilberto Peguero,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,0,iniciante,4.33,14,R$ 708 - R$ 932,820.0,36
+t0362,band,Gilberto Lemos,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.42,36,R$ 607 - R$ 919,763.0,55
+t0363,musician,Gilberto Puente,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.4,38,R$ 590 - R$ 968,779.0,68
+t0364,band,Milton Nascimento,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.26,42,R$ 701 - R$ 1.044,872.5,64
+t0365,musician,Djavan De Souza Santos,spotify,palco_bairro,MPB,MPB,Belo Horizonte - MG,1,1,intermediario,4.29,31,R$ 548 - R$ 782,665.0,55
+t0366,band,Djavann,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.37,25,R$ 697 - R$ 981,839.0,52
+t0367,band,Djavan MC,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.34,26,R$ 647 - R$ 975,811.0,42
+t0368,band,DJAANY,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,0,iniciante,4.38,33,R$ 482 - R$ 741,611.5,61
+t0369,band,Djavan Jackson,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.24,23,R$ 542 - R$ 781,661.5,35
+t0370,musician,Djavan Guy,spotify,palco_bairro,MPB,MPB,Porto Alegre - RS,1,1,intermediario,4.08,39,R$ 660 - R$ 866,763.0,37
+t0371,band,djavan.jami,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.46,44,R$ 429 - R$ 671,550.0,67
+t0372,band,DJAVAN TEODOSIO,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.42,46,R$ 509 - R$ 766,637.5,75
+t0373,musician,Djavan Caetano Viana,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.46,31,R$ 324 - R$ 657,490.5,54
+t0374,band,Djavan Dutra,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,0,iniciante,4.31,36,R$ 670 - R$ 1.056,863.0,72
+t0375,musician,DJAVANSOUZArs,spotify,palco_bairro,MPB,MPB,São Paulo - SP,1,2,profissional,4.38,30,R$ 517 - R$ 745,631.0,52
+t0376,band,Djavan abreu,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,0,iniciante,4.3,24,R$ 654 - R$ 863,758.5,57
+t0377,band,Djavan Menezes,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,0,iniciante,4.44,35,R$ 624 - R$ 1.004,814.0,59
+t0378,band,Djavan Nascimento,spotify,palco_bairro,MPB,MPB,São Paulo - SP,4,2,profissional,4.29,22,R$ 586 - R$ 954,770.0,68
+t0379,band,DJAVAN DE MORAES,spotify,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,2,profissional,4.26,33,R$ 597 - R$ 962,779.5,68
+t0380,band,Alok,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,0,iniciante,4.46,28,R$ 1.831 - R$ 2.229,2030.0,49
+t0381,band,Alosa,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.54,28,R$ 1.437 - R$ 1.751,1594.0,82
+t0382,musician,NAYEON,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.36,44,R$ 1.252 - R$ 1.583,1417.5,68
+t0383,musician,Aloka,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.34,30,R$ 1.140 - R$ 1.491,1315.5,47
+t0384,band,Alok Kumar,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,5,2,profissional,4.26,30,R$ 1.371 - R$ 1.552,1461.5,49
+t0385,band,Alok Ranjan Srivastava,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.53,30,R$ 1.751 - R$ 2.109,1930.0,68
+t0386,band,Alofoke Music,spotify,casa_noturna,Eletronica,Eletronica,Curitiba - PR,5,2,profissional,4.32,25,R$ 1.280 - R$ 1.661,1470.5,45
+t0387,band,Aloe Blacc,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,0,iniciante,4.27,40,R$ 1.412 - R$ 1.769,1590.5,63
+t0388,band,Alonzo,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.4,28,R$ 1.418 - R$ 1.711,1564.5,63
+t0389,band,Alok Sharma,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,2,profissional,4.29,18,R$ 1.152 - R$ 1.471,1311.5,41
+t0390,band,Muscadine Bloodline,spotify,casa_noturna,Eletronica,Eletronica,Recife - PE,5,1,intermediario,4.48,34,R$ 1.388 - R$ 1.608,1498.0,77
+t0391,band,Aloboi,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,1,intermediario,4.28,36,R$ 1.800 - R$ 2.216,2008.0,47
+t0392,band,Alon,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,2,profissional,4.43,42,R$ 1.638 - R$ 1.993,1815.5,82
+t0393,band,Santiago Alonso,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.66,42,R$ 1.283 - R$ 1.503,1393.0,75
+t0394,musician,Alok Anil,spotify,casa_noturna,Eletronica,Eletronica,Rio de Janeiro - RJ,1,2,profissional,4.28,26,R$ 879 - R$ 1.185,1032.0,38
+t0395,band,Alonzo Cortes,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,5,2,profissional,4.49,38,R$ 1.745 - R$ 2.010,1877.5,84
+t0396,band,Sir Mix-A-Lot,spotify,casa_noturna,Eletronica,Eletronica,Salvador - BA,3,2,profissional,4.26,26,R$ 1.414 - R$ 1.808,1611.0,47
+t0397,band,aLokke,spotify,casa_noturna,Eletronica,Eletronica,Florianópolis - SC,4,0,iniciante,4.42,28,R$ 1.468 - R$ 1.691,1579.5,44
+t0398,musician,Alok Yadav,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.21,33,R$ 1.199 - R$ 1.562,1380.5,39
+t0399,musician,The War And Treaty,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.19,18,R$ 922 - R$ 1.156,1039.0,43
+t0400,band,Alux Ghac,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,0,iniciante,4.28,31,R$ 1.824 - R$ 2.130,1977.0,40
+t0401,band,ALONSO BLUES,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,2,profissional,4.52,43,R$ 1.180 - R$ 1.435,1307.5,68
+t0402,band,ALONR,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,0,iniciante,4.38,35,R$ 1.753 - R$ 2.004,1878.5,60
+t0403,musician,Alonso Navarro,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.47,45,R$ 1.425 - R$ 1.629,1527.0,74
+t0404,musician,ALOISIO,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.26,32,R$ 1.317 - R$ 1.548,1432.5,47
+t0405,band,Alok Ranjan,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,0,iniciante,4.33,27,R$ 1.531 - R$ 1.821,1676.0,70
+t0406,band,Paul Alone,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,0,iniciante,4.43,30,R$ 1.601 - R$ 1.865,1733.0,71
+t0407,band,Alohaii,spotify,casa_noturna,Eletronica,Eletronica,Porto Alegre - RS,4,2,profissional,4.41,14,R$ 1.576 - R$ 1.784,1680.0,51
+t0408,musician,Alonestar,spotify,casa_noturna,Eletronica,Eletronica,Salvador - BA,1,1,intermediario,4.37,33,R$ 1.077 - R$ 1.357,1217.0,63
+t0409,band,Midas Alonso,spotify,casa_noturna,Eletronica,Eletronica,Recife - PE,4,2,profissional,4.31,27,R$ 1.303 - R$ 1.663,1483.0,36
+t0410,musician,Aloma Steele,spotify,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.27,37,R$ 1.741 - R$ 1.979,1860.0,49
+t0411,musician,Talento 412,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.29,34,R$ 581 - R$ 959,770.0,
+t0412,musician,Talento 413,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,1,intermediario,4.46,36,R$ 1.494 - R$ 1.804,1649.0,
+t0413,band,Talento 414,sintetico,sala_intima,Jazz,Jazz,Rio de Janeiro - RJ,3,1,intermediario,4.36,31,R$ 816 - R$ 1.180,998.0,
+t0414,band,Talento 415,sintetico,palco_bairro,Samba,Samba,Florianópolis - SC,6,0,iniciante,4.33,20,R$ 518 - R$ 927,722.5,
+t0415,band,Talento 416,sintetico,casa_noturna,Eletronica,Eletronica,Curitiba - PR,4,2,profissional,4.5,44,R$ 1.183 - R$ 1.462,1322.5,
+t0416,band,Talento 417,sintetico,sala_intima,Blues,Blues,Recife - PE,3,2,profissional,4.27,29,R$ 1.287 - R$ 1.570,1428.5,
+t0417,musician,Talento 418,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.29,36,R$ 432 - R$ 612,522.0,
+t0418,band,Talento 419,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.23,32,R$ 1.277 - R$ 1.462,1369.5,
+t0419,musician,Talento 420,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.27,35,R$ 983 - R$ 1.338,1160.5,
+t0420,band,Talento 421,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.37,28,R$ 464 - R$ 717,590.5,
+t0421,band,Talento 422,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,4,1,intermediario,4.21,31,R$ 1.574 - R$ 1.848,1711.0,
+t0422,band,Talento 423,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.51,33,R$ 847 - R$ 1.224,1035.5,
+t0423,band,Talento 424,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,1,intermediario,4.33,35,R$ 619 - R$ 827,723.0,
+t0424,band,Talento 425,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.25,9,R$ 1.479 - R$ 1.782,1630.5,
+t0425,band,Talento 426,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.26,29,R$ 1.228 - R$ 1.578,1403.0,
+t0426,band,Talento 427,sintetico,palco_bairro,Samba,Samba,São Paulo - SP,4,0,iniciante,4.36,32,R$ 713 - R$ 933,823.0,
+t0427,band,Talento 428,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,4,0,iniciante,4.26,26,R$ 1.800 - R$ 2.016,1908.0,
+t0428,band,Talento 429,sintetico,sala_intima,Jazz,Jazz,Salvador - BA,2,1,intermediario,4.31,29,R$ 1.078 - R$ 1.415,1246.5,
+t0429,musician,Talento 430,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,1,2,profissional,4.45,28,R$ 512 - R$ 760,636.0,
+t0430,band,Talento 431,sintetico,casa_noturna,Eletronica,Eletronica,Belo Horizonte - MG,5,2,profissional,4.25,15,R$ 1.847 - R$ 2.073,1960.0,
+t0431,band,Talento 432,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.36,35,R$ 1.252 - R$ 1.604,1428.0,
+t0432,musician,Talento 433,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.31,32,R$ 387 - R$ 713,550.0,
+t0433,band,Talento 434,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,3,0,iniciante,4.31,15,R$ 1.478 - R$ 1.815,1646.5,
+t0434,band,Talento 435,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.15,28,R$ 919 - R$ 1.277,1098.0,
+t0435,musician,Talento 436,sintetico,palco_bairro,MPB,MPB,Recife - PE,1,1,intermediario,4.45,33,R$ 553 - R$ 946,749.5,
+t0436,band,Talento 437,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.03,18,R$ 1.173 - R$ 1.431,1302.0,
+t0437,band,Talento 438,sintetico,sala_intima,Blues,Blues,Curitiba - PR,2,2,profissional,4.29,40,R$ 1.002 - R$ 1.183,1092.5,
+t0438,musician,Talento 439,sintetico,palco_bairro,MPB,MPB,Recife - PE,1,1,intermediario,4.29,25,R$ 554 - R$ 906,730.0,
+t0439,band,Talento 440,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,0,iniciante,4.18,22,R$ 1.288 - R$ 1.574,1431.0,
+t0440,band,Talento 441,sintetico,sala_intima,Jazz,Jazz,Salvador - BA,2,2,profissional,4.27,20,R$ 1.285 - R$ 1.488,1386.5,
+t0441,band,Talento 442,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,0,iniciante,4.44,30,R$ 474 - R$ 705,589.5,
+t0442,musician,Talento 443,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.47,24,R$ 1.144 - R$ 1.480,1312.0,
+t0443,musician,Talento 444,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.16,10,R$ 981 - R$ 1.334,1157.5,
+t0444,band,Talento 445,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.22,41,R$ 516 - R$ 749,632.5,
+t0445,band,Talento 446,sintetico,casa_noturna,Eletronica,Eletronica,Porto Alegre - RS,3,2,profissional,4.21,41,R$ 1.471 - R$ 1.842,1656.5,
+t0446,band,Talento 447,sintetico,sala_intima,Blues,Blues,Porto Alegre - RS,2,2,profissional,4.33,23,R$ 827 - R$ 1.100,963.5,
+t0447,band,Talento 448,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,1,intermediario,4.24,9,R$ 650 - R$ 992,821.0,
+t0448,band,Talento 449,sintetico,casa_noturna,Eletronica,Eletronica,Salvador - BA,3,2,profissional,4.2,18,R$ 1.400 - R$ 1.581,1490.5,
+t0449,band,Talento 450,sintetico,sala_intima,Jazz,Jazz,Rio de Janeiro - RJ,3,2,profissional,4.27,22,R$ 935 - R$ 1.153,1044.0,
+t0450,musician,Talento 451,sintetico,palco_bairro,Forro,Forro,Belo Horizonte - MG,1,2,profissional,4.25,22,R$ 464 - R$ 809,636.5,
+t0451,musician,Talento 452,sintetico,casa_noturna,Rock,Rock,Belo Horizonte - MG,1,2,profissional,4.39,41,R$ 1.564 - R$ 1.946,1755.0,
+t0452,band,Talento 453,sintetico,sala_intima,Jazz,Jazz,Curitiba - PR,3,1,intermediario,4.14,29,R$ 820 - R$ 1.097,958.5,
+t0453,band,Talento 454,sintetico,palco_bairro,MPB,MPB,Salvador - BA,5,1,intermediario,4.26,6,R$ 420 - R$ 743,581.5,
+t0454,band,Talento 455,sintetico,casa_noturna,Eletronica,Eletronica,Recife - PE,3,0,iniciante,4.14,24,R$ 1.726 - R$ 2.092,1909.0,
+t0455,band,Talento 456,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.57,43,R$ 816 - R$ 1.011,913.5,
+t0456,band,Talento 457,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.34,37,R$ 482 - R$ 776,629.0,
+t0457,band,Talento 458,sintetico,casa_noturna,Pop,Pop,Recife - PE,3,2,profissional,4.09,18,R$ 1.505 - R$ 1.909,1707.0,
+t0458,musician,Talento 459,sintetico,sala_intima,Blues,Blues,Porto Alegre - RS,1,1,intermediario,4.15,26,R$ 1.148 - R$ 1.362,1255.0,
+t0459,band,Talento 460,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,0,iniciante,4.21,20,R$ 653 - R$ 926,789.5,
+t0460,band,Talento 461,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,0,iniciante,4.25,21,R$ 1.838 - R$ 2.238,2038.0,
+t0461,musician,Talento 462,sintetico,sala_intima,Blues,Blues,Rio de Janeiro - RJ,1,2,profissional,4.32,34,R$ 628 - R$ 892,760.0,
+t0462,musician,Talento 463,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,1,2,profissional,4.35,34,R$ 369 - R$ 566,467.5,
+t0463,band,Talento 464,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,5,1,intermediario,4.34,28,R$ 1.250 - R$ 1.665,1457.5,
+t0464,band,Talento 465,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.18,19,R$ 915 - R$ 1.182,1048.5,
+t0465,band,Talento 466,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.09,17,R$ 547 - R$ 804,675.5,
+t0466,band,Talento 467,sintetico,casa_noturna,Pop,Pop,Porto Alegre - RS,4,2,profissional,4.47,43,R$ 1.337 - R$ 1.663,1500.0,
+t0467,band,Talento 468,sintetico,sala_intima,Blues,Blues,Porto Alegre - RS,3,2,profissional,4.07,9,R$ 1.058 - R$ 1.246,1152.0,
+t0468,band,Talento 469,sintetico,palco_bairro,Forro,Forro,São Paulo - SP,4,2,profissional,4.14,15,R$ 477 - R$ 660,568.5,
+t0469,musician,Talento 470,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,1,intermediario,4.07,25,R$ 1.264 - R$ 1.477,1370.5,
+t0470,band,Talento 471,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.43,26,R$ 1.247 - R$ 1.543,1395.0,
+t0471,band,Talento 472,sintetico,palco_bairro,Forro,Forro,São Paulo - SP,4,1,intermediario,4.18,12,R$ 456 - R$ 837,646.5,
+t0472,musician,Talento 473,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.37,28,R$ 1.175 - R$ 1.527,1351.0,
+t0473,band,Talento 474,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.25,27,R$ 1.063 - R$ 1.358,1210.5,
+t0474,musician,Talento 475,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.37,16,R$ 329 - R$ 558,443.5,
+t0475,band,Talento 476,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.32,30,R$ 1.524 - R$ 1.808,1666.0,
+t0476,musician,Talento 477,sintetico,sala_intima,Jazz,Jazz,Salvador - BA,1,1,intermediario,4.14,25,R$ 890 - R$ 1.261,1075.5,
+t0477,band,Talento 478,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,0,iniciante,4.39,26,R$ 453 - R$ 771,612.0,
+t0478,musician,Talento 479,sintetico,casa_noturna,Rock,Rock,Belo Horizonte - MG,1,2,profissional,4.21,27,R$ 1.194 - R$ 1.509,1351.5,
+t0479,band,Talento 480,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.39,13,R$ 993 - R$ 1.340,1166.5,
+t0480,band,Talento 481,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.3,30,R$ 538 - R$ 844,691.0,
+t0481,band,Talento 482,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.12,29,R$ 1.551 - R$ 1.866,1708.5,
+t0482,band,Talento 483,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.32,42,R$ 1.272 - R$ 1.617,1444.5,
+t0483,musician,Talento 484,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.29,29,R$ 633 - R$ 821,727.0,
+t0484,band,Talento 485,sintetico,casa_noturna,Eletronica,Eletronica,Salvador - BA,5,2,profissional,4.55,33,R$ 1.520 - R$ 1.707,1613.5,
+t0485,band,Talento 486,sintetico,sala_intima,Jazz,Jazz,Porto Alegre - RS,3,0,iniciante,4.35,21,R$ 1.170 - R$ 1.481,1325.5,
+t0486,musician,Talento 487,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.3,20,R$ 368 - R$ 755,561.5,
+t0487,band,Talento 488,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,1,intermediario,4.41,38,R$ 1.781 - R$ 2.066,1923.5,
+t0488,band,Talento 489,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.14,15,R$ 990 - R$ 1.343,1166.5,
+t0489,band,Talento 490,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.41,24,R$ 527 - R$ 762,644.5,
+t0490,band,Talento 491,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,4,2,profissional,4.19,17,R$ 1.373 - R$ 1.711,1542.0,
+t0491,musician,Talento 492,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.09,26,R$ 1.115 - R$ 1.338,1226.5,
+t0492,musician,Talento 493,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.1,28,R$ 413 - R$ 670,541.5,
+t0493,musician,Talento 494,sintetico,casa_noturna,Eletronica,Eletronica,Porto Alegre - RS,1,1,intermediario,4.24,26,R$ 1.343 - R$ 1.603,1473.0,
+t0494,band,Talento 495,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.3,17,R$ 1.098 - R$ 1.278,1188.0,
+t0495,band,Talento 496,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.32,47,R$ 427 - R$ 797,612.0,
+t0496,band,Talento 497,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,1,intermediario,4.08,10,R$ 1.734 - R$ 2.062,1898.0,
+t0497,band,Talento 498,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.41,29,R$ 1.094 - R$ 1.372,1233.0,
+t0498,band,Talento 499,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.27,41,R$ 623 - R$ 909,766.0,
+t0499,band,Talento 500,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,2,profissional,4.31,31,R$ 1.641 - R$ 2.000,1820.5,
+t0500,band,Talento 501,sintetico,sala_intima,Blues,Blues,Florianópolis - SC,3,2,profissional,4.47,34,R$ 911 - R$ 1.172,1041.5,
+t0501,band,Talento 502,sintetico,palco_bairro,MPB,MPB,Curitiba - PR,5,0,iniciante,4.64,27,R$ 652 - R$ 1.004,828.0,
+t0502,band,Talento 503,sintetico,casa_noturna,Eletronica,Eletronica,Florianópolis - SC,5,2,profissional,4.36,20,R$ 1.582 - R$ 1.820,1701.0,
+t0503,band,Talento 504,sintetico,sala_intima,Blues,Blues,Recife - PE,2,0,iniciante,4.56,32,R$ 1.089 - R$ 1.452,1270.5,
+t0504,band,Talento 505,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,6,2,profissional,4.16,14,R$ 575 - R$ 781,678.0,
+t0505,musician,Talento 506,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.41,34,R$ 1.132 - R$ 1.481,1306.5,
+t0506,musician,Talento 507,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.22,24,R$ 1.121 - R$ 1.513,1317.0,
+t0507,band,Talento 508,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.36,36,R$ 461 - R$ 845,653.0,
+t0508,band,Talento 509,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,5,2,profissional,4.24,27,R$ 1.851 - R$ 2.153,2002.0,
+t0509,band,Talento 510,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.38,34,R$ 1.286 - R$ 1.543,1414.5,
+t0510,band,Talento 511,sintetico,palco_bairro,Forro,Forro,Curitiba - PR,4,0,iniciante,4.08,5,R$ 694 - R$ 907,800.5,
+t0511,band,Talento 512,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,2,profissional,4.23,30,R$ 1.305 - R$ 1.663,1484.0,
+t0512,band,Talento 513,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,0,iniciante,4.51,33,R$ 1.301 - R$ 1.673,1487.0,
+t0513,band,Talento 514,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,1,intermediario,4.32,20,R$ 538 - R$ 911,724.5,
+t0514,band,Talento 515,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,1,intermediario,4.43,40,R$ 1.861 - R$ 2.146,2003.5,
+t0515,musician,Talento 516,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.43,20,R$ 927 - R$ 1.253,1090.0,
+t0516,band,Talento 517,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,0,iniciante,4.36,35,R$ 425 - R$ 742,583.5,
+t0517,band,Talento 518,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.19,19,R$ 1.505 - R$ 1.859,1682.0,
+t0518,band,Talento 519,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.4,21,R$ 898 - R$ 1.112,1005.0,
+t0519,band,Talento 520,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.23,22,R$ 590 - R$ 906,748.0,
+t0520,band,Talento 521,sintetico,casa_noturna,Sertanejo,Sertanejo,Recife - PE,5,1,intermediario,4.29,14,R$ 1.124 - R$ 1.499,1311.5,
+t0521,band,Talento 522,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.27,37,R$ 920 - R$ 1.306,1113.0,
+t0522,musician,Talento 523,sintetico,palco_bairro,Forro,Forro,Recife - PE,1,2,profissional,4.2,25,R$ 343 - R$ 623,483.0,
+t0523,band,Talento 524,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.38,24,R$ 1.643 - R$ 1.880,1761.5,
+t0524,band,Talento 525,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,0,iniciante,4.13,19,R$ 985 - R$ 1.311,1148.0,
+t0525,band,Talento 526,sintetico,palco_bairro,Forro,Forro,Porto Alegre - RS,5,2,profissional,4.34,29,R$ 527 - R$ 721,624.0,
+t0526,band,Talento 527,sintetico,casa_noturna,Pop,Pop,Curitiba - PR,5,2,profissional,4.55,25,R$ 1.175 - R$ 1.438,1306.5,
+t0527,musician,Talento 528,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.21,27,R$ 989 - R$ 1.406,1197.5,
+t0528,musician,Talento 529,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.42,37,R$ 422 - R$ 660,541.0,
+t0529,musician,Talento 530,sintetico,casa_noturna,Pop,Pop,Rio de Janeiro - RJ,1,2,profissional,4.17,25,R$ 1.379 - R$ 1.735,1557.0,
+t0530,band,Talento 531,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.53,42,R$ 1.254 - R$ 1.609,1431.5,
+t0531,band,Talento 532,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.31,36,R$ 726 - R$ 1.009,867.5,
+t0532,musician,Talento 533,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.54,40,R$ 1.158 - R$ 1.445,1301.5,
+t0533,band,Talento 534,sintetico,sala_intima,Blues,Blues,Rio de Janeiro - RJ,2,0,iniciante,4.47,42,R$ 1.193 - R$ 1.563,1378.0,
+t0534,band,Talento 535,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.21,19,R$ 452 - R$ 804,628.0,
+t0535,musician,Talento 536,sintetico,casa_noturna,Sertanejo,Sertanejo,Salvador - BA,1,1,intermediario,4.11,18,R$ 1.276 - R$ 1.636,1456.0,
+t0536,musician,Talento 537,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.15,16,R$ 910 - R$ 1.186,1048.0,
+t0537,band,Talento 538,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.35,37,R$ 500 - R$ 750,625.0,
+t0538,band,Talento 539,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,5,0,iniciante,4.32,44,R$ 1.475 - R$ 1.774,1624.5,
+t0539,band,Talento 540,sintetico,sala_intima,Blues,Blues,Recife - PE,2,2,profissional,4.37,27,R$ 1.256 - R$ 1.659,1457.5,
+t0540,band,Talento 541,sintetico,palco_bairro,Forro,Forro,Porto Alegre - RS,5,2,profissional,4.4,29,R$ 643 - R$ 987,815.0,
+t0541,band,Talento 542,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.38,37,R$ 1.535 - R$ 1.869,1702.0,
+t0542,musician,Talento 543,sintetico,sala_intima,Jazz,Jazz,São Paulo - SP,1,1,intermediario,4.2,23,R$ 774 - R$ 1.062,918.0,
+t0543,band,Talento 544,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,1,intermediario,4.38,39,R$ 722 - R$ 955,838.5,
+t0544,band,Talento 545,sintetico,casa_noturna,Rock,Rock,Curitiba - PR,3,0,iniciante,4.25,18,R$ 1.648 - R$ 2.029,1838.5,
+t0545,musician,Talento 546,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.17,21,R$ 787 - R$ 1.159,973.0,
+t0546,band,Talento 547,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,2,profissional,4.43,35,R$ 623 - R$ 821,722.0,
+t0547,band,Talento 548,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,0,iniciante,4.42,33,R$ 1.646 - R$ 1.980,1813.0,
+t0548,band,Talento 549,sintetico,sala_intima,Jazz,Jazz,São Paulo - SP,2,2,profissional,4.36,33,R$ 1.081 - R$ 1.486,1283.5,
+t0549,musician,Talento 550,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.18,26,R$ 536 - R$ 885,710.5,
+t0550,band,Talento 551,sintetico,casa_noturna,Sertanejo,Sertanejo,Rio de Janeiro - RJ,5,2,profissional,4.02,19,R$ 1.543 - R$ 1.724,1633.5,
+t0551,band,Talento 552,sintetico,sala_intima,Jazz,Jazz,Curitiba - PR,2,0,iniciante,4.32,20,R$ 843 - R$ 1.051,947.0,
+t0552,band,Talento 553,sintetico,palco_bairro,Samba,Samba,Recife - PE,5,2,profissional,4.04,12,R$ 548 - R$ 840,694.0,
+t0553,musician,Talento 554,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.21,24,R$ 1.799 - R$ 2.201,2000.0,
+t0554,band,Talento 555,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,0,iniciante,4.36,23,R$ 1.307 - R$ 1.635,1471.0,
+t0555,musician,Talento 556,sintetico,palco_bairro,Forro,Forro,Salvador - BA,1,1,intermediario,4.14,27,R$ 652 - R$ 959,805.5,
+t0556,band,Talento 557,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,1,intermediario,4.4,44,R$ 1.509 - R$ 1.802,1655.5,
+t0557,band,Talento 558,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.18,25,R$ 1.090 - R$ 1.428,1259.0,
+t0558,band,Talento 559,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.45,36,R$ 494 - R$ 808,651.0,
+t0559,band,Talento 560,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,5,1,intermediario,4.34,20,R$ 1.568 - R$ 1.870,1719.0,
+t0560,band,Talento 561,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.28,14,R$ 1.063 - R$ 1.265,1164.0,
+t0561,band,Talento 562,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,6,1,intermediario,4.18,9,R$ 535 - R$ 923,729.0,
+t0562,band,Talento 563,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,2,profissional,4.1,30,R$ 1.700 - R$ 1.891,1795.5,
+t0563,musician,Talento 564,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.16,14,R$ 1.066 - R$ 1.277,1171.5,
+t0564,musician,Talento 565,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,1,1,intermediario,4.28,28,R$ 553 - R$ 883,718.0,
+t0565,musician,Talento 566,sintetico,casa_noturna,Sertanejo,Sertanejo,Florianópolis - SC,1,1,intermediario,4.4,42,R$ 1.176 - R$ 1.520,1348.0,
+t0566,band,Talento 567,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.31,4,R$ 899 - R$ 1.131,1015.0,
+t0567,band,Talento 568,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,0,iniciante,4.25,20,R$ 737 - R$ 1.089,913.0,
+t0568,musician,Talento 569,sintetico,casa_noturna,Rock,Rock,Rio de Janeiro - RJ,1,2,profissional,4.04,11,R$ 1.448 - R$ 1.783,1615.5,
+t0569,musician,Talento 570,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.4,40,R$ 976 - R$ 1.274,1125.0,
+t0570,musician,Talento 571,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.33,36,R$ 551 - R$ 866,708.5,
+t0571,musician,Talento 572,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,1,intermediario,4.31,22,R$ 1.405 - R$ 1.686,1545.5,
+t0572,band,Talento 573,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.35,24,R$ 1.123 - R$ 1.396,1259.5,
+t0573,band,Talento 574,sintetico,palco_bairro,MPB,MPB,Salvador - BA,4,2,profissional,4.37,41,R$ 561 - R$ 816,688.5,
+t0574,band,Talento 575,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.38,52,R$ 1.208 - R$ 1.609,1408.5,
+t0575,musician,Talento 576,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.16,29,R$ 815 - R$ 1.038,926.5,
+t0576,band,Talento 577,sintetico,palco_bairro,MPB,MPB,Recife - PE,4,1,intermediario,4.26,22,R$ 763 - R$ 1.037,900.0,
+t0577,musician,Talento 578,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,1,1,intermediario,4.3,36,R$ 1.191 - R$ 1.547,1369.0,
+t0578,band,Talento 579,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.39,41,R$ 1.123 - R$ 1.326,1224.5,
+t0579,band,Talento 580,sintetico,palco_bairro,Samba,Samba,Salvador - BA,6,1,intermediario,4.37,27,R$ 582 - R$ 850,716.0,
+t0580,band,Talento 581,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,3,1,intermediario,4.19,26,R$ 1.531 - R$ 1.859,1695.0,
+t0581,band,Talento 582,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.21,24,R$ 886 - R$ 1.118,1002.0,
+t0582,band,Talento 583,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.43,22,R$ 526 - R$ 864,695.0,
+t0583,musician,Talento 584,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.49,39,R$ 1.112 - R$ 1.367,1239.5,
+t0584,band,Talento 585,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.33,23,R$ 961 - R$ 1.226,1093.5,
+t0585,band,Talento 586,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,0,iniciante,4.27,28,R$ 634 - R$ 915,774.5,
+t0586,band,Talento 587,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,0,iniciante,4.12,33,R$ 1.513 - R$ 1.880,1696.5,
+t0587,band,Talento 588,sintetico,sala_intima,Blues,Blues,Florianópolis - SC,2,1,intermediario,4.19,10,R$ 1.066 - R$ 1.451,1258.5,
+t0588,band,Talento 589,sintetico,palco_bairro,MPB,MPB,São Paulo - SP,5,2,profissional,4.22,22,R$ 604 - R$ 798,701.0,
+t0589,band,Talento 590,sintetico,casa_noturna,Rock,Rock,Curitiba - PR,4,2,profissional,4.42,38,R$ 1.530 - R$ 1.815,1672.5,
+t0590,band,Talento 591,sintetico,sala_intima,Jazz,Jazz,Salvador - BA,2,1,intermediario,4.1,16,R$ 911 - R$ 1.244,1077.5,
+t0591,band,Talento 592,sintetico,palco_bairro,Samba,Samba,Curitiba - PR,6,0,iniciante,4.36,20,R$ 426 - R$ 702,564.0,
+t0592,band,Talento 593,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,2,profissional,4.52,32,R$ 1.336 - R$ 1.705,1520.5,
+t0593,band,Talento 594,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,0,iniciante,4.3,30,R$ 1.193 - R$ 1.403,1298.0,
+t0594,band,Talento 595,sintetico,palco_bairro,MPB,MPB,Porto Alegre - RS,4,1,intermediario,4.27,25,R$ 480 - R$ 716,598.0,
+t0595,band,Talento 596,sintetico,casa_noturna,Rock,Rock,Florianópolis - SC,5,0,iniciante,4.37,38,R$ 1.515 - R$ 1.723,1619.0,
+t0596,musician,Talento 597,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.23,29,R$ 1.126 - R$ 1.525,1325.5,
+t0597,band,Talento 598,sintetico,palco_bairro,Forro,Forro,São Paulo - SP,6,1,intermediario,4.43,39,R$ 671 - R$ 936,803.5,
+t0598,musician,Talento 599,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,1,1,intermediario,4.31,34,R$ 1.360 - R$ 1.652,1506.0,
+t0599,musician,Talento 600,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.36,31,R$ 979 - R$ 1.390,1184.5,
+t0600,musician,Talento 601,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.35,38,R$ 721 - R$ 917,819.0,
+t0601,band,Talento 602,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,0,iniciante,4.41,19,R$ 1.726 - R$ 2.104,1915.0,
+t0602,musician,Talento 603,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.3,37,R$ 741 - R$ 986,863.5,
+t0603,band,Talento 604,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.09,21,R$ 663 - R$ 977,820.0,
+t0604,band,Talento 605,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.41,26,R$ 1.447 - R$ 1.849,1648.0,
+t0605,band,Talento 606,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,0,iniciante,4.2,15,R$ 795 - R$ 1.143,969.0,
+t0606,band,Talento 607,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.29,43,R$ 742 - R$ 1.154,948.0,
+t0607,musician,Talento 608,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.36,16,R$ 1.215 - R$ 1.613,1414.0,
+t0608,musician,Talento 609,sintetico,sala_intima,Blues,Blues,Rio de Janeiro - RJ,1,2,profissional,4.2,34,R$ 727 - R$ 1.101,914.0,
+t0609,band,Talento 610,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.43,45,R$ 589 - R$ 940,764.5,
+t0610,musician,Talento 611,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.21,18,R$ 1.222 - R$ 1.408,1315.0,
+t0611,band,Talento 612,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.36,23,R$ 1.133 - R$ 1.537,1335.0,
+t0612,band,Talento 613,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.3,18,R$ 642 - R$ 836,739.0,
+t0613,band,Talento 614,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,0,iniciante,4.1,21,R$ 1.836 - R$ 2.040,1938.0,
+t0614,band,Talento 615,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.29,24,R$ 1.324 - R$ 1.643,1483.5,
+t0615,band,Talento 616,sintetico,palco_bairro,Forro,Forro,São Paulo - SP,5,2,profissional,4.16,16,R$ 682 - R$ 1.089,885.5,
+t0616,band,Talento 617,sintetico,casa_noturna,Pop,Pop,Porto Alegre - RS,3,2,profissional,4.15,22,R$ 1.656 - R$ 1.954,1805.0,
+t0617,band,Talento 618,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.42,45,R$ 1.137 - R$ 1.498,1317.5,
+t0618,band,Talento 619,sintetico,palco_bairro,MPB,MPB,Porto Alegre - RS,5,0,iniciante,4.34,30,R$ 591 - R$ 912,751.5,
+t0619,musician,Talento 620,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.27,27,R$ 1.032 - R$ 1.314,1173.0,
+t0620,musician,Talento 621,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.16,44,R$ 1.044 - R$ 1.278,1161.0,
+t0621,band,Talento 622,sintetico,palco_bairro,MPB,MPB,Recife - PE,6,2,profissional,4.44,29,R$ 472 - R$ 681,576.5,
+t0622,band,Talento 623,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,1,intermediario,4.21,20,R$ 1.589 - R$ 1.849,1719.0,
+t0623,band,Talento 624,sintetico,sala_intima,Jazz,Jazz,Recife - PE,3,0,iniciante,4.3,24,R$ 935 - R$ 1.227,1081.0,
+t0624,band,Talento 625,sintetico,palco_bairro,MPB,MPB,Curitiba - PR,5,1,intermediario,4.26,4,R$ 652 - R$ 886,769.0,
+t0625,band,Talento 626,sintetico,casa_noturna,Rock,Rock,Recife - PE,3,2,profissional,4.38,41,R$ 1.101 - R$ 1.403,1252.0,
+t0626,musician,Talento 627,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.29,33,R$ 714 - R$ 928,821.0,
+t0627,band,Talento 628,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.55,51,R$ 456 - R$ 637,546.5,
+t0628,band,Talento 629,sintetico,casa_noturna,Pop,Pop,Rio de Janeiro - RJ,4,2,profissional,4.25,23,R$ 1.132 - R$ 1.387,1259.5,
+t0629,band,Talento 630,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.12,20,R$ 1.058 - R$ 1.371,1214.5,
+t0630,band,Talento 631,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.31,37,R$ 610 - R$ 870,740.0,
+t0631,band,Talento 632,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,4,2,profissional,4.2,31,R$ 1.431 - R$ 1.689,1560.0,
+t0632,musician,Talento 633,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.19,24,R$ 1.060 - R$ 1.461,1260.5,
+t0633,band,Talento 634,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.0,30,R$ 552 - R$ 887,719.5,
+t0634,band,Talento 635,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,1,intermediario,4.32,40,R$ 1.669 - R$ 1.996,1832.5,
+t0635,band,Talento 636,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.33,23,R$ 1.348 - R$ 1.578,1463.0,
+t0636,band,Talento 637,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.17,5,R$ 428 - R$ 629,528.5,
+t0637,band,Talento 638,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,1,intermediario,4.47,26,R$ 1.106 - R$ 1.476,1291.0,
+t0638,band,Talento 639,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.38,23,R$ 1.223 - R$ 1.636,1429.5,
+t0639,band,Talento 640,sintetico,palco_bairro,Samba,Samba,Belo Horizonte - MG,5,0,iniciante,4.25,29,R$ 694 - R$ 932,813.0,
+t0640,band,Talento 641,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,1,intermediario,4.29,26,R$ 1.546 - R$ 1.899,1722.5,
+t0641,band,Talento 642,sintetico,sala_intima,Blues,Blues,Florianópolis - SC,3,2,profissional,4.35,26,R$ 1.268 - R$ 1.475,1371.5,
+t0642,musician,Talento 643,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.16,32,R$ 536 - R$ 723,629.5,
+t0643,musician,Talento 644,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.29,27,R$ 1.166 - R$ 1.398,1282.0,
+t0644,band,Talento 645,sintetico,sala_intima,Jazz,Jazz,São Paulo - SP,2,0,iniciante,4.25,9,R$ 1.205 - R$ 1.569,1387.0,
+t0645,band,Talento 646,sintetico,palco_bairro,MPB,MPB,São Paulo - SP,4,0,iniciante,4.35,32,R$ 735 - R$ 1.050,892.5,
+t0646,band,Talento 647,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.41,19,R$ 1.500 - R$ 1.878,1689.0,
+t0647,musician,Talento 648,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.32,24,R$ 937 - R$ 1.234,1085.5,
+t0648,band,Talento 649,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.41,32,R$ 661 - R$ 1.025,843.0,
+t0649,band,Talento 650,sintetico,casa_noturna,Rock,Rock,Recife - PE,4,2,profissional,4.48,32,R$ 1.876 - R$ 2.152,2014.0,
+t0650,musician,Talento 651,sintetico,sala_intima,Jazz,Jazz,Curitiba - PR,1,2,profissional,4.42,36,R$ 703 - R$ 1.037,870.0,
+t0651,band,Talento 652,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,6,1,intermediario,4.39,29,R$ 742 - R$ 947,844.5,
+t0652,band,Talento 653,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,3,2,profissional,4.38,22,R$ 1.747 - R$ 2.066,1906.5,
+t0653,band,Talento 654,sintetico,sala_intima,Jazz,Jazz,Curitiba - PR,3,0,iniciante,4.17,24,R$ 1.315 - R$ 1.648,1481.5,
+t0654,band,Talento 655,sintetico,palco_bairro,MPB,MPB,Curitiba - PR,4,2,profissional,4.24,29,R$ 484 - R$ 700,592.0,
+t0655,band,Talento 656,sintetico,casa_noturna,Eletronica,Eletronica,Belo Horizonte - MG,5,1,intermediario,4.45,29,R$ 1.372 - R$ 1.717,1544.5,
+t0656,musician,Talento 657,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.3,16,R$ 817 - R$ 1.162,989.5,
+t0657,band,Talento 658,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,0,iniciante,4.34,31,R$ 618 - R$ 961,789.5,
+t0658,band,Talento 659,sintetico,casa_noturna,Rock,Rock,Recife - PE,5,2,profissional,4.41,27,R$ 1.559 - R$ 1.776,1667.5,
+t0659,musician,Talento 660,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.26,21,R$ 794 - R$ 1.068,931.0,
+t0660,band,Talento 661,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,6,1,intermediario,4.1,31,R$ 521 - R$ 859,690.0,
+t0661,musician,Talento 662,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,1,2,profissional,4.22,20,R$ 1.226 - R$ 1.487,1356.5,
+t0662,band,Talento 663,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.3,4,R$ 782 - R$ 1.063,922.5,
+t0663,band,Talento 664,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,5,2,profissional,4.32,22,R$ 480 - R$ 873,676.5,
+t0664,band,Talento 665,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,1,intermediario,4.45,43,R$ 1.306 - R$ 1.681,1493.5,
+t0665,band,Talento 666,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,1,intermediario,4.3,31,R$ 1.043 - R$ 1.327,1185.0,
+t0666,band,Talento 667,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.17,15,R$ 440 - R$ 720,580.0,
+t0667,band,Talento 668,sintetico,casa_noturna,Eletronica,Eletronica,Belo Horizonte - MG,5,2,profissional,4.53,32,R$ 1.369 - R$ 1.742,1555.5,
+t0668,band,Talento 669,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.49,15,R$ 975 - R$ 1.211,1093.0,
+t0669,musician,Talento 670,sintetico,palco_bairro,Forro,Forro,Belo Horizonte - MG,1,1,intermediario,4.31,37,R$ 505 - R$ 739,622.0,
+t0670,musician,Talento 671,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.2,14,R$ 1.508 - R$ 1.908,1708.0,
+t0671,band,Talento 672,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.12,10,R$ 900 - R$ 1.231,1065.5,
+t0672,band,Talento 673,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,6,0,iniciante,4.42,34,R$ 593 - R$ 811,702.0,
+t0673,band,Talento 674,sintetico,casa_noturna,Eletronica,Eletronica,Salvador - BA,4,1,intermediario,4.3,27,R$ 1.667 - R$ 2.001,1834.0,
+t0674,musician,Talento 675,sintetico,sala_intima,Jazz,Jazz,Curitiba - PR,1,2,profissional,4.23,32,R$ 761 - R$ 1.007,884.0,
+t0675,band,Talento 676,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.23,30,R$ 768 - R$ 1.156,962.0,
+t0676,band,Talento 677,sintetico,casa_noturna,Rock,Rock,Recife - PE,3,0,iniciante,4.27,33,R$ 1.844 - R$ 2.079,1961.5,
+t0677,band,Talento 678,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.23,19,R$ 1.103 - R$ 1.386,1244.5,
+t0678,band,Talento 679,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.31,34,R$ 682 - R$ 959,820.5,
+t0679,band,Talento 680,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.22,18,R$ 1.627 - R$ 1.860,1743.5,
+t0680,band,Talento 681,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.47,42,R$ 1.036 - R$ 1.306,1171.0,
+t0681,musician,Talento 682,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,1,2,profissional,4.17,31,R$ 530 - R$ 928,729.0,
+t0682,band,Talento 683,sintetico,casa_noturna,Rock,Rock,Salvador - BA,5,1,intermediario,4.28,31,R$ 1.808 - R$ 2.184,1996.0,
+t0683,band,Talento 684,sintetico,sala_intima,Jazz,Jazz,Porto Alegre - RS,3,2,profissional,4.19,6,R$ 1.024 - R$ 1.298,1161.0,
+t0684,musician,Talento 685,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.28,31,R$ 399 - R$ 655,527.0,
+t0685,band,Talento 686,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,5,1,intermediario,4.19,16,R$ 1.590 - R$ 1.963,1776.5,
+t0686,band,Talento 687,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.31,12,R$ 1.298 - R$ 1.573,1435.5,
+t0687,band,Talento 688,sintetico,palco_bairro,Samba,Samba,Salvador - BA,5,1,intermediario,4.48,36,R$ 670 - R$ 990,830.0,
+t0688,band,Talento 689,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,2,profissional,4.32,32,R$ 1.390 - R$ 1.605,1497.5,
+t0689,band,Talento 690,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,1,intermediario,4.04,24,R$ 842 - R$ 1.188,1015.0,
+t0690,band,Talento 691,sintetico,palco_bairro,Forro,Forro,Salvador - BA,6,2,profissional,4.24,10,R$ 492 - R$ 908,700.0,
+t0691,band,Talento 692,sintetico,casa_noturna,Pop,Pop,Recife - PE,5,0,iniciante,4.25,18,R$ 1.243 - R$ 1.633,1438.0,
+t0692,musician,Talento 693,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.49,43,R$ 783 - R$ 972,877.5,
+t0693,band,Talento 694,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.4,30,R$ 462 - R$ 666,564.0,
+t0694,band,Talento 695,sintetico,casa_noturna,Eletronica,Eletronica,São Paulo - SP,3,2,profissional,4.31,20,R$ 1.252 - R$ 1.589,1420.5,
+t0695,band,Talento 696,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.28,22,R$ 1.157 - R$ 1.453,1305.0,
+t0696,band,Talento 697,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,1,intermediario,4.32,21,R$ 609 - R$ 880,744.5,
+t0697,band,Talento 698,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.44,25,R$ 1.138 - R$ 1.510,1324.0,
+t0698,band,Talento 699,sintetico,sala_intima,Blues,Blues,Rio de Janeiro - RJ,3,2,profissional,4.26,15,R$ 1.338 - R$ 1.572,1455.0,
+t0699,band,Talento 700,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.1,12,R$ 477 - R$ 695,586.0,
+t0700,musician,Talento 701,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.2,19,R$ 812 - R$ 1.129,970.5,
+t0701,band,Talento 702,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,2,profissional,4.15,28,R$ 1.013 - R$ 1.316,1164.5,
+t0702,band,Talento 703,sintetico,palco_bairro,Samba,Samba,Porto Alegre - RS,5,0,iniciante,4.17,25,R$ 531 - R$ 749,640.0,
+t0703,musician,Talento 704,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,1,1,intermediario,4.23,26,R$ 939 - R$ 1.183,1061.0,
+t0704,musician,Talento 705,sintetico,sala_intima,Blues,Blues,Florianópolis - SC,1,2,profissional,4.3,37,R$ 1.085 - R$ 1.346,1215.5,
+t0705,musician,Talento 706,sintetico,palco_bairro,Samba,Samba,Recife - PE,1,2,profissional,4.22,25,R$ 613 - R$ 994,803.5,
+t0706,band,Talento 707,sintetico,casa_noturna,Pop,Pop,Rio de Janeiro - RJ,5,0,iniciante,4.21,12,R$ 1.680 - R$ 1.907,1793.5,
+t0707,band,Talento 708,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.3,26,R$ 1.304 - R$ 1.685,1494.5,
+t0708,band,Talento 709,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.33,24,R$ 535 - R$ 857,696.0,
+t0709,musician,Talento 710,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.39,39,R$ 1.044 - R$ 1.408,1226.0,
+t0710,musician,Talento 711,sintetico,sala_intima,Jazz,Jazz,Recife - PE,1,1,intermediario,4.51,33,R$ 730 - R$ 946,838.0,
+t0711,musician,Talento 712,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,1,2,profissional,4.52,32,R$ 563 - R$ 844,703.5,
+t0712,musician,Talento 713,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,1,2,profissional,4.41,42,R$ 1.477 - R$ 1.791,1634.0,
+t0713,musician,Talento 714,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.44,48,R$ 822 - R$ 1.151,986.5,
+t0714,band,Talento 715,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.47,11,R$ 759 - R$ 1.086,922.5,
+t0715,band,Talento 716,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,3,1,intermediario,4.31,20,R$ 1.773 - R$ 2.057,1915.0,
+t0716,band,Talento 717,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.42,25,R$ 1.342 - R$ 1.721,1531.5,
+t0717,band,Talento 718,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,0,iniciante,4.17,11,R$ 462 - R$ 645,553.5,
+t0718,band,Talento 719,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,5,2,profissional,4.48,30,R$ 1.755 - R$ 2.145,1950.0,
+t0719,musician,Talento 720,sintetico,sala_intima,Blues,Blues,Curitiba - PR,1,2,profissional,4.21,27,R$ 1.057 - R$ 1.338,1197.5,
+t0720,musician,Talento 721,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,2,profissional,4.25,30,R$ 671 - R$ 1.035,853.0,
+t0721,band,Talento 722,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,0,iniciante,4.21,30,R$ 1.543 - R$ 1.855,1699.0,
+t0722,band,Talento 723,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,0,iniciante,4.1,9,R$ 950 - R$ 1.172,1061.0,
+t0723,band,Talento 724,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.47,30,R$ 728 - R$ 1.079,903.5,
+t0724,band,Talento 725,sintetico,casa_noturna,Pop,Pop,Belo Horizonte - MG,3,1,intermediario,4.31,6,R$ 1.767 - R$ 2.162,1964.5,
+t0725,band,Talento 726,sintetico,sala_intima,Blues,Blues,Porto Alegre - RS,2,1,intermediario,4.31,30,R$ 1.150 - R$ 1.415,1282.5,
+t0726,band,Talento 727,sintetico,palco_bairro,Samba,Samba,Florianópolis - SC,6,2,profissional,4.24,26,R$ 776 - R$ 1.181,978.5,
+t0727,band,Talento 728,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,1,intermediario,4.25,21,R$ 1.697 - R$ 1.906,1801.5,
+t0728,band,Talento 729,sintetico,sala_intima,Blues,Blues,Salvador - BA,2,1,intermediario,4.33,23,R$ 1.288 - R$ 1.612,1450.0,
+t0729,band,Talento 730,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,1,intermediario,4.35,28,R$ 631 - R$ 892,761.5,
+t0730,band,Talento 731,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.35,29,R$ 1.350 - R$ 1.579,1464.5,
+t0731,band,Talento 732,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.24,28,R$ 1.162 - R$ 1.521,1341.5,
+t0732,musician,Talento 733,sintetico,palco_bairro,Forro,Forro,Belo Horizonte - MG,1,2,profissional,4.49,43,R$ 404 - R$ 820,612.0,
+t0733,musician,Talento 734,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,1,1,intermediario,4.24,23,R$ 913 - R$ 1.324,1118.5,
+t0734,band,Talento 735,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.2,43,R$ 820 - R$ 1.082,951.0,
+t0735,band,Talento 736,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,1,intermediario,4.35,24,R$ 756 - R$ 1.021,888.5,
+t0736,band,Talento 737,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,5,2,profissional,4.49,34,R$ 1.362 - R$ 1.684,1523.0,
+t0737,band,Talento 738,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,1,intermediario,4.28,17,R$ 935 - R$ 1.141,1038.0,
+t0738,band,Talento 739,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,1,intermediario,4.54,48,R$ 570 - R$ 917,743.5,
+t0739,musician,Talento 740,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,2,profissional,4.3,25,R$ 1.069 - R$ 1.459,1264.0,
+t0740,musician,Talento 741,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.24,27,R$ 738 - R$ 1.118,928.0,
+t0741,band,Talento 742,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,4,2,profissional,4.26,25,R$ 470 - R$ 807,638.5,
+t0742,band,Talento 743,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,2,profissional,4.34,39,R$ 1.833 - R$ 2.191,2012.0,
+t0743,band,Talento 744,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.39,20,R$ 882 - R$ 1.249,1065.5,
+t0744,band,Talento 745,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.39,36,R$ 686 - R$ 996,841.0,
+t0745,band,Talento 746,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,1,intermediario,4.53,34,R$ 1.615 - R$ 1.995,1805.0,
+t0746,band,Talento 747,sintetico,sala_intima,Jazz,Jazz,Florianópolis - SC,2,2,profissional,4.09,40,R$ 786 - R$ 1.117,951.5,
+t0747,band,Talento 748,sintetico,palco_bairro,Forro,Forro,Porto Alegre - RS,5,2,profissional,4.28,12,R$ 522 - R$ 734,628.0,
+t0748,band,Talento 749,sintetico,casa_noturna,Eletronica,Eletronica,Porto Alegre - RS,4,0,iniciante,4.13,6,R$ 1.169 - R$ 1.501,1335.0,
+t0749,musician,Talento 750,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,2,profissional,4.08,11,R$ 778 - R$ 1.098,938.0,
+t0750,musician,Talento 751,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,1,1,intermediario,4.2,21,R$ 476 - R$ 822,649.0,
+t0751,band,Talento 752,sintetico,casa_noturna,Rock,Rock,Florianópolis - SC,5,2,profissional,4.08,25,R$ 1.666 - R$ 1.936,1801.0,
+t0752,band,Talento 753,sintetico,sala_intima,Jazz,Jazz,Salvador - BA,2,2,profissional,4.4,29,R$ 1.300 - R$ 1.660,1480.0,
+t0753,band,Talento 754,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.39,30,R$ 570 - R$ 837,703.5,
+t0754,musician,Talento 755,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,1,2,profissional,4.24,15,R$ 1.464 - R$ 1.737,1600.5,
+t0755,musician,Talento 756,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,2,profissional,4.1,20,R$ 698 - R$ 1.021,859.5,
+t0756,band,Talento 757,sintetico,palco_bairro,Samba,Samba,Florianópolis - SC,6,1,intermediario,4.13,10,R$ 492 - R$ 888,690.0,
+t0757,band,Talento 758,sintetico,casa_noturna,Sertanejo,Sertanejo,Rio de Janeiro - RJ,3,2,profissional,4.15,25,R$ 1.252 - R$ 1.541,1396.5,
+t0758,band,Talento 759,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,2,2,profissional,4.36,30,R$ 1.027 - R$ 1.305,1166.0,
+t0759,musician,Talento 760,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,1,1,intermediario,4.51,32,R$ 424 - R$ 633,528.5,
+t0760,musician,Talento 761,sintetico,casa_noturna,Pop,Pop,Belo Horizonte - MG,1,2,profissional,4.24,32,R$ 1.193 - R$ 1.537,1365.0,
+t0761,band,Talento 762,sintetico,sala_intima,Jazz,Jazz,Salvador - BA,2,2,profissional,4.36,50,R$ 1.327 - R$ 1.542,1434.5,
+t0762,band,Talento 763,sintetico,palco_bairro,Forro,Forro,Porto Alegre - RS,6,2,profissional,4.37,19,R$ 467 - R$ 718,592.5,
+t0763,band,Talento 764,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,4,2,profissional,4.26,15,R$ 1.748 - R$ 2.016,1882.0,
+t0764,musician,Talento 765,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.36,36,R$ 956 - R$ 1.166,1061.0,
+t0765,band,Talento 766,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,6,2,profissional,4.36,25,R$ 565 - R$ 904,734.5,
+t0766,band,Talento 767,sintetico,casa_noturna,Eletronica,Eletronica,Florianópolis - SC,5,2,profissional,4.2,18,R$ 1.845 - R$ 2.152,1998.5,
+t0767,musician,Talento 768,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,1,1,intermediario,4.3,27,R$ 854 - R$ 1.104,979.0,
+t0768,musician,Talento 769,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,2,profissional,4.11,17,R$ 527 - R$ 858,692.5,
+t0769,band,Talento 770,sintetico,casa_noturna,Sertanejo,Sertanejo,Porto Alegre - RS,3,2,profissional,4.2,27,R$ 1.177 - R$ 1.515,1346.0,
+t0770,band,Talento 771,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,2,0,iniciante,4.14,13,R$ 797 - R$ 1.162,979.5,
+t0771,band,Talento 772,sintetico,palco_bairro,Forro,Forro,Curitiba - PR,6,0,iniciante,4.48,24,R$ 658 - R$ 894,776.0,
+t0772,band,Talento 773,sintetico,casa_noturna,Eletronica,Eletronica,Rio de Janeiro - RJ,3,2,profissional,4.3,15,R$ 1.542 - R$ 1.874,1708.0,
+t0773,band,Talento 774,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,1,intermediario,4.39,23,R$ 797 - R$ 1.186,991.5,
+t0774,band,Talento 775,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,2,profissional,4.26,34,R$ 683 - R$ 912,797.5,
+t0775,musician,Talento 776,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,1,1,intermediario,4.23,26,R$ 1.058 - R$ 1.297,1177.5,
+t0776,band,Talento 777,sintetico,sala_intima,Jazz,Jazz,Rio de Janeiro - RJ,2,0,iniciante,4.33,30,R$ 855 - R$ 1.210,1032.5,
+t0777,band,Talento 778,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,5,0,iniciante,4.26,34,R$ 555 - R$ 787,671.0,
+t0778,band,Talento 779,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,2,profissional,4.44,41,R$ 1.111 - R$ 1.300,1205.5,
+t0779,band,Talento 780,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,3,2,profissional,4.25,13,R$ 856 - R$ 1.269,1062.5,
+t0780,band,Talento 781,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,4,2,profissional,4.34,23,R$ 733 - R$ 995,864.0,
+t0781,band,Talento 782,sintetico,casa_noturna,Pop,Pop,Porto Alegre - RS,3,0,iniciante,4.15,28,R$ 1.239 - R$ 1.642,1440.5,
+t0782,musician,Talento 783,sintetico,sala_intima,Blues,Blues,Belo Horizonte - MG,1,1,intermediario,4.26,21,R$ 591 - R$ 854,722.5,
+t0783,band,Talento 784,sintetico,palco_bairro,Forro,Forro,Rio de Janeiro - RJ,4,0,iniciante,4.17,14,R$ 503 - R$ 795,649.0,
+t0784,band,Talento 785,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,3,0,iniciante,4.17,22,R$ 1.458 - R$ 1.654,1556.0,
+t0785,band,Talento 786,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.41,34,R$ 937 - R$ 1.336,1136.5,
+t0786,band,Talento 787,sintetico,palco_bairro,MPB,MPB,Rio de Janeiro - RJ,6,2,profissional,4.32,32,R$ 600 - R$ 878,739.0,
+t0787,band,Talento 788,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,5,1,intermediario,4.33,16,R$ 1.153 - R$ 1.465,1309.0,
+t0788,band,Talento 789,sintetico,sala_intima,Jazz,Jazz,São Paulo - SP,3,2,profissional,4.39,39,R$ 1.151 - R$ 1.481,1316.0,
+t0789,band,Talento 790,sintetico,palco_bairro,Samba,Samba,Salvador - BA,5,2,profissional,4.37,31,R$ 519 - R$ 738,628.5,
+t0790,band,Talento 791,sintetico,casa_noturna,Pop,Pop,São Paulo - SP,4,1,intermediario,4.34,39,R$ 1.165 - R$ 1.402,1283.5,
+t0791,musician,Talento 792,sintetico,sala_intima,Jazz,Jazz,Curitiba - PR,1,2,profissional,4.33,36,R$ 807 - R$ 1.104,955.5,
+t0792,band,Talento 793,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,5,2,profissional,4.17,6,R$ 438 - R$ 815,626.5,
+t0793,band,Talento 794,sintetico,casa_noturna,Rock,Rock,São Paulo - SP,3,2,profissional,4.29,13,R$ 1.686 - R$ 1.954,1820.0,
+t0794,band,Talento 795,sintetico,sala_intima,Jazz,Jazz,Porto Alegre - RS,3,2,profissional,4.34,32,R$ 1.205 - R$ 1.485,1345.0,
+t0795,musician,Talento 796,sintetico,palco_bairro,Samba,Samba,Rio de Janeiro - RJ,1,1,intermediario,4.12,23,R$ 737 - R$ 1.083,910.0,
+t0796,band,Talento 797,sintetico,casa_noturna,Sertanejo,Sertanejo,São Paulo - SP,5,2,profissional,4.23,31,R$ 1.283 - R$ 1.602,1442.5,
+t0797,band,Talento 798,sintetico,sala_intima,Jazz,Jazz,Belo Horizonte - MG,3,2,profissional,4.3,23,R$ 1.078 - R$ 1.437,1257.5,
+t0798,musician,Talento 799,sintetico,palco_bairro,MPB,MPB,São Paulo - SP,1,2,profissional,4.34,39,R$ 742 - R$ 942,842.0,
+t0799,band,Talento 800,sintetico,casa_noturna,Rock,Rock,Recife - PE,3,2,profissional,4.25,16,R$ 1.199 - R$ 1.595,1397.0,

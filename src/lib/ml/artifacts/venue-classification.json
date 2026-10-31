@@ -1,0 +1,142 @@
+{
+  "task": "venue-classification",
+  "model": "logistic",
+  "positiveClass": "venue_accepted",
+  "featureNames": [
+    "offer_log",
+    "budget_log",
+    "date_load",
+    "genre_match",
+    "capacity",
+    "experience",
+    "same_city",
+    "lead_days",
+    "rating"
+  ],
+  "mean": [
+    0.40698068476105853,
+    0.7041118411378781,
+    1.9904166666666667,
+    0.426875,
+    229.32729166666667,
+    1.3879166666666667,
+    0.5077083333333333,
+    39.4,
+    4.336404166666667
+  ],
+  "scale": [
+    0.9363102367618602,
+    0.9701807481995137,
+    1.6427593127790276,
+    0.4946238311838604,
+    160.38945753539494,
+    0.7455002747968791,
+    0.499940578066256,
+    20.786774641584007,
+    0.12121480237979282
+  ],
+  "coef": [
+    -2.52128404980791,
+    -1.2851067288561135,
+    -1.0211229179988743,
+    0.5261139100259019,
+    -0.013569110093521452,
+    0.11305951714928361,
+    0.1992511782403624,
+    0.048033040623358475,
+    -0.0014952194804613939
+  ],
+  "intercept": -1.0140415800881688,
+  "threshold": 0.5,
+  "vocab": {
+    "genres": [
+      "Rock",
+      "Samba",
+      "Jazz",
+      "MPB",
+      "Eletronica",
+      "Pop",
+      "Blues",
+      "Forro",
+      "Sertanejo"
+    ],
+    "establishmentTypes": [
+      "Bar",
+      "Restaurante",
+      "Pub",
+      "Casa noturna",
+      "Evento"
+    ],
+    "compatibility": {
+      "Bar": [
+        "Pop",
+        "Rock",
+        "Samba",
+        "Sertanejo"
+      ],
+      "Restaurante": [
+        "Blues",
+        "Jazz",
+        "MPB"
+      ],
+      "Pub": [
+        "Forro",
+        "Pop",
+        "Rock",
+        "Samba",
+        "Sertanejo"
+      ],
+      "Casa noturna": [
+        "Eletronica",
+        "Pop",
+        "Rock"
+      ],
+      "Evento": [
+        "Forro",
+        "Pop",
+        "Rock",
+        "Samba",
+        "Sertanejo"
+      ]
+    },
+    "weekendFromWeekday": 4,
+    "bandExperienceCuts": [
+      15,
+      40
+    ]
+  },
+  "comparison": {
+    "logistic": {
+      "accuracy": 0.8475,
+      "precision": 0.8197573656845754,
+      "recall": 0.8568840579710145,
+      "f1": 0.8379096545615589,
+      "confusionMatrix": [
+        [
+          544,
+          104
+        ],
+        [
+          79,
+          473
+        ]
+      ]
+    },
+    "randomForest": {
+      "accuracy": 0.8491666666666666,
+      "precision": 0.8128161888701517,
+      "recall": 0.8731884057971014,
+      "f1": 0.8419213973799127,
+      "confusionMatrix": [
+        [
+          537,
+          111
+        ],
+        [
+          70,
+          482
+        ]
+      ]
+    }
+  }
+}

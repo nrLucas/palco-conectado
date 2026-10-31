@@ -96,6 +96,7 @@ export function scorePair(
     amount: rawCache,
     suggestedAmount: rawCache,
     asOf: reference.asOf,
+    dateLoad: 0,
   });
   const history = historyRate(venue.type, genre, real);
   const score = priors.modelWeight * acceptanceProbability + priors.historyWeight * history;

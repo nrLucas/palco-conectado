@@ -34,9 +34,9 @@ export function SimilarProfiles({ kind, id }: SimilarProfilesProps) {
   if (failed || !clusterName) return null;
 
   return (
-    <section className="mt-8 rounded-xl border border-border bg-surface/60 p-5">
-      <p className="text-muted text-xs uppercase tracking-[0.16em]">Grupo de perfis</p>
-      <h2 className="font-display mt-1 text-2xl font-semibold">{clusterName}</h2>
+    <section className="mt-8 rounded-[var(--radius)] border border-border bg-surface/60 p-5">
+      <h2 className="font-display text-lg font-semibold">Perfis parecidos</h2>
+      <p className="text-muted mt-1 text-sm">{clusterName}</p>
       <p className="text-muted mt-2 max-w-2xl text-sm leading-relaxed">
         Perfis próximos por gênero, cidade, faixa de preço e experiência. O agrupamento é um
         K-Means treinado em um histórico sintético do marketplace.
@@ -49,7 +49,7 @@ export function SimilarProfiles({ kind, id }: SimilarProfilesProps) {
             <li key={`${profile.kind}-${profile.id}`}>
               <Link
                 href={profile.href}
-                className="block rounded-lg border border-border bg-background px-4 py-3 transition-colors hover:border-accent/50"
+                className="block rounded-[var(--radius)] border border-border bg-background px-4 py-3 transition-colors hover:border-accent/50"
               >
                 <span className="font-medium">{profile.name}</span>
                 <span className="text-muted mt-1 block text-sm">

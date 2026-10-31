@@ -1,0 +1,4046 @@
+{
+  "source": "spotify",
+  "artists": [
+    {
+      "id": "7HGNYPmbDrMkylWqeFCOIQ",
+      "name": "Caetano Veloso",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3SKTkAUNa3oUa2rkd8DAyM",
+      "name": "MPB4",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3h7RaVXBvdSNa7LXQtVYqH",
+      "name": "Armandinho",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6rM2yY0GnVcOHMU5GD3y9E",
+      "name": "Martinho Da Vila",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7jrRQZg4FZq6dwpi3baKcu",
+      "name": "Raul Seixas",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4PhdYoQGH8s1xee81dqQOO",
+      "name": "Natiruts",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7fAKtXSdNInWAIf0jVUz65",
+      "name": "Roberto Carlos",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1on7ZQ2pvgeQF4vmIA09x5",
+      "name": "Charlie Brown Jr.",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5rrmaoBXZ7Jcs4Qb77j0YA",
+      "name": "Djavan",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7oEkUINVIj1Nr3Wnj8tzqr",
+      "name": "Gilberto Gil",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4laQz4PaKeh2Hu6QL6evVD",
+      "name": "Tribalistas",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "60oAQJsBmykZP3GwjbSL6S",
+      "name": "Mari Froes",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0i1s9WcIu0PrUvHzALgofo",
+      "name": "Seu Jorge",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7rPqFVgJYARiFsLDlN6W6y",
+      "name": "Toquinho",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3f5VCwd57gZsqMad28jyLV",
+      "name": "Maria Bethânia",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0rSTXALHu0EKAawPLBdODH",
+      "name": "Marisa Monte",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0nFdWpwl7h6fp3ADRyG14L",
+      "name": "Marina Sena",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1sPg5EHuQXTMElpZ4iUgXe",
+      "name": "ANAVITÓRIA",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6tw6EpC9RgmSRZiZg0n22t",
+      "name": "Legião Urbana",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6q7nMIVgGohQ14mSsq3F8t",
+      "name": "Gilsons",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6tOsSffQQIXmK8TqsDck8t",
+      "name": "Chico Buarque",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0axa4ZdiQG1tafIU0u5SYG",
+      "name": "Leo Middea",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "559vxOLTzlAv0zB77JMcdG",
+      "name": "Alceu Valença",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0yFvXd36g5sNKYDi0Kkvl8",
+      "name": "Elis Regina",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5JYtpnUKxAzXfHEYpOeeit",
+      "name": "Jorge Ben Jor",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7dzq55YG3wjViqexDwiycQ",
+      "name": "Ivete Sangalo",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7EM9m7HOXxVgP9oEpDDv70",
+      "name": "Os Paralamas Do Sucesso",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "57pVvBwa3ZCR9LsVlkLXj7",
+      "name": "Vanessa Da Mata",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4C4kpaAdp6aKSkguw40SsU",
+      "name": "Skank",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1A5QJAC1vdhbhPE25Q0x0f",
+      "name": "O Rappa",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7dnT2FUXhjirperXaH22IJ",
+      "name": "Rita Lee",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1nca3OA1kKCpP6aPJcBL92",
+      "name": "Paula Fernandes",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "10naVTwNjE50daQVrN0bXh",
+      "name": "Cássia Eller",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1C8UBSZs5rOPfxuxTMS6OI",
+      "name": "Maria Rita",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0hPar6ePAELiu9rYMdvMEo",
+      "name": "Alcione",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1OFP2fSFWTfJ80rzUo5AGb",
+      "name": "Maneva",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1b8kpp4DUwt1hWaxTiWQhD",
+      "name": "Gal Costa",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4YLBdrR3DVSMncm785NH6C",
+      "name": "Lenine",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0jOs0wnXCu1bGGP7kh5uIu",
+      "name": "Tim Maia",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "17MzHbvKuzJje12SxWY9wN",
+      "name": "Jota.pê",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6vTqEFbTtTRJsuIpzZgjxi",
+      "name": "Grupo Menos É Mais",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0EtwDFzbxPxghUdhwfo9R4",
+      "name": "Samba De Raiz",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1M2MCylhUcKgYLPy0Si86W",
+      "name": "Samba Do Marcio",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6cUxFmglW7PeSS5dKaWOtP",
+      "name": "Terra Samba",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "40wx3ETjJh4eeVACrDaJVm",
+      "name": "Samba De Dom",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2FW6Zt8gyIF7Fb7O3TGxnE",
+      "name": "Sambabook",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5gGjpgad4tcVWMv4mlOw7a",
+      "name": "Sambaiana",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0IB2uaFC6Xm2I9VSaUlesk",
+      "name": "Samba da Ladeira",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3Il6TyOnML9fMSCyDMbUCO",
+      "name": "SAMBATA",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4gsyzG3BVJ3RscqBR3TtSF",
+      "name": "Gigantes do Samba",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6xeASKudqBrYQiGP47oWxa",
+      "name": "Samba de Cosme",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3XHp0LmHYLkVBPsH3B66zi",
+      "name": "Samba Touré",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1RnHJ07H3jcpay9PrUPjnt",
+      "name": "Raça Negra",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5ZfBThYiIIhL7jHMG8gDB2",
+      "name": "Ferrugem",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7yQrcdkLdBAkV7yY9fF2Hw",
+      "name": "Grupo Revelação",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3pO5VjZ4wOHCMBXOvbMISG",
+      "name": "Antônio Carlos Jobim",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1fUSLFr4WUBx7joEcGwpvG",
+      "name": "Sorriso Maroto",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4STHEaNw4mPZ2tzheohgXB",
+      "name": "Paul McCartney",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3jksDgFvZoEBZkH1LsSBzX",
+      "name": "Deu Samba",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7nmCMqU1REgCXIblWUt8Jj",
+      "name": "Samba Vibe",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0Hx1x22OHUgFJ2BMNUnHz6",
+      "name": "Samba Pra Deus",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7p48BUNzmf8Vhol4hsZC8T",
+      "name": "Samba Melodiosa",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7nfBxjb99prCqaT3wk87u5",
+      "name": "Samba Jean-Baptiste",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2B8HcBRTizIsSPryM46Sb1",
+      "name": "Só Pra Contrariar",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0Rrl4hJQjRAbGtiEwAqS5N",
+      "name": "Alexandre Pires",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5JG9GISYjRLQUJMH2C6iJ5",
+      "name": "Turma do Pagode",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3qZ2n5keOAat1SoF6bHwmb",
+      "name": "Zeca Pagodinho",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7wFw8VVSRHWSDRyaCsPUTQ",
+      "name": "Samba",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4JF9aWHoF88Suj80waWpOz",
+      "name": "Oba Oba Samba House",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0GmY7bUW16EeHn5ajBwjJ2",
+      "name": "Samba Junior Oficial",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2PYhZhOszONUochOA0VFWS",
+      "name": "Samba Junior",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "77ZUbcdoU5KCPHNUl8bgQy",
+      "name": "João Gilberto",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "39VceBo0jXir85LCeAmAIs",
+      "name": "Kamisa 10",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0FMucZsEnCxs5pqBjHjIc8",
+      "name": "Stan Getz",
+      "genres": [
+        "samba"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "57XFcSi83RxJN7TiOiIs5C",
+      "name": "Pagode Restaura",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5AfGpwSbYKelc5nJjUVRmb",
+      "name": "Ruben Rada",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2WZW6Gsj5R7JlRNFikJvPE",
+      "name": "Juanjo Morgade",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7FNnA9vBm6EKceENgCGRMb",
+      "name": "Anitta",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1vppDmG3i5sXf3DJzrK4T1",
+      "name": "Thiaguinho",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6L2DyVdMndLfvkAelI8vFe",
+      "name": "ONE PLAY",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "47a5fNlYub0UA5ZEbjA11c",
+      "name": "Pagodah",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1sAZZ81QuhWxef6GaHSghL",
+      "name": "Mais Uma",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2rTct8xLvWTh4gnnH9Z7NK",
+      "name": "Pagode do Velloso",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1nXpvqnZJF3vIZyYUPXPbN",
+      "name": "Pagode da Tia Doca",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4GrG809bkgPIchC0oGU1Z0",
+      "name": "Pagode do Adame",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4Uh7T7Pi4r3k6PjqL0DqxM",
+      "name": "Herederos Para Vos",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6uJKnn4CV4IIop8mg4kCUy",
+      "name": "Luana",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5Xm9ynJD7wkdtI5HR2ux9K",
+      "name": "Tabaré Cardozo",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3CDoRporvSjdzTrm99a3gi",
+      "name": "LUDMILLA",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5cJ2STpNRo3LOuTbsj0aP5",
+      "name": "Pagode Restaurador",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4GepMkTgrIZECoCC55vqjW",
+      "name": "Marama",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7pF1gcXCWyn4xGPPXNWVO5",
+      "name": "Enzo y la Sub 21",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7CpFREvQT9yqbgym6gJgzg",
+      "name": "EnLaPeraSessions",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1cyFEihCjqmV3ymkewYSAK",
+      "name": "Marcados Pagode Gospel",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2QoRWNLJ6A9M8f9F0ovGcM",
+      "name": "Sonido Caracol",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4wNFb9W3qEbAgwk0Ln8iea",
+      "name": "La Revulsiva",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6MV2UXdX8Pqy25rI7dl6os",
+      "name": "Jeninho",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5nFer0qUv1VR0MJIlAJDn1",
+      "name": "Larbanois & Carrero",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0JyDgMUQZ2FR1VN8XGzoFJ",
+      "name": "Jaime Roos",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1Sdn8kqQIdeQBjwMiwyNNN",
+      "name": "Uri",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6LfHVf6hH3gbJaIdX3k8V1",
+      "name": "Sin Perse",
+      "genres": [
+        "pagode"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1yR65psqiazQpeM79CcGh8",
+      "name": "Marília Mendonça",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3p7PcrEHaaKLJnPUGOtRlT",
+      "name": "Henrique & Juliano",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2CKOmarVWvWqkNWUatHCex",
+      "name": "Ana Castela",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3qvcCP2J0fWi0m0uQDUf6r",
+      "name": "Luan Santana",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1wb384gThJiHolfyfxjCOS",
+      "name": "Sertanejo Play",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6Wlvsn3IPHiZwAv02lB5eC",
+      "name": "Ícaro e Gilmar",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5wbf52LA6kcaboHSN6NEF1",
+      "name": "PEDRO SAMPAIO",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5qIpstBGrGteJZg1xIvbiz",
+      "name": "Panda",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "487N2T9nIPEHrlTZLL3SQs",
+      "name": "Zé Neto & Cristiano",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1RTTP6URHxuAS8AzGUbfIX",
+      "name": "Sertanejo",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7MiDcPa6UiV3In7lIM71IN",
+      "name": "Gusttavo Lima",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4I8fA8WjgUTtOQMr5rXjM1",
+      "name": "Sertanejo",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1elUiq4X7pxej6FRlrEzjM",
+      "name": "Jorge & Mateus",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7yqlgCPg2cRQIc48uBQBTB",
+      "name": "Sertanejo",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0oAZhL6hFrM3YRr6QzjlOf",
+      "name": "MJ Records",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "42m8eNKUwiMldH3GFcKMNi",
+      "name": "Los Olimareños",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7kqERaGAimGwlTeRWY3ITr",
+      "name": "Natanael Segovia",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7ySZCEP4HFGckYYPK5rqFI",
+      "name": "Melody",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2eK9gcJQ6uqVvJL63dnOM3",
+      "name": "Simone Mendes",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "55Wn8tf8dBvfl1HRsD7Kze",
+      "name": "Continental",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2Z0lRIqr997lIUiPtrpKCr",
+      "name": "Matheus & Kauan",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7gZu6kPnY9enEi5FvgTO4F",
+      "name": "Felipe e Rodrigo",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4xQFKlQXtzYxfZOnk799m2",
+      "name": "Alfredo Zitarrosa",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6olL0qHYPsvbfKPhATwqGE",
+      "name": "Pepe Guerra",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "60g9S4kJm1m9kbrt89H5CQ",
+      "name": "Copla alta",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7zREGj8GMl9UrDa6NPLi0H",
+      "name": "Meri Deal",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4dyYjqmYDjegbB3F2mbvcT",
+      "name": "Zezé Di Camargo & Luciano",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5kVgcCdPbeUwxBqWxi2Ktl",
+      "name": "Luan Pereira",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5IREutgMnyQqRcc8r15gWk",
+      "name": "CountryBeat",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "63yBOaK3N1kG2g1M5ZxBox",
+      "name": "Mariana Fagundes",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5K8Rmjmf4RZFffz94EmBRt",
+      "name": "Zé Vaqueiro",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1LIuN7ov1IBQDdLsU83ojl",
+      "name": "Hugo & Guilherme",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4XW3v1Vfu7ZEs1sJyWvoRJ",
+      "name": "Lucas LM",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2dMN7CEuwIt5GUreDLo8ZG",
+      "name": "Santiago Chalar",
+      "genres": [
+        "sertanejo"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7H2UiBSifBq66tzbg9ECNM",
+      "name": "Forró Hits",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6osuzg3Iddz6orKpsW17rT",
+      "name": "Forró da Brucelose & Gilson Neto",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0ga39iuVvywmu57DDuLv10",
+      "name": "Forró Perfeito",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0iEEXnLK5t87wh91rNYozv",
+      "name": "Forró Boys",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7pTH8pok1GcAAHcYdBgEKb",
+      "name": "Forró Cachorro",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4wJVYAyCbcrukxNKNsT9OX",
+      "name": "Forrozão Chicote D' Luxo",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5wONDxS2kxBgvk4Dl51fcQ",
+      "name": "Forró e Piseiro",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "01ST5jiTLQjTKBJZPXJhK5",
+      "name": "Forrozão Tropykalia",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2mt6tcE0v5F1Tg6r3dWrcX",
+      "name": "Forro Pisada Black",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1scVfBymTr3CeZ4imMj1QJ",
+      "name": "Forrest Frank",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2GqdVEBrngIpxsALKmZThS",
+      "name": "FORRÓ DE JEITO",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7pJ0NAjDCpdXCWabWAnXG5",
+      "name": "Canal Do Forró",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5cm1d2Gy4vHYM6AoHuUhO4",
+      "name": "Forró e Vaquejada Oficial",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2QPp8Q6Y8w8co1hZaCCOfs",
+      "name": "Forró Medôin",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "67yA0mMtuBUAtkHAi1WAP5",
+      "name": "Forró Pressão",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "49Xhc7fjG9TJIDZostV13u",
+      "name": "Forró Real",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1eIYP01ZLPKEExhcV6xFgt",
+      "name": "Grelo",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "223PR0orrzCMOBC7b5YAzF",
+      "name": "Alemão Do Forró",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4mnhyGRAuExTL4J0soT4za",
+      "name": "Aviões do Forró",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1EydKdbv0zEd72hSVbyFrI",
+      "name": "Forró Anjo Azul",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "57qUtfcXHYCcDYNHR89bsX",
+      "name": "Forrozão Baby Som",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "37mqXU98U5GmH5ZDtlHM1c",
+      "name": "Matheus Fernandes",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1zzQeAzbxN9ctihMrpTo3H",
+      "name": "Acertei",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3Yaa2NJiGdT82KIJMnHUZ7",
+      "name": "Forró do HF",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6dp4jSJ0rpWNUxD8wYdMzI",
+      "name": "Forroçacana",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1E7oGWABLQvqckcJFikcG7",
+      "name": "Forro + Tóys",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "20FlaBceHiZDOrDTbm8bim",
+      "name": "Forró Cintura de Mola",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7cmuxPnXRJxwuYDHfbD8Eu",
+      "name": "Zé Felipe",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1slHyPE5gIYlHAKLiLv9PU",
+      "name": "Netto Brito",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "43DRDu6nLSeIedZ7T1A616",
+      "name": "Xand Avião",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2LiTVEYDOEckioqrkD83jL",
+      "name": "Rey Vaqueiro",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6u3oPV9fJJnIOKvKMoROmG",
+      "name": "Toque Dez",
+      "genres": [
+        "forro"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "32x1uogH2zajP85pzZAtuE",
+      "name": "Axel",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2dn7slANEuZTGyraHIhEg0",
+      "name": "Axe Bahia",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5fUXK5m3BNwoRgTyKq8tnz",
+      "name": "AX'EL",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6GEaxHZNiogI175zUr4KvH",
+      "name": "Axel Fiks",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2PkjYgKhHI4qofYoxWB9ZP",
+      "name": "Axel Caram",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4lIZtBdj4HBILP2wAzPILy",
+      "name": "Axe",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6JSGYeCD8ksRujWHdWlahS",
+      "name": "Axe",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5mFLmIHjD4UQG4mHvD1r9g",
+      "name": "AXE",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0JopYtUprVouUTagr10VJc",
+      "name": "Axe",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "41EvVY4tHq49rZyQ7ECwLU",
+      "name": "Axe",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2TwjyKRJpvRn4SpsniXJka",
+      "name": "Axel Muñiz",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "55a3tmLfnZaniwPDbTr5NF",
+      "name": "Axel Martinez",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3gX7V7VCwOBz90t62hQHMw",
+      "name": "Axelle Red",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2aXwCqBcw1X7POWWcALd6j",
+      "name": "Axe",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "70sBM8AFSSWsGyeWA6ewav",
+      "name": "Axe",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7h1wira7h2wJhr91U8dok1",
+      "name": "axeos",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3v55VlSMlecy17rIUKO6ok",
+      "name": "Axe",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3cbNP4ir2UsDvVi8kbd1qz",
+      "name": "Axel Bennett",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3HuJ0mwMeKBMduf66nD1hT",
+      "name": "Axe",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "05nkPMgDVGi24IeMJUeW7t",
+      "name": "Axel Moons",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5Q63MoEz2XrZGaymJwcf7X",
+      "name": "Axel ASMR",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2xW3pBjCngD69hC1wIUgjA",
+      "name": "Axel Johansson",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7dWw3TXxNe2aEhng9vVRNl",
+      "name": "Axel Rudi Pell",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0pXPVMlNYciPCaysgSsJ5i",
+      "name": "Axel Caram",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "05ukT24TP30K50Blikom8z",
+      "name": "Axel Gillison",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5JBRvXkHYdoW8fRrUVbgPt",
+      "name": "Axelle Maga",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7ur9H6w9OqIgWrmM2GUWuB",
+      "name": "Axel Rulay",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2sRQFLs62KkM8UTW3DjDFM",
+      "name": "Axel Ehnström",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "313bA74MrmUBygRL2fH1lL",
+      "name": "Axel Pedersen",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1P9CIBlzVy0zn54kDlDiqF",
+      "name": "Axel Fiks",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2dzRHSrXIYRhX1tUmBT6hj",
+      "name": "Axe BA",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4JQGeB5BANQdgSABnKHBVY",
+      "name": "AxelitoHmn",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1f3NYrlm9GpXxMz8XZGEP5",
+      "name": "Axero",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6AQ3Ju0aclkVXTivkO1vFG",
+      "name": "Axé 90 Graus",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7kyE6GSXNLBLbB6wpMp9un",
+      "name": "Axel de Chevron Villette",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6jn7W8NuX94FWZyeGlyCaJ",
+      "name": "Axel Flóvent",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1adz07qkurydHDZRSePFhI",
+      "name": "Axel Cooper",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "59qo8jHDlC1i30HVjQQW3O",
+      "name": "Axel Boman",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4efs3AqHijagPC7sFYksBD",
+      "name": "Axel Kala",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6lkrkVSqgzJZz2jguafSAy",
+      "name": "Bossa Nova Covers",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4qlrhzTCrXHVXU8O7UCz60",
+      "name": "Bossa Nova",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "21eUWDGAmzh0lQ7nYxg8tR",
+      "name": "Bossa Nova",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2We4jc3vE6qvySVXKR1XgF",
+      "name": "Laza Bossa",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2nAnyTyTrRe9EFeWetv0Vx",
+      "name": "Bossa Nova",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2jDHvU3y5xMaBc8u3O85nu",
+      "name": "Nova Bossa Ltd.",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5jd0MgoI9F3hxcQHBPEk6V",
+      "name": "Bossa Bros",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3OvwaCrQZ9yTmwuQdwHOM1",
+      "name": "BossArt Ensemble",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "11FyPK488W0qoA3jpUj4oq",
+      "name": "Bossanova Covers",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6FDGzAXktjr240PHHR3uI7",
+      "name": "Bossa Nova TBM",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7ugcRmJRDrGCuVZOTcoTiG",
+      "name": "Bossa Nova Brain",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7gW0r5CkdEUMm42w9XpyZO",
+      "name": "Laufey",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "70V0T7yg7PH2Soltx94WcA",
+      "name": "Bossa Lounge Cover",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4WJ4FSFiEsJbK4SpGi4w1k",
+      "name": "Lisa Ono",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4DpQLwz0jhUU7wuT9phTlD",
+      "name": "Sarah Menescal",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2NfSBtmWe7oPw1EmetJVso",
+      "name": "Boza",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7vfmvgP5tbJg8tMILY3OOq",
+      "name": "Bossa Nova Jazz",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2nB77EV6Al8aHXfxa6YfrW",
+      "name": "Bossacucanova",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "03EYBMnqSchCMp5D9qmFXi",
+      "name": "Stacey Kent",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1Te8AXTImtNqHaOEpBFuOf",
+      "name": "Nova Jazzers",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5rX2c1zow6hCph8PnnU3kF",
+      "name": "Astrud Gilberto",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2sSQ4L0LAvDQNR4Tpdfzaq",
+      "name": "Bossanatics",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5apIRYZ7s0gTvCb4qSpGHm",
+      "name": "Bossa Players",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "174ThXFgQg2VCq9r3m8ceb",
+      "name": "Luiz Bonfá",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2lVC2nWo4KJE4p6EySdfkL",
+      "name": "Toco",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4VsUeY8nWNPZPfALeLuW8s",
+      "name": "Butterfly Bossa Nova Covers",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "65c5si0ePAwkOCn4M35Ho7",
+      "name": "Sérgio Mendes",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3NP2Tqcgz3vv8e40BfnYm3",
+      "name": "Mats & My",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6QDyLE9MsKNhEwDcgd86F9",
+      "name": "Hugo Fattoruso",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "17wDxPR2GcU3r1dpCoCiUi",
+      "name": "João Donato",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2euX7vCVnJy3TVEGfc0RCl",
+      "name": "Titãs",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1mjuRRMumbLmGmHmYvMDcb",
+      "name": "Rock Danger",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3RjvECdftnsAnsoqhBL7Vq",
+      "name": "La Trampa",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2fYAyTS2erZgqEHKHYqgi2",
+      "name": "Edi Rock",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1vEN3d3dJbmdHQpXD6AIkL",
+      "name": "Marcelo D2",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0GNq4xh8uFCyihPurnunf7",
+      "name": "Engenheiros Do Hawaii",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6Hr2CvTnI7x9U3MyDH2zBk",
+      "name": "Trotsky Vengarán",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1PwOU6fFbmaGkK3wkbb8fU",
+      "name": "Cazuza",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2K5llYyoLmzpOcbVuOY1ls",
+      "name": "Baby Do Brasil",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4w4ll81d0dR8gz989jjko1",
+      "name": "Roberto De Carvalho",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0A1oy7PC7fdzURgaLaWkL1",
+      "name": "Lulu Santos",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1Bh0ZF5ynDdpIr0B6jbrjG",
+      "name": "Rock Your Babies",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2dmQ0vMD3THLMcz7DsvfaT",
+      "name": "Pitty",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5BWqFYIPTnFx3OPWOoJvmD",
+      "name": "Gabriel O Pensador",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4Z0yuwHVJBROVZqFpTIr0d",
+      "name": "Capital Inicial",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7n1XMwvxPf10t4OX6h6Ufy",
+      "name": "Nando Reis",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5re6NsyXzHg6uvNimzQ3F6",
+      "name": "Jota Quest",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5rFBVAxrBCluez91J9ta5H",
+      "name": "Snake",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6qrqAYlS6lUj2BVXax7SZW",
+      "name": "Mc Jacaré",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6xlRSRMLgZbsSNd0BMobwy",
+      "name": "DENNIS",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1CbQrKvCpEnekM3QMGJtXK",
+      "name": "MC Meno K",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "54bV1pHNm5h5EcEgMis1RC",
+      "name": "Mc Rodrigo do CN",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7me0S5Z40qVWj3gzyK8aC3",
+      "name": "Mc Livinho",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5ay7ERQ96zTIqQbsbGCNpw",
+      "name": "Funk das galáxias",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6yiZkjeldEjFFhIaXj3w77",
+      "name": "Gordinho Bolado",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2UMj7NCbuqy1yUZmiSYGjJ",
+      "name": "MC Kevin o Chris",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4bJqqUCbQmRxziUoxUz5mS",
+      "name": "DU'L",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0EOOwVUWdPElrXOJyKOiBw",
+      "name": "MC Nito",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1mXAhKnZEdF6rotyyd4GBi",
+      "name": "MC Kevinho",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1diHvXOqurRBTTFyGZNO0K",
+      "name": "Funk Maia",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0f1IECbrVV952unZkzrsg2",
+      "name": "Mc Gw",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4PzYKhC14sTJNEr0dzoo0d",
+      "name": "Luísa Sonza",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3QXiKWVF6ze6coCuJcVHSc",
+      "name": "Jotape",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2Ci1Tt7bCEU3OTByr1nc0y",
+      "name": "Kew",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7mnSf7ctK2nPCEI781P1wU",
+      "name": "MC Menor JP",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0bg3fNpRQgZTCAg3Bseyly",
+      "name": "Mc Th",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7qga9VgjmVrAAawr8WwUAH",
+      "name": "Mc Leléto",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "22nkIVS7afh6A7hdd9Lze0",
+      "name": "Furacão 2000",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0lHB0Qc4pmD5RkTLlHeESo",
+      "name": "MC L da Vinte",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6Us5Zsn5MAHBk7SHBUsG5X",
+      "name": "DJ Biel do Furduncinho",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4yGgbQJMq9orWypwqtdzYT",
+      "name": "Oruam",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6jlrg5vTnraLDDXILE77BE",
+      "name": "CACAU CHUU",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "76Xa625geVw0Q7BdyxNjA2",
+      "name": "ZAAC",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4aTmtZjj0m43ShTVBNUxZN",
+      "name": "Facu RG",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4mb1xtQVGSK5dh8AbtwBiR",
+      "name": "MC Lan",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "47wsfaEWJwhWd9bs04Oc1g",
+      "name": "mc pl alves",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2W6kbe0nm96COrHzNmfLLd",
+      "name": "MC Fioti",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4v2ai25nhHzTue4JhbCMCn",
+      "name": "Dj Funks",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7t0BSQtRRdLyO3VseiGBBy",
+      "name": "DJ Zigão",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0REr9s0EudwoJnxfgN3F1x",
+      "name": "Prime Funk",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5eRF4FkmH7eLChZufSBf3p",
+      "name": "Croupier Funk",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7iJl63aJyNd8C6NZlMv6kp",
+      "name": "Tchakabum",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6hCsqVHnBo1BVQWuIjRMkL",
+      "name": "Sergio Mendes & Brasil '66",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "64orokTon1uOyiVjTGGnVx",
+      "name": "Brasil 690",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4ssUf5gLb1GBLxi1BhPrVt",
+      "name": "Jorge Drexler",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7vHr6L8xUxkObnyHhjqfzU",
+      "name": "Thomas Asselman",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1PIqF5oqVmicmFPxHEL1Ml",
+      "name": "Jazzy-Fi",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1DSr1LDXAAmLgyWLEOeoIS",
+      "name": "JazzyHan",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2rBLSUy1owSQXPdFuef5YM",
+      "name": "Jazz Brasileiro",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1PQ6FVFeroOtivh7oCwLf1",
+      "name": "Aquarela Do Brasil",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "43wX0pz8yybXaWJRqWmhhv",
+      "name": "Brasil Guitar Duo",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1ip7m9zmRPulv3dlNPE6lZ",
+      "name": "Banda Brasileira",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3EbJAFcHrJa1pukwuOhxib",
+      "name": "JazzDaniels",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2XhFxgLJiH32ldr4Q3uU7f",
+      "name": "Brasil Group 55",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5Q4Xz2JKOk8pkYeIRsm8Mo",
+      "name": "Brasiliero Bossa Lounge",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0NKTji2dtMilrWkrrtUsoJ",
+      "name": "Lucia Fumero",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3nL900KIKlV6HBTI4W0pCx",
+      "name": "Eduardo Mateo",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1mZbRiSVb2ExneAlDbBiiT",
+      "name": "Lô Borges",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2RzBTtaoFmXDvt5vP8lPYf",
+      "name": "Toti Cisneros",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5HlnN6xF2MD87KhGRmCRTd",
+      "name": "Vinícius de Moraes",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2XDOCIIqxQSELhBKCUKXpM",
+      "name": "Brasilian Tropical Orchestra",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0jPGatngbThanNwO6BOUdV",
+      "name": "Brasilidades",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2VQ2u1e53bramSfaADGt2J",
+      "name": "Roberto Menescal E Seu Conjunto",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "74CC5XLmc6B5lInQtEO3Y4",
+      "name": "Beats for Earth",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5Z0IPiVInY7yKWbuM0E32Y",
+      "name": "Millennium Jazz Music",
+      "genres": [
+        "jazz"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "20yRKi8cMHXuBTCaUiXd1p",
+      "name": "Anitta",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3EwQynIQckX7QbqteCZpIL",
+      "name": "Anitta",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "40JMTpVRUw90SrN4pFA6Mz",
+      "name": "Ana Tijoux",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3Dd6jD1AApgtNoU6SJWR7P",
+      "name": "Anita Ward",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7n7DTfggDvq4Qf2rw7ZJrw",
+      "name": "Anitta",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0AqlFI0tz2DsEoJlKSIiT9",
+      "name": "Emilia",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4uoFDMUpVUQfN9Q8DbCNUc",
+      "name": "Anitta",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1PegsfqrKjJEJIJTsEQrpE",
+      "name": "Annita Yes",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3vNzP3Ve3kG5jXtbCWieFN",
+      "name": "Anita Valiente",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4QzqjFGusXSNI5KDRK4ITQ",
+      "name": "Anitta",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "790FomKkXshlbRYZFtlgla",
+      "name": "KAROL G",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3z7uejI6VjINKO4LQXxMuz",
+      "name": "Anitta",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1DxLCyH42yaHKGK3cl5bvG",
+      "name": "Maria Becerra",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6tzRZ39aZlNqlUzQlkuhDV",
+      "name": "Pabllo Vittar",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7vXDAI8JwjW531ouMGbfcp",
+      "name": "TINI",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "46CH1Gp8l8QVly8bpG9JFG",
+      "name": "Anita Baker",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "04KkJSliOcXR2P86pHtYzg",
+      "name": "Anita Hopt",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7a0XAaPaK2aDSqa8p3QnC7",
+      "name": "Beéle",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1FxPMQ9A0882eNDx3ZkD6B",
+      "name": "La T y La M",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "716NhGYqD1jl2wI1Qkgq36",
+      "name": "Bizarrap",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "22P1OY4TRFRwhP0q29loQ8",
+      "name": "Lali",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5QGnprJtpZmk3OiDqspPlB",
+      "name": "Anita O'Day",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0r0jZzQYzBrRajocBU27BZ",
+      "name": "Anitta Nova",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6tD1jwHStbobn96I2vbMxc",
+      "name": "Anitha",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "06RD8CxzApXzuhHx54BhQL",
+      "name": "Anita Mui",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0vWyMSeg4ixQ98Srb8E4y5",
+      "name": "Anitha Karthikeyan",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2UZIAOlrnyZmyzt1nuXr9y",
+      "name": "Nicki Nicole",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3IbBqgzr4JxuoG1h30xDT3",
+      "name": "Anita Mami",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "60XHOAhvEBiV6BGBOv8ClM",
+      "name": "La Joaqui",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5Y3MV9DZ0d87NnVm56qSY1",
+      "name": "Tiago PZK",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4zEAhb4jlJ5tLMijg87cOZ",
+      "name": "Anita Donndorff",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1l6UgL5G16tId4qoYH8qJn",
+      "name": "Pushi",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4hjXUEgdALesVBGGDx1hKB",
+      "name": "Anita Tatlow",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2YcZup1n6AW4BxoikeUswf",
+      "name": "ANITA B QUEEN",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3JIRLDbCJ55I5nevDYiasK",
+      "name": "Anita Lipnicka",
+      "genres": [
+        "pop"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3Ej1010vkTLAPckOe65bSw",
+      "name": "Legião Urbana Tributo",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4ZDoy7AWNgQVmX7T0u0B1j",
+      "name": "No Te Va Gustar",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6nVcjUJemqpJjc1WevwTvL",
+      "name": "La Vela Puerca",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6byQKddO1b34lXC2ZEjehQ",
+      "name": "Patricio Rey y sus Redonditos de Ricota",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7An4yvF7hDYDolN4m5zKBp",
+      "name": "Soda Stereo",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "10AzTrYMPVVmpKoBP5bX9W",
+      "name": "Sumo",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3Pohtvl5MO8eQpaZVOrhUS",
+      "name": "La Deskarga",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "04IlmuXVBYLASmLi18VqRl",
+      "name": "Buitres",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2cYeADErfbwZ0xIP19KeWD",
+      "name": "Peyote Asesino",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3QLc39WR4dQAN1SgierGgE",
+      "name": "Renato Russo",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0Jo06O68y5JjVgiPbAR9Ox",
+      "name": "Agarrate Catalina",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3UisMJOlCgjdKYysGAJ4b6",
+      "name": "Abuela Coca",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7w79n5kCkTEaewxNBynvhM",
+      "name": "Once Tiros",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "708Cl7fLtLt0QkD1sFOTZk",
+      "name": "Eté & Los Problems",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "30fEdZPXgWfC4sNttcyB3C",
+      "name": "La Renga",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0Zncosr79q01riJYbSBNA1",
+      "name": "Turf",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6OO01j5rLKCyPg4i3FuzIT",
+      "name": "Árbol",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4FQG5l6GOTXcsF7BuA62l2",
+      "name": "Buenos Muchachos",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2wjmZuSHtRx96Qxb8HiP2o",
+      "name": "Guasones",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4aXUJo69L6Jyxxmubkuqc4",
+      "name": "Hereford",
+      "genres": [
+        "rock"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "27vNK840zYq6IfDijHPsv1",
+      "name": "Gilberto Santa Rosa",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7lCuFD6lBcBmO3oOMhtmiP",
+      "name": "Gilberto Gil",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6gk4ierjjSVPoZep27VfZz",
+      "name": "Bebel Gilberto",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6pdXxGaaEGf7huw3C6fz6a",
+      "name": "Gilberto Daza",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1Nkrp1KOmusy0yZw24twC5",
+      "name": "Gilberto e Gilmar",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1JBVEhYCEWk3LdiKFZbPQx",
+      "name": "Gilberto Gil",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1QVcBfbHhiDweZjWTXVno7",
+      "name": "Gilberto & Gilmar",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0kqBk1nMYKGHFQu9TBRAYz",
+      "name": "Gilberto Daza",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7fmjbzBCbHyDrx8EmpgDOY",
+      "name": "Gilberto Vasconcelos",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7t3J9V1yhXy2ayraEIsiXP",
+      "name": "Gilberto Ferrer",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1efHdvdSN0Np8RVjM1ykNa",
+      "name": "Gilberto Mota",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2vaqHfTIobm1QTZrp0JvZs",
+      "name": "Gilberto Gless",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5yoimVE1rbc3kAx4uwr7eq",
+      "name": "León Gieco",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6u0WP7ZDTKpEAnFKNKnIE9",
+      "name": "Gilberto Monteiro",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6xk9QVavvBnl53JrU4z7r5",
+      "name": "GILBERTO CRUZ PAULA",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1EernjL4yQpdXgbyqPj31l",
+      "name": "Gilberto Valenzuela",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3yLymqfGGIJjCHfCSRH96K",
+      "name": "Gilberto Alves",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1eiMU2L0F3AREvMBqBUge8",
+      "name": "Gilberto Amaral",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6SxVEYUMEyduxK3I2tQ7c4",
+      "name": "Gilberto Santa Rosa",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3IH5lvCwEpTxG2iChaF9eP",
+      "name": "Gilberto Peguero",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0AmvWq0tJU2LctMgyaD3hj",
+      "name": "Gilberto Lemos",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1OBVE9oxvqZ5mGtUUR3wVR",
+      "name": "Gilberto Puente",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7JLJesHA1X8IH1g5MoB3Fw",
+      "name": "Djavan",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2W8NMDhyX7a0EosSpohaEL",
+      "name": "Djavan",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5CPqwA7xI0y4JgbefVFdN1",
+      "name": "Djavan",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3Bnq7jiU506HcPjRgQ43TM",
+      "name": "Milton Nascimento",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6PEvntCFZV7FTzWdZTu5yZ",
+      "name": "Djavan De Souza Santos",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2pyTdbgnTh3e75XnYBiwit",
+      "name": "Djavann",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3nPTdI9CgjIfPGei6vHxkq",
+      "name": "Djavan",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "50IbdnDk5h6giOgAUIlbSW",
+      "name": "Djavan",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3HHMB5GrV3GKCz9IJHoB0E",
+      "name": "Djavan MC",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5BgM4ApAk6iBagP9VTicKs",
+      "name": "DJavan",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4YxOSRWSET3zYduQyQyPFa",
+      "name": "DJAANY",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7tZsgwQRMEOBRpkg0cC0bx",
+      "name": "Djavan Jackson",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0uyvuAXOPzNYlYbZOtGq1x",
+      "name": "Djavan Guy",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3FS41lYH26AR4zXYCpv8hV",
+      "name": "djavan.jami",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "06JFeWzD275tCats2VzyKT",
+      "name": "DJAVAN TEODOSIO",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "059y8D4Bdjx8MfEwpSB3UE",
+      "name": "Djavan Caetano Viana",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0x5lLZikrz4kECCFJdqzAZ",
+      "name": "Djavan Dutra",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2gEUxG0sWVLMBFF6C7J6wg",
+      "name": "DJAVANSOUZArs",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4QeOuvzYBno85BhEYTn3mM",
+      "name": "Djavan abreu",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1gINF1gnDUgZtKOvK28Lrz",
+      "name": "Djavan Menezes",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "42IilQn81fNFbABOlyfvnL",
+      "name": "Djavan Nascimento",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4fihvDJoM3opYAEIyRmqdJ",
+      "name": "DJAVAN DE MORAES",
+      "genres": [
+        "mpb"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0NGAZxHanS9e0iNHpR8f2W",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7tLZj7bBitwASeMgNlqWVC",
+      "name": "Alosa",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1VwDG9aBflQupaFNjUru9A",
+      "name": "NAYEON",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7oNcGi3B5CGRpyfjYWy7i6",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3y7LfP3vkL9HrOItlNblh9",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4UbgpaTDik0SDhBQq5Ucmt",
+      "name": "Aloka",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "462n2ZDcM98hxA8zYh9rQ1",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6OtXlm1xi9dkdlhUUzgTFy",
+      "name": "Alok Kumar",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5DexCXOx7knvTPNU8KBYep",
+      "name": "Alok Ranjan Srivastava",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2TvT6Yi8hPX7eDsFdVHj60",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "731dQagm65Jn3wPX0iMokM",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0UvglCoh34HxaRZP1DWhjY",
+      "name": "Alofoke Music",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1qEVJdHlfyVgzm1gcJhKmS",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7hKilHpHVRv1Bh94myNfbb",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0id62QV2SZZfvBn9xpmuCl",
+      "name": "Aloe Blacc",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6JtrRn8h6eg5JKDliDBaH0",
+      "name": "Alok",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2z2TRvloJt4EfUNQp9rHAi",
+      "name": "Alonzo",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1K1ijsngQYNZbmP9CIeUpo",
+      "name": "Alok Sharma",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0EyZDKtc41e4A3a3v69MxD",
+      "name": "Muscadine Bloodline",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4Lfqvnzd6MN7hmHJt6LfcY",
+      "name": "Aloboi",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3NOLGndGHL48IB3YFdA36r",
+      "name": "Alon",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6yw8LNuc6B8uELY2TUwrSw",
+      "name": "Santiago Alonso",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4HO3YQ7Sluxft7wVjicXla",
+      "name": "Alok Anil",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6rBLnB2OAn7Dm7YZ7qMeyd",
+      "name": "Alonzo Cortes",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3TQ9JTBI2n2hfo7aRONEYV",
+      "name": "Sir Mix-A-Lot",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0CF1ypoDxJ2cIesbKuPIYu",
+      "name": "aLokke",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2pQPF2tFNCNBy2XlA1NNIg",
+      "name": "Alok Yadav",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6HhV0jtMMK5HYnYgG0xgtz",
+      "name": "The War And Treaty",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1OKi7Jc0XIPwRhCBvZxM3b",
+      "name": "Alux Ghac",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "7DCxv1M3HIzyD5HzLO77Lo",
+      "name": "ALONSO BLUES",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4bZJtxEdAZYwkDxCz3nKa7",
+      "name": "ALONR",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "2yfpRQCYhrt92KkxGXJTF7",
+      "name": "Alonso Navarro",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "5kY3nTdGsS4deOS46Auy6U",
+      "name": "ALOISIO",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6ZAG0UsqIunkuW1WNfNimL",
+      "name": "Alok Ranjan",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "6bdtalFIKenjGPCQVI2gtE",
+      "name": "Paul Alone",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "3kNWENaTd7pb0xFqNuq7Sc",
+      "name": "Alohaii",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "1kwi1Q7X4jPTkHTgayxKhS",
+      "name": "Alonestar",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "4YbohdhSehUUc7RT3STcKW",
+      "name": "Midas Alonso",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    },
+    {
+      "id": "0Th7ebqyWRIwNfNDIkEpNX",
+      "name": "Aloma Steele",
+      "genres": [
+        "eletronica"
+      ],
+      "popularity": null,
+      "genre_source": "busca"
+    }
+  ]
+}

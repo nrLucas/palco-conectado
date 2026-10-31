@@ -1,0 +1,124 @@
+{
+  "regression": [
+    {
+      "input": {
+        "capacity": 159,
+        "members": 1,
+        "experience": 2,
+        "talentLocation": "Belo Horizonte - MG",
+        "venueLocation": "Belo Horizonte - MG",
+        "eventDate": "2026-02-27",
+        "rating": 4.8,
+        "shows": 36,
+        "talentPrice": "R$ 1.252 - R$ 1.480",
+        "venueBudget": "R$ 998 - R$ 1.617",
+        "genre": "Jazz",
+        "establishmentType": "Pub"
+      },
+      "expected": 1933.3431391388622
+    },
+    {
+      "input": {
+        "capacity": 152,
+        "members": 1,
+        "experience": 1,
+        "talentLocation": "Belo Horizonte - MG",
+        "venueLocation": "Belo Horizonte - MG",
+        "eventDate": "2025-04-13",
+        "rating": 4.57,
+        "shows": 45,
+        "talentPrice": "R$ 1.249 - R$ 1.618",
+        "venueBudget": "R$ 980 - R$ 1.269",
+        "genre": "Blues",
+        "establishmentType": "Pub"
+      },
+      "expected": 1666.110251976583
+    }
+  ],
+  "classification": [
+    {
+      "input": {
+        "capacity": 159,
+        "members": 1,
+        "experience": 2,
+        "talentLocation": "Belo Horizonte - MG",
+        "venueLocation": "Belo Horizonte - MG",
+        "eventDate": "2026-02-27",
+        "rating": 4.8,
+        "shows": 36,
+        "talentPrice": "R$ 1.252 - R$ 1.480",
+        "venueBudget": "R$ 998 - R$ 1.617",
+        "genre": "Jazz",
+        "establishmentType": "Pub",
+        "amount": 970.96,
+        "asOf": "2026-01-15",
+        "suggestedAmount": 1933.3431391388622
+      },
+      "expected": 0.507715057783765
+    },
+    {
+      "input": {
+        "capacity": 152,
+        "members": 1,
+        "experience": 1,
+        "talentLocation": "Belo Horizonte - MG",
+        "venueLocation": "Belo Horizonte - MG",
+        "eventDate": "2025-04-13",
+        "rating": 4.57,
+        "shows": 45,
+        "talentPrice": "R$ 1.249 - R$ 1.618",
+        "venueBudget": "R$ 980 - R$ 1.269",
+        "genre": "Blues",
+        "establishmentType": "Pub",
+        "amount": 3191.78,
+        "asOf": "2025-03-02",
+        "suggestedAmount": 1666.110251976583
+      },
+      "expected": 0.13957187472694582
+    }
+  ],
+  "clustering": [
+    {
+      "input": {
+        "kind": "band",
+        "genre": "MPB",
+        "location": "Rio de Janeiro - RJ",
+        "members": 5,
+        "experience": 0,
+        "shows": 12,
+        "rating": 4.31,
+        "price": "R$ 575 - R$ 922"
+      },
+      "expectedCluster": 5,
+      "citySlug": "rio_de_janeiro_rj"
+    },
+    {
+      "input": {
+        "kind": "band",
+        "genre": "Pop",
+        "location": "São Paulo - SP",
+        "members": 5,
+        "experience": 1,
+        "shows": 32,
+        "rating": 4.47,
+        "price": "R$ 1.673 - R$ 1.883"
+      },
+      "expectedCluster": 0,
+      "citySlug": "sao_paulo_sp"
+    },
+    {
+      "input": {
+        "kind": "band",
+        "genre": "Jazz",
+        "location": "Belo Horizonte - MG",
+        "members": 3,
+        "experience": 1,
+        "shows": 26,
+        "rating": 4.67,
+        "price": "R$ 1.225 - R$ 1.602"
+      },
+      "expectedCluster": 2,
+      "citySlug": "belo_horizonte_mg"
+    }
+  ]
+}

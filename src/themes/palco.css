@@ -101,7 +101,78 @@
   --font-display: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
 }
 
+@layer base {
+  ::selection {
+    background: color-mix(in oklab, var(--accent) 32%, transparent);
+    color: var(--foreground);
+  }
+
+  input,
+  textarea {
+    caret-color: var(--accent);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 0.375rem;
+  }
+
+  html {
+    scrollbar-color: color-mix(in oklch, var(--foreground) 28%, transparent) transparent;
+  }
+
+  html[data-surface="operate"] {
+    --radius: 0.25rem;
+    --radius-lg: 0.25rem;
+    --radius-xl: 0.25rem;
+    --radius-2xl: 0.25rem;
+    --radius-3xl: 0.25rem;
+    --radius-4xl: 0.25rem;
+    --field-radius: 0.25rem;
+    --surface-shadow: none;
+    --overlay-shadow: none;
+  }
+
+  html[data-surface="operate"] header,
+  html[data-surface="operate"] footer {
+    --radius: 0.75rem;
+    --radius-lg: calc(0.75rem * 1);
+    --radius-xl: calc(0.75rem * 1.5);
+    --radius-2xl: calc(0.75rem * 2);
+    --radius-3xl: calc(0.75rem * 3);
+    --radius-4xl: calc(0.75rem * 4);
+    --field-radius: calc(0.75rem * 1.5);
+    --surface-shadow:
+      0 2px 8px 0 rgba(20, 16, 10, 0.06),
+      0 1px 2px 0 rgba(20, 16, 10, 0.04);
+    --overlay-shadow:
+      0 8px 32px 0 rgba(20, 16, 10, 0.12),
+      0 4px 12px 0 rgba(20, 16, 10, 0.08);
+  }
+
+  html[data-surface="operate"].dark header,
+  html[data-surface="operate"].dark footer {
+    --surface-shadow: 0 0 0 0 transparent inset;
+    --overlay-shadow:
+      0 12px 40px 0 rgba(0, 0, 0, 0.45),
+      0 4px 12px 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
 @layer components {
+  .surface-operate {
+    --radius: 0.25rem;
+    --radius-lg: 0.25rem;
+    --radius-xl: 0.25rem;
+    --radius-2xl: 0.25rem;
+    --radius-3xl: 0.25rem;
+    --radius-4xl: 0.25rem;
+    --field-radius: 0.25rem;
+    --surface-shadow: none;
+    --overlay-shadow: none;
+  }
+
   .button--hero {
     background: linear-gradient(
       135deg,

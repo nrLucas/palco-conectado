@@ -6,6 +6,7 @@ export interface ProposalSuggestion {
   suggestedAmount: number | null;
   acceptanceProbability: number | null;
   acceptanceLabel: "alta" | "media" | "baixa" | null;
+  acceptanceTarget?: "band" | "venue";
 }
 
 export interface SimilarProfile {

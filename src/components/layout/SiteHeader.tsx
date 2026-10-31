@@ -1,6 +1,6 @@
 "use client";
 
-import { Building2, Guitar, Menu, Music2 } from "lucide-react";
+import { Building2, FlaskConical, Guitar, Menu, Music2 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -20,6 +20,7 @@ const navLinks: Array<{
   { href: "/bandas", label: "Bandas", icon: Music2 },
   { href: "/estabelecimentos", label: "Estabelecimentos", icon: Building2 },
   { href: "/musicos", label: "Músicos", icon: Guitar },
+  { href: "/ml", label: "Laboratório", icon: FlaskConical },
 ];
 
 export const SiteHeader = () => {
@@ -39,10 +40,12 @@ export const SiteHeader = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHome]);
 
-  const getNavCls = (path: string) =>
-    pathname === path
+  const getNavCls = (path: string) => {
+    const current = path === "/ml" ? pathname === "/ml" || pathname.startsWith("/ml/") : pathname === path;
+    return current
       ? "text-accent font-medium"
       : "text-foreground/75 hover:text-foreground transition-colors";
+  };
 
   return (
     <header

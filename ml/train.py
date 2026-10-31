@@ -7,6 +7,7 @@ Random Forest entra só como comparação, com as métricas no relatório.
 from __future__ import annotations
 
 import json
+import io
 from pathlib import Path
 
 import matplotlib
@@ -51,8 +52,8 @@ from domain import (
     classification_features,
     clustering_feature_names,
     clustering_features,
+    day_flags,
     experience_from_shows,
-    is_weekend,
     lead_days,
     ordered_vector,
     parse_price_midpoint,
@@ -84,7 +85,7 @@ def regression_rows(frame: pd.DataFrame) -> list[dict]:
             "members": record["members"],
             "experience": record["experience"],
             "same_city": same_city(record["talent_location"], record["venue_location"]),
-            "is_weekend": is_weekend(str(record["event_date"])),
+            **day_flags(str(record["event_date"])),
             "rating": record["rating"],
             "shows": record["shows"],
             "talent_price_mid": parse_price_midpoint(record["talent_price_text"]),
@@ -177,6 +178,7 @@ def main() -> None:
             "same_city": record["same_city"],
             "lead_days": lead_days(str(record["event_date"]), str(record["created_at"])),
             "rating": record["rating"],
+            "date_load": record["date_load"],
         }
         clf_rows.append(classification_features(prepared))
     x_clf = frame_from_features(clf_rows, clf_names)
@@ -354,6 +356,25 @@ def main() -> None:
         cluster_names,
     )
 
+    meta_path = DATA / "dataset_meta.json"
+    spotify_used = 0
+    if meta_path.exists():
+        spotify_used = int(json.loads(meta_path.read_text(encoding="utf-8")).get("spotifyArtistsUsed") or 0)
+    spotify_note = (
+        f"{spotify_used} talentos usam nome, gênero e popularidade de artistas do Spotify. "
+        if spotify_used
+        else "A busca no Spotify não entrou neste arquivo, então os talentos são só sintéticos. "
+    )
+    notes = [
+        "Histórico sintético maior, semente 42. "
+        + spotify_note
+        + "Integrantes, cachê, orçamento e aceite continuam simulados. A API do Spotify deste app devolve o nome e não devolve gênero nem popularidade, então o gênero dos artistas encontrados é o termo da busca.",
+        "O cachê não muda no dia de semana, sobe na sexta, fica entre os dois no domingo e é mais alto no sábado. A regressão aprende isso com is_friday, is_saturday e is_sunday.",
+        "A chance de aceite sobe com o logaritmo da oferta sobre o cachê e satura. Abaixo do cachê fica baixa. date_load conta propostas já feitas naquela casa e naquela data, de 0 a 5, e reduz a chance.",
+        "O segmento latente dos talentos não entra no K-Means. O índice de Rand ajustado só mede se os grupos recuperaram essa estrutura.",
+        "A aplicação infere com os coeficientes lineares e os centróides. Random Forest fica como modelo de comparação no relatório.",
+    ]
+
     metrics = {
         "synthetic": True,
         "seed": SEED,
@@ -370,13 +391,7 @@ def main() -> None:
             "clusterNames": display_names,
             "adjustedRandVsLatentSegment": ari,
         },
-        "notes": [
-            "O histórico é sintético, calibrado nas faixas de preço, cidades e gêneros do seed do Palco.",
-            "A regressão prevê o cachê observado. A classificação usa a razão entre o valor ofertado e o cachê sugerido pela regressão linear, além da distância dessa razão a 1,05 (ratio_gap).",
-            "No teste, a regressão linear supera o Random Forest. Na classificação, o Random Forest fica à frente da logística.",
-            "O segmento latente dos talentos não entra no K-Means. O índice de Rand ajustado só mede se os grupos recuperaram essa estrutura.",
-            "A aplicação infere com os coeficientes lineares e os centróides. Random Forest fica como modelo de comparação no relatório.",
-        ],
+        "notes": notes,
     }
 
     priors = recommendation_priors(proposals)
@@ -465,7 +480,7 @@ def build_sanity(
             "members": raw["members"],
             "experience": raw["experience"],
             "same_city": same_city(raw["talentLocation"], raw["venueLocation"]),
-            "is_weekend": is_weekend(raw["eventDate"]),
+            **day_flags(raw["eventDate"]),
             "rating": raw["rating"],
             "shows": raw["shows"],
             "talent_price_mid": parse_price_midpoint(raw["talentPrice"]),
@@ -482,6 +497,7 @@ def build_sanity(
             "amount": float(source["amount"]),
             "asOf": str(source["created_at"])[:10],
             "suggestedAmount": expected,
+            "dateLoad": int(source["date_load"]),
         }
         class_prepared = {
             "amount": class_raw["amount"],
@@ -492,6 +508,7 @@ def build_sanity(
             "same_city": prepared["same_city"],
             "lead_days": lead_days(class_raw["eventDate"], class_raw["asOf"]),
             "rating": class_raw["rating"],
+            "date_load": int(source["date_load"]),
         }
         class_vector = ordered_vector(classification_features(class_prepared), clf_names)
         probability = float(
@@ -573,6 +590,15 @@ def preview_seed_clusters(kmeans, cluster_scaler, cluster_names, display_names) 
         print(f"  {name}: {display_names[cluster_id]}")
 
 
+def save_figure(fig, name: str) -> None:
+    buffer = io.BytesIO()
+    fig.savefig(buffer, format="png", dpi=140)
+    plt.close(fig)
+    temporary = FIGURES / f".{name}.tmp"
+    temporary.write_bytes(buffer.getvalue())
+    temporary.replace(FIGURES / name)
+
+
 def save_regression_plot(y_true, linear_pred, forest_pred) -> None:
     fig, ax = plt.subplots(figsize=(7, 6))
     ax.scatter(y_true, linear_pred, alpha=0.65, label="Regressão linear", color="#c2410c")
@@ -585,8 +611,7 @@ def save_regression_plot(y_true, linear_pred, forest_pred) -> None:
     ax.set_title("Regressão do cachê — teste")
     ax.legend()
     fig.tight_layout()
-    fig.savefig(FIGURES / "regressao_previsto_vs_real.png", dpi=140)
-    plt.close(fig)
+    save_figure(fig, "regressao_previsto_vs_real.png")
 
 
 def save_confusion_plot(matrix: list[list[int]]) -> None:
@@ -602,8 +627,7 @@ def save_confusion_plot(matrix: list[list[int]]) -> None:
             ax.text(col, row, str(matrix[row][col]), ha="center", va="center", color="#1c1917")
     fig.colorbar(image, ax=ax, fraction=0.046)
     fig.tight_layout()
-    fig.savefig(FIGURES / "classificacao_matriz_confusao.png", dpi=140)
-    plt.close(fig)
+    save_figure(fig, "classificacao_matriz_confusao.png")
 
 
 def save_cluster_plots(scaled, labels, silhouette_by_k, best_k, names) -> None:
@@ -616,8 +640,7 @@ def save_cluster_plots(scaled, labels, silhouette_by_k, best_k, names) -> None:
     ax.set_ylabel("Silhueta")
     ax.set_title("Escolha de k no K-Means")
     fig.tight_layout()
-    fig.savefig(FIGURES / "cluster_silhueta.png", dpi=140)
-    plt.close(fig)
+    save_figure(fig, "cluster_silhueta.png")
 
     pca = PCA(n_components=2, random_state=SEED)
     projected = pca.fit_transform(scaled)
@@ -638,8 +661,7 @@ def save_cluster_plots(scaled, labels, silhouette_by_k, best_k, names) -> None:
     ax.set_title("Talentos agrupados (projeção PCA)")
     ax.legend(fontsize=8)
     fig.tight_layout()
-    fig.savefig(FIGURES / "cluster_pca.png", dpi=140)
-    plt.close(fig)
+    save_figure(fig, "cluster_pca.png")
 
 
 if __name__ == "__main__":

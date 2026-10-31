@@ -51,11 +51,11 @@ const plans = [
 
 export const SubscriptionPlans = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-background to-default/30 p-6">
+    <div className="min-h-screen p-6">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h1 className="font-display text-4xl font-bold mb-4">Escolha seu Plano</h1>
-          <p className="text-lg text-muted max-w-2xl mx-auto">
+          <h1 className="font-display mb-3 text-2xl font-semibold tracking-tight">Escolha seu Plano</h1>
+          <p className="text-muted mx-auto max-w-[65ch] text-sm leading-relaxed">
             Aumente sua visibilidade e conecte-se com mais estabelecimentos. Quanto maior o plano,
             melhor sua posição na busca!
           </p>
@@ -65,8 +65,8 @@ export const SubscriptionPlans = () => {
           {plans.map((plan) => (
             <Card
               key={plan.name}
-              className={`relative transition-all duration-200 shadow-surface hover:shadow-overlay ${
-                plan.highlighted ? 'border-accent shadow-overlay md:scale-105' : ''
+              className={`relative border shadow-none ${
+                plan.highlighted ? 'border-accent' : 'border-border'
               }`}
             >
               {plan.highlighted && (
@@ -82,7 +82,7 @@ export const SubscriptionPlans = () => {
                 <Card.Title className="text-2xl font-display">{plan.name}</Card.Title>
                 <Card.Description>{plan.description}</Card.Description>
                 <div className="mt-4">
-                  <span className="text-4xl font-bold font-display">{plan.price}</span>
+                  <span className="font-display text-2xl font-semibold tabular-nums">{plan.price}</span>
                   <span className="text-muted">{plan.period}</span>
                 </div>
               </Card.Header>

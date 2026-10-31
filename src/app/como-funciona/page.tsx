@@ -124,8 +124,8 @@ export default function ComoFuncionaPage() {
     <main>
       <section className="border-b border-border bg-surface/30 py-16 md:py-24">
         <div className="container mx-auto max-w-3xl px-4 text-center">
-          <h1 className="font-display mb-4 text-4xl font-bold md:text-5xl">Como funciona?</h1>
-          <p className="text-muted text-lg leading-relaxed">
+          <h1 className="font-display mb-4 text-3xl font-semibold tracking-tight">Como funciona?</h1>
+          <p className="text-muted mx-auto max-w-[65ch] text-sm leading-relaxed">
             O Palco Conectado é um marketplace que une bandas, músicos e estabelecimentos. Da
             descoberta à avaliação pós-show, tudo acontece em uma plataforma pensada para música ao
             vivo.
@@ -134,7 +134,7 @@ export default function ComoFuncionaPage() {
       </section>
 
       <section className="container mx-auto px-4 py-16 md:py-20" aria-labelledby="timeline-heading">
-        <h2 id="timeline-heading" className="font-display mb-10 text-2xl font-bold md:text-3xl">
+        <h2 id="timeline-heading" className="font-display mb-10 text-lg font-semibold">
           Fluxo em 5 passos
         </h2>
         <Timeline data={[...universalSteps]} />
@@ -145,7 +145,7 @@ export default function ComoFuncionaPage() {
         aria-labelledby="profiles-heading"
       >
         <div className="container mx-auto px-4">
-          <h2 id="profiles-heading" className="font-display mb-8 text-2xl font-bold md:text-3xl">
+          <h2 id="profiles-heading" className="font-display mb-8 text-lg font-semibold">
             Como funciona para...
           </h2>
 
@@ -173,7 +173,7 @@ export default function ComoFuncionaPage() {
                           <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent/15 text-sm font-semibold text-accent">
                             {i + 1}
                           </span>
-                          <p className="pt-1 leading-relaxed">{step}</p>
+                          <p className="pt-1 text-sm leading-relaxed">{step}</p>
                         </li>
                       ))}
                     </ol>
@@ -186,7 +186,7 @@ export default function ComoFuncionaPage() {
       </section>
 
       <section className="container mx-auto px-4 py-16 md:py-20" aria-labelledby="faq-heading">
-        <h2 id="faq-heading" className="font-display mb-8 text-2xl font-bold md:text-3xl">
+        <h2 id="faq-heading" className="font-display mb-8 text-lg font-semibold">
           Perguntas frequentes
         </h2>
         <Accordion className="max-w-3xl">

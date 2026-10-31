@@ -1,5 +1,5 @@
 import sanity from "./artifacts/sanity.json";
-import { assignCluster, predictAcceptance, predictCache } from "./predict";
+import { assignCluster, predictAcceptance, predictCache, predictVenueAcceptance } from "./predict";
 import type { ClassificationInput, NegotiationInput, TalentInput } from "./features";
 
 const CACHE_TOLERANCE = 0.05;
@@ -31,6 +31,11 @@ for (const [index, sample] of sanity.clustering.entries()) {
   }
 }
 
+for (const [index, sample] of sanity.venue.entries()) {
+  const predicted = predictVenueAcceptance(sample.input as ClassificationInput);
+  assertClose(predicted, sample.expected, PROBABILITY_TOLERANCE, `casa ${index}`);
+}
+
 console.log(
-  `inferência conferida: ${sanity.regression.length} regressões, ${sanity.classification.length} classificações, ${sanity.clustering.length} clusters`,
+  `inferência conferida: ${sanity.regression.length} regressões, ${sanity.classification.length} classificações, ${sanity.venue.length} casas, ${sanity.clustering.length} clusters`,
 );

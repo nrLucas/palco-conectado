@@ -1,0 +1,2 @@
+Cópia do treino anterior (180 talentos, 900 propostas, semente 42), feita antes do retreino.
+Inclui os JSON de ml/artifacts e de src/lib/ml/artifacts, os gráficos e os CSV.

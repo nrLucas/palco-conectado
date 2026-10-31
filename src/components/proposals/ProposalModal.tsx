@@ -243,9 +243,9 @@ function ProposalInsight({
 
   return (
     <div className="rounded-lg border border-accent/30 bg-accent/5 px-3 py-3">
-      <p className="text-muted text-[11px] uppercase tracking-[0.14em]">Cachê sugerido</p>
+      <p className="text-muted text-xs">Cachê sugerido</p>
       <div className="mt-1 flex items-end justify-between gap-3">
-        <p className="font-display text-2xl font-bold">{currency.format(insight.suggestedAmount)}</p>
+        <p className="font-display text-2xl font-semibold tabular-nums">{currency.format(insight.suggestedAmount)}</p>
         <Button size="sm" variant="secondary" onPress={() => onUseAmount(insight.suggestedAmount!)}>
           Usar valor
         </Button>
@@ -256,7 +256,11 @@ function ProposalInsight({
       {probability !== null && insight.acceptanceLabel && (
         <div className="mt-3">
           <div className="flex items-baseline justify-between gap-3 text-xs">
-            <span>Chance de aceite</span>
+            <span>
+              {insight.acceptanceTarget === "venue"
+                ? "Chance de a casa aceitar"
+                : "Chance de a banda aceitar"}
+            </span>
             <span className="font-medium">
               {Math.round(probability * 100)}% · {ACCEPTANCE_COPY[insight.acceptanceLabel]}
             </span>

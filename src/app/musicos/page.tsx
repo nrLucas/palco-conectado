@@ -13,8 +13,8 @@ export default function MusiciansPage() {
   return (
     <main className="container mx-auto px-4 py-10">
       <header className="mb-8">
-        <h1 className="font-display text-3xl font-bold">Encontre Músicos Independentes</h1>
-        <p className="text-muted mt-1">
+        <h1 className="font-display text-2xl font-semibold tracking-tight">Encontre Músicos Independentes</h1>
+        <p className="text-muted mt-2 max-w-[65ch] text-sm leading-relaxed">
           Bateristas, guitarristas e vocalistas prontos para sua banda ou gig.
         </p>
       </header>
@@ -31,18 +31,18 @@ export default function MusiciansPage() {
       {isLoading ? (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {[1, 2, 3].map((i) => (
-            <div key={i} className="animate-pulse h-64 rounded-xl bg-default/50" />
+            <div key={i} className="animate-pulse h-64 rounded-[var(--radius)] bg-default/50" />
           ))}
         </div>
       ) : (
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {musicians.length === 0 ? (
-            <p className="col-span-full text-center text-muted py-12">
+            <p className="col-span-full rounded-[var(--radius)] border border-dashed border-border px-6 py-16 text-center text-muted">
               Nenhum músico encontrado. Experimente buscar por outro termo.
             </p>
           ) : (
             musicians.map((musician) => (
-              <Card key={musician.id} className="shadow-surface hover:shadow-overlay transition-shadow">
+              <Card key={musician.id} className="border border-border shadow-none transition-colors hover:border-accent/40">
                 <Card.Header>
                   <Card.Title className="flex items-center justify-between text-lg">
                     <span>{musician.name}</span>
@@ -68,7 +68,7 @@ export default function MusiciansPage() {
                 </Card.Content>
                 <Card.Footer>
                   <Link href={`/musico/${musician.id}`} className="w-full">
-                    <Button className="w-full">Ver Perfil</Button>
+                    <Button className="w-full" variant="secondary">Ver perfil</Button>
                   </Link>
                 </Card.Footer>
               </Card>

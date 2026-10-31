@@ -53,16 +53,16 @@ export default function SubscriptionPage() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="text-center mb-12">
-        <h1 className="font-display text-4xl font-bold mb-4">Escolha seu plano</h1>
-        <p className="text-xl text-muted">Desbloqueie todo o potencial da sua carreira musical</p>
+        <h1 className="font-display mb-3 text-2xl font-semibold tracking-tight">Escolha seu plano</h1>
+        <p className="text-muted mx-auto max-w-[65ch] text-sm leading-relaxed">Desbloqueie todo o potencial da sua carreira musical</p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {plans.map((plan) => (
           <Card
             key={plan.name}
-            className={`relative flex flex-col shadow-surface ${
-              plan.popular ? 'border-accent shadow-overlay md:scale-105 z-10' : ''
+            className={`relative flex flex-col border shadow-none ${
+              plan.popular ? 'border-accent z-10' : 'border-border'
             }`}
           >
             {plan.popular && (
@@ -79,7 +79,7 @@ export default function SubscriptionPage() {
             </Card.Header>
             <Card.Content className="flex-1">
               <div className="mb-6">
-                <span className="text-4xl font-bold font-display">{plan.price}</span>
+                <span className="font-display text-2xl font-semibold tabular-nums">{plan.price}</span>
                 {plan.period && <span className="text-muted">{plan.period}</span>}
               </div>
               <ul className="space-y-3">

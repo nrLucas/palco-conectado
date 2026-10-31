@@ -301,7 +301,7 @@ export function OnboardingWizard() {
                         onPress={() => handleRoleSelect(role.type)}
                       >
                         <Card
-                          className={`w-full cursor-pointer transition-all hover:scale-[1.02] hover:shadow-lg bg-gradient-to-br ${role.color} ${role.borderColor}`}
+                          className={`w-full cursor-pointer border bg-surface shadow-none ${role.borderColor}`}
                         >
                           <Card.Content className="flex items-center gap-4 p-4">
                             <div className={`p-3 rounded-full bg-background/80 ${role.iconColor}`}>

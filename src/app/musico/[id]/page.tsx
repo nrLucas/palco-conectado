@@ -23,7 +23,7 @@ export default function MusicianProfilePage() {
   if (isLoading) {
     return (
       <main className="container mx-auto px-4 py-10">
-        <div className="animate-pulse h-64 bg-default/50 rounded-xl" />
+        <div className="h-64 animate-pulse rounded-[var(--radius)] bg-default/50" />
       </main>
     );
   }
@@ -40,7 +40,7 @@ export default function MusicianProfilePage() {
     <main className="container mx-auto px-4 py-10">
       <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div className="space-y-3">
-          <h1 className="font-display text-3xl font-bold md:text-4xl">{musician.name}</h1>
+          <h1 className="font-display text-2xl font-semibold tracking-tight">{musician.name}</h1>
           <div className="flex flex-wrap gap-2">
             {musician.genres.map((genre) => (
               <Chip key={genre} variant="soft" color="accent">
@@ -71,11 +71,11 @@ export default function MusicianProfilePage() {
       </header>
 
       <section className="mt-8">
-        <Card className="shadow-surface">
+        <Card className="border border-border shadow-none">
           <Card.Content className="space-y-6">
             <div>
               <h2 className="font-display mb-2 text-lg font-semibold">Sobre</h2>
-              <p className="text-muted leading-relaxed">
+              <p className="text-muted max-w-[65ch] text-sm leading-relaxed">
                 {musician.bio || 'Sem descrição cadastrada.'}
               </p>
             </div>
@@ -87,21 +87,21 @@ export default function MusicianProfilePage() {
               ))}
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="rounded-lg border border-border bg-surface/50 p-4">
-                <p className="text-muted text-xs uppercase tracking-wide">Experiência</p>
-                <p className="mt-1 font-medium">{EXPERIENCE_LABEL[musician.experience]}</p>
+              <div className="rounded-[var(--radius)] border border-border bg-surface/50 p-4">
+                <p className="text-muted text-xs">Experiência</p>
+                <p className="mt-1 text-sm font-medium">{EXPERIENCE_LABEL[musician.experience]}</p>
               </div>
-              <div className="rounded-lg border border-border bg-surface/50 p-4">
-                <p className="text-muted text-xs uppercase tracking-wide">Cidade-base</p>
-                <p className="mt-1 font-medium">{musician.location}</p>
+              <div className="rounded-[var(--radius)] border border-border bg-surface/50 p-4">
+                <p className="text-muted text-xs">Cidade-base</p>
+                <p className="mt-1 text-sm font-medium">{musician.location}</p>
               </div>
-              <div className="rounded-lg border border-border bg-surface/50 p-4">
-                <p className="text-muted text-xs uppercase tracking-wide">Gigs</p>
-                <p className="mt-1 font-medium">{musician.totalGigs}</p>
+              <div className="rounded-[var(--radius)] border border-border bg-surface/50 p-4">
+                <p className="text-muted text-xs">Gigs</p>
+                <p className="mt-1 text-sm font-medium">{musician.totalGigs}</p>
               </div>
-              <div className="rounded-lg border border-border bg-surface/50 p-4">
-                <p className="text-muted text-xs uppercase tracking-wide">Faixa de preço</p>
-                <p className="mt-1 font-medium">{musician.pricePerGig || 'Sob consulta'}</p>
+              <div className="rounded-[var(--radius)] border border-border bg-surface/50 p-4">
+                <p className="text-muted text-xs">Faixa de preço</p>
+                <p className="mt-1 text-sm font-medium">{musician.pricePerGig || 'Sob consulta'}</p>
               </div>
             </div>
           </Card.Content>

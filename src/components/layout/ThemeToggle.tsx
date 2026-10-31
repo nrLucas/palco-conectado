@@ -25,17 +25,19 @@ export function ThemeToggle() {
       aria-label={isDark ? 'Ativar modo claro' : 'Ativar modo escuro'}
     >
       {({ isSelected }) => (
-        <Switch.Control>
-          <Switch.Thumb>
-            <Switch.Icon>
-              {isSelected ? (
-                <Moon className="size-3 text-inherit opacity-100" />
-              ) : (
-                <Sun className="size-3 text-inherit opacity-70" />
-              )}
-            </Switch.Icon>
-          </Switch.Thumb>
-        </Switch.Control>
+        <Switch.Content>
+          <Switch.Control>
+            <Switch.Thumb>
+              <Switch.Icon>
+                {isSelected ? (
+                  <Moon className="size-3 text-inherit opacity-100" />
+                ) : (
+                  <Sun className="size-3 text-inherit opacity-70" />
+                )}
+              </Switch.Icon>
+            </Switch.Thumb>
+          </Switch.Control>
+        </Switch.Content>
       )}
     </Switch>
   );

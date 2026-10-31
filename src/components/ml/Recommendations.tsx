@@ -49,9 +49,8 @@ export function Recommendations({ kind, id }: RecommendationsProps) {
       : 'Bandas ranqueadas pela chance de a casa aceitar uma proposta.';
 
   return (
-    <section className="mt-8 rounded-xl border border-border bg-surface/60 p-5">
-      <p className="text-muted text-xs uppercase tracking-[0.16em]">Recomendação</p>
-      <h2 className="font-display mt-1 text-2xl font-semibold">{title}</h2>
+    <section className="mt-8 rounded-[var(--radius)] border border-border bg-surface/60 p-5">
+      <h2 className="font-display text-lg font-semibold">{title}</h2>
       <p className="text-muted mt-2 max-w-2xl text-sm leading-relaxed">
         {intro} A oferta de referência é o cachê previsto para a sexta-feira {formatDate(referenceDate)}.
         O ranking junta a regressão logística (70%) e o histórico de aceite do tipo de casa (30%).
@@ -64,11 +63,11 @@ export function Recommendations({ kind, id }: RecommendationsProps) {
             <li key={item.id}>
               <Link
                 href={item.href}
-                className="block rounded-lg border border-border bg-background px-4 py-3 transition-colors hover:border-accent/50"
+                className="block rounded-[var(--radius)] border border-border bg-background px-4 py-3 transition-colors hover:border-accent/50"
               >
                 <span className="flex items-baseline justify-between gap-3">
                   <span className="font-medium">{item.name}</span>
-                  <span className="font-display text-lg font-semibold">
+                  <span className="font-display text-lg font-semibold tabular-nums">
                     {Math.round(item.score * 100)}%
                   </span>
                 </span>

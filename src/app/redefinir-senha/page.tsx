@@ -206,8 +206,8 @@ export default function RedefinirSenhaPage() {
         <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full border border-accent/20 bg-accent/10">
           <Music2 className="h-7 w-7 text-accent" />
         </div>
-        <h1 className="font-display text-2xl font-bold">Redefinir senha</h1>
-        <p className="text-muted mt-2 text-sm">Escolha uma nova senha para sua conta.</p>
+        <h1 className="font-display text-2xl font-semibold tracking-tight">Redefinir senha</h1>
+        <p className="text-muted mx-auto mt-2 max-w-[65ch] text-sm leading-relaxed">Escolha uma nova senha para sua conta.</p>
       </div>
 
       <Suspense fallback={<p className="text-center text-muted">Carregando...</p>}>

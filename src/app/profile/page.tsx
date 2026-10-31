@@ -11,7 +11,7 @@ export default function ProfilePage() {
   if (isLoading) {
     return (
       <main className="container mx-auto px-4 py-10">
-        <div className="animate-pulse h-48 bg-default/50 rounded-xl" />
+        <div className="animate-pulse h-48 rounded-[var(--radius)] bg-default/50" />
       </main>
     );
   }
@@ -28,11 +28,11 @@ export default function ProfilePage() {
   return (
     <main className="container mx-auto px-4 py-10 space-y-8">
       <header>
-        <h1 className="font-display text-3xl font-bold">Meu Perfil</h1>
-        <p className="text-muted mt-1">Gerencie sua conta e perfis</p>
+        <h1 className="font-display text-2xl font-semibold tracking-tight">Meu Perfil</h1>
+        <p className="text-muted mt-2 max-w-[65ch] text-sm leading-relaxed">Gerencie sua conta e perfis</p>
       </header>
 
-      <Card className="shadow-surface">
+      <Card className="border border-border shadow-none">
         <Card.Header>
           <Card.Title className="flex items-center gap-2">
             <User className="h-5 w-5 text-accent" /> Conta
@@ -76,7 +76,7 @@ export default function ProfilePage() {
         ) : (
           <div className="grid gap-4 md:grid-cols-2">
             {profiles.map((profile) => (
-              <Card key={profile.id} className="shadow-surface">
+              <Card key={profile.id} className="border border-border shadow-none">
                 <Card.Header>
                   <Card.Title className="flex items-center gap-2 text-base">
                     {profile.type === 'banda' ? (

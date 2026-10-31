@@ -7,6 +7,7 @@ experiência da banda e a ordem lógica das colunas.
 
 from __future__ import annotations
 
+import math
 import re
 import unicodedata
 from datetime import date, datetime
@@ -170,6 +171,15 @@ def is_weekend(value: str) -> int:
     return int(weekday_monday0(value) >= WEEKEND_FROM_WEEKDAY)
 
 
+def day_flags(value: str) -> dict[str, int]:
+    weekday = weekday_monday0(value)
+    return {
+        "is_friday": int(weekday == 4),
+        "is_saturday": int(weekday == 5),
+        "is_sunday": int(weekday == 6),
+    }
+
+
 def lead_days(event_date: str, as_of: str) -> int:
     delta = (parse_iso_date(event_date) - parse_iso_date(as_of)).days
     return max(0, delta)
@@ -186,7 +196,9 @@ def regression_feature_names() -> list[str]:
         "members",
         "experience",
         "same_city",
-        "is_weekend",
+        "is_friday",
+        "is_saturday",
+        "is_sunday",
         "rating",
         "shows",
         "talent_price_mid",
@@ -201,8 +213,8 @@ def regression_feature_names() -> list[str]:
 
 def classification_feature_names() -> list[str]:
     return [
-        "amount_ratio",
-        "ratio_gap",
+        "offer_log",
+        "date_load",
         "genre_match",
         "capacity",
         "experience",
@@ -226,7 +238,9 @@ def regression_features(row: dict) -> dict[str, float]:
         "members": float(row["members"]),
         "experience": float(row["experience"]),
         "same_city": float(row["same_city"]),
-        "is_weekend": float(row["is_weekend"]),
+        "is_friday": float(row["is_friday"]),
+        "is_saturday": float(row["is_saturday"]),
+        "is_sunday": float(row["is_sunday"]),
         "rating": float(row["rating"]),
         "shows": float(row["shows"]),
         "talent_price_mid": float(row["talent_price_mid"]),
@@ -249,8 +263,62 @@ def classification_features(row: dict) -> dict[str, float]:
     amount = float(row["amount"])
     ratio = amount / max(suggested, 1.0)
     return {
-        "amount_ratio": ratio,
-        "ratio_gap": abs(ratio - 1.05),
+        "offer_log": math.log(max(ratio, 0.2)),
+        "date_load": float(min(int(row.get("date_load") or 0), 5)),
+        "genre_match": float(row["genre_match"]),
+        "capacity": float(row["capacity"]),
+        "experience": float(row["experience"]),
+        "same_city": float(row["same_city"]),
+        "lead_days": float(row["lead_days"]),
+        "rating": float(row["rating"]),
+    }
+
+
+def venue_feature_names() -> list[str]:
+    return [
+        "offer_log",
+        "budget_log",
+        "date_load",
+        "genre_match",
+        "capacity",
+        "experience",
+        "same_city",
+        "lead_days",
+        "rating",
+    ]
+
+
+def venue_acceptance_probability(row: dict) -> float:
+    """Chance de a casa aceitar o pedido. Usa o cachê latente, não o modelo."""
+    fair = max(float(row["fair_price"]), 1.0)
+    amount = float(row["amount"])
+    budget = max(float(row["venue_budget_mid"]), 1.0)
+    ask_signal = math.log(max(amount / fair, 0.2))
+    over_budget = max(0.0, math.log(max(amount / budget, 1.0)))
+    load = min(int(row["date_load"]), 5)
+    logit = (
+        1.2
+        - 2.7 * ask_signal
+        - 1.6 * over_budget
+        + 1.05 * float(row["genre_match"])
+        + 0.45 * float(row["same_city"])
+        + 0.18 * float(row["experience"])
+        + 0.008 * min(float(row["lead_days"]), 30)
+        - 0.62 * load
+    )
+    return float(1 / (1 + math.exp(-logit)))
+
+
+def venue_features(row: dict) -> dict[str, float]:
+    suggested = float(row["suggested_amount"])
+    amount = float(row["amount"])
+    budget = float(row["venue_budget_mid"])
+    ratio = amount / max(suggested, 1.0)
+    budget_ratio = amount / max(budget, 1.0)
+    return {
+        "offer_log": math.log(max(ratio, 0.2)),
+        "budget_log": math.log(max(budget_ratio, 0.2)),
+        "date_load": float(min(int(row.get("date_load") or 0), 5)),
         "genre_match": float(row["genre_match"]),
         "capacity": float(row["capacity"]),
         "experience": float(row["experience"]),

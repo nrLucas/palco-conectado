@@ -1,10 +1,12 @@
 import classificationArtifact from "./artifacts/classification.json";
 import clusteringArtifact from "./artifacts/clustering.json";
 import regressionArtifact from "./artifacts/regression.json";
+import venueArtifact from "./artifacts/venue-classification.json";
 import {
   classificationVector,
   clusteringVector,
   regressionVector,
+  venueVector,
   type ClassificationInput,
   type ClusteringArtifact,
   type NegotiationInput,
@@ -20,7 +22,8 @@ function dot(left: number[], right: number[]): number {
 }
 
 function sigmoid(value: number): number {
-  return 1 / (1 + Math.exp(-value));
+  const clipped = Math.max(-40, Math.min(40, value));
+  return 1 / (1 + Math.exp(-clipped));
 }
 
 export function predictCache(input: NegotiationInput): number {
@@ -39,6 +42,16 @@ export function predictAcceptance(input: ClassificationInput): number {
     classificationArtifact.scale,
   );
   const decision = dot(scaled, classificationArtifact.coef) + classificationArtifact.intercept;
+  return sigmoid(decision);
+}
+
+export function predictVenueAcceptance(input: ClassificationInput): number {
+  const scaled = scale(
+    venueVector(input, venueArtifact),
+    venueArtifact.mean,
+    venueArtifact.scale,
+  );
+  const decision = dot(scaled, venueArtifact.coef) + venueArtifact.intercept;
   return sigmoid(decision);
 }
 

@@ -67,7 +67,7 @@ export default function PropostasPage() {
     const counterparty = mode === 'received' ? proposal.fromProfile : proposal.toProfile;
 
     return (
-      <Card key={proposal.id} className="shadow-surface">
+      <Card key={proposal.id} className="border border-border shadow-none">
         <Card.Header>
           <Card.Title className="flex items-center justify-between text-base">
             <span>R$ {proposal.amount.toFixed(2)}</span>
@@ -125,8 +125,8 @@ export default function PropostasPage() {
   return (
     <main className="container mx-auto px-4 py-10">
       <header className="mb-8">
-        <h1 className="font-display text-3xl font-bold">Propostas</h1>
-        <p className="text-muted mt-1">Gerencie propostas enviadas e recebidas.</p>
+        <h1 className="font-display text-2xl font-semibold tracking-tight">Propostas</h1>
+        <p className="text-muted mt-2 max-w-[65ch] text-sm leading-relaxed">Gerencie propostas enviadas e recebidas.</p>
       </header>
 
       <Tabs defaultSelectedKey="received" className="w-full">

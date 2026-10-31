@@ -60,7 +60,7 @@ export function LandingHero() {
         </div>
 
         <div className="flex w-full max-w-lg gap-2">
-          <SearchField className="flex-1" value={query} onChange={setQuery} aria-label="Busca rápida">
+          <SearchField className="min-w-0 flex-1" value={query} onChange={setQuery} aria-label="Busca rápida">
             <SearchField.Input placeholder="Busque por banda, estilo ou cidade" />
           </SearchField>
           <Button className="button--hero shrink-0" onPress={handleSearch}>

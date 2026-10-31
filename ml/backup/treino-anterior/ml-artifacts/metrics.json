@@ -1,0 +1,81 @@
+{
+  "synthetic": true,
+  "seed": 42,
+  "split": "80/20",
+  "proposals": 900,
+  "talents": 180,
+  "acceptanceRate": 0.6155555555555555,
+  "regression": {
+    "linear": {
+      "mae": 107.36738862650442,
+      "rmse": 135.50248508305313,
+      "r2": 0.954061246868203
+    },
+    "randomForest": {
+      "mae": 147.8683655091068,
+      "rmse": 188.2574267119416,
+      "r2": 0.9113275068991458
+    }
+  },
+  "classification": {
+    "logistic": {
+      "accuracy": 0.6611111111111111,
+      "precision": 0.7,
+      "recall": 0.7706422018348624,
+      "f1": 0.7336244541484717,
+      "confusionMatrix": [
+        [
+          35,
+          36
+        ],
+        [
+          25,
+          84
+        ]
+      ]
+    },
+    "randomForest": {
+      "accuracy": 0.6833333333333333,
+      "precision": 0.696969696969697,
+      "recall": 0.8440366972477065,
+      "f1": 0.7634854771784232,
+      "confusionMatrix": [
+        [
+          31,
+          40
+        ],
+        [
+          17,
+          92
+        ]
+      ]
+    }
+  },
+  "clustering": {
+    "k": 6,
+    "silhouette": 0.44845454162593207,
+    "silhouetteByK": {
+      "2": 0.2588574779657232,
+      "3": 0.34942361620850104,
+      "4": 0.38097211482737425,
+      "5": 0.4126574133251184,
+      "6": 0.44845454162593207
+    },
+    "clusterNames": [
+      "Pop · cachê alto",
+      "Samba · cachê médio",
+      "Jazz · cachê médio",
+      "Eletronica · cachê alto",
+      "Blues · cachê médio",
+      "MPB · cachê médio"
+    ],
+    "adjustedRandVsLatentSegment": 0.5861949793087641
+  },
+  "notes": [
+    "O histórico é sintético, calibrado nas faixas de preço, cidades e gêneros do seed do Palco.",
+    "A regressão prevê o cachê observado. A classificação usa a razão entre o valor ofertado e o cachê sugerido pela regressão linear, além da distância dessa razão a 1,05 (ratio_gap).",
+    "No teste, a regressão linear supera o Random Forest. Na classificação, o Random Forest fica à frente da logística.",
+    "O segmento latente dos talentos não entra no K-Means. O índice de Rand ajustado só mede se os grupos recuperaram essa estrutura.",
+    "A aplicação infere com os coeficientes lineares e os centróides. Random Forest fica como modelo de comparação no relatório."
+  ]
+}
