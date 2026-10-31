@@ -1,6 +1,6 @@
 import { FileViewer } from "@/components/ml/lab/FileViewer";
 import { TechniqueReport } from "@/components/ml/lab/TechniqueReport";
-import { LAB_FILE_LABELS, LAB_FILES } from "@/lib/ml/lab-files";
+import { LAB_FILE_LABELS, LAB_FILES } from "@/lib/ml/lab-catalog";
 import Link from "next/link";
 
 export default function MlTechniquesPage() {

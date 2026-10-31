@@ -28,6 +28,18 @@
       "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
       "static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2"
     ],
+    "[project]/src/app/ml/page": [
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2"
+    ],
+    "[project]/src/app/ml/tecnicas/page": [
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2"
+    ],
+    "[project]/src/app/musico/[id]/page": [
+      "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
+      "static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2"
+    ],
     "[project]/src/app/musicos/page": [
       "static/media/fba5a26ea33df6a3-s.p.18rizl4rsrl42.woff2",
       "static/media/0c795a286deabae8-s.p.3vm0tq4e-zz_5.woff2"

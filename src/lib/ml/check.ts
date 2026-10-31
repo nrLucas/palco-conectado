@@ -12,29 +12,29 @@ function assertClose(actual: number, expected: number, tolerance: number, label:
   }
 }
 
-for (const [index, sample] of sanity.regression.entries()) {
+sanity.regression.forEach((sample, index) => {
   const predicted = predictCache(sample.input as NegotiationInput);
   assertClose(predicted, sample.expected, CACHE_TOLERANCE, `regressão ${index}`);
-}
+});
 
-for (const [index, sample] of sanity.classification.entries()) {
+sanity.classification.forEach((sample, index) => {
   const predicted = predictAcceptance(sample.input as ClassificationInput);
   assertClose(predicted, sample.expected, PROBABILITY_TOLERANCE, `classificação ${index}`);
-}
+});
 
-for (const [index, sample] of sanity.clustering.entries()) {
+sanity.clustering.forEach((sample, index) => {
   const assigned = assignCluster(sample.input as TalentInput);
   if (assigned.clusterId !== sample.expectedCluster) {
     throw new Error(
       `cluster ${index}: obtido ${assigned.clusterId}, esperado ${sample.expectedCluster}`,
     );
   }
-}
+});
 
-for (const [index, sample] of sanity.venue.entries()) {
+sanity.venue.forEach((sample, index) => {
   const predicted = predictVenueAcceptance(sample.input as ClassificationInput);
   assertClose(predicted, sample.expected, PROBABILITY_TOLERANCE, `casa ${index}`);
-}
+});
 
 console.log(
   `inferência conferida: ${sanity.regression.length} regressões, ${sanity.classification.length} classificações, ${sanity.venue.length} casas, ${sanity.clustering.length} clusters`,

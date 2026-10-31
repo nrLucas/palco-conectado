@@ -1,6 +1,6 @@
 "use client";
 
-import { LAB_FIGURES, type LabFigureName } from "@/lib/ml/lab-files";
+import { LAB_FIGURES, type LabFigureName } from "@/lib/ml/lab-catalog";
 import { useEffect, useState } from "react";
 
 const currency = new Intl.NumberFormat("pt-BR", {
